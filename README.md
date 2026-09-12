@@ -125,9 +125,7 @@ Open `http://localhost:8080` in any modern web browser.
 To report system abuse, security vulnerabilities, or copyright infringement originating from Sheernox IP ranges:
 
 - **Client Portal**: [my.sheernox.com](https://my.sheernox.com)
-- **Abuse Desk**: `abuse@sheernox.com`
-- **Legal & Compliance**: `legal@sheernox.com`
-- **Data Privacy Officer**: `privacy@sheernox.com`
+- **Central Support, Abuse & Compliance**: `support@sheernox.com` (All inquiries regarding Legal, Compliance, Privacy, and Network Abuse should be directed to `support@sheernox.com` as departmental sub-addresses are unmonitored)
 - **Location & Inquiries**: Sheernox Technology Group, Kamloops, British Columbia, Canada
 
 ---
