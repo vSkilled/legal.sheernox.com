@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Sheernox Legal Portal</title>
+  <meta name="description" content="Official Privacy Policy of Sheernox Technology Group detailing data collection, processing, security safeguards, cookie usage, and customer privacy rights under PIPEDA, GDPR, and CCPA/CPRA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sn-dark-navy: #071322;
+      --sn-sidebar-navy: #0b192c;
+      --sn-primary-blue: #0f4c81;
+      --sn-accent-cyan: #0284c7;
+      --sn-amber: #f59e0b;
+      --sn-emerald: #10b981;
+      --sn-emerald-bg: #ecfdf5;
+      --sn-coral: #ef4444;
+      --canvas-bg: #f8fafc;
+      --surface-card: #ffffff;
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #94a3b8;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--canvas-bg);
+      color: var(--text-main);
+      line-height: 1.68;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Reading Progress Bar */
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #10b981, #059669);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      background-color: var(--sn-dark-navy);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .top-nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      height: 30px;
+      width: auto;
+    }
+
+    .nav-divider {
+      height: 22px;
+      width: 1.5px;
+      background: rgba(255, 255, 255, 0.25);
+      margin: 0 4px;
+    }
+
+    .nav-portal-label {
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-link {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .nav-btn {
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* Document Header & Metadata */
+    .doc-hero {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 36px 24px 28px;
+    }
+
+    .doc-hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .breadcrumbs a {
+      color: var(--sn-accent-cyan);
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .doc-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .doc-title {
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .doc-meta-strip {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .meta-tag strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .version-pill {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #047857;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-action {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      background: #f8fafc;
+      color: var(--text-main);
+      border-color: #cbd5e1;
+    }
+
+    .btn-action-primary {
+      background: var(--sn-emerald);
+      color: #ffffff;
+      border-color: var(--sn-emerald);
+    }
+
+    .btn-action-primary:hover {
+      background: #059669;
+      color: #ffffff;
+    }
+
+    /* Main Container Layout */
+    .layout-container {
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 36px 24px 80px;
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 48px;
+      flex: 1;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .layout-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* Sticky Sidebar Navigation (TOC) */
+    .legal-sidebar {
+      position: sticky;
+      top: 76px;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      padding-right: 12px;
+    }
+
+    .legal-sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .legal-sidebar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .toc-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .toc-header {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-subtle);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-filter {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      margin-bottom: 14px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .toc-filter:focus {
+      border-color: var(--sn-emerald);
+    }
+
+    .toc-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toc-item a {
+      display: block;
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 6px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s ease;
+      line-height: 1.4;
+    }
+
+    .toc-item a:hover {
+      background: #ecfdf5;
+      color: #065f46;
+    }
+
+    .toc-item.active a {
+      background: #f0fdf4;
+      color: #047857;
+      border-left-color: var(--sn-emerald);
+      font-weight: 600;
+    }
+
+    /* Main Document Prose Content */
+    .legal-content {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 44px 48px;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.03);
+      max-width: 860px;
+    }
+
+    @media (max-width: 640px) {
+      .legal-content {
+        padding: 24px 20px;
+      }
+    }
+
+    /* Modern Plain English / Key Takeaway Callouts */
+    .key-takeaway {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid var(--sn-emerald);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0 24px;
+      font-size: 0.88rem;
+      color: #166534;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .key-takeaway .takeaway-badge {
+      background: var(--sn-emerald);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    .key-takeaway p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Legal Section Typography */
+    .legal-section {
+      margin-bottom: 44px;
+      scroll-margin-top: 90px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.015em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .clause-anchor-btn {
+      color: var(--text-subtle);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      opacity: 0;
+      transition: opacity 0.2s, color 0.2s;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .section-header:hover .clause-anchor-btn,
+    .clause-block:hover .clause-anchor-btn {
+      opacity: 1;
+    }
+
+    .clause-anchor-btn:hover {
+      color: var(--sn-emerald);
+      background: #ecfdf5;
+    }
+
+    .legal-prose p {
+      margin-bottom: 16px;
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.72;
+    }
+
+    .clause-block {
+      margin-bottom: 18px;
+      padding-left: 18px;
+      border-left: 2px solid #e2e8f0;
+      scroll-margin-top: 90px;
+      position: relative;
+    }
+
+    .clause-num {
+      font-weight: 700;
+      color: #047857;
+      margin-right: 6px;
+    }
+
+    .legal-sublist {
+      list-style-type: disc;
+      margin: 12px 0 16px 24px;
+      color: #334155;
+      font-size: 0.93rem;
+    }
+
+    .legal-sublist li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    /* Subprocessor Table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.88rem;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--border-color);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .data-table td {
+      color: var(--text-muted);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--sn-dark-navy);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      #progressBar, .top-nav, .legal-sidebar, .hero-actions, .clause-anchor-btn, footer {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 10.5pt;
+      }
+      .layout-container {
+        display: block !important;
+        padding: 0 !important;
+      }
+      .legal-content {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .legal-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progressBar"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox" class="nav-logo">
+        <div class="nav-divider"></div>
+        <span class="nav-portal-label">Legal Portal</span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="nav-link">&larr; Back to Legal Directory</a>
+        <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Document Hero -->
+  <header class="doc-hero">
+    <div class="doc-hero-inner">
+      <nav class="breadcrumbs">
+        <a href="index.html">Legal Portal</a>
+        <span>&rsaquo;</span>
+        <span>Governance & Privacy</span>
+        <span>&rsaquo;</span>
+        <span>Data Protection Policy</span>
+      </nav>
+
+      <div class="doc-title-row">
+        <div>
+          <h1 class="doc-title">Privacy Policy</h1>
+          <div class="doc-meta-strip">
+            <span class="meta-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Last Revised: <strong>September 2026</strong> (Modernized Edition)
+            </span>
+            <span class="meta-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              Global Compliance (PIPEDA, GDPR, CCPA/CPRA)
+            </span>
+            <span class="version-pill">v3.0-privacy</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-action" onclick="copyDocumentLink()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Share
+          </button>
+          <button class="btn-action" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout Grid -->
+  <div class="layout-container">
+
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="legal-sidebar">
+      <div class="toc-card">
+        <div class="toc-header">
+          <span>Table of Contents</span>
+          <span style="font-size: 0.72rem; color: var(--sn-emerald);">10 Sections</span>
+        </div>
+        <input type="text" id="tocFilter" class="toc-filter" placeholder="Filter privacy topics..." oninput="filterTOC(this.value)">
+        <ul class="toc-nav" id="tocList">
+          <li class="toc-item active" data-target="sec-controller"><a href="#sec-controller">1. Data Controller & Scope</a></li>
+          <li class="toc-item" data-target="sec-collected"><a href="#sec-collected">2. Information We Collect</a></li>
+          <li class="toc-item" data-target="sec-purposes"><a href="#sec-purposes">3. How We Use Personal Data</a></li>
+          <li class="toc-item" data-target="sec-services-scope"><a href="#sec-services-scope">4. Solution-Specific Processing</a></li>
+          <li class="toc-item" data-target="sec-subprocessors"><a href="#sec-subprocessors">5. Third-Party Sub-Processors</a></li>
+          <li class="toc-item" data-target="sec-cookies"><a href="#sec-cookies">6. Cookies & Tracking Controls</a></li>
+          <li class="toc-item" data-target="sec-retention"><a href="#sec-retention">7. Retention & Data Security</a></li>
+          <li class="toc-item" data-target="sec-rights"><a href="#sec-rights">8. User Rights (GDPR & CCPA)</a></li>
+          <li class="toc-item" data-target="sec-children"><a href="#sec-children">9. Children’s Privacy</a></li>
+          <li class="toc-item" data-target="sec-contact"><a href="#sec-contact">10. Contact & Privacy Officer</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="legal-content">
+      <article class="legal-prose">
+
+        <!-- Section 1 -->
+        <section id="sec-controller" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">1. Data Controller & Policy Scope</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-controller')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>Sheernox Technology Group is the data controller responsible for your personal information. We operate out of Kamloops, British Columbia, Canada, complying with Canadian PIPEDA, the European GDPR, and the California CCPA/CPRA.</p>
+          </div>
+
+          <p>
+            This Privacy Policy governs the manner in which <strong>Sheernox Technology Group</strong> ("Sheernox", "We", "Us", or "Our") collects, uses, maintains, and discloses information collected from users, clients, and visitors (each, a "User") of our websites, client portal (<code>my.sheernox.com</code>), cloud infrastructure, and hosting services.
+          </p>
+
+          <div class="clause-block" id="clause-1-1">
+            <p>
+              <span class="clause-num">1.1 Owner & Data Controller:</span><br>
+              <strong>SHEERNOX TECHNOLOGY GROUP</strong><br>
+              #205 689 Tranquille Rd, Kamloops, BC, V2B0C7, Canada<br>
+              Contact Email: <code>privacy@sheernox.com</code> | <code>support@sheernox.com</code>
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="sec-collected" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">2. Information We Collect</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-collected')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>We collect personal details you provide during registration (name, company, email, phone, billing address), technical usage data (IP address, browser telemetry), and payment details handled securely by certified payment processors.</p>
+          </div>
+
+          <div class="clause-block" id="clause-2-1">
+            <p>
+              <span class="clause-num">2.1 Direct Account Information:</span> When registering for Sheernox services or opening support tickets, we collect: full name, corporate name, email address, telephone number, physical mailing address, billing details, and login credentials.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-2-2">
+            <p>
+              <span class="clause-num">2.2 Technical & Usage Telemetry:</span> When navigating our websites and client dashboard, we collect standard server logs, IP addresses, browser user-agent strings, referring URLs, operating system signatures, and session timestamps.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-2-3">
+            <p>
+              <span class="clause-num">2.3 Payment Information:</span> Credit card and banking transactions are tokenized and processed through PCI-DSS Level 1 certified gateways (Stripe, PayPal). Sheernox does not store full credit card numbers or CVV codes on our local servers.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="sec-purposes" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">3. How We Use Personal Data</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-purposes')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>We process your data strictly to deliver services, bill your account, prevent fraud and security threats, send critical server announcements, and provide 24/7 technical support. We never sell your personal data.</p>
+          </div>
+
+          <p>We process your Personal Data on the following lawful bases under GDPR Article 6 and PIPEDA:</p>
+          <ul class="legal-sublist">
+            <li><strong>Contractual Performance:</strong> Provisioning web hosting accounts, configuring domain names, managing cloud hypervisors, and processing invoices.</li>
+            <li><strong>Security & Legitimate Interests:</strong> Monitoring network integrity, thwarting brute-force attacks, filtering outbound spam, and safeguarding our IP reputation.</li>
+            <li><strong>Legal Compliance:</strong> Maintaining financial records, tax accounting, and responding to lawful subpoenas or court orders.</li>
+            <li><strong>Consent:</strong> Sending voluntary product updates, newsletters, or marketing alerts where explicit opt-in is provided.</li>
+          </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="sec-services-scope" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">4. Solution-Specific Data Processing</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-services-scope')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>Depending on what services you use, we process specific data: WHOIS info for domains, mail routing headers for email spam protection, edge caching logs for CDN, and encrypted offsite copies for backups.</p>
+          </div>
+
+          <div class="clause-block" id="clause-4-1">
+            <p>
+              <span class="clause-num">4.1 Domain Name Registrations:</span> To register and maintain domains, registrant contact data is transmitted to accredited ICANN registrars and registry operators. WHOIS privacy masking is enabled by default where supported.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-4-2">
+            <p>
+              <span class="clause-num">4.2 Email Hosting & SPAM Filtering:</span> Outbound and inbound email transmissions pass through automated spam and virus inspection filters. Message headers and routing logs are maintained for thirty (30) days for deliverability diagnostics.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-4-3">
+            <p>
+              <span class="clause-num">4.3 DNS & CDN Edge Networks:</span> DNS queries and CDN proxy traffic pass through global edge nodes (including Cloudflare and Anycast networks) to mitigate volumetric DDoS attacks and accelerate asset delivery. Edge logs cache IP requests temporarily for security telemetry.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-4-4">
+            <p>
+              <span class="clause-num">4.4 Storage & Disaster Recovery Backups:</span> Automated snapshots and scheduled client backups are encrypted using AES-256 before transmission to isolated offsite data vaults.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-4-5">
+            <p>
+              <span class="clause-num">4.5 Website Care & Maintenance Retainers:</span> When performing CMS updates and plugin maintenance, authorized Sheernox engineers may access client staging or production administrative dashboards under strict non-disclosure obligations.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="sec-subprocessors" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">5. Third-Party Sub-Processors & Infrastructure Partners</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-subprocessors')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>We work with trusted enterprise vendors to handle payments, network routing, and server monitoring. Each vendor is bound by strict Data Processing Agreements.</p>
+          </div>
+
+          <p>We engage vetted third-party service providers to support our platform infrastructure:</p>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Partner / Service</th>
+                <th>Role & Purpose</th>
+                <th>Data Processed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Stripe & PayPal</strong></td>
+                <td>Payment gateway & recurring billing</td>
+                <td>Billing name, tokenized payment card, address</td>
+              </tr>
+              <tr>
+                <td><strong>Cloudflare</strong></td>
+                <td>Edge CDN caching, DNS & DDoS mitigation</td>
+                <td>IP address, request headers, web traffic telemetry</td>
+              </tr>
+              <tr>
+                <td><strong>Bunny.net CDN</strong></td>
+                <td>Static asset delivery & portal caching</td>
+                <td>Anonymized asset requests & cache hits</td>
+              </tr>
+              <tr>
+                <td><strong>Amazon Web Services (AWS)</strong></td>
+                <td>Encrypted cold-storage disaster recovery</td>
+                <td>Encrypted database and file archives</td>
+              </tr>
+              <tr>
+                <td><strong>Uptime Robot</strong></td>
+                <td>Infrastructure health & SLA monitoring</td>
+                <td>Server endpoint responsiveness metrics</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="sec-cookies" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">6. Cookies & Tracking Technologies</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-cookies')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>We use essential cookies to keep you logged into the client portal and preserve session security. You can manage or disable optional cookies through your browser settings.</p>
+          </div>
+
+          <div class="clause-block" id="clause-6-1">
+            <p>
+              <span class="clause-num">6.1 Essential Cookies:</span> Required for authentication in the Sheernox Client Portal, CSRF security verification, and shopping cart persistence during checkout. These cannot be disabled without breaking portal functionality.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-6-2">
+            <p>
+              <span class="clause-num">6.2 Performance & Analytics:</span> Aggregated, anonymized analytics measuring site speed, error rates, and popular navigation routes to improve system responsiveness.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="sec-retention" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">7. Data Retention & Security Safeguards</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-retention')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>We store your data as long as your account remains active. After account cancellation, data is removed from active servers within 30 days, while billing records are preserved for 7 years to satisfy statutory tax laws.</p>
+          </div>
+
+          <div class="clause-block" id="clause-7-1">
+            <p>
+              <span class="clause-num">7.1 Security Architecture:</span> We implement modern administrative, technical, and physical safeguards: TLS 1.3 encryption in transit, strict role-based access control, SSH key authentication, automated intrusion detection, and multi-factor authentication for administrative personnel.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-7-2">
+            <p>
+              <span class="clause-num">7.2 Retention Schedule:</span> Upon account termination, hosted server content and database records are purged within thirty (30) days. Invoices and financial accounting transaction histories are retained for seven (7) years to satisfy statutory revenue audits.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="sec-rights" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">8. User Privacy Rights (GDPR & CCPA/CPRA)</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-rights')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>You have the legal right to access, update, export, or delete your personal information. Sheernox does not sell your personal data to advertisers or third-party data brokers.</p>
+          </div>
+
+          <p>Regardless of your geographic location, Sheernox affords clients full privacy rights:</p>
+          <ul class="legal-sublist">
+            <li><strong>Right to Access:</strong> Request a full copy of the personal information we hold regarding your account.</li>
+            <li><strong>Right to Rectification:</strong> Update or correct inaccurate account profile details directly via <code>my.sheernox.com</code>.</li>
+            <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request complete deletion of personal records, subject to legal accounting hold requirements.</li>
+            <li><strong>Right to Data Portability:</strong> Obtain your customer record in a structured, machine-readable format.</li>
+            <li><strong>Non-Discrimination:</strong> We will never deny services, charge different prices, or degrade quality for exercising your privacy rights.</li>
+          </ul>
+        </section>
+
+        <!-- Section 9 -->
+        <section id="sec-children" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">9. Children’s Online Privacy Protection</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-children')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-9-1">
+            <p>
+              <span class="clause-num">9.1 Age Restriction:</span> Sheernox technology services are designed strictly for adult commercial operators, businesses, and individuals aged eighteen (18) or older. We do not knowingly solicit or collect personal information from children under the age of 13.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 10 -->
+        <section id="sec-contact" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">10. Contact Information & Privacy Inquiries</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-contact')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>If you have any questions, requests, or privacy complaints, please contact our Compliance Office via email or physical mail. We respond within thirty (30) days.</p>
+          </div>
+
+          <div class="clause-block" id="clause-10-1">
+            <p>
+              <span class="clause-num">10.1 Privacy Office Contact:</span><br>
+              <strong>Data Protection & Privacy Officer</strong><br>
+              Sheernox Technology Group<br>
+              #205 689 Tranquille Rd, Kamloops, BC, V2B0C7, Canada<br>
+              Email: <code>privacy@sheernox.com</code><br>
+              Client Support Portal: <a href="https://my.sheernox.com" target="_blank" rel="noopener noreferrer">https://my.sheernox.com</a>
+            </p>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="copyToast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMsg">Direct policy link copied to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background: #ffffff; border-top: 1px solid var(--border-color); padding: 32px 24px; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+    <div style="margin-bottom: 8px;">&copy; <span id="year"></span> Sheernox Technology Group. All rights reserved.</div>
+    <div style="font-size: 0.78rem; color: var(--text-subtle);">Official Legal Repository &bull; Data Protection & Privacy Policy</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Scrollspy for TOC
+    const sections = document.querySelectorAll('.legal-section');
+    const navItems = document.querySelectorAll('.toc-item');
+
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (pageYOffset >= top) {
+          currentId = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('data-target') === currentId) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // TOC Filter
+    function filterTOC(val) {
+      const q = val.toLowerCase().trim();
+      navItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Toast and Copy Helpers
+    function showToast(msg) {
+      const toast = document.getElementById('copyToast');
+      document.getElementById('toastMsg').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    function copySectionLink(id) {
+      const url = window.location.origin + window.location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Privacy section link copied to clipboard!');
+      }).catch(() => {
+        prompt('Copy section link:', url);
+      });
+    }
+
+    function copyDocumentLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast('Privacy Policy link copied to clipboard!');
+      }).catch(() => {
+        prompt('Copy document link:', window.location.href);
+      });
+    }
+  </script>
+</body>
+</html>
