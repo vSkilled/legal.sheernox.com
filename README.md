@@ -16,7 +16,7 @@ This repository contains the standalone, fully responsive, and accessible HTML5 
 All services, infrastructure, and creative contracts are provided by and contracted with:
 
 - **Entity**: **Sheernox Technology Group** (Registered Sole Proprietorship)
-- **Principal Address**: `#205 689 Tranquille Rd, Kamloops, British Columbia, V2B0C7, Canada`
+- **Location**: `Kamloops, British Columbia, Canada`
 - **Governing Law**: Laws of the **Province of British Columbia** and the federal laws of **Canada** applicable therein.
 - **Exclusive Venue**: Courts of British Columbia sitting in the **City of Kamloops, British Columbia, Canada**.
 - **Currency & Taxation**: All contractual figures, service retainers, and liquidated damage assessments are denominated in **Canadian Dollars (CAD)** and subject to Canadian Goods and Services Tax (**GST**) and British Columbia Provincial Sales Tax (**PST**).
@@ -128,7 +128,7 @@ To report system abuse, security vulnerabilities, or copyright infringement orig
 - **Abuse Desk**: `abuse@sheernox.com`
 - **Legal & Compliance**: `legal@sheernox.com`
 - **Data Privacy Officer**: `privacy@sheernox.com`
-- **Physical Mail**: Sheernox Technology Group, #205 689 Tranquille Rd, Kamloops, BC, V2B0C7, Canada
+- **Location & Inquiries**: Sheernox Technology Group, Kamloops, British Columbia, Canada
 
 ---
 
