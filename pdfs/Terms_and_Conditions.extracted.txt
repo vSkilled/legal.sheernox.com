@@ -1,0 +1,1045 @@
+                    Terms and Conditions
+Last Revised: 2023-07-07
+
+The use of services provided by Sheernox Technology Group and its subsidiaries, divisions, and
+network (hereafter referred to as "Sheernox Technology Group") is subject to the following Terms
+and Conditions.
+
+Party Definitions and Introductory Terms - The operative parties referred to in this Agreement
+are defined as follows:
+
+         1. Sheernox Technology Group is the publisher and operator of sheernox.com,
+            hostblizzard.com, vpstitan.com (the "Site") whereby Sheernox Technology Group
+            makes certain web hosting services (the "Services") available. For purposes of this
+            Agreement, when "Site" or "Services" are referenced, such reference includes all
+            hardware, software, and network resources necessary to provide said Site and/or
+            Service.
+
+             When first-person pronouns are used in this Agreement, (Us, We, Our, Ours, etc.)
+             these provisions are referring to Sheernox Technology Group. Additionally, when the
+             terms "the Site" or "Site" are used, these terms refer to any site published by Us,
+             unless a site is specifically exempt from this policy.
+         2. You, the Client - As Our Client and the user of the Site or Services, this Agreement
+            will refer to You through any second-person pronouns, such as "Your," "Yours," etc.
+
+PLEASE READ THE FOLLOWING HOSTING SERVICES TERMS AND CONDITIONS. BY SUBSCRIBING
+TO SHEERNOX TECHNOLOGY GROUP’S SERVICES, YOU AGREE TO BE BOUND BY ALL THE TERMS AND
+CONDITIONS OF THIS AGREEMENT (the "AGREEMENT"). IF YOU AGREE WITH THE TERMS AND
+CONDITIONS OF THIS AGREEMENT, CLICK "I ACCEPT," (OR SIMILAR SYNTAX) OR CHECK THE
+APPROPRIATE BOX MANIFESTING YOUR INTENT TO BE BOUND BY THESE TERMS AND CONDITIONS
+AND CONTINUE WITH THE ACCOUNT SET-UP PROCESS. YOU SHOULD PRINT-OUT OR OTHERWISE
+SAVE A COPY OF THIS AGREEMENT FOR FUTURE REFERENCE. IF YOU DO NOT AGREE WITH ALL OF
+THE TERMS AND CONDITIONS OF THIS AGREEMENT, CLICK THE "BACK" BUTTON ON YOUR BROWSER
+AND DO NOT SUBSCRIBE TO SHEERNOX TECHNOLOGY GROUP’S SERVICES. SHEERNOX TECHNOLOGY
+GROUP AGREES TO PROVIDE SERVICES TO YOU ONLY IF YOU AGREE TO BE BOUND BY ALL OF THE
+
+
+
+TERMS AND CONDITIONS CONTAINED HEREIN. YOUR ELECTRONIC ACCEPTANCE OF THIS AGREEMENT
+IS PERMITTED BY THE ELECTRONIC SIGNATURES IN GLOBAL AND NATIONAL COMMERCE ACT (E-SIGN
+ACT) AND SIMILAR FEDERAL AND STATE LAWS. ANY USE OF SHEERNOX TECHNOLOGY
+GROUP’S SERVICES SHALL CONSTITUTE AN ACT OF ACCEPTANCE OF THE CURRENT HOSTING
+SERVICES TERMS AND CONDITIONS.
+
+Incorporations by reference.
+
+Although this Agreement represents the primary terms and conditions of service for Sheernox
+Technology Group’s Services, additional guidelines and rules are hereby incorporated by
+reference. The documents which can be found on Our Site, and which are specifically
+incorporated by reference, and are therefore part and parcel of this Agreement are the following:
+
+Our Privacy Policy (https://www.sheernox.com/terms/)
+Our Acceptable Use Policy (https://www.sheernox.com/terms/)
+
+1. SERVICES
+
+1.1 At the time of initial registration, You will select from the list of available Services the
+service plan(s) to which You wish to subscribe. All subscriptions to Services are subject to formal
+acceptance by Sheernox Technology Group. Your subscription to the Services will be deemed
+accepted by Sheernox Technology Group when Sheernox Technology Group delivers a confirmation
+of the subscription to You. Sheernox Technology Group reserves the right to refuse to provide You
+with any Service for any reason. Notwithstanding Our Uptime Guarantee found in Section 17 of
+this Agreement, Sheernox Technology Group also reserves the right to interrupt access to the
+Services to perform regular and emergency maintenance as needed. You may order additional
+Services at any time, provided that You agree to pay the then-current fees for such additional
+Services. All additional Services shall be considered "Services" hereunder. All Services provided are
+subject to availability and to all of the terms and conditions of this Agreement.
+
+2. REVISIONS TO USER AGREEMENT
+
+This Agreement contains the complete and entire terms and conditions that apply to Your use of
+Sheernox Technology Group’s Services (as defined below). Sheernox Technology Group may modify
+the terms of this Agreement, including the Fees (as defined below) at any time.
+
+2.1 From time to time, We may revise this Agreement. We reserve the right to do so, and You
+agree that We have this unilateral right. You agree that all modifications or changes to this
+Agreement are in force and enforceable immediately upon posting. The updated or edited version
+supersedes any prior versions immediately upon posting, and the prior version is of no continuing
+legal effect unless the revised version specifically refers to the prior version and keeps the prior
+version or portions thereof in effect. To the extent any amendment of this Agreement is deemed
+ineffective or invalid by any court, the parties intend that the prior, effective version of this
+Agreement be considered valid and enforceable to the fullest extent.
+
+
+2.2 We agree that if We change anything in this Agreement, We will change the "last modified
+date" at the top of this Agreement. You agree to periodically re-visit this web page, and to use the
+"refresh" button on Your browser when doing so. You agree to note the date of the last revision to
+this Agreement. If the "last modified" date remains unchanged from the last time You reviewed
+this Agreement, then You may presume that nothing in the Agreement has been changed since the
+last time You read it. If the "last modified" date has changed, then You can be certain that
+something in the Agreement has been changed.
+
+2.3 Should You wish to terminate this Agreement due to any revisions made by Us, You must do
+so in writing via the cancellation form within thirty (30) days of the "last modified" date described
+above. Your continued use of the Services after the effective date of any such notice constitutes
+Your acceptance of such changes.
+
+2.4 Waiver – if You fail to periodically review this Agreement to determine if any of the terms
+have changed, You assume all responsibility for such omission and You agree that such failure
+amounts to Your affirmative waiver of Your right to review the amended terms. We are not
+responsible for Your neglect of Your legal rights.
+
+3. DURATION OF AGREEMENT AND CANCELLATION POLICY
+
+3.1 The Initial Term shall begin upon confirmation of Your order or commencement of the
+Services to You and receipt of lawful funds. The term's length is chosen by You and shall be
+indicated when You order Our Services. This Agreement may not be terminated by You during the
+Initial Term (and any renewals thereof) except in the event of a breach by Sheernox Technology
+Group. After the Initial Term, this Agreement shall automatically renew for successive terms,
+equal in length to the Initial Term, unless terminated or canceled by either party as provided
+herein.
+
+3.2 You must provide fourteen (14) days notice of non-renewal to Us should You not wish to
+renew this Agreement after the Initial Term. Sheernox Technology Group may terminate this
+Agreement at any time, without notice, in the event of nonpayment or violation of terms of
+service by You, if in Sheernox Technology Group’s sole judgment You have in any way breached
+this Agreement ("Termination for Cause"). If you cancel any Service prior to the expiration of any
+Term, You understand and agree that Sheernox Technology Group will not issue You any refund
+whatsoever, including but not limited to any remaining pre-paid Fees, set up Fees, and/or special
+programming Fees).
+
+3.3 Sheernox Technology Group may terminate this Agreement and the customer’s account
+(including all services) in its sole discretion at any time for any reason or no reason. ("Termination
+without Cause"). In such case, Sheernox Technology Group will provide You with 24 hours written
+notice before the discontinuation of Services.
+
+3.4 If Sheernox Technology Group cancels this Agreement pursuant to any of the terms outlined
+in this Agreement, with the exception of Termination without Cause pursuant to paragraph 3.3,
+
+
+Sheernox Technology Group shall not refund to You any fees paid or prepaid in advance of such
+cancellation and You shall be obligated to pay all fees and charges accrued prior to the
+effectiveness of such cancellation. In the event that Sheernox Technology Group terminates the
+Agreement for cause, all prepaid hosting fees will be forfeited and are not refundable. The
+termination of this Agreement does not relieve You of Your obligation to pay any Fees accrued or
+payable to Sheernox Technology Group prior to the effective date of termination of this
+Agreement.
+
+3.5 Cancellations must be done in writing via the support ticket system. We require You to
+cancel in writing so that We can confirm Your identity and to confirm with You that You are
+prepared for all of Your content to be removed from Our servers. Once We receive Your
+cancellation and have confirmed all necessary information with You via e-mail, We will inform You
+via email to the email address on file that Your account has been canceled. If You do not receive
+the confirmation email within twenty-four (24) hours after submitting Your cancellation request,
+please contact Us immediately.
+
+3.6 In addition to Sheernox Technology Group’s right to terminate this Agreement provided
+elsewhere in this Agreement, Sheernox Technology Group may terminate this Agreement effective
+immediately if, based on Sheernox Technology Group’s sole judgment, it determines that You or
+any of Your end-users: (a) have breached the Acceptable Use Policy ("AUP") as described in Section
+12 of this Agreement, and incorporated herein, (b) have infringed or violated any intellectual
+property right or privacy or publicity right of a third party, (c) have not complied with any
+applicable law, statute or regulation, or (d) have uploaded, published or disseminated any images,
+text, graphics, code or video which Sheernox Technology Group considers illegal or high risk, in its
+discretion. Nothing contained in this Agreement is intended to, or shall, impose any duty or
+obligation upon Sheernox Technology Group to monitor or review Your Content or the content of
+Your end-users at any time. You remain solely responsible for Your Content, and any liability
+generated therefrom.
+
+3.7 The termination of this Agreement will terminate Your access to the Services and Your
+license to the Host Materials (as defined in Section 5.2 of this Agreement). Sheernox Technology
+Group shall not be liable to You or to any third party for termination of the Services permitted
+under this agreement. Upon termination of this Agreement, Sheernox Technology Group reserves
+the right to maintain copies of Your data files and records for archival purposes, but does not
+undertake any obligation to do so. Sheernox Technology Group reserves the right to impose an
+early termination charge for all Services terminated prior to the last day of the billing cycle.
+
+3.8 If either party cancels or terminates this Agreement for any reason, You shall be solely
+responsible for making all necessary arrangements for securing a replacement host and moving all
+electronic data, graphics, images, video or text to the new service provider. Upon termination of
+this Agreement, provisions that by their nature would be expected to survive termination shall
+survive and remain in full force and effect in accordance with their terms.
+
+4. ACCOUNT SET UP
+
+
+4.1 When You register for the Services, Sheernox Technology Group will provide You with a user
+ID and a password. You may use the Services or modify Your data and content only through such
+user ID and password. You are entirely responsible for maintaining the confidentiality of Your user
+ID and password and for any and all activities which occur using those credentials. You agree to
+immediately notify Us of any unauthorized use of Your account or any other breach of security
+known to You.
+
+4.2 You must provide Us with a primary email address that is not part of any domain hosted by
+Us. All notices and communications between Us will be sent to the email address You provide, and
+You are therefore required to keep this address current or notify Us if Your address changes. You
+should notify Us if any of Your contact and/or billing information changes so that We may update
+Your account. It is also Your responsibility to make sure that Our domain(s), such as
+sheernox.com, are not included in any spam block list used by You or Your mail provider.
+
+4.3 Providing false or inaccurate contact information of any kind may result in the Termination
+for Cause of Your account per Section 3.2 of this Agreement.
+
+4.4 You are responsible for all activity transpiring under Your account. We therefore highly
+recommend that You secure file, directory, and script permissions to the most restrictive settings
+possible. You agree that You have the technical ability to properly operate a web site and that
+You are responsible for any actions performed under Your account, including but not limited to,
+damage caused to Your site, Sheernox Technology Group’s site and/or equipment, and any other
+site.
+
+5. INTELLECTUAL PROPERTY RIGHTS
+All Services provided by Sheernox Technology Group may only be used for lawful purposes.
+
+5.1 As between You and Sheernox Technology Group, Sheernox Technology Group acknowledges
+that it claims no proprietary rights in or to the content (including without limitation, text,
+software, music, sound, audio visual works, motion pictures, photographs, animation, video and
+graphics) supplied by You for use on Your web site ("Your Content"). You hereby grant to Sheernox
+Technology Group a non-exclusive, worldwide and royalty-free license to copy, make derivative
+works, display, perform, use, broadcast and transmit on and via the Internet Your Content, solely
+for the benefit of You and to enable Sheernox Technology Group to perform its obligations
+hereunder.
+
+5.2 In connection with performance of the Services and at the sole discretion of Sheernox
+Technology Group, Sheernox Technology Group may (but is not obligated to) provide You with
+certain materials, including, without limitation, computer software (in object code or source code
+form), data, documentation or information developed or provided by Sheernox Technology Group
+or its suppliers under this Agreement, domain names, electronic mail addresses and other network
+addresses assigned to You, and other know-how, methodologies, equipment, and processes used
+by Sheernox Technology Group to provide You with the Services ("Host Materials"). Subject to the
+terms and conditions of this Agreement, Sheernox Technology Group hereby grants You a limited,
+
+
+revocable, non-transferable, non-exclusive license to use the Host Materials solely in connection
+with the Services. This license terminates when this Agreement terminates. As between You and
+Sheernox Technology Group, You acknowledge and agree that Sheernox Technology Group owns all
+right, title, and interest or otherwise has acquired all applicable licenses for the Host Materials,
+and all copyright, trade secret, patent, trademark and other intellectual property rights therein.
+Any use of the Host Materials after termination of this Agreement is not licensed and strictly
+prohibited. You agree that You will not upload, transmit, reproduce, distribute or in any way
+exploit any Host Materials obtained through the Services without first obtaining the express
+written permission to do so from Sheernox Technology Group.
+
+5.3 This Agreement does not constitute a license to use Sheernox Technology Group’s trade
+names, service marks or any other trade insignia. Any use of any of Sheernox Technology Group’s
+trade names, service marks or any other trade insignia is strictly prohibited, absent Sheernox
+Technology Group’s prior written consent.
+
+5.4 As a specific matter – You are not permitted to register any Uniform Resource Locator (URL)
+or world wide web address that contains any of Our trademarks or URLs or that contain any terms
+that are confusingly similar to Our trademarks or Our URLs.
+
+5.5 You may not register any URL or world wide web addresses that consist of, or contain,
+common or likely misspellings of Our trademarks or Our URLs.
+
+5.6 In the event that You wish to register a URL and You are unclear as to whether the URL
+would be considered to be a violation of this provision, You are invited to contact Us. Upon
+receipt of Your request, We will issue a determination to You within thirty (30) days as to whether
+the URL would be a violation of this Agreement.
+
+5.7 In the event that You do not receive a response from Us within thirty (30) days, You should
+consider registration of the URL to be a violation of this Agreement and You should not register
+the URL.
+
+5.8 If You violate this Agreement, You will immediately transfer the offending URL to Us upon
+demand, and You agree to pay Us $5000 in stipulated liquidated damages for each URL registered
+in violation of this Agreement. This remedy shall be cumulative to any other legal or equitable
+remedies provided under provincial or federal law.
+
+5.9 You specifically agree to pay the liquidated damages referenced above. In agreeing to pay
+these liquidated damages, You acknowledge that this amount is not a penalty, and that the actual
+damages are uncertain and difficult to ascertain, but that this amount represents the parties' good
+faith attempt to calculate an appropriate compensation based on anticipated actual damages.
+
+5.10 If We are required to enlist the assistance of an Attorney or other person to collect any
+liquidated damages or any other amount of money from You, or if We are required to seek the
+assistance of an Attorney to pursue injunctive relief against You, or if We are required to file an
+
+
+ICANN complaint against You in order to bring about the transfer of an offending URL to Us from
+You, then You additionally agree that You will reimburse Us for all fees incurred in order to
+collect these liquidated damages, or in order to seek injunctive relief from You, or in order to file
+and prosecute an ICANN complaint.
+
+5.11 You understand that even a nominal amount of damages may require the expenditure of
+extensive legal fees, travel expenses, costs, and other amounts that may dwarf the liquidated
+damages themselves. You agree that You will pay all of these fees and costs.
+
+6 DMCA Notice and Takedown Policy
+
+6.1 Introduction
+
+Sheernox Technology Group ("Sheernox Technology Group") implements the following DMCA Notice
+and Takedown Policy. Sheernox Technology Group respects the intellectual property rights of third
+parties, and expects others to do the same. As part of our effort to recognize the copyrights of
+third parties, Sheernox Technology Group complies with the U.S. Digital Millennium Copyright Act
+("DMCA") and is therefore protected by the limitations on liability recognized by 17 U.S.C. § 512;
+commonly known as the "safe harbor" provisions of the DMCA. Sheernox Technology Group’s
+infringement notification procedure, counter-notification procedure, and takedown policies, are
+set forth below.
+
+7 Notice of Claimed Infringement
+
+7.1 Abuse Warning
+
+The DMCA permits copyright owners, or their authorized agents, to submit notifications to service
+providers, such as Sheernox Technology Group, requesting that infringing material hosted on
+Sheernox Technology Group’s servers be disabled or removed. Importantly, the DMCA imposes
+significant penalties – including court costs and attorneys fees – on those who abuse the
+infringement notification procedure, by misrepresenting either that material is infringing, or was
+removed by mistake. See; 17 U.S.C. § 512(f). Sheernox Technology Group will pursue those who
+abuse its DMCA notice or counter-notification procedure, and will cooperate with law enforcement
+in any investigation of such abuse. Please make sure that you meet all the qualifications before
+submitting a DMCA notice to our Designated Agent identified below.
+
+7.2. Notification Contents and Procedure
+
+If you believe that your work has been copied, reproduced, altered or published in a way that
+constitutes copyright infringement under federal law, or your copyrights have been otherwise
+violated, please submit a DMCA notice to Sheernox Technology Group’s Designated Copyright
+Agent, containing the following:
+
+
+
+
+
+         1. an electronic or physical signature of the person authorized to act on behalf of the
+            owner of the copyright or other intellectual property interest;
+         2. a description of the copyrighted work or other intellectual property that you claim
+            has been infringed;
+         3. a description of where the material that you claim is infringing is located on
+            Sheernox Technology Group’s servers (preferably including specific URL's associated
+            with the material);
+         4. your full name, address, telephone number, and email address;
+         5. a statement by you that you have a good faith belief that the disputed use is not
+            authorized by the copyright owner, its agent(s), or the law; and
+         6. a statement by you, made under penalty of perjury, that the above information in
+            your Notice is accurate and that you are the copyright or intellectual property owner
+            or authorized to act on the copyright or intellectual property owner's behalf.
+
+Claimants may send their Notice of Claimed Infringement to:
+
+Sheernox Technology Group, Abuse Dept.
+#205 – 689 Tranquille Road
+Kamloops, BC, V2B 0C7
++1 (855) 375-8324
+abuse@sheernox.com
+
+Please do not send other inquires or information to our Designated Agent.
+
+8. Takedown Policies and Procedures
+
+Sheernox Technology Group implements the following Takedown Policies and Procedures. Upon
+receipt of any notification of claimed copyright infringement, Sheernox Technology Group will act
+expeditiously to notify its customer of the alleged infringement, and take steps to disable or
+remove the subject material. DMCA Notices are generally processed within two (2) business days
+from receipt, absent extenuating circumstances. Sheernox Technology Group reserves the right at
+any time to disable access to, or remove any material or expressive work accessible on or from its
+servers or services, that is claimed to be infringing via a valid DMCA Notice, or based on facts or
+circumstances from which infringing activity is apparent. It is the firm policy of Sheernox
+Technology Group to terminate the account of repeat copyright infringers, when appropriate, and
+Sheernox Technology Group will act expeditiously to remove access to all material that infringes
+on another's copyright, according to the procedure set forth in 17 U.S.C. §512 of the DMCA. The
+procedure for notifying Sheernox Technology Group of claimed copyright infringement is set forth
+in Section 7.2, hereof. If the DMCA notice does not comply with §512 of the DMCA, but does
+substantially comply with the (3) three requirements for identifying infringing works according to
+§512 of the DMCA, Sheernox Technology Group shall attempt to contact or take other reasonable
+steps to reach the complaining party to assist that party comply with sending a compliant DMCA
+Notice. As noted above, when Sheernox Technology Group’s Designated Agent receives a valid
+
+
+notice, Sheernox Technology Group will act expeditiously to remove and/or disable access to the
+infringing material and shall notify the affected customer or subscriber. Then, the affected
+customer or subscriber may submit a counter-notification to the Designated Agent, using the
+counter-notification procedures set forth below. Sheernox Technology Group reserves the right to
+modify, alter or add to this policy, and all affected persons should regularly check back to this
+page to stay current on any modifications.
+
+9. Counter-Notification Procedures
+
+If the Recipient of a Notice of Claimed Infringement ("Notice") believes that the Notice is
+erroneous or false, and/or that allegedly infringing material has been wrongly removed/disabled
+in accordance with the procedures outlined above in Section III above, the Recipient is permitted
+to submit a counter-notification pursuant to 17 U.S.C. § 512(g)(2) & (3). A counter-notification is
+the proper method for the Recipient to dispute the improper removal or disabling of material
+pursuant to a Notice. The information that a Recipient provides in a counter-notification must be
+accurate and truthful, and the Recipient will be liable for any misrepresentations contained in the
+counter-notification pursuant to 17 U.S.C. § 512(f).
+
+9.1 To initiate a counter-notification, the Recipient must submit to Sheernox Technology Group’s
+Designated Copyright Agent the following information:
+
+         1. a specific description of the material that was removed or disabled pursuant to the
+            Notice.
+         2. a description of where the material was located within Sheernox Technology Group
+            or the Content before such material was removed and/or disabled (preferably
+            including specific URL's associated with the material.)
+         3. a statement reflecting the Recipient's belief that the removal or disabling of the
+            material was done so erroneously. For convenience, the following language may be
+            utilized:
+            "I swear, under penalty of perjury, that I have a good faith belief that the
+            referenced material was removed or disabled by the service provider as a result of
+            mistake or misidentification of the material to be removed or disabled."
+         4. a statement that the Recipient consents to the jurisdiction of the Federal District
+            Court in and for the judicial district where the Recipient is located, or if the
+            Recipient is outside of the United States, for any judicial district in which the service
+            provider may be found, and that the Recipient will accept service of process from
+            the person who provided the Notice, or that person's agent.
+         5. the Recipient's physical address, telephone number, and email address.
+
+Counter Notifications can be sent to:
+
+Sheernox Technology Group, Abuse Dept.
+#205 – 689 Tranquille Road
+
+
+
+Kamloops, BC, V2B 0C7
++1 (855) 375-8324
+abuse@sheernox.com
+
+Please do not send other inquires or information to our Designated Agent.
+
+After receiving a DMCA-compliant counter-notification, Our Designated Copyright Agent will
+forward the counter-notification to the original claimant who first provided the Notice identifying
+the allegedly infringing material.
+
+Within ten to fourteen (10-14) days from Sheernox Technology Group’s receipt of a valid counter-
+notification, Sheernox Technology Group will replace or cease disabling access to the disputed
+material unless Sheernox Technology Group’s Designated Agent receives notification that the
+original claimant has filed an action seeking a court order to restrain the Recipient from engaging
+in infringing activity relating to the material on Sheernox Technology Group’s system or network.
+
+10. Service Provider Customers of Sheernox Technology Group
+
+Some of Sheernox Technology Group’s customers are, themselves, "Service Providers" within the
+meaning of 17 U.S.C. § 512(k)(1). Accordingly, Sheernox Technology Group requests that any DMCA
+Notices relating to alleged infringement by third party users, customers or subscribers of Sheernox
+Technology Group’s Service Provider Customers be submitted directly to the DMCA Agent
+designated by such customer.
+
+11. Modifications
+
+Sheernox Technology Group reserves the right to modify, alter or add to the DMCA policy set forth
+in Sections 6-10 above, and all users should regularly check back regularly to stay current on any
+such changes.
+
+12. CONTENT AND ACCEPTABLE USE POLICY
+
+12.1 You agree to comply with Sheernox Technology Group’s Acceptable Use Policy ("AUP"),
+which may be found by accessing Sheernox Technology Group’s web site, which policy is hereby
+incorporated by reference as an indispensable part of this Agreement. Sheernox Technology Group
+reserves the right to modify the AUP at any time by posting the modified policy on its web site.
+You agree to monitor the Sheernox Technology Group home page for any changes to the AUP. Your
+continued use of the Services after the effective date of any changes to the AUP constitutes Your
+manifestation of intent to be bound by such changes. Sheernox Technology Group may, at its sole
+discretion, immediately terminate Your access to the Services, or this Agreement, if Your conduct
+violates the AUP, or if any of Your end users' conduct violates the AUP.
+
+12.2 Sheernox Technology Group will not actively monitor the content of the web sites being
+hosted by Sheernox Technology Group, although Sheernox Technology Group, at its sole
+
+
+
+discretion, may elect to electronically monitor its network and may disclose any content or
+records concerning Your account as necessary to satisfy any law, regulation, or other
+governmental request or to properly operate Our network and protect any of Our customers.
+Sheernox Technology Group will investigate complaints of a violation of a third party right or of
+the AUP. Sheernox Technology Group will cooperate with those attempting to minimize Internet
+abuse and reserves the right to institute "filters" or other mechanisms for that purpose. Sheernox
+Technology Group will cooperate with law enforcement authorities and reserves the right to notify
+such authorities if it suspects that You or any of Your end users are engaged in illegal activities.
+Nothing contained in this Section, or anywhere in this Agreement, is intended to bestow any rights
+on any third party, and no third parties shall be entitled to enforce any terms of this Agreement
+between the Parties.
+
+12.3 You acknowledge and expressly agree that Sheernox Technology Group will not be liable to
+You or any of Your end users for any action Sheernox Technology Group takes to remove or restrict
+access to the Services for any alleged violation of the AUP, or exercising its rights as a Good
+Samaritan under the Telecommunications Act of 1996 (47 U.S.C. § 230(d)) or under the Digital
+Millennium Copyright Act of 1998 (See Section 12.8 below).
+
+12.4 Sheernox Technology Group may, at its sole discretion, immediately terminate Your access
+to the Services, and terminate this Agreement for cause, if Your conduct violates the acceptable
+uses outlined below, or if any of Your end users' or downstream customers' conduct violate such
+acceptable uses.
+
+12.5 Sheernox Technology Group takes the issue of child pornography very seriously, and any
+potential harm to minors using our services is strictly prohibited. Content that is or may be
+perceived to be child pornography will be immediately removed from public access upon
+notification or detection by Us. Additionally, Sheernox Technology Group reserves the right to
+terminate any account whose website(s) hosts or links to child pornography immediately and
+without notice to You. If the account is a Sheernox Technology Group reseller account, the
+account will be suspended and the reseller will be directed to terminate the responsible account.
+You agree to cooperate in any such efforts. Content or communications seeking to solicit, lure or
+entice minors into sexual activity or lewd behavior is also strictly prohibited, and will be treated
+the same as, or similar to, child pornography, consistent with applicable law. You agree to
+cooperate with Sheernox Technology Group in any effort to investigate, disable or remove such
+content originating with Your end-users. Consistent with federal law, Sheernox Technology Group
+will cooperate with law enforcement authorities and will notify such authorities if it suspects that
+You or any of Your downstream customers or end users are engaged in any such illegal activities.
+
+12.6 In accordance with the reporting requirements of 18 U.S.C. § 2258A, We will report to the
+CyberTipline any actual knowledge of apparent violations of 18 U.S.C §§ 2251, 2251A, 2252,
+2252A, 2252B, 2260, or 1466A. If You suspect any instances of child pornography appearing on
+sites hosted by Sheernox Technology Group, We encourage You to send such reports to Our abuse
+address (abuse@sheernox.com), and include the file name and/or URL (or other location on the
+customer's site), victim (if known), date of birth, date of production, and any other information
+
+
+about the suspect image(s). Do not send the image(s) in question. Alternately, You may use the
+CyberTipline to report suspected child pornography. Reports involving sites not hosted by
+Sheernox Technology Group should be directed to law enforcement or to a cooperating child
+pornography organization such as: http://www.asacp.org.
+
+12.7 We respect the intellectual property rights of all parties and have adopted a policy
+regarding termination of repeat copyright infringers under the Digital Millennium Copyright Act for
+content that applies under DMCA jurisdiction. Copies of Our Repeat Infringer Policy are available
+on request to our clients.
+
+12.8 Section 230 Notice: You acknowledge Your responsibility to prevent minors under Your care
+from accessing harmful or inappropriate material on Your site. You agree not to allow minors to
+view any such site, and agree to take responsible measures to prevent them from doing so.
+Numerous commercial online safety filters are available which may help users limit minors' access
+to harmful or inappropriate material. Pursuant to 47 U.S.C. §230(d), You are hereby informed that
+You can research such services at websites such as: www.getnetwise.org or http://www.child-
+internet-safety/internet_filters.php, among others. Please note that this Site makes no
+representation or warranty regarding any of the products or services referenced on such sites, and
+recommend that the user conduct appropriate due diligence before purchasing or installing any
+online filter. You agree to take particular steps to prevent minors from viewing this site if Your
+computer can be accessed by a minor. Finally, You agree that if You are a parent or guardian of a
+minor child, it is Your responsibility, not Ours, to keep any age-restricted content on Our Site from
+being displayed or accessed by Your children or wards.
+
+Pursuant to the Communications Decency Act ("CDA"), 47 U.S.C. § 230(c)(1), and court decisions
+interpreting the scope of the CDA, You acknowledge and understand that Sheernox Technology
+Group operates as the provider of an interactive computer service. Thus, We are immune from,
+and cannot be held responsible for, claims arising from the publication of Your content (including
+third-party content published on Your website(s)). We do not create such content, and We are not
+responsible for the publication of remarks or communications of You or third-parties that may
+arguably rise to the level of being actionable under federal or state laws including, but not limited
+to, the publication of material that might be considered defamatory, or violative of privacy or
+publicity rights. Note, that federal law allows Sheernox Technology Group to remove any content
+found to be offensive, defamatory, obscene or otherwise violative of Our policies, without
+impacting Our immunity status as an interactive computer service. Nothing contained in this
+paragraph is intended to limit or alter the immunity from claims provided by Section 230 of the
+Communications Decency Act. In the event that any court finds that any third party
+communication or third party content hosted by us falls outside of the realm of the immunity
+provided by the CDA, this shall not be deemed to be a waiver of any legal protections provided by
+Section 230 for any and all other content posted on our Website or hosted via our Services.
+
+12.9 Specific Requirements for Service Provider and User-Generated Content Subscribers
+
+
+
+
+
+If You use Our Services for any site, sub-domain, page or business model that allows Your end
+users or customers to control or upload material to Internet space assigned to You by Us, You shall
+be deemed to be acting as a "Service Provider" with respect to such services and/or customers.
+Service Providers include but are not limited to Clients which; a) resell bandwidth as hosts to third
+parties; b) operate user-generated content sites such as forums, "tube" sites, review sites, and
+online classified advertising sites; c) operate search engines; or d) operate peer-to-peer file
+sharing networks. Clients acting as a Service Provider for third party users shall comply with the
+following provisions:
+
+ •   You shall notify Us of all domains, web pages or IP addresses for which You are acting as
+     Service Provider.
+ •   You shall comply with 17 U.S.C. §512 of the DMCA by properly designating an agent for
+     receipt of copyright infringement notices, and You shall publish a link on the home page of
+     any website for which You are a Service Provider to a DMCA Notice and Takedown Policy,
+     identifying the website's designated agent and associated contact information.
+ •   You shall provide Us with a current link to Your DMCA Notice and Takedown Policy and
+     further advise Us of any changes to Your Designated Agent contact information. This shall be
+     a continuing obligation for as long as You use Our Services.
+
+It is the policy of Sheernox Technology Group to provide any infringement notices it receives
+relating to Service Provider Subscribers, directly to the Subscriber's Designated DMCA Agent, and
+to further notify any copyright claimants of the identity and contact information for the Service
+Provider Subscriber's Designated DMCA Agent. Failure to maintain compliance with this section
+shall constitute a material breach of this Agreement. Nothing contained herein should be
+interpreted as legal advice, and You are encouraged to consult your personal attorney regarding
+DMCA safe harbor compliance, or any other legal matter.
+
+12.10 In keeping with Our DMCA policies and obligations set forth above, You understand, agree,
+and expressly allow Us to access and subsequently disable public access to any files or data
+residing on the server, disk, partition, or other data space under Your control as Our customer
+when such files or data, in Our discretion; 1), have been identified in a substantially compliant
+DMCA notice under 17 U.S.C. § 512; or 2) when We become aware of facts or circumstances
+indicating that such files or data are infringing on the copyrights or other intellectual property
+rights of third parties. Given that Our customers may employ various methods of securing files in
+conjunction with Our Services, and in an attempt to avoid material disruption of Our customers'
+Services, You agree that You will provide Us with Your preferred procedure for disabling access to
+material identified under this provision. If We forward You a substantially compliant DMCA Notice
+and which concerns content under Your control, You are obligated under this Agreement to
+immediately disable or remove access to such content. Irrespective of the above, We reserve the
+right to disable or remove access to such content, in Our discretion, and without claim of damage
+or injury by You. While We will attempt to simply disable access to such content without fully
+deleting it, or suspending all services to your account, We make no warranties concerning harm or
+injury to the content, and reserve the right to take any necessary actions to disable access to the
+
+
+
+identified material, including suspension or termination of Services. It is therefore in Your best
+interest to promptly respond to any DMCA Notices You may receive. Should You or Your website's
+users feel that such DMCA Notice was erroneously or improperly sent, You must follow the
+Counter-Notification procedure set forth above, and wait the required period of time, before We
+allow public access to the content to resume.
+
+12.11 Nothing contained in this Section, or any part of this Agreement, shall constitute legal or
+professional advice regarding any matter referenced therein. You are responsible for obtaining
+your own legal advice regarding compliance with any and all applicable laws or regulations.
+
+13. ZERO TOLERANCE SPAM POLICY
+
+13.1 You agree to comply with Sheernox Technology Group’s Anti-Spam Policy which may be
+found at https://www.sheernox.com/terms/ and which is hereby incorporated by reference as an
+indispensable part of this Agreement. Use of Sheernox Technology Group’s services for any illegal
+spam activities is strictly prohibited.
+
+13.2 Sheernox Technology Group reserves the right to modify the Anti-Spam Policy at any time
+by posting the modified policy on its web Site. You agree to monitor Sheernox Technology Group’s
+home page for any changes to the Anti-Spam Policy. Your continued use of the Services after the
+effective date of any changes to the Anti-Spam Policy constitutes Your manifestation of intent to
+be bound by such changes.
+
+14. PAYMENT
+
+14.1 Payment for Services is due in advance of the time period for which such payment covers.
+Services are billed on an automatic and recurring basis unless and until you follow Sheernox
+Technology Group’s cancellation procedure set forth in this Agreement.
+
+14.2 Unless separately negotiated by You and Us, and confirmed by separate written agreement,
+the initial and recurring Fees for the Services selected by You shall be as provided in the initial
+on-line order form. All set-up fees and special programming fees are non-refundable. Fees for
+Services are payable in advance. Failure to make payment of Fees for Services when due may
+result in the suspension or termination of Services.
+
+14.3 At the time of registration, You must select a payment method. Sheernox Technology Group
+reserves the right to contract with a third party to process all payments. Such third party may
+impose additional terms and conditions governing payment processing. If You do not pay all Fees
+when due, Your account will be deemed past due. For any past due Fees, Sheernox Technology
+Group will charge You a late fee at fifteen percent (15%) or the highest rate allowed by
+applicable law, whichever is lower, per month of the unpaid amount, until paid. A minimum late
+fee amount of $2.50 USD is charged in cases where the calculated late fee falls below this figure.
+
+
+
+
+
+14.4 You agree to pay any and all taxes, including personal property, value added, or sales
+taxes, resulting from Your use of the Services. Sheernox Technology Group is not responsible for
+any bank fees incurred by You due to Your use of check cards, automatic payment services,
+insufficient funds, and any and all other fees your financial institution may impose due to Your use
+of the Services. If Sheernox Technology Group should receive less than full payment of the Fees
+due to taxes, bank charges, transfer fees, or the like, Sheernox Technology Group will invoice You
+for the difference between payment received and the Fees due.
+
+14.5 You also agree to pay all attorney and collection fees arising from Sheernox Technology
+Group’s efforts to collect any past due Fees. If you cancel any Service prior to the expiration of
+the pre-paid Fees, You understand and agree that Sheernox Technology Group will not issue You
+any refund whatsoever, including but not limited to any remaining pre-paid Fees, set up Fees,
+and/or special programming Fees.
+
+14.6 Coupons and Discount Codes – From time to time, Sheernox Technology Group may offer
+coupons or other discount codes which may be used when signing up for hosting with Us. Coupons
+and discount codes are for first-time customers of Sheernox Technology Group and must be used
+at the time of Your initial purchase with Us – they may not be applied after Your service with Us
+has already been initiated. Unless expressly provided, such coupons and discount codes may not
+be used toward upgrades to Your account. Any account We deem to be attempting unauthorized
+coupon or discount code use may be subject to Termination for Cause.
+
+14.7 Accounts that are past due over 7 days are deemed to be abandoned and are subject to
+permanent and non-recoverable termination of services including data destruction. Data
+stored on a client's services will not be available to the client until reconnection is established or
+alternative arrangements are made to the sole satisfaction of Sheernox Technology Group.
+Sheernox Technology Group is NOT responsible for data integrity, regardless of circumstance.
+Sheernox Technology Group strongly recommends keeping up to date and off network backups to
+protect against data loss.
+
+15. BACK UPS & DATA LOSS
+
+15.1 You agree that Your use of Sheernox Technology Group’s Services is at Your own risk, and
+that Sheernox Technology Group is not liable for any data loss in connection with its Services. You
+are solely responsible for creating backups of Your Content. If, during Our own routine
+maintenance, We do create a backup of Your Content which You later request Us to restore to
+Your account, We cannot guarantee that we will be able to do so, or that Your Content will be
+unharmed as a result of the initial data loss or the subsequent restore procedure. To that end, We
+highly recommend that You establish Your own routine backup procedure and that You
+periodically test restoring files from Your backup media to ensure that You are making viable
+backups.
+
+15.2 You acknowledge that unless you subscribe to a Hosting Service that expressly includes the
+independent backup of Your Content as a service, Sheernox Technology Group’s back-up activities
+
+
+are primarily for Sheernox Technology Group’s own disaster recovery purposes, and that YOU ARE
+RESPONSIBLE FOR THE STORAGE, BACK-UP AND ARCHIVING OF YOUR CONTENT. Also note,
+Hosting Services include access to one or more tools via your Control Panel that allow you to back-
+up Your Content. Please use these tools and back-up Your Content frequently.
+
+16. RESOURCE USAGE & SECURITY
+
+16.1 Sheernox Technology Group may, at its discretion, impose hard set limits on each account's
+system resources. We do not actively disable accounts until they greatly exceed an acceptable
+level of usage. There are numerous activities that could cause such problems; these include: CGI
+scripts, FTP, PHP, HTTP, etc. Sheernox Technology Group will advise You of a temporary block
+placed on any account found to be consuming an inordinate amount of system resources, to the
+point of degrading overall system performance.
+
+16.2 Except where expressly permitted by law, You may not translate, reverse-engineer,
+decompile, disassemble, or make derivative works from the Site and/or Materials. You hereby
+agree not to use any automatic device or manual process to monitor or reproduce the Site or
+Materials, and will not use any device, software, computer code, or virus to interfere or attempt
+to disrupt or damage Our Services and Site or any communications on it. If You do not adhere to
+this provision of this Agreement, in addition to monetary damages and other remedies available to
+Sheernox Technology Group, You hereby agree to pay liquidated damages of $5000.00 plus any
+and all fees associated with recovery of these damages, including attorneys' fees and costs.
+
+16.3 SECURITY Any violation of the security to the Site and/or Services is prohibited and may
+result in criminal and civil liability. Unauthorized Access of the servers used to provide the Site,
+Services, and/or Materials (the "Servers") is strictly prohibited and is a violation of this Agreement
+and the AUP per Section 6 of this Agreement. You agree not to engage in such activity or to
+attempt to breach the Servers for the purpose of altering or manipulating the hardware and
+software, compromising the Servers, or for any other unauthorized use commonly known as
+"hacking." In addition, You are prohibited from the following:
+
+         1. Any form of unauthorized access to or use of data, systems or networks, including
+            the Site and/or Services;
+         2. Unauthorized monitoring of data or traffic on any network or system without express
+            authorization of the owner of the system or network;
+         3. Unauthorized interference with service to any user, host or network;
+         4. Introducing a malicious program into the network or server (e.g. viruses and worms),
+            including the Site and/or Services;
+         5. Circumventing user authentication or security of any host, network or account;
+         6. Using an account with another provider to promote Your site with Us in an abusive
+            manner.
+         7. Utilizing Our Services for the purpose of compromising the security or tampering with
+            system resources or accounts on computers at Our site or any other site.
+
+
+In the event You are involved in any violation of system security, We reserve the right to release
+information about You to system administrators at other sites in order to assist in resolving
+security incidents, and We shall also cooperate with any law enforcement agency investigating a
+criminal violation of system or network security. Additionally, any violation of these security
+provisions may, at Our sole discretion, be grounds for Termination for Cause as described in
+Section 3.2 of this Agreement.
+
+16.4 BANDWIDTH USAGE Your monthly bandwidth allowance is determined by the specific
+package for which You sign up. If Your account exceeds Your monthly allowance, You will be
+charged an overage fee as outlined in Your service order. If this fee is not outlined in Your service
+order, then You will be charged the default rate of $25.00 per Megabit overage, or $0.10 per
+Gigabyte, whichever is lower. Unused bandwidth is not carried over to the next month for
+purposes of a credit. Unmetered bandwidth plans may be part of a shared pool of bandwidth,
+please consult a sales representative to see if the plan you are interested in is dedicated or
+shared.
+
+16.5 FAIR USE POLICY You may not use the Services or Sheernox Technology Group’s technology
+infrastructure in any manner that interferes with or disrupts Sheernox Technology Group’s other
+customers. If disruptive use to other customers is detected it is considered a breach of these
+terms and Sheernox Technology Group may exercise its rights under section 3 including suspending
+or termination of Services. We provide specific Services to our Clients and define normal, fair, and
+reasonable use. We expect regular usage patterns from individual component machines and the
+client solution as a whole. Should we at our sole discretion determine a Client is not using this
+Service as defined under this Fair Use Policy, we may take actions to mitigate negative impact to
+Service delivery systems including but not limited to the following:
+
+         1. Rate-limit the data the Client may send and/or receive from the individual service to
+            the entire solution level
+         2. Impose hard limits on resource usage
+         3. Adjust pricing to a standard bandwidth rate (market-dependent)
+         4. Suspend or terminate Service to any or all Client services
+
+
+Additional Considerations
+*We offer Content Delivery Network (CDN) Services and we facilitate streaming media solutions for
+our clients. Clients may not use TB/Unmetered bandwidth plans for the purpose of operating a
+CDN, nor may they run streaming media solutions or VPN services without gaining consent from Us.
+
+16.6 UNLIMITED POLICY On certain web hosting plans, Sheernox Technology Group does not
+place limits on the amount of particular resources a single client may use. Sheernox Technology
+Group makes every reasonable effort to provide clients with the disk space and bandwidth
+resources needed for their websites within the limitations of these Terms of Service. Sheernox
+Technology Group monitors all servers via automated and non-automated methods to help ensure
+
+
+
+
+no single client adversely impacts other clients located on the same server. Please review the
+Acceptable Usage Policy for more details.
+
+Please note that shared hosting plans are for website hosting only. The storage of backups (unless
+otherwise allowed in this agreement), file repositories, MP3s, videos, photo archives, and similar
+is strictly prohibited. Violators of this policy may have their accounts terminated.
+
+17. UPTIME GUARANTEE
+
+17.1 Sheernox Technology Group may offer You a Service Level Agreement ("SLA") guaranteeing
+certain availability of Our Services. If applicable, the terms of any such SLA were separately
+negotiated between You and Us, and such SLA, if any, is hereby incorporated by reference as an
+indispensable part of this Agreement.
+
+To be eligible for any credits to Your account, You must follow the specific procedures set forth in
+the SLA for notifying Us of Your desire for credits. You understand and agree that the failure to
+follow the procedure in the SLA within three (3) days of the triggering event will result in Your
+waiver of any right to receive credits.
+
+
+
+
+18. PRICE CHANGE
+
+The amount You pay for hosting will never increase during a specific term or time period for which
+you have signed up for Our Services. We reserve the right to change prices listed on our web sites
+at any time, without notice, and the right to modify the amount of resources given to plans at any
+time. Additionally, if we terminate this agreement without cause pursuant to paragraph 3.3 of the
+Agreement, You understand that if We agree to provide Services to You in the future, the amount
+You paid under any prior term or time period is not determinative of the amount You pay should
+We provide Services to You again. It is Your responsibility to check Our website for plan or price
+changes should You wish to take advantage of plan or price changes which may have occurred.
+Sheernox Technology Group does not automatically update Your plan. All upgrades or downgrades
+will be performed at Your request and may include modification fees or require reinitiating
+service with Us.
+
+19. INDEMNIFICATION
+
+You agree to defend, indemnify, and hold Sheernox Technology Group and its Affiliates harmless
+from and against any and all claims and liabilities, including reasonable attorneys' and experts'
+fees, related to or arising from (a) any breach of Your covenants under this Agreement; (b) Your
+use of the Services; (c) all conduct and activities occurring under Your user ID and password; (d)
+any item or service sold or advertised in connection with Your Content or Your information and
+data; (e) any defamatory, libelous or illegal material contained within Your Content or Your
+information and data; (f) any claim or contention that Your Content or Your information and data
+
+
+infringes any third party's patent, copyright or other intellectual property rights or violates any
+third party's rights of privacy or publicity; (g) any third party's access or use of Your Content or
+Your information and data; (h) any violation of the applicable Acceptable Use Policy; and, (i) to
+the extent applicable to Your site, You warrant and represent that: 1) Your Content complies with
+Title 18, U.S.C. § 2257 and 28 C.F.R. § 75 et seq., as amended; 2) all performers depicted in the
+Your Content were over the age of eighteen (18) when the content was created; 3) Your Content
+does not contain any images which constitute child pornography, obscenity, bestiality, actual
+depictions of violence, or activities otherwise illegal in the United States of America; and 4) all
+representations and reproductions of any aspect of the likeness of actual people in the Your
+Content have been duly authorized and permitted by the persons depicted. In the event of a claim
+under this section, Sheernox Technology Group shall be permitted to select legal counsel to
+provide a defense to such claim. Sheernox Technology Group reserves the right, at its own
+expense, to participate in the defense of any matter otherwise subject to indemnification from
+You, but shall have no obligation to do so. You shall not settle any such claim or liability without
+the prior written consent of Sheernox Technology Group, which shall not be unreasonably
+withheld.
+
+20. NO WARRANTIES
+
+YOU EXPRESSLY AGREE THAT YOUR USE OF THE SERVICES IS AT YOUR SOLE AND EXCLUSIVE RISK.
+THE SERVICES ARE PROVIDED ON AN "AS IS, WITH ALL FAULTS" AND "AS AVAILABLE"
+BASIS. SHEERNOX TECHNOLOGY GROUP EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND,
+WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. OTHER
+THAN AS SET FORTH IN PARAGRAPH 11, SHEERNOX TECHNOLOGY GROUP MAKES NO WARRANTY
+THAT THE SERVICES WILL MEET YOUR REQUIREMENTS, OR THAT THE SERVICES WILL BE
+UNINTERRUPTED, TIMELY, SECURE, OR ERROR FREE; NOR DOES SHEERNOX TECHNOLOGY
+GROUP MAKE ANY WARRANTY AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE
+SERVICES OR AS TO THE ACCURACY OR RELIABILITY OF ANY INFORMATION OBTAINED THROUGH THE
+SERVICES OR THAT DEFECTS IN ANY SOFTWARE, HARDWARE OR THE SERVICES WILL BE CORRECTED.
+ANY STATEMENTS MADE REGARDING SUCH MATTERS IN PROMOTIONAL MATERIALS SHALL BE
+CONSIDERED ADVERTISING REFERENCES, AND NOT WARRANTIES. YOU UNDERSTAND AND AGREE
+THAT ANY USE YOU MAKE OF ANY MATERIAL AND/OR DATA DOWNLOADED OR OTHERWISE
+OBTAINED THROUGH THE USE OF THE SERVICES IS AT YOUR OWN DISCRETION AND RISK, AND THAT
+YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF
+DATA THAT RESULTS FROM THE DOWNLOAD OF SUCH MATERIAL AND/OR DATA.
+
+SHEERNOX TECHNOLOGY GROUP MAY MAKE THIRD-PARTY GOODS, SERVICES AND/OR SOFTWARE
+AVAILABLE TO YOU THAT ARE NOT PART OF THE SERVICES ("THIRD-PARTY SERVICES"). SHEERNOX
+TECHNOLOGY GROUP HAS NO CONTROL OVER THE CONTENT OF THIRD-PARTY SERVICES. USE OF
+ANY THIRD-PARTY SERVICES WILL BE AT YOUR OWN AND SOLE RISK AND SUBJECT TO THE TERMS
+AND CONDITIONS OF A SEPARATE AGREEMENT BETWEEN YOU AND THE THIRD-PARTY.
+
+
+
+
+
+SHEERNOX TECHNOLOGY GROUP MAKES NO WARRANTY REGARDING ANY GOODS OR SERVICES
+PURCHASED OR OBTAINED THROUGH THE SERVICES OR ANY TRANSACTIONS ENTERED INTO
+THROUGH THE SERVICES.
+
+NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM SHEERNOX
+TECHNOLOGY GROUP OR THROUGH THE SERVICES SHALL CREATE ANY WARRANTY, WHETHER BY
+IMPLICATION, ESTOPPEL OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY MARKETING OR
+PROMOTIONAL MATERIALS DESCRIBING THE SERVICES ON SHEERNOX TECHNOLOGY
+GROUP’S WEBSITE.
+
+UNLESS OTHERWISE AGREED TO IN WRITING, SHEERNOX TECHNOLOGY GROUP DOES NOT MAKE A
+BACK-UP OF YOUR SITE(S) AS PART OF THE SERVICES. ACCORDINGLY, WE ENCOURAGE YOU TO
+MAKE A BACK-UP OF YOUR SITE(S) ON A REGULAR BASIS.
+
+21. LIMITATION ON LIABILITY
+
+YOU ARE SOLELY RESPONSIBLE FOR THE PROPER OPERATION OF YOUR WEB-SITE AND/OR CONDUCT
+OF YOUR BUSINESS AND ALL OTHER MATTERS UNDER YOUR CONTROL. IN NO EVENT
+SHALL SHEERNOX TECHNOLOGY GROUP BE LIABLE TO YOU FOR ANY DAMAGES ARISING FROM OR
+RELATED TO YOUR OPERATION OF YOUR WEB-SITE AND/OR BUSINESS OR FAILURE TO OPERATE
+YOUR WEB-SITE AND/OR BUSINESS.
+
+THIS SECTION APPLIES TO ALL CLAIMS BY YOU OR YOUR END USERS IRRESPECTIVE OF THE CAUSE OF
+ACTION UNDERLYING THE CLAIM, INCLUDING, BUT NOT LIMITED TO, BREACH OF CONTRACT, TORT,
+INCLUDING BUT NOT LIMITED TO NEGLIGENCE, STRICT LIABILITY, FRAUD, AND/OR
+MISREPRESENTATION.
+
+REGARDLESS OF THE TYPE OF CLAIM OR THE NATURE OF THE CAUSE OF ACTION, YOU AGREE THAT
+IN NO EVENT WILL SHEERNOX TECHNOLOGY GROUP, OUR AFFILIATES, CONTRACTORS, SERVICE
+PROVIDERS, EMPLOYEES, AGENTS, OR LICENSORS, OR ANY OTHER PARTY INVOLVED IN CREATING,
+PRODUCING OR DELIVERING THE SERVICES, TECHNOLOGY, OR CONTENT AVAILABLE ON THE
+SERVICES ("AFFILIATES"), BE LIABLE TO YOU IN ANY MANNER WHATSOEVER: (A) FOR ANY DECISION
+MADE OR ACTION OR NON-ACTION TAKEN BY YOU IN RELIANCE UPON THE INFORMATION PROVIDED
+THROUGH THE SERVICES; (B) FOR LOSS OR INACCURACY OF DATA OR, COST OF PROCUREMENT OF
+SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY; (C) FOR ANY INDIRECT, SPECIAL, INCIDENTAL,
+CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF REVENUES,
+LOSS OF PROFITS OR LOSS OF REPUTATION, FOR BUSINESS INTERRUPTION OR SIMILAR ACTION,
+EVEN IF SHEERNOX TECHNOLOGY GROUP HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+THE TOTAL AGGREGATE AND MAXIMUM LIABILITY OF SHEERNOX TECHNOLOGY GROUP AND THE
+AFFILIATES, ARISING FROM OR OTHERWISE RELATING TO THIS AGREEMENT (REGARDLESS OF THE
+FORM OF ACTION OR CLAIM) IS LIMITED TO ANY AMOUNTS YOU HAVE PAID TO SHEERNOX
+
+
+
+
+TECHNOLOGY GROUP DURING THE SIX (6) MONTHS PRIOR TO THE ACCRUAL OF THE CAUSE OR
+CAUSES OF ACTION.
+
+
+
+
+22. GENERAL PROVISIONS
+
+22.1. Jurisdiction. This Agreement and all matters arising out of or otherwise relating to this
+Agreement shall be governed by the laws of the Province of British Columbia, Canada, excluding
+its conflict of law provisions. The parties hereby submit to the personal jurisdiction of the
+provincial and federal courts of British Columbia, Canada in the event litigation permitted under
+this Agreement is initiated. Exclusive venue for any litigation permitted under this Agreement
+shall be with the provincial and federal courts located in British Columbia, Canada.
+
+22.2. Arbitration. If there is a dispute between the parties arising out of or otherwise relating to
+this Agreement, the parties shall meet and negotiate in good faith to attempt to resolve the
+dispute. If the parties are unable to resolve the dispute through direct negotiations, then, except
+as otherwise provided herein, either party shall submit the issue to binding arbitration in
+accordance with the then-existing Commercial Arbitration Rules of the American Arbitration
+Association. Arbitral Claims shall include, but are not limited to, contract and tort claims of all
+kinds, and all claims based on any federal, state or local law, statute, or regulation, excepting
+only claims under applicable worker's compensation law, unemployment insurance claims,
+intellectual property claims, actions for injunctions, attachment, garnishment, and other
+equitable relief. The arbitration shall be conducted in British Columbia, Canada and conducted by
+a single arbitrator, knowledgeable in Internet and e-Commerce. Except as provided below, the
+party bringing the action shall be responsible for paying all costs for arbitration, including the
+arbitrator's fees. Each party shall bear its own attorneys' fees (except if the matter is for the
+collection of a debt owed, the prevailing party shall be awarded its attorneys fees, all arbitration
+costs and arbitrator fees, in addition to all other applicable remedies). The arbitrator shall have
+no authority to award any punitive or exemplary damages; certify a class action; add any parties;
+vary or ignore the provisions of this Agreement, and shall be bound by governing and applicable
+law. The arbitrator shall be willing to execute an oath of neutrality. The arbitrator shall render a
+written opinion setting forth all material facts and the basis of his or her decision within thirty
+(30) days of the conclusion of the arbitration proceeding. THE PARTIES HEREBY WAIVE ANY RIGHTS
+THEY MAY HAVE TO TRIAL BY JURY IN REGARD TO ARBITRAL CLAIMS.
+
+22.3. Assignment. The rights and liabilities of the parties hereto will bind and inure to the
+benefit of their respective assignees, successors, executors, and administrators, as the case may
+be. Neither this Agreement nor any rights granted hereunder may be sold, leased, assigned or
+otherwise transferred, in whole or in part by You.
+
+22.4. Severability. If for any reason a court of competent jurisdiction or arbitrator finds any
+provision of this Agreement, or any portion thereof, to be unenforceable, that provision will be
+
+
+
+
+enforced to the maximum extent permissible and the remainder of this Agreement will continue in
+full force and effect.
+
+22.5. No Waiver. Failure by either party to enforce any provision of this Agreement will not be
+deemed a waiver of future enforcement of that or any other provision, and no waiver of one
+breach will constitute a waiver of subsequent breaches of the same or of a different nature.
+
+22.6. Complete Agreement. This Agreement (including all other policies incorporated herein)
+constitutes the entire agreement between the parties with respect to the Services, and
+supersedes and replaces all prior or contemporaneous understandings or agreements, written or
+oral, regarding such subject matter. No amendment to or modification of this Agreement will be
+binding unless in writing and signed by a duly authorized representative of both parties.
+
+22.7. Relationship Between the Parties. Sheernox Technology Group is an independent
+contractor; nothing in this Agreement shall be construed to create a partnership, joint venture or
+agency relationship between the parties.
+
+22.8. Non-Solicitation. Beginning upon commencement of the Services to You and continuing for
+a period of two (2) years after the termination of this Agreement or after any other cancellation
+or termination of Your account or Services with Us, You agree not to directly or indirectly, solicit,
+hire, contract, or otherwise employ any Sheernox Technology Group employee who was an
+employee during the term of this Agreement (including the Initial Term and any successive terms),
+to work for You or any other firm, person or business, of whatever character, corporate or
+otherwise.
+
+22.9. Headings. Section and subsection headings of this Agreement are inserted for convenience
+only and shall not be deemed to constitute a part hereof nor to affect the meaning thereof.
+
+22.10. Force Majeure. Sheernox Technology Group shall not be responsible for any failure to
+perform due to unforeseen circumstances or to causes beyond its reasonable control, including but
+not limited to: acts of God; war, riot, embargoes, acts of civil or military authority, or terrorism;
+fire, flood, earthquakes, hurricanes, tropical storms or other natural disasters; fiber cuts; strikes,
+or shortages in transportation, facilities, fuel, energy, labor or materials; failure of the
+telecommunications or information services infrastructure; hacking, SPAM, or any failure of a
+computer, server or software for so long as such event continues to delay Sheernox Technology
+Group’s performance.
+
+22.11. Export. You understand and acknowledge that the software elements of the Host Materials
+may be subject to regulation by agencies of the U.S. Government, including the U.S. Department
+of Commerce, which prohibits export or diversion of software to certain countries and third
+parties. You will not assist or participate in any such diversion or other violation of applicable U.S.
+laws and regulations. You warrant that You will not license or otherwise permit anyone not
+approved to receive controlled commodities under applicable U.S. laws and regulations and that
+You will abide by such laws and regulations.
+
+
+22.12. Government Rights. The software elements of the Host Materials have been developed at
+private expense and are "commercial computer software" or "restricted computer software" within
+the meaning of the FARs, the DFARs, and any other similar regulations relating to government
+acquisition of computer software. Nothing contained herein will be deemed to: (i) grant any
+government agency any license or other rights greater than are mandated by statute or regulation
+for commercial computer software developed entirely at private expense, or (ii) restrict any
+government rights in any extensions or custom solutions provided hereunder and developed at
+government expense.
+
+22.13. Notices Electronic Communications. All notices permitted or required under this
+Agreement may be sent by e-mail, fax, express mail, mail, or registered mail to the e-mail
+address, fax number, or address most recently provided by You and will be effective upon
+transmission. Evidence of successful transmission shall be retained. Each of the parties may
+communicate with the other by electronic means as described in this Agreement. Each of the
+parties agrees to the following for all electronic communications: (i) The user identification of a
+sender, contained in an electronic communication, is legally sufficient to verify the sender's
+identity and the communication's authenticity; (ii) An electronic communication sent by You
+containing Your user identification establishes You as its originator and has the same effect as a
+document with Your written signature on it; and (iii) An electronic communication, or any
+computer printout of it, is valid proof of the validity of the original document of the electronic
+communication.
+
+22.14. Permission to Use Logo and Copyrighted or Trademarked Content. You grant Sheernox
+Technology Group a non-exclusive license to use your logo, company name and/or other
+intellectual property under Sheernox Technology Group’s website, clientele portfolio and other
+marketing material during the Term of the Agreement and thereafter. Sheernox Technology Group
+shall not be allowed to use or reproduce the Licensed Material for any other purpose for any
+reason whatsoever without the express prior written consent of Licensor. Licensor shall retain all
+rights in and to the Licensed Material during the Term of the Agreement and thereafter.
+
+
+
+
+

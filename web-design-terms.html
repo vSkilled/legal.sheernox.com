@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design, Branding & Care Agreement | Sheernox Legal Portal</title>
+  <meta name="description" content="Terms governing custom website design, branding, UX development, and ongoing website care & maintenance services by Sheernox Technology Group.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sn-dark-navy: #071322;
+      --sn-sidebar-navy: #0b192c;
+      --sn-primary-blue: #0f4c81;
+      --sn-accent-cyan: #0284c7;
+      --sn-amber: #f59e0b;
+      --sn-emerald: #10b981;
+      --sn-coral: #ef4444;
+      --sn-coral-bg: #fee2e2;
+      --canvas-bg: #f8fafc;
+      --surface-card: #ffffff;
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #94a3b8;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--canvas-bg);
+      color: var(--text-main);
+      line-height: 1.68;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Reading Progress Bar */
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #f43f5e, #ef4444);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      background-color: var(--sn-dark-navy);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .top-nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      height: 30px;
+      width: auto;
+    }
+
+    .nav-divider {
+      height: 22px;
+      width: 1.5px;
+      background: rgba(255, 255, 255, 0.25);
+      margin: 0 4px;
+    }
+
+    .nav-portal-label {
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-link {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .nav-btn {
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* Document Header & Metadata */
+    .doc-hero {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 36px 24px 28px;
+    }
+
+    .doc-hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .breadcrumbs a {
+      color: var(--sn-accent-cyan);
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .doc-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .doc-title {
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .doc-meta-strip {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .meta-tag strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .version-pill {
+      background: #fee2e2;
+      border: 1px solid #fca5a5;
+      color: #b91c1c;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-action {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      background: #f8fafc;
+      color: var(--text-main);
+      border-color: #cbd5e1;
+    }
+
+    .btn-action-primary {
+      background: #dc2626;
+      color: #ffffff;
+      border-color: #dc2626;
+    }
+
+    .btn-action-primary:hover {
+      background: #b91c1c;
+      color: #ffffff;
+    }
+
+    /* Main Container Layout */
+    .layout-container {
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 36px 24px 80px;
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 48px;
+      flex: 1;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .layout-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* Sticky Sidebar Navigation (TOC) */
+    .legal-sidebar {
+      position: sticky;
+      top: 76px;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      padding-right: 12px;
+    }
+
+    .legal-sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .legal-sidebar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .toc-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .toc-header {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-subtle);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-filter {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      margin-bottom: 14px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .toc-filter:focus {
+      border-color: var(--sn-coral);
+    }
+
+    .toc-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toc-item a {
+      display: block;
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 6px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s ease;
+      line-height: 1.4;
+    }
+
+    .toc-item a:hover {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .toc-item.active a {
+      background: #fff1f2;
+      color: #e11d48;
+      border-left-color: #ef4444;
+      font-weight: 600;
+    }
+
+    /* Main Document Prose Content */
+    .legal-content {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 44px 48px;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.03);
+      max-width: 860px;
+    }
+
+    @media (max-width: 640px) {
+      .legal-content {
+        padding: 24px 20px;
+      }
+    }
+
+    /* Modern Plain English / Key Takeaway Callouts */
+    .key-takeaway {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid var(--sn-emerald);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0 24px;
+      font-size: 0.88rem;
+      color: #166534;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .key-takeaway .takeaway-badge {
+      background: var(--sn-emerald);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    .key-takeaway p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Legal Section Typography */
+    .legal-section {
+      margin-bottom: 44px;
+      scroll-margin-top: 90px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.015em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .clause-anchor-btn {
+      color: var(--text-subtle);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      opacity: 0;
+      transition: opacity 0.2s, color 0.2s;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .section-header:hover .clause-anchor-btn,
+    .clause-block:hover .clause-anchor-btn {
+      opacity: 1;
+    }
+
+    .clause-anchor-btn:hover {
+      color: #dc2626;
+      background: #fee2e2;
+    }
+
+    .legal-prose p {
+      margin-bottom: 16px;
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.72;
+    }
+
+    .clause-block {
+      margin-bottom: 18px;
+      padding-left: 18px;
+      border-left: 2px solid #e2e8f0;
+      scroll-margin-top: 90px;
+      position: relative;
+    }
+
+    .clause-num {
+      font-weight: 700;
+      color: #dc2626;
+      margin-right: 6px;
+    }
+
+    .legal-sublist {
+      list-style-type: lower-alpha;
+      margin: 12px 0 16px 24px;
+      color: #334155;
+      font-size: 0.93rem;
+    }
+
+    .legal-sublist li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    /* All-Caps Statutory Disclaimer Box */
+    .all-caps-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: #475569;
+      font-family: inherit;
+      letter-spacing: 0.01em;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--sn-dark-navy);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      #progressBar, .top-nav, .legal-sidebar, .hero-actions, .clause-anchor-btn, footer {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 10.5pt;
+      }
+      .layout-container {
+        display: block !important;
+        padding: 0 !important;
+      }
+      .legal-content {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .legal-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progressBar"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox" class="nav-logo">
+        <div class="nav-divider"></div>
+        <span class="nav-portal-label">Legal Portal</span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="nav-link">&larr; Back to Legal Directory</a>
+        <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Document Hero -->
+  <header class="doc-hero">
+    <div class="doc-hero-inner">
+      <nav class="breadcrumbs">
+        <a href="index.html">Legal Portal</a>
+        <span>&rsaquo;</span>
+        <span>Creative Agreements</span>
+        <span>&rsaquo;</span>
+        <span>Web Design & Care</span>
+      </nav>
+
+      <div class="doc-title-row">
+        <div>
+          <h1 class="doc-title">Web Design, Branding & Care Terms</h1>
+          <div class="doc-meta-strip">
+            <span class="meta-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Last Revised: <strong>September 2026</strong> (Modernized Edition)
+            </span>
+            <span class="meta-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              Design, Development & Maintenance SOW
+            </span>
+            <span class="version-pill">v2.5-design</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-action" onclick="copyDocumentLink()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Share
+          </button>
+          <button class="btn-action" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print
+          </button>
+          <a href="https://cdn.sheernox.com/terms/Web_Design_Terms_and_Conditions.pdf" class="btn-action btn-action-primary" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout Grid -->
+  <div class="layout-container">
+
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="legal-sidebar">
+      <div class="toc-card">
+        <div class="toc-header">
+          <span>Table of Contents</span>
+          <span style="font-size: 0.72rem; color: #dc2626;">10 Sections</span>
+        </div>
+        <input type="text" id="tocFilter" class="toc-filter" placeholder="Filter clauses..." oninput="filterTOC(this.value)">
+        <ul class="toc-nav" id="tocList">
+          <li class="toc-item active" data-target="sec-preamble"><a href="#sec-preamble">Preamble & Agreement Scope</a></li>
+          <li class="toc-item" data-target="sec-1"><a href="#sec-1">1. Project Workflow & Delivery</a></li>
+          <li class="toc-item" data-target="sec-2"><a href="#sec-2">2. Branding & UX Prototyping</a></li>
+          <li class="toc-item" data-target="sec-3"><a href="#sec-3">3. Review, Revisions & Sign-off</a></li>
+          <li class="toc-item" data-target="sec-4"><a href="#sec-4">4. Website Care & Maintenance</a></li>
+          <li class="toc-item" data-target="sec-5"><a href="#sec-5">5. Client Content & Assets</a></li>
+          <li class="toc-item" data-target="sec-6"><a href="#sec-6">6. Copyright Transfer & Code Handoff</a></li>
+          <li class="toc-item" data-target="sec-7"><a href="#sec-7">7. Cross-Browser Compatibility</a></li>
+          <li class="toc-item" data-target="sec-8"><a href="#sec-8">8. Payment Milestones & Retainers</a></li>
+          <li class="toc-item" data-target="sec-9"><a href="#sec-9">9. Liability & Survival</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="legal-content">
+      <article class="legal-prose">
+
+        <!-- Preamble Section -->
+        <section id="sec-preamble" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">Preamble & Agreement Scope</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-preamble')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>This agreement specifically governs custom branding, graphic design, user experience (UX) prototyping, website development, and ongoing website care & maintenance plans provided by Sheernox. It is maintained separately from hosting and infrastructure services.</p>
+          </div>
+
+          <p>
+            By commissioning, ordering, or retaining <strong>Sheernox Technology Group</strong> ("Sheernox") for branding, graphic design, UI/UX architecture, custom software development, or ongoing website care, the customer ("Customer", "Client", or "You") confirms that You are bound by this specialized Web Design, Branding & Care Agreement.
+          </p>
+          <p>
+            This Agreement governs creative, front-end, and CMS maintenance engagements. Infrastructure hosting and network connectivity remain governed by the primary <a href="terms-and-conditions.html">Master Terms and Conditions</a>.
+          </p>
+        </section>
+
+        <!-- Section 1 -->
+        <section id="sec-1" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">1. Project Workflow & Delivery Policy</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-1')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>Projects begin once the scope is finalized and initial deposit is received. We deliver initial concepts for your review, iterate based on written feedback, and test thoroughly on staging servers before public deployment.</p>
+          </div>
+
+          <div class="clause-block" id="clause-1-1">
+            <p>
+              <span class="clause-num">1.1 Discovery & Scoping:</span> Customer collaborates with a Sheernox technical consultant to scope project requirements, wireframe user flows, and establish project milestones documented in a Statement of Work (SOW).
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-1-2">
+            <p>
+              <span class="clause-num">1.2 Iterative Design Concepts:</span> Sheernox produces initial design prototypes (interactive mockups or staging drafts) for Customer feedback.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-1-3">
+            <p>
+              <span class="clause-num">1.3 Staging Server Testing:</span> Prior to public release, websites are assembled and tested on a password-protected Sheernox staging subdomain for cross-device review and quality assurance.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="sec-2" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">2. Branding, Graphic Design & UX Architecture</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-2')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-2-1">
+            <p>
+              <span class="clause-num">2.1 Visual Assets:</span> Logo design, brand style guides, typography systems, vector illustrations, and UX design components created by Sheernox are custom-tailored to the specifications outlined in the project brief.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-2-2">
+            <p>
+              <span class="clause-num">2.2 File Deliverables:</span> Upon final milestone payment, branding assets are delivered in standard industry formats (SVG, PDF, PNG, and layered master files).
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="sec-3" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">3. Review, Feedback & Revision Thresholds</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-3')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>Each design milestone includes two (2) consolidated rounds of revisions. Feedback must be submitted in writing within ten (10) business days. Inactivity beyond 10 days constitutes milestone acceptance so projects stay on schedule.</p>
+          </div>
+
+          <div class="clause-block" id="clause-3-1">
+            <p>
+              <span class="clause-num">3.1 Revision Rounds:</span> Unless otherwise specified in an SOW, each design phase includes up to two (2) consolidated rounds of minor revisions to typography, color palette, layout spacing, and content positioning.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-3-2">
+            <p>
+              <span class="clause-num">3.2 Scope Changes:</span> Significant structural redesigns, architecture modifications, or feature requests exceeding the approved scope will be quoted under a Change Order at Sheernox’s standard hourly design rate.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-3-3">
+            <p>
+              <span class="clause-num">3.3 10-Day Deemed Acceptance:</span> Customer agrees to review deliverables and provide written feedback or sign-off within ten (10) business days of submission. Failure to provide feedback within ten (10) business days constitutes constructive milestone acceptance.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="sec-4" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">4. Website Care & Ongoing Maintenance Plans</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-4')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>Website Care plans cover ongoing CMS updates, security patching, uptime checks, and automated backups. Maintenance retainers do not include major visual overhauls or third-party API rebuilds unless explicitly scoped.</p>
+          </div>
+
+          <div class="clause-block" id="clause-4-1">
+            <p>
+              <span class="clause-num">4.1 Maintenance Scope:</span> Sheernox Website Care packages include scheduled CMS core updates (e.g. WordPress), security patch deployment, premium plugin updates, daily cloud backups, and proactive uptime monitoring.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-4-2">
+            <p>
+              <span class="clause-num">4.2 Out-of-Scope Requests:</span> Ongoing maintenance retainers exclude new feature builds, third-party API deprecations, bespoke database migrations, or redesigns, which shall be billed separately.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="sec-5" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">5. Client Content & Third-Party Asset Licenses</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-5')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-5-1">
+            <p>
+              <span class="clause-num">5.1 Client Materials:</span> Customer warrants that all copy, photographs, trademarks, and media furnished to Sheernox are owned by Customer or properly licensed. Customer defends and indemnifies Sheernox against any copyright or trademark claims arising from supplied assets.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-5-2">
+            <p>
+              <span class="clause-num">5.2 Third-Party Licenses:</span> Commercial stock photos, proprietary web fonts, and specialized commercial plugin licenses purchased on Customer’s behalf are registered to Customer, who remains responsible for recurring license renewals.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="sec-6" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">6. Copyright Transfer, Source Code Ownership & File Handoff</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-6')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>Once all project invoices are paid in full, full intellectual property and copyright of the custom design and code are transferred to you. Sheernox retains the right to display the completed work in its creative portfolio.</p>
+          </div>
+
+          <div class="clause-block" id="clause-6-1">
+            <p>
+              <span class="clause-num">6.1 IP Transfer upon Full Payment:</span> Conditioned upon full and final payment of all invoices, Sheernox transfers to Customer all right, title, and copyright in the bespoke visual layout, graphics, and custom CSS/HTML created for the project.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-6-2">
+            <p>
+              <span class="clause-num">6.2 Pre-Existing Tools & Open Source:</span> Open-source software (GPL, MIT, Apache libraries) and pre-existing Sheernox internal development frameworks remain subject to their respective licenses and are not transferred.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-6-3">
+            <p>
+              <span class="clause-num">6.3 File Transfer & External Hosting Fee:</span> When Customer elects to host their completed website on external third-party servers rather than Sheernox cloud infrastructure, an archival packaging and migration fee of $150.00 USD may apply for data bundling and DNS cutover support.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-6-4">
+            <p>
+              <span class="clause-num">6.4 Portfolio Display:</span> Sheernox reserves the professional right to showcase completed project designs, case studies, and live links in its online agency portfolio and marketing materials.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="sec-7" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">7. Cross-Browser & Device Compatibility</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-7')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-7-1">
+            <p>
+              <span class="clause-num">7.1 Supported Platforms:</span> Sheernox designs websites to function consistently across current, evergreen versions of modern browsers (Google Chrome, Apple Safari, Mozilla Firefox, and Microsoft Edge) and modern iOS/Android mobile screens. Compatibility with discontinued browsers (e.g. Internet Explorer) is expressly disclaimed.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="sec-8" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">8. Payment Milestones, Retainers & Cancellation</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-8')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-8-1">
+            <p>
+              <span class="clause-num">8.1 Milestone Schedule:</span> Website projects typically require an initial non-refundable deposit (typically 50%) to initiate discovery, with subsequent milestone payments due upon completion of staging review and prior to public DNS launch.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-8-2">
+            <p>
+              <span class="clause-num">8.2 Early Project Termination:</span> In the event Customer cancels a project prior to completion, Sheernox retains the deposit and Customer shall be billed for all design and engineering hours completed up to the cancellation notice date.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 9 -->
+        <section id="sec-9" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">9. Limitation of Liability & Survival</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-9')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="all-caps-box">
+            SHEERNOX TECHNOLOGY GROUP DISCLAIMS ANY LIABILITY FOR THIRD-PARTY SOFTWARE BUGS, OPEN-SOURCE CMS VULNERABILITIES, CLIENT-SIDE DATA ENTRY ERRORS, OR BUSINESS INTERRUPTION ARISING FROM WEBSITE LAUNCH DELAYS. SHEERNOX’S TOTAL AGGREGATE LIABILITY FOR CREATIVE AND DEVELOPMENT SERVICES SHALL NOT EXCEED THE TOTAL PROJECT FEES RECEIVED UNDER THE APPLICABLE STATEMENT OF WORK. THIS SECTION AND SECTIONS 5, 6, AND 9 SHALL SURVIVE TERMINATION.
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="copyToast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMsg">Direct agreement link copied to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background: #ffffff; border-top: 1px solid var(--border-color); padding: 32px 24px; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+    <div style="margin-bottom: 8px;">&copy; <span id="year"></span> Sheernox Technology Group. All rights reserved.</div>
+    <div style="font-size: 0.78rem; color: var(--text-subtle);">Official Legal Repository &bull; Web Design, Branding & Care Agreement</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Scrollspy for TOC
+    const sections = document.querySelectorAll('.legal-section');
+    const navItems = document.querySelectorAll('.toc-item');
+
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (pageYOffset >= top) {
+          currentId = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('data-target') === currentId) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // TOC Filter
+    function filterTOC(val) {
+      const q = val.toLowerCase().trim();
+      navItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Toast and Copy Helpers
+    function showToast(msg) {
+      const toast = document.getElementById('copyToast');
+      document.getElementById('toastMsg').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    function copySectionLink(id) {
+      const url = window.location.origin + window.location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Agreement permalink copied to clipboard!');
+      }).catch(() => {
+        prompt('Copy section link:', url);
+      });
+    }
+
+    function copyDocumentLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast('Document link copied to clipboard!');
+      }).catch(() => {
+        prompt('Copy document link:', window.location.href);
+      });
+    }
+  </script>
+</body>
+</html>

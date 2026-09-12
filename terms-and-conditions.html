@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions | Sheernox Legal Portal</title>
+  <meta name="description" content="Master Terms and Conditions and Service Level Agreement for Sheernox Technology Group cloud hosting, infrastructure, and business technology solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sn-dark-navy: #071322;
+      --sn-sidebar-navy: #0b192c;
+      --sn-primary-blue: #0f4c81;
+      --sn-accent-cyan: #0284c7;
+      --sn-amber: #f59e0b;
+      --sn-emerald: #10b981;
+      --sn-coral: #ef4444;
+      --canvas-bg: #f8fafc;
+      --surface-card: #ffffff;
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #94a3b8;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--canvas-bg);
+      color: var(--text-main);
+      line-height: 1.68;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Reading Progress Bar */
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0284c7, #38bdf8);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      background-color: var(--sn-dark-navy);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .top-nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      height: 30px;
+      width: auto;
+    }
+
+    .nav-divider {
+      height: 22px;
+      width: 1.5px;
+      background: rgba(255, 255, 255, 0.25);
+      margin: 0 4px;
+    }
+
+    .nav-portal-label {
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-link {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .nav-btn {
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* Document Header & Metadata */
+    .doc-hero {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 36px 24px 28px;
+    }
+
+    .doc-hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .breadcrumbs a {
+      color: var(--sn-accent-cyan);
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .doc-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .doc-title {
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .doc-meta-strip {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .meta-tag strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .version-pill {
+      background: #f1f5f9;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-action {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      background: #f8fafc;
+      color: var(--text-main);
+      border-color: #cbd5e1;
+    }
+
+    .btn-action-primary {
+      background: var(--sn-primary-blue);
+      color: #ffffff;
+      border-color: var(--sn-primary-blue);
+    }
+
+    .btn-action-primary:hover {
+      background: #0a355c;
+      color: #ffffff;
+    }
+
+    /* Main Container Layout */
+    .layout-container {
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 36px 24px 80px;
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 48px;
+      flex: 1;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .layout-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* Sticky Sidebar Navigation (TOC) */
+    .legal-sidebar {
+      position: sticky;
+      top: 76px;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      padding-right: 12px;
+    }
+
+    .legal-sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .legal-sidebar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .toc-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .toc-header {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-subtle);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-filter {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      margin-bottom: 14px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .toc-filter:focus {
+      border-color: var(--sn-accent-cyan);
+    }
+
+    .toc-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toc-item a {
+      display: block;
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 6px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s ease;
+      line-height: 1.4;
+    }
+
+    .toc-item a:hover {
+      background: #f1f5f9;
+      color: var(--text-main);
+    }
+
+    .toc-item.active a {
+      background: #eff6ff;
+      color: var(--sn-accent-cyan);
+      border-left-color: var(--sn-accent-cyan);
+      font-weight: 600;
+    }
+
+    /* Main Document Prose Content */
+    .legal-content {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 44px 48px;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.03);
+      max-width: 860px;
+    }
+
+    @media (max-width: 640px) {
+      .legal-content {
+        padding: 24px 20px;
+      }
+    }
+
+    /* Modern Plain English / Key Takeaway Callouts */
+    .key-takeaway {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid var(--sn-emerald);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0 24px;
+      font-size: 0.88rem;
+      color: #166534;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .key-takeaway .takeaway-badge {
+      background: var(--sn-emerald);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    .key-takeaway p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Statutory Warning Callout */
+    .statutory-callout {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid var(--sn-amber);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 24px 0;
+    }
+
+    .statutory-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: #92400e;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .statutory-content {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #78350f;
+    }
+
+    /* Legal Section Typography */
+    .legal-section {
+      margin-bottom: 44px;
+      scroll-margin-top: 90px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.015em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .clause-anchor-btn {
+      color: var(--text-subtle);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      opacity: 0;
+      transition: opacity 0.2s, color 0.2s;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .section-header:hover .clause-anchor-btn,
+    .clause-block:hover .clause-anchor-btn {
+      opacity: 1;
+    }
+
+    .clause-anchor-btn:hover {
+      color: var(--sn-accent-cyan);
+      background: #f1f5f9;
+    }
+
+    .legal-prose p {
+      margin-bottom: 16px;
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.72;
+    }
+
+    .clause-block {
+      margin-bottom: 18px;
+      padding-left: 18px;
+      border-left: 2px solid #e2e8f0;
+      scroll-margin-top: 90px;
+      position: relative;
+    }
+
+    .clause-num {
+      font-weight: 700;
+      color: var(--sn-primary-blue);
+      margin-right: 6px;
+    }
+
+    .legal-sublist {
+      list-style-type: lower-alpha;
+      margin: 12px 0 16px 24px;
+      color: #334155;
+      font-size: 0.93rem;
+    }
+
+    .legal-sublist li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .service-grid-pill {
+      display: inline-block;
+      background: #f1f5f9;
+      color: var(--sn-primary-blue);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin: 2px;
+    }
+
+    /* All-Caps Statutory Disclaimer Box */
+    .all-caps-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: #475569;
+      font-family: inherit;
+      letter-spacing: 0.01em;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--sn-dark-navy);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      #progressBar, .top-nav, .legal-sidebar, .hero-actions, .clause-anchor-btn, footer {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 10.5pt;
+      }
+      .layout-container {
+        display: block !important;
+        padding: 0 !important;
+      }
+      .legal-content {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .legal-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progressBar"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox" class="nav-logo">
+        <div class="nav-divider"></div>
+        <span class="nav-portal-label">Legal Portal</span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="nav-link">&larr; Back to Legal Directory</a>
+        <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Document Hero -->
+  <header class="doc-hero">
+    <div class="doc-hero-inner">
+      <nav class="breadcrumbs">
+        <a href="index.html">Legal Portal</a>
+        <span>&rsaquo;</span>
+        <span>Customer Agreements</span>
+        <span>&rsaquo;</span>
+        <span>Master Terms of Service</span>
+      </nav>
+
+      <div class="doc-title-row">
+        <div>
+          <h1 class="doc-title">Terms and Conditions</h1>
+          <div class="doc-meta-strip">
+            <span class="meta-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Last Revised: <strong>September 2026</strong> (Modernized Edition)
+            </span>
+            <span class="meta-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              Master Service Agreement & SLA
+            </span>
+            <span class="version-pill">v2.5-web</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-action" onclick="copyDocumentLink()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Share
+          </button>
+          <button class="btn-action" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print
+          </button>
+          <a href="https://cdn.sheernox.com/terms/Terms_and_Conditions.pdf" class="btn-action btn-action-primary" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout Grid -->
+  <div class="layout-container">
+
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="legal-sidebar">
+      <div class="toc-card">
+        <div class="toc-header">
+          <span>Table of Contents</span>
+          <span style="font-size: 0.72rem; color: var(--sn-accent-cyan);">23 Sections</span>
+        </div>
+        <input type="text" id="tocFilter" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC(this.value)">
+        <ul class="toc-nav" id="tocList">
+          <li class="toc-item active" data-target="sec-preamble"><a href="#sec-preamble">Preamble & Definitions</a></li>
+          <li class="toc-item" data-target="sec-1"><a href="#sec-1">1. Services & Solutions Scope</a></li>
+          <li class="toc-item" data-target="sec-2"><a href="#sec-2">2. Revisions to User Agreement</a></li>
+          <li class="toc-item" data-target="sec-3"><a href="#sec-3">3. Duration & Cancellation Policy</a></li>
+          <li class="toc-item" data-target="sec-4"><a href="#sec-4">4. Account Set Up & Verification</a></li>
+          <li class="toc-item" data-target="sec-5"><a href="#sec-5">5. Intellectual Property & DMCA</a></li>
+          <li class="toc-item" data-target="sec-12"><a href="#sec-12">12. Content & Acceptable Use</a></li>
+          <li class="toc-item" data-target="sec-13"><a href="#sec-13">13. Zero Tolerance Spam Policy</a></li>
+          <li class="toc-item" data-target="sec-14"><a href="#sec-14">14. Payment, Fees & Invoicing</a></li>
+          <li class="toc-item" data-target="sec-15"><a href="#sec-15">15. Backups & Data Integrity</a></li>
+          <li class="toc-item" data-target="sec-16"><a href="#sec-16">16. Resource Usage & Security</a></li>
+          <li class="toc-item" data-target="sec-17"><a href="#sec-17">17. Uptime SLA Guarantee (99.9%)</a></li>
+          <li class="toc-item" data-target="sec-18"><a href="#sec-18">18. Price Change Policy</a></li>
+          <li class="toc-item" data-target="sec-19"><a href="#sec-19">19. Indemnification</a></li>
+          <li class="toc-item" data-target="sec-20"><a href="#sec-20">20. Disclaimer of Warranties</a></li>
+          <li class="toc-item" data-target="sec-21"><a href="#sec-21">21. Limitation of Liability</a></li>
+          <li class="toc-item" data-target="sec-22"><a href="#sec-22">22. General Legal Provisions</a></li>
+          <li class="toc-item" data-target="sec-23"><a href="#sec-23">23. Custom Systems & On-Site Work</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="legal-content">
+      <article class="legal-prose">
+
+        <!-- Preamble Section -->
+        <section id="sec-preamble" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">Preamble & Party Definitions</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-preamble')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>This Master Service Agreement governs all services provided by Sheernox Technology Group to you. By subscribing, ordering, or utilizing any Sheernox service, you agree to these legal obligations and our incorporated Acceptable Use Policy and Privacy Policy.</p>
+          </div>
+
+          <p>
+            The use of services provided by <strong>Sheernox Technology Group</strong> and its subsidiaries, divisions, affiliates, and network (hereafter referred to as <em>"Sheernox Technology Group"</em>, <em>"Sheernox"</em>, <em>"We"</em>, <em>"Us"</em>, or <em>"Our"</em>) is subject to the following Master Terms and Conditions.
+          </p>
+
+          <div class="clause-block" id="clause-p-1">
+            <p>
+              <span class="clause-num">1. Sheernox Technology Group</span> is the publisher, owner, and operator of <code>sheernox.com</code> and related portals, making available end-to-end technology solutions, cloud infrastructure, managed server deployments, and digital services.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-p-2">
+            <p>
+              <span class="clause-num">2. You, the Client</span> &mdash; As Our Client and the user or purchaser of the Site or Services, this Agreement refers to You through any second-person pronouns, such as <em>"Your"</em> or <em>"Yours"</em>.
+            </p>
+          </div>
+
+          <div class="statutory-callout">
+            <div class="statutory-header">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              Electronic Acceptance Notice (E-SIGN Act Compliance)
+            </div>
+            <div class="statutory-content">
+              PLEASE READ THE FOLLOWING HOSTING AND TECHNOLOGY SERVICES TERMS AND CONDITIONS CAREFULLY. BY SUBSCRIBING TO, PURCHASING, OR USING SHEERNOX TECHNOLOGY GROUP’S SERVICES, YOU AGREE TO BE BOUND BY ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT. YOUR ELECTRONIC ACCEPTANCE OF THIS AGREEMENT IS PERMITTED AND ENFORCEABLE UNDER THE ELECTRONIC SIGNATURES IN GLOBAL AND NATIONAL COMMERCE ACT (E-SIGN ACT) AND CORRESPONDING UNIFORM ELECTRONIC TRANSACTIONS ACT (UETA) REGULATIONS.
+            </div>
+          </div>
+
+          <p>
+            <strong>Incorporations by Reference:</strong> This Master Agreement incorporates by reference the following policies, available at the Sheernox Legal Portal:
+          </p>
+          <ul class="legal-sublist">
+            <li><strong>Acceptable Use Policy (AUP):</strong> <a href="acceptable-use-policy.html">acceptable-use-policy.html</a></li>
+            <li><strong>Web Design, Branding & Care Agreement:</strong> <a href="web-design-terms.html">web-design-terms.html</a> (Applicable to bespoke creative, design, and care contracts)</li>
+            <li><strong>Privacy Policy:</strong> <a href="https://cdn.sheernox.com/terms/Privacy_Policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+          </ul>
+        </section>
+
+        <!-- Section 1 -->
+        <section id="sec-1" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">1. Services & Solutions Scope</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-1')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>Sheernox provides a complete suite of solutions—from web hosting and domain registration to email, CDN, server management, backups, and physical system architecture. All orders are subject to account verification and formal acceptance.</p>
+          </div>
+
+          <div class="clause-block" id="clause-1-1">
+            <p>
+              <span class="clause-num">1.1 Complete Solution Spectrum:</span> Sheernox Technology Group provides end-to-end cloud infrastructure, web hosting, and technology management services, including:
+            </p>
+            <div style="margin: 12px 0 16px;">
+              <span class="service-grid-pill">Shared & Reseller Hosting</span>
+              <span class="service-grid-pill">Cloud, VPS & Dedicated Servers</span>
+              <span class="service-grid-pill">Domain Names & Domain Resellers</span>
+              <span class="service-grid-pill">Email Hosting & SPAM Protection</span>
+              <span class="service-grid-pill">Website Care & Maintenance</span>
+              <span class="service-grid-pill">Server Monitoring & Management</span>
+              <span class="service-grid-pill">DNS & Content Delivery Networks (CDN)</span>
+              <span class="service-grid-pill">Storage & Backup Solutions</span>
+              <span class="service-grid-pill">Custom System Builds & On-Site Install/Repair</span>
+            </div>
+          </div>
+
+          <div class="clause-block" id="clause-1-2">
+            <p>
+              <span class="clause-num">1.2 Provisioning & Acceptance:</span> At the time of initial registration or contract execution, Client selects from the list of available Services. Subscriptions and service orders are subject to formal verification and acceptance by Sheernox. Acceptance occurs when automated provisioning completes or Sheernox delivers electronic confirmation credentials.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-1-3">
+            <p>
+              <span class="clause-num">1.3 Verification & Fraud Screening:</span> Sheernox reserves the right to decline or suspend provisioning of any service order pending identity verification, payment authentication, or compliance checks.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="sec-2" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">2. Revisions to User Agreement</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-2')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>We may update these terms as legal regulations or infrastructure evolve. When material updates occur, we post the new revision date and provide notification through the client portal or email. Continued use indicates agreement.</p>
+          </div>
+
+          <div class="clause-block" id="clause-2-1">
+            <p>
+              <span class="clause-num">2.1</span> Sheernox reserves the right to amend, update, or replace this Agreement and incorporated policies at any time. Material amendments will be communicated via the Sheernox Client Portal (<code>my.sheernox.com</code>) or verified email at least thirty (30) days prior to taking effect, except for emergency security or statutory modifications.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="sec-3" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">3. Duration of Agreement & Cancellation Policy</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-3')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>Subscriptions renew automatically for each billing cycle unless you submit a cancellation request through the verified Sheernox Client Portal before your renewal date. Certain items, including domain registrations, SSL certificates, and custom setup fees, are non-refundable once ordered.</p>
+          </div>
+
+          <div class="clause-block" id="clause-3-1">
+            <p>
+              <span class="clause-num">3.1 Term & Auto-Renewal:</span> Subscriptions automatically renew for recurring billing intervals (monthly, quarterly, semi-annually, or annually) at prevailing rates unless Client requests cancellation prior to the commencement of the subsequent billing cycle.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-3-2">
+            <p>
+              <span class="clause-num">3.2 Cancellation Submission:</span> To protect against unauthorized service destruction, all cancellation requests must be executed through the authenticated Sheernox Client Portal (<code>my.sheernox.com</code>).
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-3-3">
+            <p>
+              <span class="clause-num">3.3 Non-Refundable Items:</span> Domain name registrations, renewals, and transfers; commercial SSL certificates; software licensing fees (cPanel, CloudLinux, LiteSpeed, Microsoft); and labor charges for custom architectural builds or on-site engineering are non-refundable under all circumstances.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="sec-4" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">4. Account Set Up & Verification</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-4')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-4-1">
+            <p>
+              <span class="clause-num">4.1 Accuracy of Information:</span> Client agrees to provide accurate, current, and complete legal entity and contact details, including primary technical contact, billing address, and authorized administrative email. Providing fictitious or deceptive contact details constitutes a material breach resulting in immediate suspension.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-4-2">
+            <p>
+              <span class="clause-num">4.2 Credential Security:</span> Client is solely responsible for maintaining the confidentiality of administrative passwords, API keys, and multi-factor authentication credentials. Sheernox is not liable for unauthorized actions taken under authenticated client credentials.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="sec-5" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">5. Intellectual Property Rights & DMCA Policy</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-5')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>You retain ownership of your uploaded content. You must ensure you have legal rights to all material hosted on our infrastructure. Sheernox complies with the Digital Millennium Copyright Act (DMCA) and terminates accounts of repeat infringers.</p>
+          </div>
+
+          <div class="clause-block" id="clause-5-1">
+            <p>
+              <span class="clause-num">5.1 Client Content Ownership:</span> Client retains all intellectual property rights and title to all data, code, images, and content uploaded to Sheernox infrastructure. Client grants Sheernox a limited, non-exclusive license solely to host, transmit, cache, and backup such content as necessary to provide the Services.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-5-2">
+            <p>
+              <span class="clause-num">5.2 DMCA Notice & Takedown:</span> Copyright holders claiming infringement must send formal notice conforming to 17 U.S.C. &sect; 512(c)(3) to our designated Copyright Agent at:
+            </p>
+            <p style="margin-left: 20px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--sn-primary-blue);">
+              DMCA Compliance Office<br>
+              Sheernox Technology Group<br>
+              Email: dmca@sheernox.com
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 12 -->
+        <section id="sec-12" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">12. Content & Acceptable Use Policy</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-12')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-12-1">
+            <p>
+              <span class="clause-num">12.1</span> All services provided by Sheernox may be used for lawful purposes only. Client agrees to comply with Sheernox’s comprehensive <a href="acceptable-use-policy.html">Acceptable Use Policy (AUP)</a>, which strictly prohibits child exploitation material, unauthorized copyrighted distribution, unlicensed software, phishing, network scanning, malware hosting, and unauthorized cryptographic mining.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 13 -->
+        <section id="sec-13" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">13. Zero Tolerance Spam Policy</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-13')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>We have an absolute zero-tolerance policy for unsolicited commercial email (SPAM). Sending spam or operating mail services that result in IP blacklisting will result in immediate suspension and remediation fees.</p>
+          </div>
+
+          <div class="clause-block" id="clause-13-1">
+            <p>
+              <span class="clause-num">13.1 Strict Prohibition:</span> The transmission of unsolicited commercial email (UCE), spam, email address harvesting, mailbombing, or operating unconfirmed mailing lists through Sheernox servers, relay networks, or email hosting solutions is strictly prohibited.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-13-2">
+            <p>
+              <span class="clause-num">13.2 Blacklisting Remediation:</span> Any customer whose activity causes Sheernox IP ranges to be listed on major anti-spam blacklists (Spamhaus, Barracuda, SORBS) shall be assessed a clean-up and delisting fee of $250.00 USD per incident, plus administrative costs.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 14 -->
+        <section id="sec-14" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">14. Payment, Fees & Invoicing</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-14')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-14-1">
+            <p>
+              <span class="clause-num">14.1 Advance Invoicing:</span> All recurring hosting, management, and maintenance services are billed in advance. Invoices are generated fourteen (14) days prior to the due date.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-14-2">
+            <p>
+              <span class="clause-num">14.2 Suspension Grace Period:</span> Accounts overdue by more than seven (7) business days are subject to automated service suspension. Accounts overdue past thirty (30) days are subject to permanent termination and data deletion.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-14-3">
+            <p>
+              <span class="clause-num">14.3 Chargebacks:</span> Any fraudulent chargeback or payment reversal initiated without prior consultation with our billing department will result in immediate termination of all associated services and a $50.00 administrative fee per chargeback.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 15 -->
+        <section id="sec-15" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">15. Backups & Data Integrity</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-15')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>While Sheernox maintains routine operational snapshots and offers automated enterprise backup solutions, you are ultimately responsible for maintaining your own off-site backups of critical business data.</p>
+          </div>
+
+          <div class="clause-block" id="clause-15-1">
+            <p>
+              <span class="clause-num">15.1 Customer Responsibility:</span> Client acknowledges that hosting infrastructure carries inherent risks of hardware failure, corruption, or catastrophic loss. Except where Client specifically subscribes to a dedicated Sheernox Managed Backup Service, Client is solely responsible for maintaining independent off-site copies of all data, databases, and software.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-15-2">
+            <p>
+              <span class="clause-num">15.2 Routine Snapshots:</span> Any courtesy snapshots taken by Sheernox are for emergency disaster recovery only and are provided without warranty of completeness or availability.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 16 -->
+        <section id="sec-16" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">16. Resource Usage & Security</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-16')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-16-1">
+            <p>
+              <span class="clause-num">16.1 Fair Share Compute:</span> Users of Shared and Reseller hosting may not utilize excessive server CPU, RAM, or disk I/O exceeding standard thresholds for more than 90 seconds consecutively. Accounts impairing performance for neighboring clients may be temporarily throttled or required to upgrade to VPS or Dedicated hardware.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-16-2">
+            <p>
+              <span class="clause-num">16.2 Security Vulnerability Patching:</span> Client must keep all application software, CMS platforms (WordPress, Joomla, Drupal), plugins, and scripts updated. Known exploited software may be quarantined by automated security agents.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 17 -->
+        <section id="sec-17" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">17. Service Level Agreement (SLA) & Uptime Guarantee</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-17')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>We commit to a 99.9% monthly uptime SLA for network and server infrastructure. If monthly uptime drops below 99.9%, you may request service credits on your subsequent invoice, excluding scheduled maintenance.</p>
+          </div>
+
+          <div class="clause-block" id="clause-17-1">
+            <p>
+              <span class="clause-num">17.1 99.9% Availability Commitment:</span> Sheernox guarantees 99.9% network transit and server availability in any given calendar month across our cloud hypervisors and hosting infrastructure.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-17-2">
+            <p>
+              <span class="clause-num">17.2 Service Credit Schedule:</span>
+            </p>
+            <ul class="legal-sublist">
+              <li><strong>99.5% &ndash; 99.89% Uptime:</strong> 10% credit of monthly service fee</li>
+              <li><strong>99.0% &ndash; 99.49% Uptime:</strong> 25% credit of monthly service fee</li>
+              <li><strong>Below 99.0% Uptime:</strong> 50% credit of monthly service fee</li>
+            </ul>
+          </div>
+
+          <div class="clause-block" id="clause-17-3">
+            <p>
+              <span class="clause-num">17.3 Exclusions:</span> SLA credits exclude downtime resulting from: (a) scheduled maintenance announced at least 24 hours in advance; (b) client configuration errors or script failures; (c) third-party upstream carrier outages; or (d) volumetric DDoS attacks exceeding contracted mitigation capacities.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 18 -->
+        <section id="sec-18" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">18. Price Change Policy</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-18')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-18-1">
+            <p>
+              <span class="clause-num">18.1</span> Sheernox reserves the right to adjust service pricing upon thirty (30) days written notice before the expiration of the current billing cycle. Clients on prepaid multi-year agreements are price-protected for the duration of their prepaid term.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 19 -->
+        <section id="sec-19" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">19. Indemnification</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-19')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-19-1">
+            <p>
+              <span class="clause-num">19.1</span> Client agrees to defend, indemnify, and hold harmless Sheernox Technology Group, its officers, directors, employees, and agents from any claims, liabilities, losses, damages, or legal costs arising from: (a) Client’s breach of this Agreement or the AUP; (b) any content or software hosted or distributed by Client; or (c) any infringement of third-party intellectual property or privacy rights.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 20 -->
+        <section id="sec-20" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">20. Disclaimer of Warranties</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-20')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="all-caps-box">
+            SHEERNOX TECHNOLOGY GROUP SERVICES ARE PROVIDED STRICTLY ON AN "AS IS" AND "AS AVAILABLE" BASIS. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SHEERNOX DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. SHEERNOX DOES NOT WARRANT THAT SERVICES WILL BE ENTIRELY UNINTERRUPTED, ERROR-FREE, OR SECURE AGAINST EVERY FORM OF MALICIOUS ATTACK.
+          </div>
+        </section>
+
+        <!-- Section 21 -->
+        <section id="sec-21" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">21. Limitation of Liability</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-21')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="all-caps-box">
+            TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT SHALL SHEERNOX TECHNOLOGY GROUP BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF PROFITS, REVENUE, DATA, REPUTATION, OR BUSINESS OPPORTUNITY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SHEERNOX’S TOTAL AGGREGATE LIABILITY ARISING UNDER OR RELATED TO THIS AGREEMENT SHALL BE STRICTLY LIMITED TO THE TOTAL FEES PAID BY CLIENT TO SHEERNOX FOR THE SPECIFIC SERVICE IN QUESTION DURING THE THREE (3) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO LIABILITY.
+          </div>
+        </section>
+
+        <!-- Section 22 -->
+        <section id="sec-22" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">22. General Legal Provisions</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-22')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="clause-block" id="clause-22-1">
+            <p>
+              <span class="clause-num">22.1 Governing Law & Jurisdiction:</span> This Agreement shall be construed, governed, and interpreted in accordance with the laws of the jurisdiction of operation of Sheernox Technology Group, without regard to conflicts of law principles.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-22-2">
+            <p>
+              <span class="clause-num">22.2 Severability:</span> If any provision of this Agreement is held to be invalid or unenforceable, such provision will be severed and the remaining terms shall remain in full force and effect.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-22-3">
+            <p>
+              <span class="clause-num">22.3 Entire Agreement:</span> This Agreement, along with the incorporated Acceptable Use Policy and Service Level Agreement, constitutes the entire understanding between the parties regarding the subject matter herein.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 23 -->
+        <section id="sec-23" class="legal-section">
+          <div class="section-header">
+            <h2 class="section-title">23. Custom System Builds, Network Planning & On-Site Engineering</h2>
+            <button class="clause-anchor-btn" onclick="copySectionLink('sec-23')" title="Copy link to this section">#</button>
+          </div>
+
+          <div class="key-takeaway">
+            <span class="takeaway-badge">In Plain English</span>
+            <p>When Sheernox performs on-site installation, network architecture planning, custom hardware builds, or hardware repairs, work is governed by an approved Statement of Work (SOW). Facility access, power, and environmental safety must be provided by the client.</p>
+          </div>
+
+          <div class="clause-block" id="clause-23-1">
+            <p>
+              <span class="clause-num">23.1 Scope of On-Site Engagements:</span> For engagements involving custom server architecture, rack installation, structured network cabling, system commissioning, or physical repair, specifications and deliverables shall be detailed in a formal Statement of Work (SOW).
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-23-2">
+            <p>
+              <span class="clause-num">23.2 Site Access & Facility Safety:</span> Client agrees to provide Sheernox engineering personnel with safe, unrestricted physical and electrical access to designated data center racks, equipment rooms, and server facilities during scheduled on-site maintenance windows.
+            </p>
+          </div>
+
+          <div class="clause-block" id="clause-23-3">
+            <p>
+              <span class="clause-num">23.3 Hardware Warranties & Component Replacement:</span> Any hardware components furnished by Sheernox carry the manufacturer’s warranty. Sheernox facilitates manufacturer warranty claims and RMA processing in accordance with active server management plans.
+            </p>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="copyToast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMsg">Direct section link copied to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background: #ffffff; border-top: 1px solid var(--border-color); padding: 32px 24px; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+    <div style="margin-bottom: 8px;">&copy; <span id="year"></span> Sheernox Technology Group. All rights reserved.</div>
+    <div style="font-size: 0.78rem; color: var(--text-subtle);">Official Legal Repository &bull; Master Service Agreement & SLA</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Scrollspy for TOC
+    const sections = document.querySelectorAll('.legal-section');
+    const navItems = document.querySelectorAll('.toc-item');
+
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (pageYOffset >= top) {
+          currentId = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('data-target') === currentId) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // TOC Filter
+    function filterTOC(val) {
+      const q = val.toLowerCase().trim();
+      navItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Toast and Copy Helpers
+    function showToast(msg) {
+      const toast = document.getElementById('copyToast');
+      document.getElementById('toastMsg').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    function copySectionLink(id) {
+      const url = window.location.origin + window.location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Section permalink copied to clipboard!');
+      }).catch(() => {
+        prompt('Copy section link:', url);
+      });
+    }
+
+    function copyDocumentLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast('Document link copied to clipboard!');
+      }).catch(() => {
+        prompt('Copy document link:', window.location.href);
+      });
+    }
+  </script>
+</body>
+</html>
