@@ -1,6 +1,8 @@
 # Sheernox Legal Portal
 
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-emerald?style=flat-square)](#)
+[![CDN Deployment](https://img.shields.io/badge/CDN-legal.sheernox.com-0284c7?style=flat-square)](https://legal.sheernox.com)
+[![Storage](https://img.shields.io/badge/Storage-Bunny.net%20S3-f59e0b?style=flat-square)](#)
 [![Jurisdiction](https://img.shields.io/badge/Jurisdiction-British%20Columbia%2C%20Canada-0284c7?style=flat-square)](#)
 [![Documents](https://img.shields.io/badge/Documents-8%20Policies%20%7C%208%20PDFs-6366f1?style=flat-square)](#)
 [![Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-0f4c81?style=flat-square)](#)
@@ -8,7 +10,7 @@
 
 Official customer legal agreements, compliance policies, service level commitments, and security governance repository for **Sheernox Technology Group**.
 
-This repository contains the standalone, fully responsive, and accessible HTML5 web agreements that power the public legal hub at [sheernox.com](https://sheernox.com) and the client portal at [my.sheernox.com](https://my.sheernox.com), alongside automated tooling for generating official print-ready vector PDF documents.
+This repository contains the standalone, fully responsive, and accessible HTML5 web agreements that power the public legal hub at [sheernox.com](https://sheernox.com) and the client portal at [my.sheernox.com](https://my.sheernox.com), alongside automated tooling for generating official print-ready vector PDF documents and automatic S3-compatible deployment to [legal.sheernox.com](https://legal.sheernox.com) on Bunny.net CDN.
 
 ---
 
@@ -61,19 +63,22 @@ This repository contains **strictly production-grade code** with zero build arti
 
 ```text
 sheernox_legal_portal/
-├── .gitignore                             # Production ignore rules
-├── README.md                              # Repository documentation and architecture guide
-├── AGENTS.md                              # AI Agent operational runbook & legal guardrails
-├── index.html                             # Central Legal Portal Directory & Search Hub
-├── terms-and-conditions.html              # Master Terms and Conditions of Service (v4.0-TOS)
-├── acceptable-use-policy.html             # Acceptable Use Policy (v3.5-AUP)
-├── privacy-policy.html                    # Privacy & Personal Information Policy (v4.0-PRIV)
-├── service-level-agreement.html           # Service Level Agreement & Incident Policy (v1.0-SLA)
-├── vulnerability-disclosure-policy.html   # Vulnerability Disclosure Policy (v1.0-VDP)
-├── copyright-policy.html                  # Copyright & Notice-and-Notice Policy (v1.0-CPR)
-├── web-design-terms.html                  # Web Design & Development Terms (v3.0-WDT)
-├── website-care-plan-terms.html           # Website Care Plan & Maintenance Terms (v1.0-WCP)
-├── pdf/                                   # Official Print-Ready Vector PDF Documents
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                         # Automated CI/CD deployment to Bunny S3 storage
+├── .gitignore                                 # Production ignore rules
+├── README.md                                  # Repository documentation and architecture guide
+├── AGENTS.md                                  # AI Agent operational runbook & legal guardrails
+├── index.html                                 # Central Legal Portal Directory & Search Hub
+├── terms-and-conditions.html                  # Master Terms and Conditions of Service (v4.0-TOS)
+├── acceptable-use-policy.html                 # Acceptable Use Policy (v3.5-AUP)
+├── privacy-policy.html                        # Privacy & Personal Information Policy (v4.0-PRIV)
+├── service-level-agreement.html               # Service Level Agreement & Incident Policy (v1.0-SLA)
+├── vulnerability-disclosure-policy.html       # Vulnerability Disclosure Policy (v1.0-VDP)
+├── copyright-policy.html                      # Copyright & Notice-and-Notice Policy (v1.0-CPR)
+├── web-design-terms.html                      # Web Design & Development Terms (v3.0-WDT)
+├── website-care-plan-terms.html               # Website Care Plan & Maintenance Terms (v1.0-WCP)
+├── pdf/                                       # Official Print-Ready Vector PDF Documents
 │   ├── Terms_and_Conditions.pdf
 │   ├── Acceptable_Use_Policy.pdf
 │   ├── Privacy_Policy.pdf
@@ -82,9 +87,9 @@ sheernox_legal_portal/
 │   ├── Copyright_Notice_and_Notice_Policy.pdf
 │   ├── Web_Design_Terms_and_Conditions.pdf
 │   └── Website_Care_Plan_Terms.pdf
-└── scripts/                               # Automated Vector PDF Generation Tooling
-    ├── generate_pdfs.py                   # Standalone multi-browser headless PDF compiler
-    └── logo_data.py                       # Embedded base64 vector brand logo
+└── scripts/                                   # Automated Vector PDF Generation Tooling
+    ├── generate_pdfs.py                       # Standalone multi-browser headless PDF compiler
+    └── logo_data.py                           # Embedded base64 vector brand logo
 ```
 
 ---

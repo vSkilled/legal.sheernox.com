@@ -59,6 +59,27 @@ When modifying any document, ensure strict adherence to these legal parameters:
 
 ---
 
+## 🚀 CDN Storage & Automated S3 Deployment
+
+- **Production URL**: [`https://legal.sheernox.com`](https://legal.sheernox.com)
+- **CDN Edge Infrastructure**: Bunny.net CDN Pull Zone with S3-Compatible Storage Zone.
+- **Storage Zone / Bucket**: `sheernox-legal-portal`
+- **S3 Endpoint**: `https://la-s3.storage.bunnycdn.com` (Region: `la`)
+- **CI/CD Workflow**: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+  - Automatically triggers on every `push` to `main` and `workflow_dispatch`.
+  - Re-generates all vector PDFs via headless Chrome.
+  - Deploys static HTML and `pdf/` documents to Bunny S3 with strict Content-Types.
+  - Runs automated live HTTP health checks against `https://legal.sheernox.com`.
+- **Encrypted GitHub Secrets**:
+  - `BUNNY_STORAGE_BUCKET`
+  - `BUNNY_STORAGE_ACCESS_KEY_ID`
+  - `BUNNY_STORAGE_SECRET_ACCESS_KEY`
+  - `BUNNY_STORAGE_ENDPOINT`
+  - `BUNNY_STORAGE_REGION`
+  - *Never commit secrets, tokens, or credentials into repository files.*
+
+---
+
 ## 🖨️ Automated PDF Generation System
 
 The PDF documents are built using **Variation 1 (Modern Tech Enterprise)** layout specs.

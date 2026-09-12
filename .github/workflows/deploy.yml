@@ -1,0 +1,63 @@
+name: Deploy Legal Portal to Bunny.net S3
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-bunny-s3
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to Bunny.net S3 Storage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python Dependencies & Browser
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4
+
+      - name: Regenerate & Verify Vector PDFs
+        run: |
+          python3 scripts/generate_pdfs.py --browser /usr/bin/google-chrome
+
+      - name: Configure AWS CLI Credentials for Bunny S3
+        run: |
+          aws configure set aws_access_key_id "${{ secrets.BUNNY_STORAGE_ACCESS_KEY_ID }}"
+          aws configure set aws_secret_access_key "${{ secrets.BUNNY_STORAGE_SECRET_ACCESS_KEY }}"
+          aws configure set default.region "${{ secrets.BUNNY_STORAGE_REGION }}"
+
+      - name: Deploy HTML Pages to Bunny S3
+        run: |
+          aws s3 sync . "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}" \
+            --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
+            --exclude "*" \
+            --include "*.html" \
+            --content-type "text/html; charset=utf-8"
+
+      - name: Deploy Vector PDFs to Bunny S3
+        run: |
+          aws s3 sync pdf/ "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}/pdf" \
+            --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
+            --exclude "*" \
+            --include "*.pdf" \
+            --content-type "application/pdf"
+
+      - name: Verify Live Deployment
+        run: |
+          echo "Verifying live CDN endpoints on legal.sheernox.com..."
+          curl -f -s -I "https://legal.sheernox.com/index.html" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/pdf/Terms_and_Conditions.pdf" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/website-care-plan-terms.html" | head -n 5
+          echo "Deployment verified successfully!"
