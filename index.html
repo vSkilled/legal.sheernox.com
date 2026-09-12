@@ -570,47 +570,31 @@
     .actions-cluster {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .btn-copy {
-      background: #f1f5f9;
+      background: #f8fafc;
       border: 1px solid var(--border-color);
       color: var(--text-muted);
-      padding: 8px 12px;
+      padding: 6px 11px;
       border-radius: 6px;
-      font-size: 0.82rem;
-      font-weight: 600;
+      font-size: 0.78rem;
+      font-weight: 500;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       transition: all 0.2s ease;
       font-family: inherit;
       text-decoration: none;
+      line-height: 1.4;
     }
 
     .btn-copy:hover {
-      background: #e2e8f0;
+      background: #f1f5f9;
       color: var(--text-main);
-    }
-
-    .btn-open {
-      background: var(--sn-primary-blue);
-      color: #ffffff;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s ease;
-    }
-
-    .btn-open:hover {
-      background: #0a355c;
+      border-color: #cbd5e1;
     }
 
     /* Dedicated PDF Action Button */
@@ -618,17 +602,18 @@
       background: #fff1f2;
       border: 1px solid #fecdd3;
       color: #be123c;
-      padding: 8px 12px;
+      padding: 6px 11px;
       border-radius: 6px;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 600;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       transition: all 0.2s ease;
       font-family: inherit;
       text-decoration: none;
+      line-height: 1.4;
     }
 
     .btn-pdf:hover {
@@ -636,6 +621,47 @@
       color: #9f1239;
       border-color: #fda4af;
       box-shadow: 0 2px 6px rgba(190, 18, 60, 0.12);
+    }
+
+    /* Primary Open Document Action Button */
+    .btn-open {
+      background: linear-gradient(135deg, #0284c7 0%, #0f4c81 100%);
+      color: #ffffff;
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.015em;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid rgba(2, 132, 199, 0.5);
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      line-height: 1.4;
+    }
+
+    .btn-open:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0a365c 100%);
+      border-color: rgba(2, 132, 199, 0.7);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
+      color: #ffffff;
+    }
+
+    .btn-open:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 3px rgba(2, 132, 199, 0.3), inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-open svg {
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
+    }
+
+    .btn-open:hover svg {
+      transform: translate(2px, -2px);
     }
 
     /* Version Pill Tag in Cards */
@@ -968,8 +994,8 @@
               Copy Link
             </button>
             <a href="terms-and-conditions.html" class="btn-open">
-              Open Web Page
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <span>Open</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -1026,8 +1052,8 @@
               Copy Link
             </button>
             <a href="acceptable-use-policy.html" class="btn-open">
-              Open Web Page
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <span>Open</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -1085,8 +1111,8 @@
               Copy Link
             </button>
             <a href="privacy-policy.html" class="btn-open">
-              Open Web Page
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <span>Open</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -1144,8 +1170,8 @@
               Copy Link
             </button>
             <a href="web-design-terms.html" class="btn-open">
-              Open Web Page
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <span>Open</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
