@@ -40,16 +40,16 @@ All infrastructure, cloud hosting, managed care, and creative agency services ar
 Every page across the Legal Portal integrates a standardized, responsive enterprise multi-brand navigation bar positioned at the top of the viewport (`.network-bar`), showcasing the Sheernox corporate network:
 
 ```
-[ Sheernox.com (Active) ● | HostBlizzard.com | VPSTitan.com | UptimeHawk.com | 4Up.ca ]    [ ● Sheernox Technology Group • Kamloops, BC ]
+[ Sheernox.com (Active) | HostBlizzard.com | VPSTitan.com | UptimeHawk.com | 4Up.ca ]    [ Sheernox Technology Group ]
 ```
 
 - **Participating Brands**:
-  1. [`Sheernox.com`](https://sheernox.com) — Active portal state with animated live emerald status pulse.
+  1. [`Sheernox.com`](https://sheernox.com) — Active portal state highlighted in cyan gradient.
   2. [`HostBlizzard.com`](https://hostblizzard.com) — Web, cloud, and reseller hosting platform.
   3. [`VPSTitan.com`](https://vpstitan.com) — High-performance virtual private server infrastructure.
   4. [`UptimeHawk.com`](https://uptimehawk.com) — 24/7/365 infrastructure monitoring and telemetry.
   5. [`4Up.ca`](https://4up.ca) — Canadian domain services and network solutions.
-- **Enterprise Entity Badge**: Displays `Sheernox Technology Group • Kamloops, BC` on desktop displays.
+- **Enterprise Entity Badge**: Displays `Sheernox Technology Group` on desktop displays.
 - **Mobile Responsive**: Horizontally scrollable tab bar on mobile displays (`< 840px`) with hidden scrollbars to prevent page-level horizontal overflow.
 - **Print Optimization**: Automatically suppressed on `@media print` across all documents.
 

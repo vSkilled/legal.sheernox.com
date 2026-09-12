@@ -123,44 +123,18 @@
       box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .network-pulse {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: #34d399;
-      box-shadow: 0 0 6px rgba(52, 211, 153, 0.8);
-    }
-
     .network-brand-badge {
       display: flex;
       align-items: center;
-      gap: 7px;
-      font-size: 0.72rem;
-      color: #94a3b8;
       white-space: nowrap;
       flex-shrink: 0;
     }
 
-    .network-status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: #10b981;
-      box-shadow: 0 0 5px rgba(16, 185, 129, 0.7);
-    }
-
     .network-entity {
-      color: #e2e8f0;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    .network-sep {
-      color: rgba(255, 255, 255, 0.3);
-    }
-
-    .network-location {
+      font-size: 0.68rem;
       color: #94a3b8;
+      font-weight: 500;
+      letter-spacing: 0.01em;
     }
 
     @media (max-width: 840px) {
@@ -878,7 +852,6 @@
       <nav class="network-tabs" aria-label="Sheernox Technology Group Network">
         <a href="https://sheernox.com" class="network-tab active" target="_blank" rel="noopener noreferrer">
           <span>Sheernox.com</span>
-          <span class="network-pulse" aria-hidden="true"></span>
         </a>
         <a href="https://hostblizzard.com" class="network-tab" target="_blank" rel="noopener noreferrer">
           <span>HostBlizzard.com</span>
@@ -894,10 +867,7 @@
         </a>
       </nav>
       <div class="network-brand-badge">
-        <span class="network-status-dot" aria-hidden="true"></span>
         <span class="network-entity">Sheernox Technology Group</span>
-        <span class="network-sep">&bull;</span>
-        <span class="network-location">Kamloops, BC</span>
       </div>
     </div>
   </header>
