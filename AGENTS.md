@@ -12,12 +12,12 @@ This document is the authoritative operational guide for AI coding agents (and d
 
 ### Document Registry
 
-| Key | HTML Source | Target PDF Output | Document Title | Document Code |
+| Key | HTML Source | Target PDF Output | Document Title | Version Tag |
 | :--- | :--- | :--- | :--- | :--- |
-| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `SN-TOS-2026-CA` |
-| `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `SN-AUP-2026-CA` |
-| `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `SN-WDT-2026-CA` |
-| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `SN-PRIV-2026-CA` |
+| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v3.5-TOS` |
+| `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v3.5-AUP` |
+| `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.0-WDT` |
+| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v3.5-PRIV` |
 | `hub` | `index.html` | N/A | Legal Portal Directory & Search Hub | N/A |
 
 ---
@@ -79,11 +79,20 @@ python3 scripts/generate_pdfs.py --doc privacy  # Privacy Policy
 python3 scripts/generate_pdfs.py --browser /usr/bin/brave
 ```
 
+### Revision Dates & Versioning Standards
+- **Standard ISO 8601 Date**: Always use `Last Revised: YYYY-MM-DD` (e.g., `2026-09-11`) consistently across all web pages and PDFs.
+- **Consistent Version Tags**: Format version tags strictly as `vX.X-KEY` (e.g., `v3.5-TOS`, `v3.5-AUP`, `v3.0-WDT`, `v3.5-PRIV`).
+- **0.5 Version Increments**: Versions must only increase in **0.5 increments** (e.g., `v3.0` -> `v3.5` -> `v4.0`).
+- **Colored Version Tag Display**: Web pages and PDF headers must render the version tag as a colored pill (`.version-pill`, cyan background/border, monospaced font).
+
 ### PDF Design Specifications (Variation 1)
 - **Top Brand Banner**: Deep navy `#071322` background, embedded vector Sheernox logo (`scripts/logo_data.py`), vertical divider, and cyan jurisdiction badge (`British Columbia • Canada`).
-- **Typography**: `Inter` for body copy, headings, and callouts; `JetBrains Mono` for metadata codes, IP references, and clause IDs.
+- **Top Info Bar**: Do **NOT** include "Governing Law", "Entity Status", or "Document Code". Display only the document category, document title, and the metadata row containing `Last Revised: YYYY-MM-DD` alongside the colored version pill tag (`vX.X-KEY`).
+- **Per-Page Running Footer**:
+  - **Bottom-Left**: Revision date and version tag: `Last Revised: YYYY-MM-DD • vX.X-KEY`.
+  - **Bottom-Right**: Dynamic page numbers: `Page X of Y`.
+- **Typography**: `Inter` for body copy, headings, and callouts; `JetBrains Mono` for metadata codes, IP references, version tags, and clause IDs.
 - **Page Geometry**: Standard Letter portrait (`8.5in x 11in`), margins: `16mm 16mm 18mm 16mm`.
-- **Page Numbering**: Automatic dynamic running footer (`Page X of Y`).
 - **Orphan/Widow Prevention**: `break-inside: avoid;` applied to `.clause-block`, `.key-takeaway`, `.statutory-callout`, `.critical-alert-box`, and `table` so individual sections or cards never break midway across pages awkwardly.
 - **Header Protection**: `break-after: avoid;` on `.section-header` to prevent headings from being orphaned at the bottom of a page.
 
@@ -103,11 +112,12 @@ Here are the policy changes I need:
 
 Operational Instructions:
 1. Update the appropriate HTML document(s) directly while maintaining the established semantic structure (`<article class="legal-prose">`, `.legal-section`, `.key-takeaway`, etc.).
-2. Ensure Canadian legal standards are strictly preserved (Kamloops BC sole proprietorship, support@sheernox.com for legal/privacy, abuse@sheernox.com for network abuse, no physical street address).
-3. Regenerate the production vector PDF(s) in `pdf/` using `python3 scripts/generate_pdfs.py`.
-4. Inspect the resulting PDF(s) to verify that layout, page breaks, typography, and page numbers render cleanly.
-5. Keep the repository clean to production code only.
-6. Commit and push the changes to `origin/main`.
+2. Update the "Last Revised" date to the current date in ISO 8601 format (`YYYY-MM-DD`) and increment the version tag by 0.5 (format: `vX.X-KEY`, e.g., `v3.5-TOS`).
+3. Ensure Canadian legal standards are strictly preserved (Kamloops BC sole proprietorship, support@sheernox.com for legal/privacy, abuse@sheernox.com for network abuse, no physical street address).
+4. Regenerate the production vector PDF(s) in `pdf/` using `python3 scripts/generate_pdfs.py`.
+5. Verify that PDFs render with the simplified top bar (no Governing Law, Entity Status, or Document Code) and show `Last Revised: YYYY-MM-DD • vX.X-KEY` in the footer of all pages.
+6. Keep the repository clean to production code only.
+7. Commit and push the changes to `origin/main`.
 ```
 
 ---

@@ -37,25 +37,65 @@ except ImportError:
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PDF_DIR = REPO_ROOT / "pdf"
 
-CSS_STYLE = """
-    @page {
+LAST_REVISED_DATE = "2026-09-11"
+
+DOC_REGISTRY = {
+    "aup": {
+        "source": "acceptable-use-policy.html",
+        "category": "Network & Cloud Infrastructure Policy",
+        "title": "Acceptable Use Policy (AUP)",
+        "version": "v3.5-AUP",
+        "output_pdf": "Acceptable_Use_Policy.pdf",
+    },
+    "tos": {
+        "source": "terms-and-conditions.html",
+        "category": "Master Services Agreement",
+        "title": "Terms and Conditions of Service",
+        "version": "v3.5-TOS",
+        "output_pdf": "Terms_and_Conditions.pdf",
+    },
+    "wdt": {
+        "source": "web-design-terms.html",
+        "category": "Agency Services Agreement",
+        "title": "Web Design & Development Terms and Conditions",
+        "version": "v3.0-WDT",
+        "output_pdf": "Web_Design_Terms_and_Conditions.pdf",
+    },
+    "priv": {
+        "source": "privacy-policy.html",
+        "category": "Privacy & Data Protection Policy",
+        "title": "Privacy & Personal Information Policy",
+        "version": "v3.5-PRIV",
+        "output_pdf": "Privacy_Policy.pdf",
+    },
+}
+
+def get_css(last_revised, version):
+    return f"""
+    @page {{
       size: letter portrait;
       margin: 16mm 16mm 18mm 16mm;
-      @bottom-right {
+      @bottom-left {{
+        content: "Last Revised: {last_revised} \\2022  {version}";
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 7.2pt;
+        color: #64748b;
+      }}
+      @bottom-right {{
         content: "Page " counter(page) " of " counter(pages);
         font-family: 'Inter', sans-serif;
-        font-size: 7.5pt;
+        font-size: 7.2pt;
         color: #64748b;
-      }
-    }
+      }}
+    }}
 
-    * {
+    * {{
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
+    }}
 
-    body {
+    body {{
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 8.8pt;
       line-height: 1.52;
@@ -63,10 +103,10 @@ CSS_STYLE = """
       background: #ffffff;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
-    }
+    }}
 
     /* Top Brand Header */
-    .brand-header {
+    .brand-header {{
       background: #071322;
       color: #ffffff;
       padding: 12px 18px;
@@ -76,34 +116,34 @@ CSS_STYLE = """
       align-items: center;
       margin-bottom: 16px;
       break-inside: avoid;
-    }
+    }}
 
-    .brand-left {
+    .brand-left {{
       display: flex;
       align-items: center;
       gap: 12px;
-    }
+    }}
 
-    .brand-logo {
+    .brand-logo {{
       height: 22px;
       width: auto;
-    }
+    }}
 
-    .brand-divider {
+    .brand-divider {{
       height: 18px;
       width: 1px;
       background: rgba(255, 255, 255, 0.2);
-    }
+    }}
 
-    .brand-subtitle {
+    .brand-subtitle {{
       font-size: 7.8pt;
       font-weight: 600;
       color: #94a3b8;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-    }
+    }}
 
-    .brand-badge {
+    .brand-badge {{
       font-size: 7.2pt;
       font-weight: 600;
       color: #38bdf8;
@@ -112,61 +152,65 @@ CSS_STYLE = """
       padding: 3px 8px;
       border-radius: 12px;
       letter-spacing: 0.03em;
-    }
+    }}
 
     /* Document Title Block */
-    .title-block {
+    .title-block {{
       border-bottom: 1.5px solid #e2e8f0;
       padding-bottom: 12px;
       margin-bottom: 14px;
       break-inside: avoid;
-    }
+    }}
 
-    .doc-category {
+    .doc-category {{
       font-size: 7.5pt;
       font-weight: 700;
       color: #0284c7;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 3px;
-    }
+    }}
 
-    .doc-title {
+    .doc-title {{
       font-size: 18pt;
       font-weight: 800;
       color: #071322;
       letter-spacing: -0.02em;
       line-height: 1.2;
-      margin-bottom: 10px;
-    }
+      margin-bottom: 8px;
+    }}
 
-    /* Metadata Strip */
-    .meta-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 7.5pt;
-    }
-
-    .meta-item strong {
-      display: block;
+    /* Metadata Info Row */
+    .doc-meta-strip {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 8.2pt;
       color: #64748b;
-      font-size: 6.8pt;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
+    }}
 
-    .meta-item span {
-      font-weight: 600;
+    .meta-date strong {{
       color: #0f172a;
-    }
+      font-weight: 700;
+    }}
+
+    /* Colored Version Pill Tag */
+    .version-pill {{
+      display: inline-flex;
+      align-items: center;
+      background: rgba(14, 165, 233, 0.12);
+      color: #0284c7;
+      border: 1px solid rgba(14, 165, 233, 0.35);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.2pt;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+    }}
 
     /* Critical Warning Box */
-    .critical-alert-box, .alert-box {
+    .critical-alert-box, .alert-box {{
       background: #fffbeb;
       border: 1px solid #fde68a;
       border-left: 4px solid #f59e0b;
@@ -177,31 +221,31 @@ CSS_STYLE = """
       gap: 10px;
       align-items: flex-start;
       break-inside: avoid;
-    }
+    }}
 
-    .alert-icon {
+    .alert-icon {{
       font-size: 11pt;
       line-height: 1;
-    }
+    }}
 
-    .critical-alert-box h3, .alert-content h4 {
+    .critical-alert-box h3, .alert-content h4 {{
       font-size: 8pt;
       font-weight: 700;
       color: #92400e;
       text-transform: uppercase;
       letter-spacing: 0.03em;
       margin-bottom: 2px;
-    }
+    }}
 
-    .critical-alert-box p, .alert-content p {
+    .critical-alert-box p, .alert-content p {{
       font-size: 8.2pt;
       color: #b45309;
       line-height: 1.45;
       margin-bottom: 0;
-    }
+    }}
 
     /* Statutory Callouts */
-    .statutory-callout {
+    .statutory-callout {{
       background: #f8fafc;
       border: 1px solid #cbd5e1;
       border-left: 3.5px solid #0f172a;
@@ -209,9 +253,9 @@ CSS_STYLE = """
       border-radius: 6px;
       margin: 10px 0;
       break-inside: avoid;
-    }
+    }}
 
-    .statutory-header {
+    .statutory-header {{
       display: flex;
       align-items: center;
       gap: 6px;
@@ -221,17 +265,17 @@ CSS_STYLE = """
       text-transform: uppercase;
       letter-spacing: 0.04em;
       margin-bottom: 4px;
-    }
+    }}
 
-    .statutory-content {
+    .statutory-content {{
       font-size: 7.8pt;
       line-height: 1.45;
       color: #334155;
       text-align: justify;
-    }
+    }}
 
     /* Plain English Callout */
-    .key-takeaway, .takeaway-card {
+    .key-takeaway, .takeaway-card {{
       background: #f0f9ff;
       border: 1px solid #bae6fd;
       border-left: 3.5px solid #0284c7;
@@ -239,9 +283,9 @@ CSS_STYLE = """
       border-radius: 6px;
       margin: 9px 0 11px 0;
       break-inside: avoid;
-    }
+    }}
 
-    .takeaway-badge {
+    .takeaway-badge {{
       display: inline-block;
       font-size: 6.8pt;
       font-weight: 700;
@@ -252,90 +296,90 @@ CSS_STYLE = """
       padding: 2px 6px;
       border-radius: 4px;
       margin-bottom: 4px;
-    }
+    }}
 
-    .key-takeaway p, .takeaway-card p {
+    .key-takeaway p, .takeaway-card p {{
       font-size: 8.2pt;
       color: #0369a1;
       line-height: 1.42;
       font-weight: 500;
       margin-bottom: 0;
-    }
+    }}
 
     /* Section Structure */
-    .legal-section {
+    .legal-section {{
       margin-bottom: 14px;
       break-inside: auto;
-    }
+    }}
 
-    .section-header {
+    .section-header {{
       margin-top: 14px;
       margin-bottom: 8px;
       border-bottom: 1px solid #e2e8f0;
       padding-bottom: 4px;
       break-after: avoid;
       break-inside: avoid;
-    }
+    }}
 
-    .section-title {
+    .section-title {{
       font-size: 10.8pt;
       font-weight: 700;
       color: #071322;
       display: flex;
       align-items: center;
       gap: 6px;
-    }
+    }}
 
-    p {
+    p {{
       margin-bottom: 6px;
       color: #334155;
       text-align: justify;
       font-size: 8.6pt;
       line-height: 1.5;
-    }
+    }}
 
     /* Clause Blocks */
-    .clause-block {
+    .clause-block {{
       margin-bottom: 8px;
       break-inside: avoid;
-    }
+    }}
 
-    .clause-num {
+    .clause-num {{
       font-weight: 700;
       color: #071322;
       display: inline;
-    }
+    }}
 
     /* Lists */
-    ul, ol {
+    ul, ol {{
       margin: 6px 0 8px 20px;
-    }
+    }}
 
-    li {
+    li {{
       font-size: 8.5pt;
       line-height: 1.48;
       color: #334155;
       margin-bottom: 4px;
-    }
+    }}
 
-    .legal-sublist, .sub-list {
+    .legal-sublist, .sub-list {{
       list-style-type: lower-alpha;
       margin: 4px 0 6px 20px;
-    }
+    }}
 
-    .legal-sublist li, .sub-list li {
+    .legal-sublist li, .sub-list li {{
       margin-bottom: 3px;
       font-size: 8.2pt;
-    }
+    }}
 
     /* Custom Numbered Lists */
-    .legal-counter-list {
+    .legal-counter-list {{
       list-style-type: none;
       counter-reset: aup-counter;
       margin: 8px 0;
-    }
+    }}
 
-    .legal-counter-list > li {
+    .legal-counter-list > li {{
       counter-increment: aup-counter;
       position: relative;
       padding-left: 28px;
@@ -344,9 +388,9 @@ CSS_STYLE = """
       line-height: 1.48;
       color: #334155;
       break-inside: avoid;
-    }
+    }}
 
-    .legal-counter-list > li::before {
+    .legal-counter-list > li::before {{
       content: counter(aup-counter);
       position: absolute;
       left: 0;
@@ -363,35 +407,35 @@ CSS_STYLE = """
       font-weight: 700;
       color: #0f4c81;
       font-family: 'JetBrains Mono', monospace;
-    }
+    }}
 
     /* Tables */
-    table, .sla-table, .summary-table {
+    table, .sla-table, .summary-table {{
       width: 100%;
       border-collapse: collapse;
       margin: 10px 0;
       font-size: 8pt;
       break-inside: avoid;
-    }
+    }}
 
-    th, td {
+    th, td {{
       border: 1px solid #e2e8f0;
       padding: 6px 8px;
       text-align: left;
-    }
+    }}
 
-    th {
+    th {{
       background: #f8fafc;
       font-weight: 700;
       color: #0f172a;
-    }
+    }}
 
-    tr:nth-child(even) {
+    tr:nth-child(even) {{
       background: #fbfcfe;
-    }
+    }}
 
     /* Badges & Tags */
-    .sec-badge, .status-badge {
+    .sec-badge, .status-badge {{
       display: inline-block;
       font-size: 7pt;
       padding: 2px 6px;
@@ -399,29 +443,29 @@ CSS_STYLE = """
       background: #e2e8f0;
       color: #334155;
       font-weight: 600;
-    }
+    }}
 
-    code {
+    code {{
       font-family: 'JetBrains Mono', monospace;
       font-size: 8pt;
       background: #f1f5f9;
       padding: 1px 4px;
       border-radius: 3px;
       color: #0f172a;
-    }
+    }}
 
-    a {
+    a {{
       color: #0284c7;
       text-decoration: none;
-    }
+    }}
 
     /* Interactive Elements Hidden in Print */
-    .clause-anchor-btn, .btn-action, .toc-card, .search-box, .hero-actions {
+    .clause-anchor-btn, .btn-action, .toc-card, .search-box, .hero-actions {{
       display: none !important;
-    }
+    }}
 
     /* Final Document Sign-off */
-    .doc-footer {
+    .doc-footer {{
       margin-top: 24px;
       padding-top: 12px;
       border-top: 1.5px solid #e2e8f0;
@@ -431,47 +475,16 @@ CSS_STYLE = """
       font-size: 7.4pt;
       color: #64748b;
       break-inside: avoid;
-    }
+    }}
 
-    .footer-left {
+    .footer-left {{
       font-family: 'Inter', sans-serif;
-    }
+    }}
 
-    .footer-right {
+    .footer-right {{
       font-family: 'JetBrains Mono', monospace;
-    }
-"""
-
-DOC_REGISTRY = {
-    "aup": {
-        "source": "acceptable-use-policy.html",
-        "category": "Network & Cloud Infrastructure Policy",
-        "title": "Acceptable Use Policy (AUP)",
-        "code": "SN-AUP-2026-CA",
-        "output_pdf": "Acceptable_Use_Policy.pdf",
-    },
-    "tos": {
-        "source": "terms-and-conditions.html",
-        "category": "Master Services Agreement",
-        "title": "Terms and Conditions of Service",
-        "code": "SN-TOS-2026-CA",
-        "output_pdf": "Terms_and_Conditions.pdf",
-    },
-    "wdt": {
-        "source": "web-design-terms.html",
-        "category": "Agency Services Agreement",
-        "title": "Web Design & Development Terms and Conditions",
-        "code": "SN-WDT-2026-CA",
-        "output_pdf": "Web_Design_Terms_and_Conditions.pdf",
-    },
-    "priv": {
-        "source": "privacy-policy.html",
-        "category": "Privacy & Data Protection Policy",
-        "title": "Privacy & Personal Information Policy",
-        "code": "SN-PRIV-2026-CA",
-        "output_pdf": "Privacy_Policy.pdf",
-    },
-}
+    }}
+    """
 
 def find_browser(preferred_bin=None):
     if preferred_bin and shutil.which(preferred_bin):
@@ -498,7 +511,7 @@ def find_browser(preferred_bin=None):
             return found
     return None
 
-def build_print_html(source_path, category, title, doc_code):
+def build_print_html(source_path, category, title, version, last_revised):
     with open(source_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
 
@@ -513,6 +526,7 @@ def build_print_html(source_path, category, title, doc_code):
         s.decompose()
 
     article_html = str(article)
+    css_content = get_css(last_revised, version)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -521,9 +535,9 @@ def build_print_html(source_path, category, title, doc_code):
   <title>{title} - Sheernox Technology Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-{CSS_STYLE}
+{css_content}
   </style>
 </head>
 <body>
@@ -538,28 +552,13 @@ def build_print_html(source_path, category, title, doc_code):
     <div class="brand-badge">British Columbia &bull; Canada</div>
   </div>
 
-  <!-- Title Block -->
+  <!-- Title Block with ISO 8601 Last Revised Date & Colored Version Tag -->
   <div class="title-block">
     <div class="doc-category">{category}</div>
     <h1 class="doc-title">{title}</h1>
-    
-    <div class="meta-grid">
-      <div class="meta-item">
-        <strong>Effective Date</strong>
-        <span>September 2026</span>
-      </div>
-      <div class="meta-item">
-        <strong>Governing Law</strong>
-        <span>British Columbia, Canada</span>
-      </div>
-      <div class="meta-item">
-        <strong>Entity Status</strong>
-        <span>Sole Proprietorship (BC)</span>
-      </div>
-      <div class="meta-item">
-        <strong>Document Code</strong>
-        <span>{doc_code}</span>
-      </div>
+    <div class="doc-meta-strip">
+      <span class="meta-date">Last Revised: <strong>{last_revised}</strong></span>
+      <span class="version-pill">{version}</span>
     </div>
   </div>
 
@@ -569,7 +568,7 @@ def build_print_html(source_path, category, title, doc_code):
   <!-- Footer -->
   <div class="doc-footer">
     <div class="footer-left">&copy; 2026 Sheernox Technology Group &bull; Kamloops, BC, Canada &bull; All Rights Reserved</div>
-    <div class="footer-right">{doc_code} // OFFICIAL</div>
+    <div class="footer-right">Last Revised: {last_revised} // {version}</div>
   </div>
 
 </body>
@@ -584,8 +583,14 @@ def render_doc(browser_bin, key, doc_info, temp_dir):
         print(f"[-] Source file not found: {source_file}", file=sys.stderr)
         return False
 
-    print(f"[*] Preparing HTML for: {doc_info['title']} ({doc_info['code']})")
-    html_markup = build_print_html(source_file, doc_info["category"], doc_info["title"], doc_info["code"])
+    print(f"[*] Preparing HTML for: {doc_info['title']} ({doc_info['version']})")
+    html_markup = build_print_html(
+        source_file,
+        doc_info["category"],
+        doc_info["title"],
+        doc_info["version"],
+        LAST_REVISED_DATE,
+    )
 
     temp_html = Path(temp_dir) / f"{key}_print.html"
     with open(temp_html, "w", encoding="utf-8") as f:
