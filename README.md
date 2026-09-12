@@ -56,7 +56,7 @@ sheernox_legal_portal/
 | **[`index.html`](index.html)** | Portal Hub & Directory | N/A | Central search, filter by service type, direct deep links, and enterprise MSA inquiries. |
 | **[`terms-and-conditions.html`](terms-and-conditions.html)** | Master Services & Infrastructure | 23 Sections | Kamloops BC venue, $5,000 CAD typo-squatting liquidated damages, 14-day cancellation notice via portal, 99.9% SLA credit tiers, SOW on-site builds. |
 | **[`acceptable-use-policy.html`](acceptable-use-policy.html)** | Network & Compute Rules | 8 Core Sections | All 33 original unacceptable categories, 26 itemized prohibited activities, cron/MySQL limits, CASL compliance, $250 CAD delisting fee. |
-| **[`web-design-terms.html`](web-design-terms.html)** | Creative, UI/UX & Care Retainers | 13 Sections | 50% non-refundable deposit, net 30 (1.8% monthly interest), Small Claims Court of BC, $250 CAD file transfer fee, Criminal Code theft protections. |
+| **[`web-design-terms.html`](web-design-terms.html)** | Creative, UI/UX, Web Apps & Care | 14 Sections | SOW framework, technology-agnostic (Headless, Jamstack, CMS, Web Apps), 30-day warranty, 50% deposit, Small Claims Court of BC, $250 CAD external fee. |
 | **[`privacy-policy.html`](privacy-policy.html)** | Data Privacy & GDPR/PIPEDA | 10 Sections | Self-hosted, PIPEDA & BC PIPA compliance, vetted sub-processor registry, DPO in Kamloops, OIPC BC complaint rights. |
 
 ---
