@@ -44,7 +44,7 @@ sheernox_legal_portal/
 ├── README.md                    # Repository documentation and architecture guide
 ├── index.html                   # Central Legal Portal Directory & Interactive Hub
 ├── terms-and-conditions.html    # Master Terms and Conditions (TOS, SLA, Infrastructure)
-├── acceptable-use-policy.html   # Acceptable Use Policy (AUP, 33 Rules, Resource Ceilings)
+├── acceptable-use-policy.html   # Acceptable Use Policy (Hosting & VPS Resource Standards)
 ├── web-design-terms.html        # Web Design, Branding & Maintenance Care Agreement
 └── privacy-policy.html          # Global Data Protection & Privacy Policy (PIPEDA/GDPR)
 ```
@@ -55,7 +55,7 @@ sheernox_legal_portal/
 | :--- | :--- | :--- | :--- |
 | **[`index.html`](index.html)** | Portal Hub & Directory | N/A | Central search, filter by service type, direct deep links, and enterprise MSA inquiries. |
 | **[`terms-and-conditions.html`](terms-and-conditions.html)** | Master Services & Infrastructure | 23 Sections | Kamloops BC venue, $5,000 CAD typo-squatting liquidated damages, 14-day cancellation notice via portal, 99.9% SLA credit tiers, SOW on-site builds. |
-| **[`acceptable-use-policy.html`](acceptable-use-policy.html)** | Network & Compute Rules | 8 Core Sections | All 33 original unacceptable categories, 26 itemized prohibited activities, cron/MySQL limits, CASL compliance, $250 CAD delisting fee. |
+| **[`acceptable-use-policy.html`](acceptable-use-policy.html)** | Hosting & VPS Network Rules | 8 Core Sections | Illustrative non-exhaustive standards, VPS hypervisor multi-tenancy, quarantine null-routing, CloudLinux resource caps, CASL compliance, $250 CAD delisting fee. |
 | **[`web-design-terms.html`](web-design-terms.html)** | Creative, UI/UX, Web Apps & Care | 14 Sections | SOW framework, technology-agnostic (Headless, Jamstack, CMS, Web Apps), 30-day warranty, 50% deposit, Small Claims Court of BC, $250 CAD external fee. |
 | **[`privacy-policy.html`](privacy-policy.html)** | Data Privacy & GDPR/PIPEDA | 10 Sections | Self-hosted, PIPEDA & BC PIPA compliance, vetted sub-processor registry, DPO in Kamloops, OIPC BC complaint rights. |
 
