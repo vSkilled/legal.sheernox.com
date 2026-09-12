@@ -186,10 +186,11 @@
 
     /* Hero Section */
     .hero-section {
-      background: linear-gradient(180deg, #ffffff 0%, var(--canvas-bg) 100%);
+      background: radial-gradient(circle at 50% -20%, rgba(15, 76, 129, 0.08) 0%, transparent 65%), linear-gradient(180deg, #ffffff 0%, var(--canvas-bg) 100%);
       border-bottom: 1px solid var(--border-color);
-      padding: 64px 24px 52px;
+      padding: 64px 24px 44px;
       text-align: center;
+      position: relative;
     }
 
     .hero-inner {
@@ -230,7 +231,7 @@
       font-size: 1.05rem;
       color: var(--text-muted);
       max-width: 650px;
-      margin: 0 auto 32px;
+      margin: 0 auto 28px;
     }
 
     /* Search Input */
@@ -242,13 +243,13 @@
 
     .search-input {
       width: 100%;
-      padding: 14px 18px 14px 46px;
+      padding: 14px 44px 14px 46px;
       font-size: 0.95rem;
       font-family: inherit;
       border: 1px solid var(--border-color);
       border-radius: 10px;
       background: #ffffff;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
       outline: none;
       transition: all 0.2s ease;
     }
@@ -267,6 +268,118 @@
       width: 18px;
       height: 18px;
       pointer-events: none;
+    }
+
+    .search-shortcut {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #f1f5f9;
+      border: 1px solid var(--border-color);
+      color: var(--text-subtle);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #e2e8f0;
+      border: none;
+      color: var(--text-muted);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.2s ease;
+    }
+
+    .search-clear-btn:hover {
+      background: #cbd5e1;
+      color: var(--text-main);
+    }
+
+    /* Quick Filter Chips */
+    .quick-filter-chips {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .chip-btn {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    }
+
+    .chip-btn:hover {
+      border-color: var(--sn-primary-blue);
+      color: var(--sn-primary-blue);
+      background: #f8fafc;
+    }
+
+    .chip-btn.active {
+      background: var(--sn-primary-blue);
+      border-color: var(--sn-primary-blue);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(15, 76, 129, 0.25);
+    }
+
+    /* Hero Trust Strip */
+    .hero-trust-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 26px;
+      font-size: 0.78rem;
+      color: var(--text-subtle);
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .trust-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
+    }
+
+    .trust-divider {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--border-color);
     }
 
     /* Main Container */
@@ -307,8 +420,28 @@
 
     .enterprise-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 14px 32px -6px rgba(15, 23, 42, 0.08);
       border-color: #cbd5e1;
+    }
+
+    .card-blue:hover {
+      border-color: #93c5fd;
+      box-shadow: 0 14px 32px -6px rgba(15, 76, 129, 0.12);
+    }
+
+    .card-amber:hover {
+      border-color: #fcd34d;
+      box-shadow: 0 14px 32px -6px rgba(245, 158, 11, 0.12);
+    }
+
+    .card-emerald:hover {
+      border-color: #6ee7b7;
+      box-shadow: 0 14px 32px -6px rgba(16, 185, 129, 0.12);
+    }
+
+    .card-coral:hover {
+      border-color: #fca5a5;
+      box-shadow: 0 14px 32px -6px rgba(239, 68, 68, 0.12);
     }
 
     /* Color Ribbon Indicator */
@@ -480,6 +613,146 @@
       background: #0a355c;
     }
 
+    /* Dedicated PDF Action Button */
+    .btn-pdf {
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+      color: #be123c;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      text-decoration: none;
+    }
+
+    .btn-pdf:hover {
+      background: #ffe4e6;
+      color: #9f1239;
+      border-color: #fda4af;
+      box-shadow: 0 2px 6px rgba(190, 18, 60, 0.12);
+    }
+
+    /* Version Pill Tag in Cards */
+    .version-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.03em;
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .card-meta-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+
+    .meta-revised {
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      font-weight: 500;
+    }
+
+    /* No Results Empty State */
+    .no-results-card {
+      grid-column: 1 / -1;
+      background: #ffffff;
+      border: 1px dashed var(--border-color);
+      border-radius: 12px;
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .no-results-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: var(--text-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .no-results-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .no-results-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 20px;
+      line-height: 1.5;
+    }
+
+    .btn-clear-filter {
+      background: var(--sn-primary-blue);
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+
+    .btn-clear-filter:hover {
+      background: #0a355c;
+    }
+
+    /* Responsive Mobile Layout Adjustments */
+    @media (max-width: 600px) {
+      .card-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .card-actions-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .actions-cluster {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .meta-url {
+        max-width: 100%;
+      }
+      .enterprise-callout {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-trust-bar {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .trust-divider {
+        display: none;
+      }
+    }
+
     /* Enterprise Info Callout */
     .enterprise-callout {
       margin-top: 48px;
@@ -611,7 +884,34 @@
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="filterInput" class="search-input" placeholder="Quick search by document name or keyword...">
+        <input type="text" id="filterInput" class="search-input" placeholder="Quick search by document name, topic, or keyword..." autocomplete="off">
+        <span class="search-shortcut" id="searchShortcut" title="Press / to focus">/</span>
+        <button type="button" id="clearSearchBtn" class="search-clear-btn" style="display: none;" onclick="clearSearch()" title="Clear search (Esc)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="quick-filter-chips">
+        <button type="button" class="chip-btn active" onclick="filterByChip('all', this)">All Documents</button>
+        <button type="button" class="chip-btn" onclick="filterByChip('hosting', this)">Hosting &amp; SLA</button>
+        <button type="button" class="chip-btn" onclick="filterByChip('aup', this)">Acceptable Use</button>
+        <button type="button" class="chip-btn" onclick="filterByChip('privacy', this)">Privacy &amp; Data</button>
+        <button type="button" class="chip-btn" onclick="filterByChip('design', this)">Design &amp; SOW</button>
+      </div>
+
+      <div class="hero-trust-bar">
+        <div class="trust-item">
+          <span class="trust-dot"></span>
+          <span>British Columbia Sole Proprietorship</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span>Letter Vector PDFs Available</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span>ISO 8601 &amp; CASL Compliant</span>
+        </div>
       </div>
     </div>
   </section>
@@ -621,7 +921,7 @@
     <div class="doc-grid" id="documentGrid">
 
       <!-- 1. Terms and Conditions -->
-      <div class="enterprise-card" data-title="terms and conditions" data-keywords="billing SLA liability payment subscription hosting cloud vps dedicated domains email backups">
+      <div class="enterprise-card card-blue" data-category="hosting" data-title="terms and conditions master service agreement" data-keywords="billing SLA liability payment subscription hosting cloud vps dedicated domains email backups uptime">
         <div class="card-ribbon ribbon-blue"></div>
         <div>
           <div class="card-header-row">
@@ -632,7 +932,13 @@
                   <polyline points="14 2 14 8 20 8"></polyline>
                 </svg>
               </div>
-              <h2 class="card-title">Terms and Conditions</h2>
+              <div>
+                <h2 class="card-title">Terms and Conditions</h2>
+                <div class="card-meta-line">
+                  <span class="version-pill">v3.5-TOS</span>
+                  <span class="meta-revised">Revised 2026-09-11</span>
+                </div>
+              </div>
             </div>
             <span class="type-pill pill-html">Web Agreement</span>
           </div>
@@ -650,7 +956,7 @@
         <div class="card-actions-bar">
           <span class="meta-url" title="terms-and-conditions.html">terms-and-conditions.html</span>
           <div class="actions-cluster">
-            <a href="pdf/Terms_and_Conditions.pdf" class="btn-copy" target="_blank" title="Download Vector PDF">
+            <a href="pdf/Terms_and_Conditions.pdf" class="btn-pdf" target="_blank" title="Download Vector PDF">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               PDF
             </a>
@@ -674,7 +980,7 @@
       </div>
 
       <!-- 2. Acceptable Use Policy -->
-      <div class="enterprise-card" data-title="acceptable use policy" data-keywords="aup abuse spam security bandwidth resource limits bots scraping mining">
+      <div class="enterprise-card card-amber" data-category="aup" data-title="acceptable use policy aup" data-keywords="aup abuse spam security bandwidth resource limits bots scraping mining network cloud vps">
         <div class="card-ribbon ribbon-amber"></div>
         <div>
           <div class="card-header-row">
@@ -684,7 +990,13 @@
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
               </div>
-              <h2 class="card-title">Acceptable Use Policy</h2>
+              <div>
+                <h2 class="card-title">Acceptable Use Policy</h2>
+                <div class="card-meta-line">
+                  <span class="version-pill">v3.5-AUP</span>
+                  <span class="meta-revised">Revised 2026-09-11</span>
+                </div>
+              </div>
             </div>
             <span class="type-pill pill-html">Web Policy</span>
           </div>
@@ -702,7 +1014,7 @@
         <div class="card-actions-bar">
           <span class="meta-url" title="acceptable-use-policy.html">acceptable-use-policy.html</span>
           <div class="actions-cluster">
-            <a href="pdf/Acceptable_Use_Policy.pdf" class="btn-copy" target="_blank" title="Download Vector PDF">
+            <a href="pdf/Acceptable_Use_Policy.pdf" class="btn-pdf" target="_blank" title="Download Vector PDF">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               PDF
             </a>
@@ -726,7 +1038,7 @@
       </div>
 
       <!-- 3. Privacy Policy -->
-      <div class="enterprise-card" data-title="privacy policy" data-keywords="privacy gdpr pipeda ccpa data cookies protection personal tracking encryption">
+      <div class="enterprise-card card-emerald" data-category="privacy" data-title="privacy policy personal data" data-keywords="privacy gdpr pipeda ccpa data cookies protection personal tracking encryption sub-processors controller">
         <div class="card-ribbon ribbon-emerald"></div>
         <div>
           <div class="card-header-row">
@@ -737,7 +1049,13 @@
                   <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
               </div>
-              <h2 class="card-title">Privacy Policy</h2>
+              <div>
+                <h2 class="card-title">Privacy Policy</h2>
+                <div class="card-meta-line">
+                  <span class="version-pill">v3.5-PRIV</span>
+                  <span class="meta-revised">Revised 2026-09-11</span>
+                </div>
+              </div>
             </div>
             <span class="type-pill pill-html">Web Policy</span>
           </div>
@@ -755,7 +1073,7 @@
         <div class="card-actions-bar">
           <span class="meta-url" title="privacy-policy.html">privacy-policy.html</span>
           <div class="actions-cluster">
-            <a href="pdf/Privacy_Policy.pdf" class="btn-copy" target="_blank" title="Download Vector PDF">
+            <a href="pdf/Privacy_Policy.pdf" class="btn-pdf" target="_blank" title="Download Vector PDF">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               PDF
             </a>
@@ -779,7 +1097,7 @@
       </div>
 
       <!-- 4. Web Design, Branding & Care Terms -->
-      <div class="enterprise-card" data-title="web design branding care terms and conditions" data-keywords="design development branding care maintenance ux approval milestones creative copyright">
+      <div class="enterprise-card card-coral" data-category="design" data-title="web design branding care terms and conditions" data-keywords="design development branding care maintenance ux approval milestones creative copyright sow agency">
         <div class="card-ribbon ribbon-coral"></div>
         <div>
           <div class="card-header-row">
@@ -790,7 +1108,13 @@
                   <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
                 </svg>
               </div>
-              <h2 class="card-title">Web Design & Care Terms</h2>
+              <div>
+                <h2 class="card-title">Web Design & Care Terms</h2>
+                <div class="card-meta-line">
+                  <span class="version-pill">v3.0-WDT</span>
+                  <span class="meta-revised">Revised 2026-09-11</span>
+                </div>
+              </div>
             </div>
             <span class="type-pill pill-html">Web Agreement</span>
           </div>
@@ -808,7 +1132,7 @@
         <div class="card-actions-bar">
           <span class="meta-url" title="web-design-terms.html">web-design-terms.html</span>
           <div class="actions-cluster">
-            <a href="pdf/Web_Design_Terms_and_Conditions.pdf" class="btn-copy" target="_blank" title="Download Vector PDF">
+            <a href="pdf/Web_Design_Terms_and_Conditions.pdf" class="btn-pdf" target="_blank" title="Download Vector PDF">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               PDF
             </a>
@@ -829,6 +1153,20 @@
             </a>
           </div>
         </div>
+      </div>
+
+      <!-- No Results State -->
+      <div id="noResults" class="no-results-card" style="display: none;">
+        <div class="no-results-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+        </div>
+        <h3 class="no-results-title">No matching policy documents found</h3>
+        <p class="no-results-desc">No agreements matched your search query. Try searching for broader terms like <strong>SLA</strong>, <strong>cancellation</strong>, <strong>uptime</strong>, <strong>backup</strong>, <strong>sub-processor</strong>, or <strong>governing law</strong>.</p>
+        <button type="button" class="btn-clear-filter" onclick="clearSearch()">Clear Search Filter</button>
       </div>
 
     </div>
@@ -870,32 +1208,88 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Search filter
     const filterInput = document.getElementById('filterInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const searchShortcut = document.getElementById('searchShortcut');
+    const noResults = document.getElementById('noResults');
     const cards = document.querySelectorAll('.enterprise-card');
+    const chipBtns = document.querySelectorAll('.chip-btn');
+    let activeCategory = 'all';
 
-    filterInput.addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase().trim();
+    function applyFilters() {
+      const q = filterInput.value.toLowerCase().trim();
+      let matchCount = 0;
+
+      if (clearSearchBtn) {
+        clearSearchBtn.style.display = q ? 'flex' : 'none';
+      }
+      if (searchShortcut) {
+        searchShortcut.style.opacity = q ? '0' : '1';
+      }
+
       cards.forEach(c => {
         const title = c.getAttribute('data-title') || '';
         const keys = c.getAttribute('data-keywords') || '';
+        const category = c.getAttribute('data-category') || '';
         const body = c.textContent.toLowerCase();
-        if (!q || title.includes(q) || keys.includes(q) || body.includes(q)) {
+
+        const matchesQuery = !q || title.includes(q) || keys.includes(q) || body.includes(q);
+        const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+        if (matchesQuery && matchesCategory) {
           c.style.display = 'flex';
+          matchCount++;
         } else {
           c.style.display = 'none';
         }
       });
+
+      if (noResults) {
+        noResults.style.display = matchCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    filterInput.addEventListener('input', applyFilters);
+
+    function clearSearch() {
+      filterInput.value = '';
+      activeCategory = 'all';
+      chipBtns.forEach(btn => btn.classList.remove('active'));
+      if (chipBtns[0]) chipBtns[0].classList.add('active');
+      applyFilters();
+      filterInput.focus();
+    }
+
+    function filterByChip(category, btn) {
+      activeCategory = category;
+      chipBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    }
+
+    // Keyboard shortcuts: '/' to search, 'Escape' to clear
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== filterInput && document.activeElement.tagName !== 'INPUT') {
+        e.preventDefault();
+        filterInput.focus();
+        filterInput.select();
+      } else if (e.key === 'Escape') {
+        if (filterInput.value || activeCategory !== 'all') {
+          clearSearch();
+        }
+        filterInput.blur();
+      }
     });
 
-    // Copy to clipboard
+    // Copy to clipboard with full URL resolution
     function copyDocUrl(url) {
-      navigator.clipboard.writeText(url).then(() => {
+      const fullUrl = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '') + url;
+      navigator.clipboard.writeText(fullUrl).then(() => {
         const toast = document.getElementById('copyToast');
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 2500);
-      }).catch(err => {
-        prompt("Copy this URL:", url);
+      }).catch(() => {
+        prompt("Copy document link:", fullUrl);
       });
     }
   </script>

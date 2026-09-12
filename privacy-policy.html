@@ -496,17 +496,36 @@
     }
 
     /* Subprocessor Table */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 20px 0;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
+      margin: 0;
       font-size: 0.88rem;
     }
 
     .data-table th, .data-table td {
-      border: 1px solid var(--border-color);
-      padding: 10px 14px;
+      border: none;
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 16px;
       text-align: left;
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .data-table tr:hover td {
+      background-color: #f8fafc;
     }
 
     .data-table th {
@@ -805,62 +824,64 @@
 
           <p>We engage vetted third-party service providers to support our platform infrastructure:</p>
 
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Partner / Service</th>
-                <th>Role & Purpose</th>
-                <th>Data Processed</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Stripe & PayPal</strong></td>
-                <td>Payment gateway & recurring billing</td>
-                <td>Billing name, tokenized payment card, address</td>
-              </tr>
-              <tr>
-                <td><strong>OVHcloud (OVH.com)</strong></td>
-                <td>Bare-metal dedicated server infrastructure, network transit & DDoS mitigation</td>
-                <td>Hosted server disk volumes, system logs & encrypted client assets</td>
-              </tr>
-              <tr>
-                <td><strong>Vultr (The Constant Company)</strong></td>
-                <td>High-performance cloud compute, VPS instances & NVMe block storage</td>
-                <td>Virtual server filesystem data, operating system snapshots & ephemeral routing data</td>
-              </tr>
-              <tr>
-                <td><strong>Microsoft Azure</strong></td>
-                <td>Enterprise cloud compute, hypervisor virtualization & regional infrastructure services</td>
-                <td>System disk images, containerized workloads & operational diagnostic telemetry</td>
-              </tr>
-              <tr>
-                <td><strong>Google Cloud Compute (GCP)</strong></td>
-                <td>Cloud compute nodes, redundant hypervisor failover & distributed object storage</td>
-                <td>Virtual machine instances, encrypted snapshot archives & networking telemetry</td>
-              </tr>
-              <tr>
-                <td><strong>Cloudflare</strong></td>
-                <td>Edge CDN caching, DNS & DDoS mitigation</td>
-                <td>IP address, request headers, web traffic telemetry</td>
-              </tr>
-              <tr>
-                <td><strong>Bunny.net CDN</strong></td>
-                <td>Static asset delivery & portal caching</td>
-                <td>Anonymized asset requests & cache hits</td>
-              </tr>
-              <tr>
-                <td><strong>Amazon Web Services (AWS)</strong></td>
-                <td>Encrypted cold-storage disaster recovery</td>
-                <td>Encrypted database and file archives</td>
-              </tr>
-              <tr>
-                <td><strong>Uptime Robot</strong></td>
-                <td>Infrastructure health & SLA monitoring</td>
-                <td>Server endpoint responsiveness metrics</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Partner / Service</th>
+                  <th>Role & Purpose</th>
+                  <th>Data Processed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Stripe & PayPal</strong></td>
+                  <td>Payment gateway & recurring billing</td>
+                  <td>Billing name, tokenized payment card, address</td>
+                </tr>
+                <tr>
+                  <td><strong>OVHcloud (OVH.com)</strong></td>
+                  <td>Bare-metal dedicated server infrastructure, network transit & DDoS mitigation</td>
+                  <td>Hosted server disk volumes, system logs & encrypted client assets</td>
+                </tr>
+                <tr>
+                  <td><strong>Vultr (The Constant Company)</strong></td>
+                  <td>High-performance cloud compute, VPS instances & NVMe block storage</td>
+                  <td>Virtual server filesystem data, operating system snapshots & ephemeral routing data</td>
+                </tr>
+                <tr>
+                  <td><strong>Microsoft Azure</strong></td>
+                  <td>Enterprise cloud compute, hypervisor virtualization & regional infrastructure services</td>
+                  <td>System disk images, containerized workloads & operational diagnostic telemetry</td>
+                </tr>
+                <tr>
+                  <td><strong>Google Cloud Compute (GCP)</strong></td>
+                  <td>Cloud compute nodes, redundant hypervisor failover & distributed object storage</td>
+                  <td>Virtual machine instances, encrypted snapshot archives & networking telemetry</td>
+                </tr>
+                <tr>
+                  <td><strong>Cloudflare</strong></td>
+                  <td>Edge CDN caching, DNS & DDoS mitigation</td>
+                  <td>IP address, request headers, web traffic telemetry</td>
+                </tr>
+                <tr>
+                  <td><strong>Bunny.net CDN</strong></td>
+                  <td>Static asset delivery & portal caching</td>
+                  <td>Anonymized asset requests & cache hits</td>
+                </tr>
+                <tr>
+                  <td><strong>Amazon Web Services (AWS)</strong></td>
+                  <td>Encrypted cold-storage disaster recovery</td>
+                  <td>Encrypted database and file archives</td>
+                </tr>
+                <tr>
+                  <td><strong>Uptime Robot</strong></td>
+                  <td>Infrastructure health & SLA monitoring</td>
+                  <td>Server endpoint responsiveness metrics</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <!-- Section 6 -->
