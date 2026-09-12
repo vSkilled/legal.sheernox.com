@@ -567,7 +567,7 @@ def build_print_html(source_path, category, title, version, last_revised):
 
   <!-- Footer -->
   <div class="doc-footer">
-    <div class="footer-left">&copy; 2026 Sheernox Technology Group &bull; Kamloops, BC, Canada &bull; All Rights Reserved</div>
+    <div class="footer-left">&copy; 2026 Sheernox Technology Group &bull; 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada &bull; All Rights Reserved</div>
     <div class="footer-right">Last Revised: {last_revised} // {version}</div>
   </div>
 

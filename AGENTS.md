@@ -28,8 +28,8 @@ When modifying any document, ensure strict adherence to these legal parameters:
 
 1. **Entity Status**: **Sheernox Technology Group** is a **sole proprietorship** registered in the Province of British Columbia, Canada.
 2. **Location & Address**:
-   - **Default Rule**: **DO NOT INCLUDE** a physical street address. Keep it generic to `Kamloops, British Columbia, Canada`.
-   - **Exception**: Only if a statute, registration body, or regulatory filing strictly requires a physical mailing address, use: `#1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8`.
+   - **Registered Physical & Mailing Address**: `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada`.
+   - All legal agreements, contact channels, and statutory disclosures must consistently reference this official address.
 3. **Jurisdiction & Venue**:
    - Governed by the laws of the **Province of British Columbia** and the federal laws of **Canada**.
    - Exclusive legal venue: Courts of British Columbia sitting in the **City of Kamloops, British Columbia, Canada**.
@@ -113,7 +113,7 @@ Here are the policy changes I need:
 Operational Instructions:
 1. Update the appropriate HTML document(s) directly while maintaining the established semantic structure (`<article class="legal-prose">`, `.legal-section`, `.key-takeaway`, etc.).
 2. Update the "Last Revised" date to the current date in ISO 8601 format (`YYYY-MM-DD`) and increment the version tag by 0.5 (format: `vX.X-KEY`, e.g., `v3.5-TOS`).
-3. Ensure Canadian legal standards are strictly preserved (Kamloops BC sole proprietorship, support@sheernox.com for legal/privacy, abuse@sheernox.com for network abuse, no physical street address).
+3. Ensure Canadian legal standards are strictly preserved (Kamloops BC sole proprietorship, support@sheernox.com for legal/privacy, abuse@sheernox.com for network abuse, official address: `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada`).
 4. Regenerate the production vector PDF(s) in `pdf/` using `python3 scripts/generate_pdfs.py`.
 5. Verify that PDFs render with the simplified top bar (no Governing Law, Entity Status, or Document Code) and show `Last Revised: YYYY-MM-DD • vX.X-KEY` in the footer of all pages.
 6. Keep the repository clean to production code only.
@@ -127,7 +127,7 @@ Operational Instructions:
 Before committing any update:
 1. [ ] **Legal Verification**: Are all party definitions set to Sheernox Technology Group in Kamloops, BC, Canada?
 2. [ ] **Email Verification**: Is abuse routed to `abuse@sheernox.com` and all other legal/privacy routed to `support@sheernox.com`?
-3. [ ] **Address Check**: Is the street address omitted (unless strictly required)?
+3. [ ] **Address Check**: Is the official physical address `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada` accurately included across all documents?
 4. [ ] **PDF Re-generation**: Was `python3 scripts/generate_pdfs.py` executed successfully?
 5. [ ] **Visual Layout Check**: Were page counts and page breaks checked (`break-inside: avoid` intact)?
 6. [ ] **Clean Git Tree**: Are only production files staged? (`git status` shows no scratch or debug files).

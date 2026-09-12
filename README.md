@@ -16,7 +16,7 @@ This repository contains the standalone, fully responsive, and accessible HTML5 
 All services, infrastructure, and creative contracts are provided by and contracted with:
 
 - **Entity**: **Sheernox Technology Group** (Registered Sole Proprietorship)
-- **Location**: `Kamloops, British Columbia, Canada`
+- **Location & Address**: `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada`
 - **Governing Law**: Laws of the **Province of British Columbia** and the federal laws of **Canada** applicable therein.
 - **Exclusive Venue**: Courts of British Columbia sitting in the **City of Kamloops, British Columbia, Canada**.
 - **Currency & Taxation**: All contractual figures, service retainers, and liquidated damage assessments are denominated in **Canadian Dollars (CAD)** and subject to Canadian Goods and Services Tax (**GST**) and British Columbia Provincial Sales Tax (**PST**).
@@ -155,10 +155,10 @@ To report system abuse, security vulnerabilities, or copyright infringement orig
 - **Client Portal**: [my.sheernox.com](https://my.sheernox.com)
 - **Abuse Department**: `abuse@sheernox.com`
 - **Legal, Compliance & Privacy Inquiries**: `support@sheernox.com` (All inquiries regarding Legal, Compliance, and Privacy should be directed to `support@sheernox.com`)
-- **Location & Inquiries**: Sheernox Technology Group, Kamloops, British Columbia, Canada
+- **Location & Inquiries**: Sheernox Technology Group, 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada
 
 ---
 
 ## ⚖️ Copyright & Proprietary Rights
 
-&copy; 2026 **Sheernox Technology Group**. All rights reserved. Registered sole proprietorship in Kamloops, British Columbia, Canada.
+&copy; 2026 **Sheernox Technology Group**. All rights reserved. Registered sole proprietorship at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada.
