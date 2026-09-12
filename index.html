@@ -94,76 +94,6 @@
       gap: 16px;
     }
 
-    .nav-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 0.78rem;
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.09);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      padding: 5px 12px;
-      border-radius: 9999px;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      position: relative;
-      animation: cdn-badge-pulse 3s ease-in-out infinite;
-    }
-
-    .status-dot {
-      position: relative;
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #38bdf8;
-      box-shadow: 0 0 6px rgba(56, 189, 248, 0.9);
-      flex-shrink: 0;
-    }
-
-    .status-dot::after {
-      content: '';
-      position: absolute;
-      top: -3px;
-      left: -3px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(56, 189, 248, 0.6);
-      animation: cdn-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-    }
-
-    @keyframes cdn-ping {
-      0% {
-        transform: scale(0.4);
-        opacity: 0.9;
-      }
-      70%, 100% {
-        transform: scale(2.6);
-        opacity: 0;
-      }
-    }
-
-    @keyframes cdn-badge-pulse {
-      0%, 100% {
-        border-color: rgba(56, 189, 248, 0.22);
-        background: rgba(56, 189, 248, 0.08);
-        box-shadow: 0 0 8px rgba(56, 189, 248, 0.05);
-      }
-      50% {
-        border-color: rgba(56, 189, 248, 0.48);
-        background: rgba(56, 189, 248, 0.16);
-        box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .status-dot::after,
-      .nav-status {
-        animation: none;
-      }
-    }
-
     .nav-btn {
       color: #ffffff;
       font-size: 0.85rem;
@@ -416,6 +346,7 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
       transition: all 0.25s ease;
+      cursor: pointer;
     }
 
     .enterprise-card:hover {
@@ -424,9 +355,17 @@
       border-color: #cbd5e1;
     }
 
+    .enterprise-card:active {
+      transform: translateY(-1px);
+    }
+
     .card-blue:hover {
       border-color: #93c5fd;
       box-shadow: 0 14px 32px -6px rgba(15, 76, 129, 0.12);
+    }
+
+    .card-blue:hover .card-title {
+      color: #0284c7;
     }
 
     .card-amber:hover {
@@ -434,14 +373,26 @@
       box-shadow: 0 14px 32px -6px rgba(245, 158, 11, 0.12);
     }
 
+    .card-amber:hover .card-title {
+      color: #d97706;
+    }
+
     .card-emerald:hover {
       border-color: #6ee7b7;
       box-shadow: 0 14px 32px -6px rgba(16, 185, 129, 0.12);
     }
 
+    .card-emerald:hover .card-title {
+      color: #059669;
+    }
+
     .card-coral:hover {
       border-color: #fca5a5;
       box-shadow: 0 14px 32px -6px rgba(239, 68, 68, 0.12);
+    }
+
+    .card-coral:hover .card-title {
+      color: #dc2626;
     }
 
     /* Color Ribbon Indicator */
@@ -492,26 +443,7 @@
       font-weight: 700;
       color: var(--text-main);
       letter-spacing: -0.01em;
-    }
-
-    .type-pill {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 4px 8px;
-      border-radius: 6px;
-      white-space: nowrap;
-    }
-
-    .pill-pdf {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
-
-    .pill-html {
-      background: #ecfdf5;
-      color: #047857;
+      transition: color 0.2s ease;
     }
 
     .card-body {
@@ -887,10 +819,6 @@
         <span class="nav-portal-label">Legal Portal</span>
       </div>
       <div class="nav-actions">
-        <div class="nav-status">
-          <span class="status-dot"></span>
-          <span>CDN Active</span>
-        </div>
         <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
       </div>
     </div>
@@ -947,7 +875,7 @@
     <div class="doc-grid" id="documentGrid">
 
       <!-- 1. Terms and Conditions -->
-      <div class="enterprise-card card-blue" data-category="hosting" data-title="terms and conditions master service agreement" data-keywords="billing SLA liability payment subscription hosting cloud vps dedicated domains email backups uptime">
+      <div class="enterprise-card card-blue" data-category="hosting" data-title="terms and conditions master service agreement" data-keywords="billing SLA liability payment subscription hosting cloud vps dedicated domains email backups uptime" onclick="handleCardClick(event, 'terms-and-conditions.html')">
         <div class="card-ribbon ribbon-blue"></div>
         <div>
           <div class="card-header-row">
@@ -966,7 +894,6 @@
                 </div>
               </div>
             </div>
-            <span class="type-pill pill-html">Web Agreement</span>
           </div>
           <div class="card-body">
             <p class="card-desc">
@@ -1006,7 +933,7 @@
       </div>
 
       <!-- 2. Acceptable Use Policy -->
-      <div class="enterprise-card card-amber" data-category="aup" data-title="acceptable use policy aup" data-keywords="aup abuse spam security bandwidth resource limits bots scraping mining network cloud vps">
+      <div class="enterprise-card card-amber" data-category="aup" data-title="acceptable use policy aup" data-keywords="aup abuse spam security bandwidth resource limits bots scraping mining network cloud vps" onclick="handleCardClick(event, 'acceptable-use-policy.html')">
         <div class="card-ribbon ribbon-amber"></div>
         <div>
           <div class="card-header-row">
@@ -1024,7 +951,6 @@
                 </div>
               </div>
             </div>
-            <span class="type-pill pill-html">Web Policy</span>
           </div>
           <div class="card-body">
             <p class="card-desc">
@@ -1064,7 +990,7 @@
       </div>
 
       <!-- 3. Privacy Policy -->
-      <div class="enterprise-card card-emerald" data-category="privacy" data-title="privacy policy personal data" data-keywords="privacy gdpr pipeda ccpa data cookies protection personal tracking encryption sub-processors controller">
+      <div class="enterprise-card card-emerald" data-category="privacy" data-title="privacy policy personal data" data-keywords="privacy gdpr pipeda ccpa data cookies protection personal tracking encryption sub-processors controller" onclick="handleCardClick(event, 'privacy-policy.html')">
         <div class="card-ribbon ribbon-emerald"></div>
         <div>
           <div class="card-header-row">
@@ -1083,7 +1009,6 @@
                 </div>
               </div>
             </div>
-            <span class="type-pill pill-html">Web Policy</span>
           </div>
           <div class="card-body">
             <p class="card-desc">
@@ -1123,7 +1048,7 @@
       </div>
 
       <!-- 4. Web Design, Branding & Care Terms -->
-      <div class="enterprise-card card-coral" data-category="design" data-title="web design branding care terms and conditions" data-keywords="design development branding care maintenance ux approval milestones creative copyright sow agency">
+      <div class="enterprise-card card-coral" data-category="design" data-title="web design branding care terms and conditions" data-keywords="design development branding care maintenance ux approval milestones creative copyright sow agency" onclick="handleCardClick(event, 'web-design-terms.html')">
         <div class="card-ribbon ribbon-coral"></div>
         <div>
           <div class="card-header-row">
@@ -1142,7 +1067,6 @@
                 </div>
               </div>
             </div>
-            <span class="type-pill pill-html">Web Agreement</span>
           </div>
           <div class="card-body">
             <p class="card-desc">
@@ -1306,6 +1230,12 @@
         filterInput.blur();
       }
     });
+
+    // Card click handler: navigates to policy page unless an inner button or link is clicked
+    function handleCardClick(event, url) {
+      if (event.target.closest('a, button, input')) return;
+      window.location.href = url;
+    }
 
     // Copy to clipboard with full URL resolution
     function copyDocUrl(url) {

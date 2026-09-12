@@ -122,6 +122,10 @@
       color: #ffffff;
     }
 
+    .nav-link-short {
+      display: none;
+    }
+
     .nav-btn {
       color: #ffffff;
       font-size: 0.85rem;
@@ -273,12 +277,6 @@
       align-items: start;
     }
 
-    @media (max-width: 960px) {
-      .layout-container {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-    }
 
     /* Sticky Sidebar Navigation (TOC) */
     .legal-sidebar {
@@ -316,6 +314,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    .toc-header-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-badge {
+      font-size: 0.72rem;
+      color: var(--sn-accent-cyan);
+      font-weight: 700;
+    }
+
+    .toc-toggle-icon {
+      display: none;
+    }
+
+    .toc-body {
+      display: block;
     }
 
     .toc-filter {
@@ -374,9 +392,128 @@
       max-width: 860px;
     }
 
-    @media (max-width: 640px) {
+    /* Mobile Responsive Architecture & Overlap Prevention */
+    @media (max-width: 960px) {
+      .layout-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        padding: 24px 16px 60px;
+      }
+
       .legal-content {
-        padding: 24px 20px;
+        min-width: 0;
+      }
+
+      /* On mobile, sidebar is static at the top like a table of contents - never overlaps content */
+      .legal-sidebar {
+        position: static !important;
+        top: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        margin-bottom: 8px;
+      }
+
+      .toc-card {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .toc-header {
+        padding: 14px 18px;
+        margin-bottom: 0;
+        cursor: pointer;
+        background: #f8fafc;
+        border-radius: 9px;
+        transition: background 0.15s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .toc-header:hover {
+        background: #f1f5f9;
+      }
+
+      .toc-toggle-icon {
+        display: inline-block;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        transition: transform 0.2s ease;
+      }
+
+      .toc-body {
+        display: none;
+        padding: 16px 18px 18px;
+        border-top: 1px solid var(--border-color);
+        max-height: 360px;
+        overflow-y: auto;
+      }
+
+      .toc-card.open .toc-body {
+        display: block;
+      }
+
+      .toc-card.open .toc-toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      .toc-card.open .toc-header {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-nav {
+        padding: 10px 16px;
+      }
+      .nav-brand .nav-divider,
+      .nav-brand .nav-portal-label {
+        display: none;
+      }
+      .nav-logo {
+        height: 24px;
+      }
+      .nav-actions {
+        gap: 8px;
+      }
+      .nav-link {
+        font-size: 0.78rem;
+        white-space: nowrap;
+      }
+      .nav-link-full {
+        display: none;
+      }
+      .nav-link-short {
+        display: inline;
+      }
+      .nav-btn {
+        padding: 5px 10px;
+        font-size: 0.78rem;
+      }
+      .doc-hero {
+        padding: 24px 16px 20px;
+      }
+      .doc-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .hero-actions {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .btn-action {
+        flex: 1 1 auto;
+        justify-content: center;
+      }
+      .breadcrumbs {
+        flex-wrap: wrap;
+      }
+      .legal-content {
+        padding: 20px 16px;
       }
     }
 
@@ -552,6 +689,8 @@
       position: fixed;
       bottom: 24px;
       right: 24px;
+      max-width: calc(100vw - 32px);
+      box-sizing: border-box;
       background: var(--sn-dark-navy);
       color: #ffffff;
       padding: 12px 20px;
@@ -615,7 +754,10 @@
         <span class="nav-portal-label">Legal Portal</span>
       </a>
       <div class="nav-actions">
-        <a href="index.html" class="nav-link">&larr; Back to Legal Directory</a>
+        <a href="index.html" class="nav-link">
+          <span class="nav-link-full">&larr; Back to Legal Directory</span>
+          <span class="nav-link-short">&larr; Directory</span>
+        </a>
         <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
       </div>
     </div>
@@ -671,13 +813,17 @@
 
     <!-- Sticky Sidebar Table of Contents -->
     <aside class="legal-sidebar">
-      <div class="toc-card">
-        <div class="toc-header">
+      <div class="toc-card" id="tocCard">
+        <div class="toc-header" onclick="toggleTOC()">
           <span>Table of Contents</span>
-          <span style="font-size: 0.72rem; color: var(--sn-accent-cyan);">23 Sections</span>
+          <div class="toc-header-right">
+            <span class="toc-badge">23 Sections</span>
+            <span class="toc-toggle-icon">▾</span>
+          </div>
         </div>
-        <input type="text" id="tocFilter" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC(this.value)">
-        <ul class="toc-nav" id="tocList">
+        <div class="toc-body" id="tocBody">
+          <input type="text" id="tocFilter" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC(this.value)">
+          <ul class="toc-nav" id="tocList">
           <li class="toc-item active" data-target="sec-preamble"><a href="#sec-preamble">Preamble & Party Definitions</a></li>
           <li class="toc-item" data-target="sec-1"><a href="#sec-1">1. Services & Solutions Scope</a></li>
           <li class="toc-item" data-target="sec-2"><a href="#sec-2">2. Revisions to User Agreement</a></li>
@@ -698,6 +844,7 @@
           <li class="toc-item" data-target="sec-22"><a href="#sec-22">22. General Provisions & BC Law</a></li>
           <li class="toc-item" data-target="sec-23"><a href="#sec-23">23. Custom Systems & On-Site Work</a></li>
         </ul>
+        </div>
       </div>
     </aside>
 
@@ -1400,6 +1547,23 @@
         item.classList.remove('active');
         if (item.getAttribute('data-target') === currentId) {
           item.classList.add('active');
+        }
+      });
+    });
+
+    // Toggle Mobile Table of Contents Accordion
+    function toggleTOC() {
+      if (window.innerWidth <= 960) {
+        const card = document.getElementById('tocCard');
+        card.classList.toggle('open');
+      }
+    }
+
+    // Auto-close mobile TOC when section link is tapped
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.innerWidth <= 960) {
+          document.getElementById('tocCard')?.classList.remove('open');
         }
       });
     });
