@@ -22,3 +22,8 @@ scratch/
 
 # Local archives
 pdfs/
+
+# Python bytecode & runtime cache
+__pycache__/
+*.py[cod]
+*$py.class

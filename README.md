@@ -42,16 +42,20 @@ This repository contains **strictly production-grade code** with zero build arti
 sheernox_legal_portal/
 ├── .gitignore                   # Production ignore rules
 ├── README.md                    # Repository documentation and architecture guide
+├── AGENTS.md                    # AI Agent runbook, legal guardrails & prompt templates
 ├── index.html                   # Central Legal Portal Directory & Interactive Hub
 ├── terms-and-conditions.html    # Master Terms and Conditions (TOS, SLA, Infrastructure)
 ├── acceptable-use-policy.html   # Acceptable Use Policy (Hosting & VPS Resource Standards)
 ├── web-design-terms.html        # Web Design, Branding & Maintenance Care Agreement
 ├── privacy-policy.html          # Global Data Protection & Privacy Policy (PIPEDA/GDPR)
-└── pdf/                         # Official Print-Ready Vector PDF Policy Documents
-    ├── Terms_and_Conditions.pdf
-    ├── Acceptable_Use_Policy.pdf
-    ├── Web_Design_Terms_and_Conditions.pdf
-    └── Privacy_Policy.pdf
+├── pdf/                         # Official Print-Ready Vector PDF Policy Documents
+│   ├── Terms_and_Conditions.pdf
+│   ├── Acceptable_Use_Policy.pdf
+│   ├── Web_Design_Terms_and_Conditions.pdf
+│   └── Privacy_Policy.pdf
+└── scripts/                     # Automated Vector PDF Generation Tooling
+    ├── generate_pdfs.py         # Standalone multi-browser PDF compiler
+    └── logo_data.py             # Embedded base64 vector logo asset
 ```
 
 ### Production Document Index
@@ -122,6 +126,25 @@ Open `http://localhost:8080` in any modern web browser.
 - **GitHub Pages**: Set source to branch `main` and root directory `/`.
 - **Cloudflare Pages / Vercel / Netlify**: Connect repository, leave build command empty, and set publish directory to `/`.
 - **Nginx / Apache**: Copy files directly into the web document root (e.g., `/var/www/html/`).
+
+---
+
+## 🖨️ Automated Vector PDF Generation
+
+The repository includes a dedicated, zero-dependency PDF compiler at [`scripts/generate_pdfs.py`](scripts/generate_pdfs.py). It automatically parses legal HTML prose, applies the **Variation 1 (Modern Tech Enterprise)** print styling, and compiles vector-grade PDFs via headless Chromium/Brave:
+
+```bash
+# Generate all 4 legal policy PDFs
+python3 scripts/generate_pdfs.py
+
+# Generate only a specific document
+python3 scripts/generate_pdfs.py --doc aup      # Acceptable Use Policy
+python3 scripts/generate_pdfs.py --doc tos      # Terms and Conditions
+python3 scripts/generate_pdfs.py --doc wdt      # Web Design Terms
+python3 scripts/generate_pdfs.py --doc privacy  # Privacy Policy
+```
+
+For AI agents and automated maintenance runbooks, consult [**`AGENTS.md`**](AGENTS.md).
 
 ---
 
