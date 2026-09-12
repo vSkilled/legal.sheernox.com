@@ -72,6 +72,38 @@ DOC_REGISTRY = {
         "last_revised": "2026-09-12",
         "output_pdf": "Privacy_Policy.pdf",
     },
+    "sla": {
+        "source": "service-level-agreement.html",
+        "category": "Cloud Infrastructure & Operations",
+        "title": "Service Level Agreement & Incident Policy",
+        "version": "v1.0-SLA",
+        "last_revised": "2026-09-12",
+        "output_pdf": "Service_Level_Agreement.pdf",
+    },
+    "vdp": {
+        "source": "vulnerability-disclosure-policy.html",
+        "category": "Cybersecurity & Trust Governance",
+        "title": "Vulnerability Disclosure Policy (VDP)",
+        "version": "v1.0-VDP",
+        "last_revised": "2026-09-12",
+        "output_pdf": "Vulnerability_Disclosure_Policy.pdf",
+    },
+    "cpr": {
+        "source": "copyright-policy.html",
+        "category": "Intellectual Property & Compliance",
+        "title": "Copyright & Notice-and-Notice Policy",
+        "version": "v1.0-CPR",
+        "last_revised": "2026-09-12",
+        "output_pdf": "Copyright_Notice_and_Notice_Policy.pdf",
+    },
+    "wcp": {
+        "source": "website-care-plan-terms.html",
+        "category": "Creative & Agency SOW Schedule",
+        "title": "Website Care Plan & Maintenance Terms",
+        "version": "v1.0-WCP",
+        "last_revised": "2026-09-12",
+        "output_pdf": "Website_Care_Plan_Terms.pdf",
+    },
 }
 
 def get_css(last_revised, version):
@@ -625,7 +657,7 @@ def main():
         "--doc",
         choices=list(DOC_REGISTRY.keys()) + ["privacy", "all"],
         default="all",
-        help="Target document key (aup, tos, wdt, priv/privacy, all)",
+        help="Target document key (aup, tos, wdt, priv/privacy, sla, vdp, cpr, wcp, all)",
     )
     parser.add_argument("--browser", default=None, help="Explicit path to Chrome/Brave/Chromium executable")
     args = parser.parse_args()

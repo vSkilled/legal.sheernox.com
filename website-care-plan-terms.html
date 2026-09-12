@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Care Plan &amp; Maintenance Terms | Sheernox Legal Portal</title>
+  <meta name="description" content="Official Website Care Plan & Maintenance Terms of Sheernox Technology Group, Kamloops, BC, Canada. Retainer tiers, update scopes, content support hours, staging protocols, and billing schedules.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sn-dark-navy: #071322;
+      --sn-sidebar-navy: #0b192c;
+      --sn-primary-teal: #0d9488;
+      --sn-primary-teal-dark: #0f766e;
+      --sn-accent-teal: #14b8a6;
+      --sn-amber: #f59e0b;
+      --sn-amber-bg: #fef3c7;
+      --sn-emerald: #10b981;
+      --sn-coral: #ef4444;
+      --canvas-bg: #f8fafc;
+      --surface-card: #ffffff;
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #94a3b8;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--canvas-bg);
+      color: var(--text-main);
+      line-height: 1.68;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Reading Progress Bar */
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #14b8a6, #0d9488);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      background-color: var(--sn-dark-navy);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .top-nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      height: 30px;
+      width: auto;
+    }
+
+    .nav-divider {
+      height: 22px;
+      width: 1.5px;
+      background: rgba(255, 255, 255, 0.25);
+      margin: 0 4px;
+    }
+
+    .nav-portal-label {
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-link {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .nav-link-short {
+      display: none;
+    }
+
+    .nav-btn {
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* Document Header & Metadata */
+    .doc-hero {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 36px 24px 28px;
+    }
+
+    .doc-hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .breadcrumbs a {
+      color: var(--sn-primary-teal);
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .doc-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .doc-title {
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .doc-meta-strip {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .version-pill {
+      background: #ccfbf1;
+      color: #0f766e;
+      border: 1px solid #99f6e4;
+      padding: 3px 9px;
+      border-radius: 9999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .btn-action:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      color: var(--text-main);
+    }
+
+    .btn-action-primary {
+      background: var(--sn-primary-teal);
+      border-color: var(--sn-primary-teal);
+      color: #ffffff;
+    }
+
+    .btn-action-primary:hover {
+      background: var(--sn-primary-teal-dark);
+      border-color: var(--sn-primary-teal-dark);
+      color: #ffffff;
+    }
+
+    /* Main Layout */
+    .layout-container {
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 36px 24px 80px;
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 48px;
+      flex: 1;
+      align-items: start;
+    }
+
+    /* Sidebar Navigation (TOC) */
+    .legal-sidebar {
+      position: sticky;
+      top: 76px;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      padding-right: 12px;
+    }
+
+    .legal-sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .legal-sidebar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .toc-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .toc-header {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-subtle);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-header-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-badge {
+      font-size: 0.72rem;
+      color: var(--sn-primary-teal);
+      font-weight: 700;
+    }
+
+    .toc-toggle-icon {
+      display: none;
+    }
+
+    .toc-body {
+      display: block;
+    }
+
+    .toc-filter {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      margin-bottom: 14px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .toc-filter:focus {
+      border-color: var(--sn-primary-teal);
+    }
+
+    .toc-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.15s ease;
+      line-height: 1.4;
+    }
+
+    .toc-link:hover {
+      background: #f1f5f9;
+      color: var(--text-main);
+    }
+
+    .toc-link.active {
+      background: #ccfbf1;
+      color: var(--sn-primary-teal-dark);
+      font-weight: 600;
+    }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      min-width: 20px;
+    }
+
+    .toc-link.active .toc-num {
+      color: var(--sn-primary-teal-dark);
+    }
+
+    /* Content Area */
+    .legal-content {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 44px 48px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+      min-width: 0;
+    }
+
+    .legal-prose {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .legal-section {
+      margin-bottom: 48px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border-subtle);
+      scroll-margin-top: 90px;
+    }
+
+    .legal-section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 1.32rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.015em;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      color: var(--sn-primary-teal);
+      font-weight: 600;
+    }
+
+    .clause-anchor-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-subtle);
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+
+    .legal-section:hover .clause-anchor-btn {
+      opacity: 1;
+    }
+
+    .clause-anchor-btn:hover {
+      background: #f1f5f9;
+      color: var(--sn-primary-teal);
+    }
+
+    .legal-prose p {
+      margin-bottom: 16px;
+    }
+
+    .legal-prose ul, .legal-prose ol {
+      margin: 14px 0 20px 24px;
+    }
+
+    .legal-prose li {
+      margin-bottom: 10px;
+      padding-left: 4px;
+    }
+
+    .legal-prose strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* Key Takeaways & Statutory Callouts */
+    .key-takeaway {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+      border: 1px solid #99f6e4;
+      border-left: 4px solid var(--sn-primary-teal);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0 24px;
+      font-size: 0.88rem;
+      color: #115e59;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .takeaway-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f766e;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    .key-takeaway p {
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .statutory-callout {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid #0284c7;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0 24px;
+      font-size: 0.88rem;
+      color: #1e40af;
+    }
+
+    .statutory-callout h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #1e3a8a;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .statutory-callout p {
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .critical-alert-box {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-left: 4px solid #ea580c;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0 24px;
+      font-size: 0.88rem;
+      color: #9a3412;
+    }
+
+    .critical-alert-box h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #7c2d12;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .critical-alert-box p {
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Table Styling */
+    .table-wrapper {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 22px 0;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: var(--text-main);
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border-color);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background: #fafafa;
+    }
+
+    .tier-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .tier-essential {
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    .tier-pro {
+      background: #ccfbf1;
+      color: #0f766e;
+    }
+
+    .tier-enterprise {
+      background: #e0e7ff;
+      color: #4338ca;
+    }
+
+    .mono-code {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0f172a;
+    }
+
+    /* Footer */
+    .page-footer {
+      background: var(--sn-dark-navy);
+      color: #94a3b8;
+      padding: 40px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .footer-legal-bar {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: #94a3b8;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .footer-link:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 9999;
+      pointer-events: none;
+      max-width: calc(100vw - 32px);
+      box-sizing: border-box;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive Mobile Media Queries */
+    @media (max-width: 960px) {
+      .layout-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 24px 16px 60px;
+      }
+
+      .legal-sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+        padding-right: 0;
+      }
+
+      .toc-card {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .toc-header {
+        margin-bottom: 0;
+        padding: 14px 16px;
+        cursor: pointer;
+        user-select: none;
+        background: #f8fafc;
+        border-radius: 9px;
+      }
+
+      .toc-toggle-icon {
+        display: inline-block;
+        transition: transform 0.2s ease;
+      }
+
+      .toc-body {
+        display: none;
+        padding: 16px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .toc-card.open .toc-body {
+        display: block;
+      }
+
+      .toc-card.open .toc-toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      .toc-card.open .toc-header {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-nav {
+        padding: 10px 16px;
+      }
+      .nav-brand .nav-divider,
+      .nav-brand .nav-portal-label {
+        display: none;
+      }
+      .nav-logo {
+        height: 24px;
+      }
+      .nav-actions {
+        gap: 8px;
+      }
+      .nav-link {
+        font-size: 0.78rem;
+        white-space: nowrap;
+      }
+      .nav-link-full {
+        display: none;
+      }
+      .nav-link-short {
+        display: inline;
+      }
+      .nav-btn {
+        padding: 5px 10px;
+        font-size: 0.78rem;
+      }
+      .doc-hero {
+        padding: 24px 16px 20px;
+      }
+      .doc-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .hero-actions {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .btn-action {
+        flex: 1 1 auto;
+        justify-content: center;
+      }
+      .breadcrumbs {
+        flex-wrap: wrap;
+      }
+      .legal-content {
+        padding: 20px 16px;
+      }
+    }
+
+    @media print {
+      .top-nav, .legal-sidebar, .hero-actions, .page-footer, #progressBar, .clause-anchor-btn, .toc-card {
+        display: none !important;
+      }
+      .layout-container {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+      .legal-content {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      .legal-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progressBar"></div>
+
+  <!-- Navigation Bar -->
+  <header class="top-nav">
+    <div class="top-nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox" class="nav-logo">
+        <span class="nav-divider"></span>
+        <span class="nav-portal-label">Legal Portal</span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="nav-link">
+          <span class="nav-link-full">Directory</span>
+          <span class="nav-link-short">Hub</span>
+        </a>
+        <a href="https://my.sheernox.com" class="nav-link">Client Portal</a>
+        <a href="pdf/Website_Care_Plan_Terms.pdf" class="nav-btn" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          PDF
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Document Header Hero -->
+  <section class="doc-hero">
+    <div class="doc-hero-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Legal Portal</a>
+        <span>/</span>
+        <span>Creative &amp; Agency SOW Schedule</span>
+        <span>/</span>
+        <span style="color: var(--text-main); font-weight: 500;">Website Care Plan Terms</span>
+      </nav>
+
+      <div class="doc-title-row">
+        <div>
+          <h1 class="doc-title">Website Care Plan &amp; Maintenance Terms</h1>
+          <div class="doc-meta-strip">
+            <div class="meta-tag">
+              <span>Last Revised: 2026-09-12</span>
+            </div>
+            <div class="meta-tag">
+              <span class="version-pill">v1.0-WCP</span>
+            </div>
+            <div class="meta-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>SOW Schedule &bull; CAD Recurring Retainer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-action" onclick="copyShareLink()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Share Link
+          </button>
+          <a href="pdf/Website_Care_Plan_Terms.pdf" class="btn-action btn-action-primary" download>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Layout Container -->
+  <div class="layout-container">
+
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="legal-sidebar">
+      <div class="toc-card" id="tocCard">
+        <div class="toc-header" onclick="toggleTOC()">
+          <span>Table of Contents</span>
+          <div class="toc-header-right">
+            <span class="toc-badge">9 Clauses</span>
+            <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+        <div class="toc-body">
+          <input type="text" id="tocSearch" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC()">
+          <ul class="toc-nav" id="tocList">
+            <li><a href="#preamble" class="toc-link"><span class="toc-num">00</span> Preamble &amp; Master SOW</a></li>
+            <li><a href="#plan-tiers" class="toc-link"><span class="toc-num">01</span> Care Plan Tiers &amp; Matrix</a></li>
+            <li><a href="#maintenance-scope" class="toc-link"><span class="toc-num">02</span> Maintenance Scope</a></li>
+            <li><a href="#content-hours" class="toc-link"><span class="toc-num">03</span> Content Support Hours</a></li>
+            <li><a href="#staging-protocol" class="toc-link"><span class="toc-num">04</span> Staging-First Protocol</a></li>
+            <li><a href="#out-of-scope" class="toc-link"><span class="toc-num">05</span> Out-of-Scope Hourly Rates</a></li>
+            <li><a href="#security-remediation" class="toc-link"><span class="toc-num">06</span> Security &amp; Malware Recovery</a></li>
+            <li><a href="#access-warranty" class="toc-link"><span class="toc-num">07</span> Access &amp; Warranty Boundary</a></li>
+            <li><a href="#billing-cancellation" class="toc-link"><span class="toc-num">08</span> Billing &amp; 30-Day Cancellation</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Legal Prose Body -->
+    <main class="legal-content">
+      <article class="legal-prose">
+
+        <!-- Preamble -->
+        <section class="legal-section" id="preamble">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">00.</span> Preamble &amp; Relationship to Master Terms</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('preamble')">Copy Link</button>
+          </div>
+          <p>
+            These Website Care Plan &amp; Maintenance Terms ("Care Terms") constitute an ongoing recurring Statement of Work (SOW) schedule entered into between <strong>Sheernox Technology Group</strong> ("Sheernox", "we", "us", or "our"), a sole proprietorship registered in the Province of British Columbia, Canada, and the client identified in the applicable service order ("Client").
+          </p>
+          <p>
+            These Care Terms are incorporated by reference into, and governed by, the Sheernox <a href="web-design-terms.html" style="color: var(--sn-primary-teal); font-weight: 600;">Web Design &amp; Development Terms and Conditions</a> and the <a href="terms-and-conditions.html" style="color: var(--sn-primary-teal); font-weight: 600;">General Terms and Conditions of Service</a>. In the event of an express conflict regarding ongoing maintenance and support retainers, these Care Terms take precedence.
+          </p>
+          <div class="key-takeaway">
+            <span class="takeaway-badge">At a Glance</span>
+            <p>Our Website Care Plans protect your digital investment through scheduled core and plugin updates, automated offsite cloud backups, uptime monitoring, and included developer hours on a recurring monthly retainer.</p>
+          </div>
+        </section>
+
+        <!-- Section 1: Plan Tiers -->
+        <section class="legal-section" id="plan-tiers">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">01.</span> Care Plan Tiers &amp; Service Deliverables Matrix</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('plan-tiers')">Copy Link</button>
+          </div>
+          <p>
+            Sheernox provides three standardized tiers of website care retainers. The specific deliverables, monitoring cadences, and developer allocations applicable to each plan are set forth below:
+          </p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature / Service Area</th>
+                  <th>Essential Care</th>
+                  <th>Professional Care</th>
+                  <th>Enterprise Agency Care</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Core &amp; Plugin Updates</strong></td>
+                  <td>Weekly automated/reviewed</td>
+                  <td>Weekly staging-verified</td>
+                  <td>Continuous priority staging</td>
+                </tr>
+                <tr>
+                  <td><strong>Offsite Cloud Backups</strong></td>
+                  <td>Daily (30-day retention)</td>
+                  <td>Daily (60-day retention)</td>
+                  <td>Real-time / Hourly (90-day retention)</td>
+                </tr>
+                <tr>
+                  <td><strong>Uptime Monitoring</strong></td>
+                  <td>15-minute intervals</td>
+                  <td>5-minute intervals</td>
+                  <td>1-minute intervals (SMS alert)</td>
+                </tr>
+                <tr>
+                  <td><strong>Included Content Hours</strong></td>
+                  <td>None (billed hourly)</td>
+                  <td><strong>2 Hours / month</strong></td>
+                  <td><strong>5 Hours / month</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Support Response SLA</strong></td>
+                  <td>&le; 24 business hours</td>
+                  <td>&le; 8 business hours</td>
+                  <td>&le; 2 business hours (Priority)</td>
+                </tr>
+                <tr>
+                  <td><strong>Malware Remediation</strong></td>
+                  <td>Backup restore only</td>
+                  <td>Full cleanup included</td>
+                  <td>Immediate 2h emergency cleanup</td>
+                </tr>
+                <tr>
+                  <td><strong>Performance Optimization</strong></td>
+                  <td>Basic caching</td>
+                  <td>Monthly speed review</td>
+                  <td>Continuous CDN &amp; DB tuning</td>
+                </tr>
+                <tr>
+                  <td><strong>Reporting &amp; Audits</strong></td>
+                  <td>Monthly automated report</td>
+                  <td>Monthly executive report</td>
+                  <td>Quarterly UX &amp; SEO audit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            The selected tier and its recurring monthly fee are confirmed upon checkout within the <a href="https://my.sheernox.com" style="color: var(--sn-primary-teal); font-weight: 600;">Sheernox Client Portal</a>.
+          </p>
+        </section>
+
+        <!-- Section 2: Maintenance Scope -->
+        <section class="legal-section" id="maintenance-scope">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">02.</span> Maintenance Scope &amp; Operational Boundaries</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('maintenance-scope')">Copy Link</button>
+          </div>
+          <p>
+            The scope of ongoing website maintenance under this SOW is designed to preserve the operational health, security, and integrity of existing web properties. Specifically included within routine maintenance:
+          </p>
+          <ul>
+            <li><strong>Content Management System (CMS) Updates:</strong> Application of minor and major core security releases for supported platforms (WordPress, Drupal, Headless CMS frameworks).</li>
+            <li><strong>Third-Party Plugin &amp; Extension Patching:</strong> Routine updating of verified plugins, extensions, and themes to mitigate known Common Vulnerabilities and Exposures (CVEs).</li>
+            <li><strong>Database Hygiene &amp; Maintenance:</strong> Periodic pruning of post revisions, transient data, spam comment queues, and overhead tables to maintain database responsiveness.</li>
+            <li><strong>Security Scanning:</strong> Daily remote security integrity scans to detect file alterations, injected scripts, phishing kits, and blacklisting status with search engines.</li>
+            <li><strong>Broken Link &amp; 404 Auditing:</strong> Automated monthly scanning of internal hyperlinks to ensure clean navigation and search engine crawling hygiene.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Content Hours -->
+        <section class="legal-section" id="content-hours">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">03.</span> Included Content Support Hours &amp; Turnaround Rules</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('content-hours')">Copy Link</button>
+          </div>
+          <p>
+            Plans including monthly support hours (Professional and Enterprise Agency) may be utilized for minor content updates and standard technical adjustments:
+          </p>
+          <ol>
+            <li><strong>Eligible Tasks:</strong> Text copy additions and revisions, replacing existing imagery, publishing customer-provided blog posts, updating contact information, modifying navigation menu links, updating existing web form fields, and minor CSS aesthetic adjustments.</li>
+            <li><strong>Task Submission:</strong> Support requests must be submitted through our verified client ticketing portal at <span class="mono-code">https://my.sheernox.com</span> or via email to <span class="mono-code">support@sheernox.com</span> from an authorized contact email.</li>
+            <li><strong>Turnaround Target:</strong> Content update requests under 1 hour in scope are completed within <strong>twenty-four (24) to forty-eight (48) business hours</strong> (Monday through Friday, 09:00–17:00 PST).</li>
+            <li><strong>Use-It-or-Lose-It (Non-Rollover Policy):</strong> Monthly content hours are allocated on a strict monthly retainer basis to reserve dedicated engineering capacity. <strong>Unused hours do not accumulate, transfer, or roll over</strong> into subsequent billing cycles and cannot be redeemed for cash or credit.</li>
+          </ol>
+          <div class="key-takeaway">
+            <span class="takeaway-badge">Non-Rollover Policy</span>
+            <p>Retainer hours reserve active agency capacity each month. Because our team allocates dedicated developer time every billing cycle, unused support hours expire at the end of each billing period.</p>
+          </div>
+        </section>
+
+        <!-- Section 4: Staging-First Protocol -->
+        <section class="legal-section" id="staging-protocol">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">04.</span> Staging-First Deployment Protocol</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('staging-protocol')">Copy Link</button>
+          </div>
+          <p>
+            To eliminate the risk of production downtime or broken client-facing functionality caused by incompatible plugin updates, Sheernox enforces a rigorous <strong>Staging-First Protocol</strong> for all Professional and Enterprise tiers:
+          </p>
+          <ul>
+            <li><strong>Sandbox Cloning:</strong> Before updates are applied to the live production website, a complete staging snapshot is deployed on an isolated staging server.</li>
+            <li><strong>Automated &amp; Visual Regression Testing:</strong> Core updates and extension dependencies are tested on staging. Visual regression checks are performed across key templates (homepage, checkout, contact forms).</li>
+            <li><strong>Safe Deployment:</strong> Once verified conflict-free, updates are synchronized to the production environment during low-traffic maintenance windows.</li>
+            <li><strong>Rollback Guarantee:</strong> In the event an unforeseen conflict manifests post-deployment, Sheernox executes an immediate restoration from the pre-update snapshot at no extra charge.</li>
+          </ul>
+        </section>
+
+        <!-- Section 5: Out of Scope Rates -->
+        <section class="legal-section" id="out-of-scope">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">05.</span> Out-of-Scope Services &amp; Additional Hourly Rates</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('out-of-scope')">Copy Link</button>
+          </div>
+          <p>
+            Care Plans are strictly focused on operational maintenance, health, and minor content adjustments. Major design overhauls, software engineering, and architectural refactoring fall outside standard care scopes.
+          </p>
+          <div class="critical-alert-box">
+            <h4>Work Defined as Out of Scope</h4>
+            <p>Major graphic redesigns, building new multi-page website sections, custom plugin or API development, CRM/ERP database synchronization, migrating e-commerce shopping carts, and search engine penalty remediation require separate scoping and formal quotes.</p>
+          </div>
+          <p>
+            Clients with an active Care Plan benefit from discounted preferred engineering rates for any approved out-of-scope work:
+          </p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Client Service Category</th>
+                  <th>Hourly Billing Rate (CAD)</th>
+                  <th>Billing Increments</th>
+                  <th>Quoting Procedure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Care Plan Active Subscribers</strong></td>
+                  <td><strong>$95.00 CAD / hr</strong> (Preferred Rate)</td>
+                  <td>30-minute minimums</td>
+                  <td>Written quote provided prior to commencement.</td>
+                </tr>
+                <tr>
+                  <td><strong>Non-Retainer / Ad-Hoc Clients</strong></td>
+                  <td><strong>$125.00 CAD / hr</strong> (Standard Agency Rate)</td>
+                  <td>1-hour minimums</td>
+                  <td>Upfront deposit required before scheduling.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            All additional hourly fees are billed in Canadian Dollars (CAD) and are subject to applicable GST (5%) and BC PST (7%).
+          </p>
+        </section>
+
+        <!-- Section 6: Security & Malware Recovery -->
+        <section class="legal-section" id="security-remediation">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">06.</span> Security Incidents &amp; Malware Recovery</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('security-remediation')">Copy Link</button>
+          </div>
+          <p>
+            While Sheernox employs industry-leading security practices, no web application connected to the internet can be guaranteed 100% immune from novel zero-day exploits or credential compromise.
+          </p>
+          <p>
+            In the event of a confirmed security incident or malware infection on an enrolled website:
+          </p>
+          <ul>
+            <li><strong>Immediate Isolation:</strong> The affected application is immediately placed in maintenance mode to prevent malware propagation and protect website visitors.</li>
+            <li><strong>Remediation Protocol:</strong> Our security engineers clean infected core and plugin directories, restore known clean state files from verified offsite backups, audit database tables for injected payloads, and update all administrative credentials and API keys.</li>
+            <li><strong>Coverage Limitation:</strong> Full manual malware scrubbing and hack recovery are included at no additional charge for Professional and Enterprise Care Plan subscribers. For Essential Care subscribers, Sheernox will restore the most recent uninfected backup snapshot free of charge; in-depth forensic code scrubbing is billed at our preferred hourly rate.</li>
+          </ul>
+        </section>
+
+        <!-- Section 7: Access & Warranty Boundary -->
+        <section class="legal-section" id="access-warranty">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">07.</span> Mutual Access, Third Parties &amp; Warranty Boundary</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('access-warranty')">Copy Link</button>
+          </div>
+          <p>
+            To maintain stability, the client agrees to the following operational boundaries:
+          </p>
+          <ul>
+            <li><strong>Access Credentials:</strong> The client must provide Sheernox with full administrative CMS credentials, hosting control panel access, and DNS access necessary to perform maintenance.</li>
+            <li><strong>Client &amp; Third-Party Modifications:</strong> If the client, client employees, or external third-party agencies access the website backend and install unvetted plugins, edit core system files, or alter database schemas without prior consultation with Sheernox, <strong>any subsequent downtime, broken features, or security breaches are excluded from maintenance coverage</strong>. Remediation of such conflicts will be billed at our preferred out-of-scope hourly rate.</li>
+            <li><strong>Third-Party Software Disclaimers:</strong> Sheernox does not author third-party themes, CMS platforms, or commercial plugins. We are not liable for software bugs, deprecation, or licensing costs imposed by independent third-party vendors.</li>
+          </ul>
+          <div class="statutory-callout">
+            <h4>Warranty Boundary</h4>
+            <p>Sheernox warrants that maintenance services will be delivered in a professional, workmanlike manner in accordance with Canadian commercial standards. Unapproved third-party code tampering immediately voids our maintenance conflict warranty.</p>
+          </div>
+        </section>
+
+        <!-- Section 8: Billing & Cancellation -->
+        <section class="legal-section" id="billing-cancellation">
+          <div class="section-header">
+            <h2 class="section-title"><span class="section-num">08.</span> Billing, Payment &amp; 30-Day Cancellation</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('billing-cancellation')">Copy Link</button>
+          </div>
+          <p>
+            Website Care Plans operate as recurring monthly subscriptions subject to the following commercial conditions:
+          </p>
+          <ol>
+            <li><strong>Automatic Recurring Billing:</strong> Monthly subscription fees are billed in advance on a recurring 30-day billing cycle to the credit card on file via Stripe.</li>
+            <li><strong>Late Payment &amp; Grace Period:</strong> If automatic payment fails, a 5-calendar-day grace period is provided. If payment remains outstanding after 5 days, maintenance services and automated backup synchronizations are suspended until the account balance is cleared.</li>
+            <li><strong>Cancellation Policy:</strong> Either party may cancel a Care Plan at any time by providing <strong>thirty (30) days' advance written notice</strong> via our client support ticket system at <span class="mono-code">https://my.sheernox.com</span> or by emailing <span class="mono-code">support@sheernox.com</span>.</li>
+            <li><strong>No Mid-Cycle Refunds:</strong> Care Plan fees are non-refundable for partial months. Service continues through the conclusion of the paid 30-day billing cycle.</li>
+            <li><strong>Offboarding Site Snapshot:</strong> Upon completion of the 30-day cancellation period, Sheernox generates and delivers a final, complete offsite backup archive (database SQL dump and compressed media directory) to the client at no extra charge.</li>
+          </ol>
+        </section>
+
+      </article>
+    </main>
+
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">&copy; 2026 Sheernox Technology Group &bull; Kamloops, BC, Canada</div>
+        <div class="footer-legal-bar">
+          <a href="terms-and-conditions.html" class="footer-link">Terms of Service</a>
+          <a href="acceptable-use-policy.html" class="footer-link">Acceptable Use Policy</a>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="service-level-agreement.html" class="footer-link">SLA</a>
+          <a href="vulnerability-disclosure-policy.html" class="footer-link">VDP</a>
+          <a href="copyright-policy.html" class="footer-link">Copyright Policy</a>
+          <a href="web-design-terms.html" class="footer-link">Web Design Terms</a>
+          <a href="website-care-plan-terms.html" class="footer-link" style="color: #ffffff; font-weight: 600;">Care Plan Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Registered Sole Proprietorship in British Columbia, Canada &bull; Operating Address: 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8</div>
+        <div>Care Plan Terms Version: v1.0-WCP &bull; Last Revised: 2026-09-12</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toast" class="toast">Link copied to clipboard</div>
+
+  <script>
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Mobile TOC Toggle
+    function toggleTOC() {
+      const card = document.getElementById('tocCard');
+      card.classList.toggle('open');
+    }
+
+    // Filter Table of Contents
+    function filterTOC() {
+      const query = document.getElementById('tocSearch').value.toLowerCase();
+      const items = document.querySelectorAll('#tocList li');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
+      });
+    }
+
+    // Copy Share Link
+    function copyShareLink() {
+      navigator.clipboard.writeText(window.location.href.split('#')[0]).then(() => {
+        showToast("Document link copied to clipboard");
+      });
+    }
+
+    // Copy Clause Link
+    function copyClauseLink(clauseId) {
+      const url = window.location.href.split('#')[0] + '#' + clauseId;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast("Clause permalink copied to clipboard");
+      });
+    }
+
+    // Toast Notification
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // Highlight Active TOC Item on Scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.legal-section');
+      const links = document.querySelectorAll('.toc-link');
+      let currentSectionId = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.pageYOffset >= sectionTop) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSectionId) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

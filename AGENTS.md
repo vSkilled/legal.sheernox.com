@@ -18,6 +18,10 @@ This document is the authoritative operational guide for AI coding agents (and d
 | `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v3.5-AUP` |
 | `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.0-WDT` |
 | `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.0-PRIV` |
+| `sla` | `service-level-agreement.html` | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.0-SLA` |
+| `vdp` | `vulnerability-disclosure-policy.html` | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.0-VDP` |
+| `cpr` | `copyright-policy.html` | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.0-CPR` |
+| `wcp` | `website-care-plan-terms.html` | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.0-WCP` |
 | `hub` | `index.html` | N/A | Legal Portal Directory & Search Hub | N/A |
 
 ---
@@ -66,14 +70,18 @@ A fully self-contained generator is maintained at [`scripts/generate_pdfs.py`](f
 ### Quick Commands
 
 ```bash
-# Generate all 4 PDF policy documents
+# Generate all 8 PDF policy documents
 python3 scripts/generate_pdfs.py
 
 # Generate only a specific document
 python3 scripts/generate_pdfs.py --doc aup      # Acceptable Use Policy
 python3 scripts/generate_pdfs.py --doc tos      # Terms and Conditions
 python3 scripts/generate_pdfs.py --doc wdt      # Web Design Terms
-python3 scripts/generate_pdfs.py --doc privacy  # Privacy Policy
+python3 scripts/generate_pdfs.py --doc priv     # Privacy Policy
+python3 scripts/generate_pdfs.py --doc sla      # Service Level Agreement
+python3 scripts/generate_pdfs.py --doc vdp      # Vulnerability Disclosure Policy
+python3 scripts/generate_pdfs.py --doc cpr      # Copyright Policy
+python3 scripts/generate_pdfs.py --doc wcp      # Website Care Plan Terms
 
 # Specify a custom browser binary
 python3 scripts/generate_pdfs.py --browser /usr/bin/brave

@@ -324,6 +324,42 @@
       color: #dc2626;
     }
 
+    .card-cyan:hover {
+      border-color: #7dd3fc;
+      box-shadow: 0 14px 32px -6px rgba(2, 132, 199, 0.12);
+    }
+
+    .card-cyan:hover .card-title {
+      color: #0284c7;
+    }
+
+    .card-purple:hover {
+      border-color: #d8b4fe;
+      box-shadow: 0 14px 32px -6px rgba(124, 58, 237, 0.12);
+    }
+
+    .card-purple:hover .card-title {
+      color: #7c3aed;
+    }
+
+    .card-rose:hover {
+      border-color: #fecdd3;
+      box-shadow: 0 14px 32px -6px rgba(225, 29, 72, 0.12);
+    }
+
+    .card-rose:hover .card-title {
+      color: #e11d48;
+    }
+
+    .card-teal:hover {
+      border-color: #99f6e4;
+      box-shadow: 0 14px 32px -6px rgba(13, 148, 136, 0.12);
+    }
+
+    .card-teal:hover .card-title {
+      color: #0d9488;
+    }
+
     /* Color Ribbon Indicator */
     .card-ribbon {
       position: absolute;
@@ -337,6 +373,10 @@
     .ribbon-amber { background-color: #f59e0b; }
     .ribbon-emerald { background-color: #10b981; }
     .ribbon-coral { background-color: #ef4444; }
+    .ribbon-cyan { background-color: #0284c7; }
+    .ribbon-purple { background-color: #7c3aed; }
+    .ribbon-rose { background-color: #e11d48; }
+    .ribbon-teal { background-color: #0d9488; }
 
     .card-header-row {
       display: flex;
@@ -366,6 +406,10 @@
     .icon-amber { background: #fef3c7; color: #d97706; }
     .icon-emerald { background: #d1fae5; color: #059669; }
     .icon-coral { background: #fee2e2; color: #dc2626; }
+    .icon-cyan { background: #e0f2fe; color: #0284c7; }
+    .icon-purple { background: #f3e8ff; color: #7c3aed; }
+    .icon-rose { background: #ffe4e6; color: #e11d48; }
+    .icon-teal { background: #ccfbf1; color: #0f766e; }
 
     .card-title {
       font-size: 1.25rem;
@@ -538,6 +582,42 @@
       background: #e0f2fe;
       color: #0369a1;
       border: 1px solid #bae6fd;
+    }
+
+    .pill-amber {
+      background: #fef3c7;
+      color: #b45309;
+      border-color: #fde68a;
+    }
+
+    .pill-emerald {
+      background: #d1fae5;
+      color: #065f46;
+      border-color: #a7f3d0;
+    }
+
+    .pill-coral {
+      background: #fee2e2;
+      color: #b91c1c;
+      border-color: #fecaca;
+    }
+
+    .pill-purple {
+      background: #f3e8ff;
+      color: #7c3aed;
+      border-color: #d8b4fe;
+    }
+
+    .pill-rose {
+      background: #ffe4e6;
+      color: #be123c;
+      border-color: #fecdd3;
+    }
+
+    .pill-teal {
+      background: #ccfbf1;
+      color: #0f766e;
+      border-color: #99f6e4;
     }
 
     .card-meta-line {
@@ -843,7 +923,7 @@
               <div>
                 <h2 class="card-title">Acceptable Use Policy</h2>
                 <div class="card-meta-line">
-                  <span class="version-pill">v3.5-AUP</span>
+                  <span class="version-pill pill-amber">v3.5-AUP</span>
                   <span class="meta-revised">Revised 2026-09-11</span>
                 </div>
               </div>
@@ -901,7 +981,7 @@
               <div>
                 <h2 class="card-title">Privacy Policy</h2>
                 <div class="card-meta-line">
-                  <span class="version-pill">v4.0-PRIV</span>
+                  <span class="version-pill pill-emerald">v4.0-PRIV</span>
                   <span class="meta-revised">Revised 2026-09-12</span>
                 </div>
               </div>
@@ -944,7 +1024,179 @@
         </div>
       </div>
 
-      <!-- 4. Web Design, Branding & Care Terms -->
+      <!-- 4. Service Level Agreement (SLA) -->
+      <div class="enterprise-card card-cyan" data-category="hosting" data-title="service level agreement sla incident policy" data-keywords="sla uptime 99.9 incident response priority credit scheduled maintenance downtime penalty outage bare-metal vps" onclick="handleCardClick(event, 'service-level-agreement.html')">
+        <div class="card-ribbon ribbon-cyan"></div>
+        <div>
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-badge-icon icon-cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h2 class="card-title">Service Level Agreement</h2>
+                <div class="card-meta-line">
+                  <span class="version-pill">v1.0-SLA</span>
+                  <span class="meta-revised">Revised 2026-09-12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              Formal availability commitments across cloud hosting, VPS, and network infrastructure with transparent credit schedules.
+            </p>
+            <ul class="card-bullet-list">
+              <li>99.9% monthly uptime guarantee & mathematical formula</li>
+              <li>P1 (&lt; 15 min) to P4 incident triage response matrix</li>
+              <li>Tiered service credits up to 100% of monthly invoice</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-actions-bar">
+          <span class="meta-url" title="service-level-agreement.html">service-level-agreement.html</span>
+          <div class="actions-cluster">
+            <a href="pdf/Service_Level_Agreement.pdf" class="btn-pdf" target="_blank" title="Download Vector PDF">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              PDF
+            </a>
+            <button type="button" class="btn-copy" onclick="copyDocUrl('service-level-agreement.html')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Link
+            </button>
+            <a href="service-level-agreement.html" class="btn-open">
+              <span>Open</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Vulnerability Disclosure Policy (VDP) -->
+      <div class="enterprise-card card-purple" data-category="security" data-title="vulnerability disclosure policy vdp safe harbor security" data-keywords="vdp security vulnerability ethical hacking safe harbor bug bounty cvss reporting coordinated disclosure exploit penetration testing" onclick="handleCardClick(event, 'vulnerability-disclosure-policy.html')">
+        <div class="card-ribbon ribbon-purple"></div>
+        <div>
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-badge-icon icon-purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="card-title">Vulnerability Disclosure (VDP)</h2>
+                <div class="card-meta-line">
+                  <span class="version-pill pill-purple">v1.0-VDP</span>
+                  <span class="meta-revised">Revised 2026-09-12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              Official framework and safe harbor protections for ethical security researchers, penetration testers, and academic cryptographers.
+            </p>
+            <ul class="card-bullet-list">
+              <li>Criminal Code s. 342.1 safe harbor authorization</li>
+              <li>In-scope domains, edge DNS, and customer APIs</li>
+              <li>48h receipt acknowledgement & 90-day coordinated release</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-actions-bar">
+          <span class="meta-url" title="vulnerability-disclosure-policy.html">vulnerability-disclosure-policy.html</span>
+          <div class="actions-cluster">
+            <a href="pdf/Vulnerability_Disclosure_Policy.pdf" class="btn-pdf" target="_blank" title="Download Vector PDF">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              PDF
+            </a>
+            <button type="button" class="btn-copy" onclick="copyDocUrl('vulnerability-disclosure-policy.html')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Link
+            </button>
+            <a href="vulnerability-disclosure-policy.html" class="btn-open">
+              <span>Open</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Copyright & Notice-and-Notice Policy -->
+      <div class="enterprise-card card-rose" data-category="compliance" data-title="copyright notice-and-notice policy dmca intellectual property" data-keywords="copyright notice-and-notice dmca infringement canadian copyright act safe harbor 31.1 designated agent statutory log retention norwich" onclick="handleCardClick(event, 'copyright-policy.html')">
+        <div class="card-ribbon ribbon-rose"></div>
+        <div>
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-badge-icon icon-rose">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="card-title">Copyright &amp; Notice-and-Notice</h2>
+                <div class="card-meta-line">
+                  <span class="version-pill pill-rose">v1.0-CPR</span>
+                  <span class="meta-revised">Revised 2026-09-12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              Compliance framework under the Canadian Copyright Act Notice-and-Notice regime, forwarding timelines, log retention, and DMCA.
+            </p>
+            <ul class="card-bullet-list">
+              <li>Statutory Notice-and-Notice forwarding without fee</li>
+              <li>Mandatory 6 to 12-month IP log preservation rules</li>
+              <li>Strict subscriber privacy protection (court order required)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-actions-bar">
+          <span class="meta-url" title="copyright-policy.html">copyright-policy.html</span>
+          <div class="actions-cluster">
+            <a href="pdf/Copyright_Notice_and_Notice_Policy.pdf" class="btn-pdf" target="_blank" title="Download Vector PDF">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              PDF
+            </a>
+            <button type="button" class="btn-copy" onclick="copyDocUrl('copyright-policy.html')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Link
+            </button>
+            <a href="copyright-policy.html" class="btn-open">
+              <span>Open</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Web Design & Development Terms -->
       <div class="enterprise-card card-coral" data-category="design" data-title="web design branding care terms and conditions" data-keywords="design development branding care maintenance ux approval milestones creative copyright sow agency" onclick="handleCardClick(event, 'web-design-terms.html')">
         <div class="card-ribbon ribbon-coral"></div>
         <div>
@@ -957,9 +1209,9 @@
                 </svg>
               </div>
               <div>
-                <h2 class="card-title">Web Design & Care Terms</h2>
+                <h2 class="card-title">Web Design &amp; Development Terms</h2>
                 <div class="card-meta-line">
-                  <span class="version-pill">v3.0-WDT</span>
+                  <span class="version-pill pill-coral">v3.0-WDT</span>
                   <span class="meta-revised">Revised 2026-09-11</span>
                 </div>
               </div>
@@ -967,7 +1219,7 @@
           </div>
           <div class="card-body">
             <p class="card-desc">
-              Master terms governing branding, UI/UX architecture, custom web engineering (Jamstack, CMS, web apps), 30-day warranty, and ongoing website care.
+              Master terms governing branding, UI/UX architecture, custom web engineering (Jamstack, CMS, web apps), 30-day warranty, and IP transfer.
             </p>
             <ul class="card-bullet-list">
               <li>Discovery, UI/UX prototyping & staging review cycles</li>
@@ -991,6 +1243,63 @@
               Copy Link
             </button>
             <a href="web-design-terms.html" class="btn-open">
+              <span>Open</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Website Care Plan & Maintenance Terms -->
+      <div class="enterprise-card card-teal" data-category="design" data-title="website care plan maintenance terms sow schedule" data-keywords="care plan website maintenance retainer wordpress updates staging backups malware content support hourly rates" onclick="handleCardClick(event, 'website-care-plan-terms.html')">
+        <div class="card-ribbon ribbon-teal"></div>
+        <div>
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-badge-icon icon-teal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="card-title">Website Care Plan Terms</h2>
+                <div class="card-meta-line">
+                  <span class="version-pill pill-teal">v1.0-WCP</span>
+                  <span class="meta-revised">Revised 2026-09-12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              Recurring maintenance Statement of Work (SOW) schedule covering CMS core updates, daily cloud backups, and included developer hours.
+            </p>
+            <ul class="card-bullet-list">
+              <li>Essential, Professional, and Enterprise Care tiers</li>
+              <li>Staging-first deployment protocol & rollback safety</li>
+              <li>Up to 5 hours/mo content tasks & preferred CAD rates</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-actions-bar">
+          <span class="meta-url" title="website-care-plan-terms.html">website-care-plan-terms.html</span>
+          <div class="actions-cluster">
+            <a href="pdf/Website_Care_Plan_Terms.pdf" class="btn-pdf" target="_blank" title="Download Vector PDF">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              PDF
+            </a>
+            <button type="button" class="btn-copy" onclick="copyDocUrl('website-care-plan-terms.html')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Link
+            </button>
+            <a href="website-care-plan-terms.html" class="btn-open">
               <span>Open</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
