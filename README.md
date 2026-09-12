@@ -63,10 +63,10 @@ sheernox_legal_portal/
 | Document | Primary Focus | Sections | Canadian Legal Highlights |
 | :--- | :--- | :--- | :--- |
 | **[`index.html`](index.html)** | Portal Hub & Directory | N/A | Central search, filter by service type, direct deep links, and enterprise MSA inquiries. |
-| **[`terms-and-conditions.html`](terms-and-conditions.html)** | Master Services & Infrastructure | 23 Sections | Kamloops BC venue, $5,000 CAD typo-squatting liquidated damages, 14-day cancellation notice via portal, 99.9% SLA credit tiers, SOW on-site builds. |
+| **[`terms-and-conditions.html`](terms-and-conditions.html)** | Master Services & Infrastructure | 23 Sections | Kamloops BC venue, $5,000 CAD typo-squatting liquidated damages, 14-day cancellation notice via portal, 99.9% SLA credit tiers, SOW on-site builds, upstream cloud CLOUD Act process disclaimer. |
 | **[`acceptable-use-policy.html`](acceptable-use-policy.html)** | Hosting & VPS Network Rules | 8 Core Sections | Illustrative non-exhaustive standards, VPS hypervisor multi-tenancy, quarantine null-routing, CloudLinux resource caps, CASL compliance, $250 CAD delisting fee. |
 | **[`web-design-terms.html`](web-design-terms.html)** | Creative, UI/UX, Web Apps & Care | 14 Sections | SOW framework, technology-agnostic (Headless, Jamstack, CMS, Web Apps), 30-day warranty, 50% deposit, Small Claims Court of BC, $250 CAD external fee. |
-| **[`privacy-policy.html`](privacy-policy.html)** | Data Privacy & GDPR/PIPEDA | 10 Sections | Self-hosted, PIPEDA & BC PIPA compliance, vetted sub-processor registry, DPO in Kamloops, OIPC BC complaint rights. |
+| **[`privacy-policy.html`](privacy-policy.html)** | Data Privacy & GDPR/PIPEDA | 10 Sections | Self-hosted, PIPEDA & BC PIPA compliance, vetted sub-processor registry, US CLOUD Act cross-border statutory disclosures, DPO in Kamloops, OIPC BC complaint rights. |
 
 ---
 

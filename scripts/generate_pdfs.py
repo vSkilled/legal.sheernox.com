@@ -45,13 +45,15 @@ DOC_REGISTRY = {
         "category": "Network & Cloud Infrastructure Policy",
         "title": "Acceptable Use Policy (AUP)",
         "version": "v3.5-AUP",
+        "last_revised": "2026-09-11",
         "output_pdf": "Acceptable_Use_Policy.pdf",
     },
     "tos": {
         "source": "terms-and-conditions.html",
         "category": "Master Services Agreement",
         "title": "Terms and Conditions of Service",
-        "version": "v3.5-TOS",
+        "version": "v4.0-TOS",
+        "last_revised": "2026-09-12",
         "output_pdf": "Terms_and_Conditions.pdf",
     },
     "wdt": {
@@ -59,13 +61,15 @@ DOC_REGISTRY = {
         "category": "Agency Services Agreement",
         "title": "Web Design & Development Terms and Conditions",
         "version": "v3.0-WDT",
+        "last_revised": "2026-09-11",
         "output_pdf": "Web_Design_Terms_and_Conditions.pdf",
     },
     "priv": {
         "source": "privacy-policy.html",
         "category": "Privacy & Data Protection Policy",
         "title": "Privacy & Personal Information Policy",
-        "version": "v3.5-PRIV",
+        "version": "v4.0-PRIV",
+        "last_revised": "2026-09-12",
         "output_pdf": "Privacy_Policy.pdf",
     },
 }
@@ -589,7 +593,7 @@ def render_doc(browser_bin, key, doc_info, temp_dir):
         doc_info["category"],
         doc_info["title"],
         doc_info["version"],
-        LAST_REVISED_DATE,
+        doc_info.get("last_revised", LAST_REVISED_DATE),
     )
 
     temp_html = Path(temp_dir) / f"{key}_print.html"

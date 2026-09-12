@@ -14,10 +14,10 @@ This document is the authoritative operational guide for AI coding agents (and d
 
 | Key | HTML Source | Target PDF Output | Document Title | Version Tag |
 | :--- | :--- | :--- | :--- | :--- |
-| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v3.5-TOS` |
+| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.0-TOS` |
 | `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v3.5-AUP` |
 | `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.0-WDT` |
-| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v3.5-PRIV` |
+| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.0-PRIV` |
 | `hub` | `index.html` | N/A | Legal Portal Directory & Search Hub | N/A |
 
 ---
