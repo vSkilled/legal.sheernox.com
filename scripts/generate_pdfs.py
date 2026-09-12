@@ -47,6 +47,7 @@ DOC_REGISTRY = {
         "version": "v3.5-AUP",
         "last_revised": "2026-09-11",
         "output_pdf": "Acceptable_Use_Policy.pdf",
+        "accent_color": "#d97706",
     },
     "tos": {
         "source": "terms-and-conditions.html",
@@ -55,6 +56,7 @@ DOC_REGISTRY = {
         "version": "v4.0-TOS",
         "last_revised": "2026-09-12",
         "output_pdf": "Terms_and_Conditions.pdf",
+        "accent_color": "#0284c7",
     },
     "wdt": {
         "source": "web-design-terms.html",
@@ -63,6 +65,7 @@ DOC_REGISTRY = {
         "version": "v3.0-WDT",
         "last_revised": "2026-09-11",
         "output_pdf": "Web_Design_Terms_and_Conditions.pdf",
+        "accent_color": "#ea580c",
     },
     "priv": {
         "source": "privacy-policy.html",
@@ -71,6 +74,7 @@ DOC_REGISTRY = {
         "version": "v4.0-PRIV",
         "last_revised": "2026-09-12",
         "output_pdf": "Privacy_Policy.pdf",
+        "accent_color": "#059669",
     },
     "sla": {
         "source": "service-level-agreement.html",
@@ -79,6 +83,7 @@ DOC_REGISTRY = {
         "version": "v1.0-SLA",
         "last_revised": "2026-09-12",
         "output_pdf": "Service_Level_Agreement.pdf",
+        "accent_color": "#2563eb",
     },
     "vdp": {
         "source": "vulnerability-disclosure-policy.html",
@@ -87,6 +92,7 @@ DOC_REGISTRY = {
         "version": "v1.0-VDP",
         "last_revised": "2026-09-12",
         "output_pdf": "Vulnerability_Disclosure_Policy.pdf",
+        "accent_color": "#7c3aed",
     },
     "cpr": {
         "source": "copyright-policy.html",
@@ -95,6 +101,7 @@ DOC_REGISTRY = {
         "version": "v1.0-CPR",
         "last_revised": "2026-09-12",
         "output_pdf": "Copyright_Notice_and_Notice_Policy.pdf",
+        "accent_color": "#e11d48",
     },
     "wcp": {
         "source": "website-care-plan-terms.html",
@@ -103,10 +110,11 @@ DOC_REGISTRY = {
         "version": "v1.0-WCP",
         "last_revised": "2026-09-12",
         "output_pdf": "Website_Care_Plan_Terms.pdf",
+        "accent_color": "#0d9488",
     },
 }
 
-def get_css(last_revised, version):
+def get_css(last_revised, version, accent_color="#0284c7"):
     return f"""
     @page {{
       size: letter portrait;
@@ -201,7 +209,7 @@ def get_css(last_revised, version):
     .doc-category {{
       font-size: 7.5pt;
       font-weight: 700;
-      color: #0284c7;
+      color: {accent_color};
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 3px;
@@ -234,9 +242,9 @@ def get_css(last_revised, version):
     .version-pill {{
       display: inline-flex;
       align-items: center;
-      background: rgba(14, 165, 233, 0.12);
-      color: #0284c7;
-      border: 1px solid rgba(14, 165, 233, 0.35);
+      background: {accent_color}1a;
+      color: {accent_color};
+      border: 1px solid {accent_color}4d;
       font-family: 'JetBrains Mono', monospace;
       font-size: 7.2pt;
       font-weight: 700;
@@ -312,9 +320,9 @@ def get_css(last_revised, version):
 
     /* Plain English Callout */
     .key-takeaway, .takeaway-card {{
-      background: #f0f9ff;
-      border: 1px solid #bae6fd;
-      border-left: 3.5px solid #0284c7;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3.5px solid {accent_color};
       padding: 8px 12px;
       border-radius: 6px;
       margin: 9px 0 11px 0;
@@ -327,7 +335,7 @@ def get_css(last_revised, version):
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      background: #0284c7;
+      background: {accent_color};
       color: #ffffff;
       padding: 2px 6px;
       border-radius: 4px;
@@ -336,7 +344,7 @@ def get_css(last_revised, version):
 
     .key-takeaway p, .takeaway-card p {{
       font-size: 8.2pt;
-      color: #0369a1;
+      color: #334155;
       line-height: 1.42;
       font-weight: 500;
       margin-bottom: 0;
@@ -366,6 +374,14 @@ def get_css(last_revised, version):
       gap: 6px;
     }}
 
+    .section-num {{
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: {accent_color};
+      margin-right: 6px;
+    }}
+
     p {{
       margin-bottom: 6px;
       color: #334155;
@@ -381,8 +397,11 @@ def get_css(last_revised, version):
     }}
 
     .clause-num {{
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.2pt;
       font-weight: 700;
-      color: #071322;
+      color: {accent_color};
+      margin-right: 5px;
       display: inline;
     }}
 
@@ -491,7 +510,7 @@ def get_css(last_revised, version):
     }}
 
     a {{
-      color: #0284c7;
+      color: {accent_color};
       text-decoration: none;
     }}
 
@@ -547,7 +566,7 @@ def find_browser(preferred_bin=None):
             return found
     return None
 
-def build_print_html(source_path, category, title, version, last_revised):
+def build_print_html(source_path, category, title, version, last_revised, accent_color="#0284c7"):
     with open(source_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
 
@@ -562,7 +581,7 @@ def build_print_html(source_path, category, title, version, last_revised):
         s.decompose()
 
     article_html = str(article)
-    css_content = get_css(last_revised, version)
+    css_content = get_css(last_revised, version, accent_color)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -626,6 +645,7 @@ def render_doc(browser_bin, key, doc_info, temp_dir):
         doc_info["title"],
         doc_info["version"],
         doc_info.get("last_revised", LAST_REVISED_DATE),
+        doc_info.get("accent_color", "#0284c7"),
     )
 
     temp_html = Path(temp_dir) / f"{key}_print.html"

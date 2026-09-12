@@ -471,13 +471,20 @@
 
     .toc-num {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-subtle);
-      min-width: 20px;
+      font-size: 0.76rem;
+      color: var(--sn-primary-teal);
+      font-weight: 700;
+      min-width: 26px;
+      flex-shrink: 0;
     }
 
     .toc-link.active .toc-num {
-      color: var(--sn-primary-teal-dark);
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--sn-primary-teal);
+      font-weight: 700;
+      min-width: 26px;
+      flex-shrink: 0;
     }
 
     /* Content Area */
@@ -523,14 +530,25 @@
       letter-spacing: -0.015em;
       display: flex;
       align-items: baseline;
-      gap: 10px;
+      gap: 12px;
+    }
+
+    .clause-num {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--sn-primary-teal);
+      margin-right: 8px;
+      display: inline;
     }
 
     .section-num {
       font-family: var(--font-mono);
-      font-size: 1.05rem;
+      font-size: 1.12rem;
       color: var(--sn-primary-teal);
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
     }
 
     .clause-anchor-btn {
@@ -1103,12 +1121,12 @@
   <div class="layout-container">
 
     <!-- Sticky Sidebar Table of Contents -->
-    <aside class="legal-sidebar">
+        <aside class="legal-sidebar">
       <div class="toc-card" id="tocCard">
         <div class="toc-header" onclick="toggleTOC()">
           <span>Table of Contents</span>
           <div class="toc-header-right">
-            <span class="toc-badge">9 Clauses</span>
+            <span class="toc-badge">9 Sections</span>
             <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
@@ -1117,15 +1135,15 @@
         <div class="toc-body">
           <input type="text" id="tocSearch" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC()">
           <ul class="toc-nav" id="tocList">
-            <li><a href="#preamble" class="toc-link"><span class="toc-num">00</span> Preamble &amp; Master SOW</a></li>
-            <li><a href="#plan-tiers" class="toc-link"><span class="toc-num">01</span> Care Plan Tiers &amp; Matrix</a></li>
-            <li><a href="#maintenance-scope" class="toc-link"><span class="toc-num">02</span> Maintenance Scope</a></li>
-            <li><a href="#content-hours" class="toc-link"><span class="toc-num">03</span> Content Support Hours</a></li>
-            <li><a href="#staging-protocol" class="toc-link"><span class="toc-num">04</span> Staging-First Protocol</a></li>
-            <li><a href="#out-of-scope" class="toc-link"><span class="toc-num">05</span> Out-of-Scope Hourly Rates</a></li>
-            <li><a href="#security-remediation" class="toc-link"><span class="toc-num">06</span> Security &amp; Malware Recovery</a></li>
-            <li><a href="#access-warranty" class="toc-link"><span class="toc-num">07</span> Access &amp; Warranty Boundary</a></li>
-            <li><a href="#billing-cancellation" class="toc-link"><span class="toc-num">08</span> Billing &amp; 30-Day Cancellation</a></li>
+            <li><a href="#preamble" class="toc-link"><span class="toc-num">0.0</span> Preamble &amp; Master SOW</a></li>
+            <li><a href="#plan-tiers" class="toc-link"><span class="toc-num">1.0</span> Care Plan Tiers &amp; Matrix</a></li>
+            <li><a href="#maintenance-scope" class="toc-link"><span class="toc-num">2.0</span> Maintenance Scope</a></li>
+            <li><a href="#content-hours" class="toc-link"><span class="toc-num">3.0</span> Content Support Hours</a></li>
+            <li><a href="#staging-protocol" class="toc-link"><span class="toc-num">4.0</span> Staging-First Protocol</a></li>
+            <li><a href="#out-of-scope" class="toc-link"><span class="toc-num">5.0</span> Out-of-Scope Hourly Rates</a></li>
+            <li><a href="#security-remediation" class="toc-link"><span class="toc-num">6.0</span> Security &amp; Malware Recovery</a></li>
+            <li><a href="#access-warranty" class="toc-link"><span class="toc-num">7.0</span> Access &amp; Warranty Boundary</a></li>
+            <li><a href="#billing-cancellation" class="toc-link"><span class="toc-num">8.0</span> Billing &amp; 30-Day Cancellation</a></li>
           </ul>
         </div>
       </div>
@@ -1138,8 +1156,8 @@
         <!-- Preamble -->
         <section class="legal-section" id="preamble">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">00.</span> Preamble &amp; Relationship to Master Terms</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('preamble')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">0.0</span> Preamble &amp; Relationship to Master Terms</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('preamble')" title="Copy link to this section">#</button>
           </div>
           <p>
             These Website Care Plan &amp; Maintenance Terms ("Care Terms") constitute an ongoing recurring Statement of Work (SOW) schedule entered into between <strong>Sheernox Technology Group</strong> ("Sheernox", "we", "us", or "our"), a sole proprietorship registered in the Province of British Columbia, Canada, and the client identified in the applicable service order ("Client").
@@ -1156,8 +1174,8 @@
         <!-- Section 1: Plan Tiers -->
         <section class="legal-section" id="plan-tiers">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">01.</span> Care Plan Tiers &amp; Service Deliverables Matrix</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('plan-tiers')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">1.0</span> Care Plan Tiers &amp; Service Deliverables Matrix</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('plan-tiers')" title="Copy link to this section">#</button>
           </div>
           <p>
             Sheernox provides three standardized tiers of website care retainers. The specific deliverables, monitoring cadences, and developer allocations applicable to each plan are set forth below:
@@ -1174,49 +1192,49 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Core &amp; Plugin Updates</strong></td>
+                  <td><span class="clause-num">1.1</span> <strong>Core &amp; Plugin Updates</strong></td>
                   <td>Weekly automated/reviewed</td>
                   <td>Weekly staging-verified</td>
                   <td>Continuous priority staging</td>
                 </tr>
                 <tr>
-                  <td><strong>Offsite Cloud Backups</strong></td>
+                  <td><span class="clause-num">1.2</span> <strong>Offsite Cloud Backups</strong></td>
                   <td>Daily (30-day retention)</td>
                   <td>Daily (60-day retention)</td>
                   <td>Real-time / Hourly (90-day retention)</td>
                 </tr>
                 <tr>
-                  <td><strong>Uptime Monitoring</strong></td>
+                  <td><span class="clause-num">1.3</span> <strong>Uptime Monitoring</strong></td>
                   <td>15-minute intervals</td>
                   <td>5-minute intervals</td>
                   <td>1-minute intervals (SMS alert)</td>
                 </tr>
                 <tr>
-                  <td><strong>Included Content Hours</strong></td>
+                  <td><span class="clause-num">1.4</span> <strong>Included Content Hours</strong></td>
                   <td>None (billed hourly)</td>
                   <td><strong>2 Hours / month</strong></td>
                   <td><strong>5 Hours / month</strong></td>
                 </tr>
                 <tr>
-                  <td><strong>Support Response SLA</strong></td>
+                  <td><span class="clause-num">1.5</span> <strong>Support Response SLA</strong></td>
                   <td>&le; 24 business hours</td>
                   <td>&le; 8 business hours</td>
                   <td>&le; 2 business hours (Priority)</td>
                 </tr>
                 <tr>
-                  <td><strong>Malware Remediation</strong></td>
+                  <td><span class="clause-num">1.6</span> <strong>Malware Remediation</strong></td>
                   <td>Backup restore only</td>
                   <td>Full cleanup included</td>
                   <td>Immediate 2h emergency cleanup</td>
                 </tr>
                 <tr>
-                  <td><strong>Performance Optimization</strong></td>
+                  <td><span class="clause-num">1.7</span> <strong>Performance Optimization</strong></td>
                   <td>Basic caching</td>
                   <td>Monthly speed review</td>
                   <td>Continuous CDN &amp; DB tuning</td>
                 </tr>
                 <tr>
-                  <td><strong>Reporting &amp; Audits</strong></td>
+                  <td><span class="clause-num">1.8</span> <strong>Reporting &amp; Audits</strong></td>
                   <td>Monthly automated report</td>
                   <td>Monthly executive report</td>
                   <td>Quarterly UX &amp; SEO audit</td>
@@ -1232,35 +1250,35 @@
         <!-- Section 2: Maintenance Scope -->
         <section class="legal-section" id="maintenance-scope">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">02.</span> Maintenance Scope &amp; Operational Boundaries</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('maintenance-scope')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">2.0</span> Maintenance Scope &amp; Operational Boundaries</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('maintenance-scope')" title="Copy link to this section">#</button>
           </div>
           <p>
             The scope of ongoing website maintenance under this SOW is designed to preserve the operational health, security, and integrity of existing web properties. Specifically included within routine maintenance:
           </p>
           <ul>
-            <li><strong>Content Management System (CMS) Updates:</strong> Application of minor and major core security releases for supported platforms (WordPress, Drupal, Headless CMS frameworks).</li>
-            <li><strong>Third-Party Plugin &amp; Extension Patching:</strong> Routine updating of verified plugins, extensions, and themes to mitigate known Common Vulnerabilities and Exposures (CVEs).</li>
-            <li><strong>Database Hygiene &amp; Maintenance:</strong> Periodic pruning of post revisions, transient data, spam comment queues, and overhead tables to maintain database responsiveness.</li>
-            <li><strong>Security Scanning:</strong> Daily remote security integrity scans to detect file alterations, injected scripts, phishing kits, and blacklisting status with search engines.</li>
-            <li><strong>Broken Link &amp; 404 Auditing:</strong> Automated monthly scanning of internal hyperlinks to ensure clean navigation and search engine crawling hygiene.</li>
+            <li><span class="clause-num">2.1</span> <strong>Content Management System (CMS) Updates:</strong> Application of minor and major core security releases for supported platforms (WordPress, Drupal, Headless CMS frameworks).</li>
+            <li><span class="clause-num">2.2</span> <strong>Third-Party Plugin &amp; Extension Patching:</strong> Routine updating of verified plugins, extensions, and themes to mitigate known Common Vulnerabilities and Exposures (CVEs).</li>
+            <li><span class="clause-num">2.3</span> <strong>Database Hygiene &amp; Maintenance:</strong> Periodic pruning of post revisions, transient data, spam comment queues, and overhead tables to maintain database responsiveness.</li>
+            <li><span class="clause-num">2.4</span> <strong>Security Scanning:</strong> Daily remote security integrity scans to detect file alterations, injected scripts, phishing kits, and blacklisting status with search engines.</li>
+            <li><span class="clause-num">2.5</span> <strong>Broken Link &amp; 404 Auditing:</strong> Automated monthly scanning of internal hyperlinks to ensure clean navigation and search engine crawling hygiene.</li>
           </ul>
         </section>
 
         <!-- Section 3: Content Hours -->
         <section class="legal-section" id="content-hours">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">03.</span> Included Content Support Hours &amp; Turnaround Rules</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('content-hours')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">3.0</span> Included Content Support Hours &amp; Turnaround Rules</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('content-hours')" title="Copy link to this section">#</button>
           </div>
           <p>
             Plans including monthly support hours (Professional and Enterprise Agency) may be utilized for minor content updates and standard technical adjustments:
           </p>
           <ol>
-            <li><strong>Eligible Tasks:</strong> Text copy additions and revisions, replacing existing imagery, publishing customer-provided blog posts, updating contact information, modifying navigation menu links, updating existing web form fields, and minor CSS aesthetic adjustments.</li>
-            <li><strong>Task Submission:</strong> Support requests must be submitted through our verified client ticketing portal at <span class="mono-code">https://my.sheernox.com</span> or via email to <span class="mono-code">support@sheernox.com</span> from an authorized contact email.</li>
-            <li><strong>Turnaround Target:</strong> Content update requests under 1 hour in scope are completed within <strong>twenty-four (24) to forty-eight (48) business hours</strong> (Monday through Friday, 09:00–17:00 PST).</li>
-            <li><strong>Use-It-or-Lose-It (Non-Rollover Policy):</strong> Monthly content hours are allocated on a strict monthly retainer basis to reserve dedicated engineering capacity. <strong>Unused hours do not accumulate, transfer, or roll over</strong> into subsequent billing cycles and cannot be redeemed for cash or credit.</li>
+            <li><span class="clause-num">3.1</span> <strong>Eligible Tasks:</strong> Text copy additions and revisions, replacing existing imagery, publishing customer-provided blog posts, updating contact information, modifying navigation menu links, updating existing web form fields, and minor CSS aesthetic adjustments.</li>
+            <li><span class="clause-num">3.2</span> <strong>Task Submission:</strong> Support requests must be submitted through our verified client ticketing portal at <span class="mono-code">https://my.sheernox.com</span> or via email to <span class="mono-code">support@sheernox.com</span> from an authorized contact email.</li>
+            <li><span class="clause-num">3.3</span> <strong>Turnaround Target:</strong> Content update requests under 1 hour in scope are completed within <strong>twenty-four (24) to forty-eight (48) business hours</strong> (Monday through Friday, 09:00–17:00 PST).</li>
+            <li><span class="clause-num">3.4</span> <strong>Use-It-or-Lose-It (Non-Rollover Policy):</strong> Monthly content hours are allocated on a strict monthly retainer basis to reserve dedicated engineering capacity. <strong>Unused hours do not accumulate, transfer, or roll over</strong> into subsequent billing cycles and cannot be redeemed for cash or credit.</li>
           </ol>
           <div class="key-takeaway">
             <span class="takeaway-badge">Non-Rollover Policy</span>
@@ -1271,25 +1289,25 @@
         <!-- Section 4: Staging-First Protocol -->
         <section class="legal-section" id="staging-protocol">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">04.</span> Staging-First Deployment Protocol</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('staging-protocol')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">4.0</span> Staging-First Deployment Protocol</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('staging-protocol')" title="Copy link to this section">#</button>
           </div>
           <p>
             To eliminate the risk of production downtime or broken client-facing functionality caused by incompatible plugin updates, Sheernox enforces a rigorous <strong>Staging-First Protocol</strong> for all Professional and Enterprise tiers:
           </p>
           <ul>
-            <li><strong>Sandbox Cloning:</strong> Before updates are applied to the live production website, a complete staging snapshot is deployed on an isolated staging server.</li>
-            <li><strong>Automated &amp; Visual Regression Testing:</strong> Core updates and extension dependencies are tested on staging. Visual regression checks are performed across key templates (homepage, checkout, contact forms).</li>
-            <li><strong>Safe Deployment:</strong> Once verified conflict-free, updates are synchronized to the production environment during low-traffic maintenance windows.</li>
-            <li><strong>Rollback Guarantee:</strong> In the event an unforeseen conflict manifests post-deployment, Sheernox executes an immediate restoration from the pre-update snapshot at no extra charge.</li>
+            <li><span class="clause-num">4.1</span> <strong>Sandbox Cloning:</strong> Before updates are applied to the live production website, a complete staging snapshot is deployed on an isolated staging server.</li>
+            <li><span class="clause-num">4.2</span> <strong>Automated &amp; Visual Regression Testing:</strong> Core updates and extension dependencies are tested on staging. Visual regression checks are performed across key templates (homepage, checkout, contact forms).</li>
+            <li><span class="clause-num">4.3</span> <strong>Safe Deployment:</strong> Once verified conflict-free, updates are synchronized to the production environment during low-traffic maintenance windows.</li>
+            <li><span class="clause-num">4.4</span> <strong>Rollback Guarantee:</strong> In the event an unforeseen conflict manifests post-deployment, Sheernox executes an immediate restoration from the pre-update snapshot at no extra charge.</li>
           </ul>
         </section>
 
         <!-- Section 5: Out of Scope Rates -->
         <section class="legal-section" id="out-of-scope">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">05.</span> Out-of-Scope Services &amp; Additional Hourly Rates</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('out-of-scope')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">5.0</span> Out-of-Scope Services &amp; Additional Hourly Rates</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('out-of-scope')" title="Copy link to this section">#</button>
           </div>
           <p>
             Care Plans are strictly focused on operational maintenance, health, and minor content adjustments. Major design overhauls, software engineering, and architectural refactoring fall outside standard care scopes.
@@ -1313,13 +1331,13 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Care Plan Active Subscribers</strong></td>
+                  <td><span class="clause-num">5.1</span> <strong>Care Plan Active Subscribers</strong></td>
                   <td><strong>$95.00 CAD / hr</strong> (Preferred Rate)</td>
                   <td>30-minute minimums</td>
                   <td>Written quote provided prior to commencement.</td>
                 </tr>
                 <tr>
-                  <td><strong>Non-Retainer / Ad-Hoc Clients</strong></td>
+                  <td><span class="clause-num">5.2</span> <strong>Non-Retainer / Ad-Hoc Clients</strong></td>
                   <td><strong>$125.00 CAD / hr</strong> (Standard Agency Rate)</td>
                   <td>1-hour minimums</td>
                   <td>Upfront deposit required before scheduling.</td>
@@ -1335,8 +1353,8 @@
         <!-- Section 6: Security & Malware Recovery -->
         <section class="legal-section" id="security-remediation">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">06.</span> Security Incidents &amp; Malware Recovery</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('security-remediation')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">6.0</span> Security Incidents &amp; Malware Recovery</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('security-remediation')" title="Copy link to this section">#</button>
           </div>
           <p>
             While Sheernox employs industry-leading security practices, no web application connected to the internet can be guaranteed 100% immune from novel zero-day exploits or credential compromise.
@@ -1345,17 +1363,17 @@
             In the event of a confirmed security incident or malware infection on an enrolled website:
           </p>
           <ul>
-            <li><strong>Immediate Isolation:</strong> The affected application is immediately placed in maintenance mode to prevent malware propagation and protect website visitors.</li>
-            <li><strong>Remediation Protocol:</strong> Our security engineers clean infected core and plugin directories, restore known clean state files from verified offsite backups, audit database tables for injected payloads, and update all administrative credentials and API keys.</li>
-            <li><strong>Coverage Limitation:</strong> Full manual malware scrubbing and hack recovery are included at no additional charge for Professional and Enterprise Care Plan subscribers. For Essential Care subscribers, Sheernox will restore the most recent uninfected backup snapshot free of charge; in-depth forensic code scrubbing is billed at our preferred hourly rate.</li>
+            <li><span class="clause-num">6.1</span> <strong>Immediate Isolation:</strong> The affected application is immediately placed in maintenance mode to prevent malware propagation and protect website visitors.</li>
+            <li><span class="clause-num">6.2</span> <strong>Remediation Protocol:</strong> Our security engineers clean infected core and plugin directories, restore known clean state files from verified offsite backups, audit database tables for injected payloads, and update all administrative credentials and API keys.</li>
+            <li><span class="clause-num">6.3</span> <strong>Coverage Limitation:</strong> Full manual malware scrubbing and hack recovery are included at no additional charge for Professional and Enterprise Care Plan subscribers. For Essential Care subscribers, Sheernox will restore the most recent uninfected backup snapshot free of charge; in-depth forensic code scrubbing is billed at our preferred hourly rate.</li>
           </ul>
         </section>
 
         <!-- Section 7: Access & Warranty Boundary -->
         <section class="legal-section" id="access-warranty">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">07.</span> Mutual Access, Third Parties &amp; Warranty Boundary</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('access-warranty')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">7.0</span> Mutual Access, Third Parties &amp; Warranty Boundary</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('access-warranty')" title="Copy link to this section">#</button>
           </div>
           <p>
             To maintain stability, the client agrees to the following operational boundaries:
@@ -1374,8 +1392,8 @@
         <!-- Section 8: Billing & Cancellation -->
         <section class="legal-section" id="billing-cancellation">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">08.</span> Billing, Payment &amp; 30-Day Cancellation</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('billing-cancellation')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">8.0</span> Billing, Payment &amp; 30-Day Cancellation</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('billing-cancellation')" title="Copy link to this section">#</button>
           </div>
           <p>
             Website Care Plans operate as recurring monthly subscriptions subject to the following commercial conditions:

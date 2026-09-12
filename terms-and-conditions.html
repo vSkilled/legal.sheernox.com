@@ -448,28 +448,49 @@
       gap: 2px;
     }
 
-    .toc-item a {
-      display: block;
+        .toc-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
       padding: 6px 10px;
-      font-size: 0.82rem;
+      border-radius: 6px;
+      font-size: 0.84rem;
       color: var(--text-muted);
       text-decoration: none;
-      border-radius: 6px;
-      border-left: 2px solid transparent;
       transition: all 0.15s ease;
       line-height: 1.4;
     }
 
-    .toc-item a:hover {
+    .toc-link:hover {
       background: #f1f5f9;
       color: var(--text-main);
     }
 
-    .toc-item.active a {
-      background: #eff6ff;
-      color: var(--sn-accent-cyan);
-      border-left-color: var(--sn-accent-cyan);
+    .toc-link.active {
+      background: #e0f2fe;
+      color: #0369a1;
       font-weight: 600;
+    }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--sn-accent-cyan);
+      font-weight: 700;
+      min-width: 26px;
+      flex-shrink: 0;
+    }
+
+    .toc-link:hover .toc-num,
+    .toc-link.active .toc-num {
+      color: #0369a1;
     }
 
     /* Main Document Prose Content */
@@ -685,13 +706,22 @@
     }
 
     .section-title {
-      font-size: 1.35rem;
+      font-size: 1.32rem;
       font-weight: 700;
       color: var(--text-main);
       letter-spacing: -0.015em;
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 1.12rem;
+      color: var(--sn-accent-cyan);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
     }
 
     .clause-anchor-btn {
@@ -732,9 +762,12 @@
     }
 
     .clause-num {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
       font-weight: 700;
-      color: var(--sn-primary-blue);
-      margin-right: 6px;
+      color: var(--sn-accent-cyan);
+      margin-right: 8px;
+      display: inline;
     }
 
     .legal-sublist {
@@ -1037,38 +1070,40 @@
   <div class="layout-container">
 
     <!-- Sticky Sidebar Table of Contents -->
-    <aside class="legal-sidebar">
+        <aside class="legal-sidebar">
       <div class="toc-card" id="tocCard">
         <div class="toc-header" onclick="toggleTOC()">
           <span>Table of Contents</span>
           <div class="toc-header-right">
-            <span class="toc-badge">23 Sections</span>
-            <span class="toc-toggle-icon">▾</span>
+            <span class="toc-badge">19 Sections</span>
+            <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </div>
         </div>
-        <div class="toc-body" id="tocBody">
-          <input type="text" id="tocFilter" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC(this.value)">
+        <div class="toc-body">
+          <input type="text" id="tocSearch" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC()">
           <ul class="toc-nav" id="tocList">
-          <li class="toc-item active" data-target="sec-preamble"><a href="#sec-preamble">Preamble & Party Definitions</a></li>
-          <li class="toc-item" data-target="sec-1"><a href="#sec-1">1. Services & Solutions Scope</a></li>
-          <li class="toc-item" data-target="sec-2"><a href="#sec-2">2. Revisions to User Agreement</a></li>
-          <li class="toc-item" data-target="sec-3"><a href="#sec-3">3. Duration & Cancellation Policy</a></li>
-          <li class="toc-item" data-target="sec-4"><a href="#sec-4">4. Account Set Up & Verification</a></li>
-          <li class="toc-item" data-target="sec-5"><a href="#sec-5">5. Intellectual Property & URL Policy</a></li>
-          <li class="toc-item" data-target="sec-6"><a href="#sec-6">6. Copyright & Notice-and-Notice</a></li>
-          <li class="toc-item" data-target="sec-12"><a href="#sec-12">12. Content & Acceptable Use</a></li>
-          <li class="toc-item" data-target="sec-13"><a href="#sec-13">13. Zero Tolerance Anti-Spam (CASL)</a></li>
-          <li class="toc-item" data-target="sec-14"><a href="#sec-14">14. Payment, Taxes & Invoicing</a></li>
-          <li class="toc-item" data-target="sec-15"><a href="#sec-15">15. Backups & Data Risk Assumption</a></li>
-          <li class="toc-item" data-target="sec-16"><a href="#sec-16">16. Resource Usage, Security & Fair Use</a></li>
-          <li class="toc-item" data-target="sec-17"><a href="#sec-17">17. Uptime SLA (99.9% Guarantee)</a></li>
-          <li class="toc-item" data-target="sec-18"><a href="#sec-18">18. Price Change Policy</a></li>
-          <li class="toc-item" data-target="sec-19"><a href="#sec-19">19. Comprehensive Indemnification</a></li>
-          <li class="toc-item" data-target="sec-20"><a href="#sec-20">20. Disclaimer of Warranties</a></li>
-          <li class="toc-item" data-target="sec-21"><a href="#sec-21">21. Limitation of Liability</a></li>
-          <li class="toc-item" data-target="sec-22"><a href="#sec-22">22. General Provisions & BC Law</a></li>
-          <li class="toc-item" data-target="sec-23"><a href="#sec-23">23. Custom Systems & On-Site Work</a></li>
-        </ul>
+            <li><a href="#sec-preamble" class="toc-link"><span class="toc-num">0.0</span> Preamble &amp; Party Definitions</a></li>
+            <li><a href="#sec-1" class="toc-link"><span class="toc-num">1.0</span> Services &amp; Solutions Scope</a></li>
+            <li><a href="#sec-2" class="toc-link"><span class="toc-num">2.0</span> Revisions to User Agreement</a></li>
+            <li><a href="#sec-3" class="toc-link"><span class="toc-num">3.0</span> Duration &amp; Cancellation Policy</a></li>
+            <li><a href="#sec-4" class="toc-link"><span class="toc-num">4.0</span> Account Set Up &amp; Verification</a></li>
+            <li><a href="#sec-5" class="toc-link"><span class="toc-num">5.0</span> Intellectual Property &amp; URL Policy</a></li>
+            <li><a href="#sec-6" class="toc-link"><span class="toc-num">6.0</span> Copyright &amp; Notice-and-Notice</a></li>
+            <li><a href="#sec-7" class="toc-link"><span class="toc-num">7.0</span> Content &amp; Acceptable Use</a></li>
+            <li><a href="#sec-8" class="toc-link"><span class="toc-num">8.0</span> Zero Tolerance Anti-Spam (CASL)</a></li>
+            <li><a href="#sec-9" class="toc-link"><span class="toc-num">9.0</span> Payment, Taxes &amp; Invoicing</a></li>
+            <li><a href="#sec-10" class="toc-link"><span class="toc-num">10.0</span> Backups &amp; Data Risk Assumption</a></li>
+            <li><a href="#sec-11" class="toc-link"><span class="toc-num">11.0</span> Resource Usage, Security &amp; Fair Use</a></li>
+            <li><a href="#sec-12" class="toc-link"><span class="toc-num">12.0</span> Uptime SLA (99.9% Guarantee)</a></li>
+            <li><a href="#sec-13" class="toc-link"><span class="toc-num">13.0</span> Price Change Policy</a></li>
+            <li><a href="#sec-14" class="toc-link"><span class="toc-num">14.0</span> Comprehensive Indemnification</a></li>
+            <li><a href="#sec-15" class="toc-link"><span class="toc-num">15.0</span> Disclaimer of Warranties</a></li>
+            <li><a href="#sec-16" class="toc-link"><span class="toc-num">16.0</span> Limitation of Liability</a></li>
+            <li><a href="#sec-17" class="toc-link"><span class="toc-num">17.0</span> General Provisions &amp; BC Law</a></li>
+            <li><a href="#sec-18" class="toc-link"><span class="toc-num">18.0</span> Custom Systems &amp; On-Site Work</a></li>
+          </ul>
         </div>
       </div>
     </aside>
@@ -1080,8 +1115,8 @@
         <!-- Preamble Section -->
         <section id="sec-preamble" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">Preamble & Party Definitions</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-preamble')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">0.0</span> Preamble &amp; Party Definitions</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-preamble')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1095,13 +1130,13 @@
 
           <div class="clause-block" id="clause-p-1">
             <p>
-              <span class="clause-num">1. Sheernox Technology Group</span> is the publisher, owner, and operator of <code>sheernox.com</code> and associated client management portals (the "Site") through which Sheernox makes available web hosting, cloud computing infrastructure, managed networks, and total technology solutions (the "Services"). For purposes of this Agreement, references to "Site" or "Services" include all hardware, virtual machines, cloud hypervisors, software licenses, network infrastructure, and physical facilities necessary to deliver said capabilities.
+              <span class="clause-num">0.1 Sheernox Technology Group:</span> is the publisher, owner, and operator of <code>sheernox.com</code> and associated client management portals (the "Site") through which Sheernox makes available web hosting, cloud computing infrastructure, managed networks, and total technology solutions (the "Services"). For purposes of this Agreement, references to "Site" or "Services" include all hardware, virtual machines, cloud hypervisors, software licenses, network infrastructure, and physical facilities necessary to deliver said capabilities.
             </p>
           </div>
 
           <div class="clause-block" id="clause-p-2">
             <p>
-              <span class="clause-num">2. You, the Client</span> &mdash; As Our Client and the subscriber, purchaser, or user of the Site or Services, this Agreement refers to You through any second-person pronouns, such as <em>"Your"</em> or <em>"Yours"</em>.
+              <span class="clause-num">0.2 You, the Client:</span> &mdash; As Our Client and the subscriber, purchaser, or user of the Site or Services, this Agreement refers to You through any second-person pronouns, such as <em>"Your"</em> or <em>"Yours"</em>.
             </p>
           </div>
 
@@ -1128,8 +1163,8 @@
         <!-- Section 1 -->
         <section id="sec-1" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">1. Services & Complete Solutions Scope</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-1')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">1.0</span> Services &amp; Complete Solutions Scope</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-1')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1170,8 +1205,8 @@
         <!-- Section 2 -->
         <section id="sec-2" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">2. Revisions to User Agreement</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-2')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">2.0</span> Revisions to User Agreement</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-2')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1207,8 +1242,8 @@
         <!-- Section 3 -->
         <section id="sec-3" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">3. Duration of Agreement & Cancellation Policy</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-3')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">3.0</span> Duration of Agreement &amp; Cancellation Policy</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-3')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1248,13 +1283,13 @@
 
           <div class="clause-block" id="clause-3-6">
             <p>
-              <span class="clause-num">3.7 Post-Termination Cessation:</span> Termination of this Agreement immediately terminates all access to the Services, hypervisors, mailboxes, and control panels.
+              <span class="clause-num">3.6 Post-Termination Cessation:</span> Termination of this Agreement immediately terminates all access to the Services, hypervisors, mailboxes, and control panels.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-3-7">
+          <div class="clause-block" id="clause-3-6">
             <p>
-              <span class="clause-num">3.8 Sole Responsibility for Data Backups:</span> If either party cancels or terminates this Agreement for any reason, Client is solely responsible for creating independent backups of all data, web content, databases, and emails prior to cancellation. Sheernox has no obligation to maintain, forward, or preserve customer data following termination.
+              <span class="clause-num">3.7 Sole Responsibility for Data Backups:</span> If either party cancels or terminates this Agreement for any reason, Client is solely responsible for creating independent backups of all data, web content, databases, and emails prior to cancellation. Sheernox has no obligation to maintain, forward, or preserve customer data following termination.
             </p>
           </div>
         </section>
@@ -1262,8 +1297,8 @@
         <!-- Section 4 -->
         <section id="sec-4" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">4. Account Set Up & Verification</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-4')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">4.0</span> Account Set Up &amp; Verification</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-4')" title="Copy link to this section">#</button>
           </div>
 
           <div class="clause-block" id="clause-4-1">
@@ -1294,8 +1329,8 @@
         <!-- Section 5 -->
         <section id="sec-5" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">5. Intellectual Property Rights & URL / Trademark Policy</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-5')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">5.0</span> Intellectual Property Rights &amp; URL / Trademark Policy</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-5')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1361,8 +1396,8 @@
         <!-- Section 6 -->
         <section id="sec-6" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">6. Copyright Infringement & Canadian Notice-and-Notice Regime</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-6')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">6.0</span> Copyright Infringement &amp; Canadian Notice-and-Notice Regime</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-6')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1402,10 +1437,10 @@
         </section>
 
         <!-- Section 12 -->
-        <section id="sec-12" class="legal-section">
+        <section id="sec-7" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">12. Content and Acceptable Use Policy</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-12')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">7.0</span> Content and Acceptable Use Policy</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-7')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1413,36 +1448,36 @@
             <p>All hosted content must comply with our Acceptable Use Policy and Canadian law. Child sexual abuse material is strictly zero-tolerance and immediately reported to Cybertip.ca and the RCMP. If you operate user-generated content or reseller platforms, you are responsible for monitoring and taking down abusive downstream content.</p>
           </div>
 
-          <div class="clause-block" id="clause-12-1">
+          <div class="clause-block" id="clause-7-1">
             <p>
-              <span class="clause-num">12.1 Compliance with AUP:</span> Client agrees to comply in full with Sheernox’s <a href="acceptable-use-policy.html">Acceptable Use Policy</a>. Any violation of the AUP constitutes a material breach of this Agreement.
+              <span class="clause-num">7.1 Compliance with AUP:</span> Client agrees to comply in full with Sheernox’s <a href="acceptable-use-policy.html">Acceptable Use Policy</a>. Any violation of the AUP constitutes a material breach of this Agreement.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-12-2">
+          <div class="clause-block" id="clause-7-2">
             <p>
-              <span class="clause-num">12.2 No Affirmative Monitoring Duty:</span> Sheernox does not actively pre-screen or monitor content hosted on servers. Sheernox disclaims any liability for third-party or client-generated content.
+              <span class="clause-num">7.2 No Affirmative Monitoring Duty:</span> Sheernox does not actively pre-screen or monitor content hosted on servers. Sheernox disclaims any liability for third-party or client-generated content.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-12-3">
+          <div class="clause-block" id="clause-7-3">
             <p>
-              <span class="clause-num">12.3 Child Sexual Abuse Material (Zero Tolerance):</span> Sheernox maintains absolute zero tolerance for child sexual abuse material (CSAM) or any form of child exploitation under the <em>Criminal Code of Canada</em>, R.S.C., 1985, c. C-46. Sheernox will immediately terminate offending services and report full account data, access logs, and content to <strong>Cybertip.ca</strong> (the Canadian Centre for Child Protection) and the <strong>Royal Canadian Mounted Police (RCMP)</strong>.
+              <span class="clause-num">7.3 Child Sexual Abuse Material (Zero Tolerance):</span> Sheernox maintains absolute zero tolerance for child sexual abuse material (CSAM) or any form of child exploitation under the <em>Criminal Code of Canada</em>, R.S.C., 1985, c. C-46. Sheernox will immediately terminate offending services and report full account data, access logs, and content to <strong>Cybertip.ca</strong> (the Canadian Centre for Child Protection) and the <strong>Royal Canadian Mounted Police (RCMP)</strong>.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-12-4">
+          <div class="clause-block" id="clause-7-4">
             <p>
-              <span class="clause-num">12.4 Reseller & Service Provider Downstream Duties:</span> If Client operates a reseller, platform, or user-generated content service, Client is solely responsible for ensuring all downstream sub-users and hosted sites adhere strictly to this Agreement. Client must maintain an active abuse handling workflow and take prompt corrective action upon notification.
+              <span class="clause-num">7.4 Reseller & Service Provider Downstream Duties:</span> If Client operates a reseller, platform, or user-generated content service, Client is solely responsible for ensuring all downstream sub-users and hosted sites adhere strictly to this Agreement. Client must maintain an active abuse handling workflow and take prompt corrective action upon notification.
             </p>
           </div>
         </section>
 
         <!-- Section 13 -->
-        <section id="sec-13" class="legal-section">
+        <section id="sec-8" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">13. Zero Tolerance Anti-Spam Policy (CASL Compliance)</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-13')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">8.0</span> Zero Tolerance Anti-Spam Policy (CASL Compliance)</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-8')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1450,62 +1485,62 @@
             <p>We enforce strict compliance with Canada's Anti-Spam Legislation (CASL). You cannot send unsolicited commercial emails. Causing Sheernox IP ranges to be blacklisted results in immediate account suspension and a $250.00 CAD remediation fee per listing.</p>
           </div>
 
-          <div class="clause-block" id="clause-13-1">
+          <div class="clause-block" id="clause-8-1">
             <p>
-              <span class="clause-num">13.1 Mandatory CASL Adherence:</span> Client agrees to comply fully with <em>Canada's Anti-Spam Legislation</em> (CASL), S.C. 2010, c. 23. Sending unsolicited commercial electronic messages (CEMs), purchasing email lists, or harvesting addresses without verifiable express or implied consent is strictly prohibited.
+              <span class="clause-num">8.1 Mandatory CASL Adherence:</span> Client agrees to comply fully with <em>Canada's Anti-Spam Legislation</em> (CASL), S.C. 2010, c. 23. Sending unsolicited commercial electronic messages (CEMs), purchasing email lists, or harvesting addresses without verifiable express or implied consent is strictly prohibited.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-13-2">
+          <div class="clause-block" id="clause-8-2">
             <p>
-              <span class="clause-num">13.2 Blacklist Delisting Fee:</span> If Client’s mailing activities result in any Sheernox IP address being listed on anti-spam blocklists (Spamhaus, Barracuda, SORBS, etc.), Client will be assessed a mandatory clean-up and delisting fee of $250.00 CAD per incident.
+              <span class="clause-num">8.2 Blacklist Delisting Fee:</span> If Client’s mailing activities result in any Sheernox IP address being listed on anti-spam blocklists (Spamhaus, Barracuda, SORBS, etc.), Client will be assessed a mandatory clean-up and delisting fee of $250.00 CAD per incident.
             </p>
           </div>
         </section>
 
         <!-- Section 14 -->
-        <section id="sec-14" class="legal-section">
+        <section id="sec-9" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">14. Payment, Taxes & Invoicing Terms</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-14')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">9.0</span> Payment, Taxes &amp; Invoicing Terms</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-9')" title="Copy link to this section">#</button>
           </div>
 
-          <div class="clause-block" id="clause-14-1">
+          <div class="clause-block" id="clause-9-1">
             <p>
-              <span class="clause-num">14.1 Advance Invoicing:</span> Payment for recurring hosting and services is due in advance of the service interval covered. Invoices are dispatched electronically fourteen (14) days prior to the due date.
+              <span class="clause-num">9.1 Advance Invoicing:</span> Payment for recurring hosting and services is due in advance of the service interval covered. Invoices are dispatched electronically fourteen (14) days prior to the due date.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-14-2">
+          <div class="clause-block" id="clause-9-2">
             <p>
-              <span class="clause-num">14.2 Canadian & Provincial Taxes:</span> Client agrees to pay all applicable federal Goods and Services Tax (GST), British Columbia Provincial Sales Tax (PST), Harmonized Sales Tax (HST), and any provincial or local retail taxes applicable to the Services.
+              <span class="clause-num">9.2 Canadian & Provincial Taxes:</span> Client agrees to pay all applicable federal Goods and Services Tax (GST), British Columbia Provincial Sales Tax (PST), Harmonized Sales Tax (HST), and any provincial or local retail taxes applicable to the Services.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-14-3">
+          <div class="clause-block" id="clause-9-3">
             <p>
-              <span class="clause-num">14.3 Solicitor-and-Own-Client Collection Costs:</span> Client agrees to pay all legal fees, collection agency commissions, court disbursements, and administrative costs incurred by Sheernox in collecting any past-due amounts on a solicitor-and-own-client basis.
+              <span class="clause-num">9.3 Solicitor-and-Own-Client Collection Costs:</span> Client agrees to pay all legal fees, collection agency commissions, court disbursements, and administrative costs incurred by Sheernox in collecting any past-due amounts on a solicitor-and-own-client basis.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-14-4">
+          <div class="clause-block" id="clause-9-4">
             <p>
-              <span class="clause-num">14.4 7-Day Abandonment & Termination:</span> Accounts past due by more than seven (7) days are subject to automated suspension. Accounts remaining delinquent past thirty (30) days are deemed abandoned; services will be permanently terminated and data purged.
+              <span class="clause-num">9.4 7-Day Abandonment & Termination:</span> Accounts past due by more than seven (7) days are subject to automated suspension. Accounts remaining delinquent past thirty (30) days are deemed abandoned; services will be permanently terminated and data purged.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-14-5">
+          <div class="clause-block" id="clause-9-5">
             <p>
-              <span class="clause-num">14.5 Non-Refundable Items:</span> Domain name registrations, SSL certificates, software licenses (cPanel, CloudLinux, LiteSpeed), and architectural engineering labor are non-refundable under all circumstances.
+              <span class="clause-num">9.5 Non-Refundable Items:</span> Domain name registrations, SSL certificates, software licenses (cPanel, CloudLinux, LiteSpeed), and architectural engineering labor are non-refundable under all circumstances.
             </p>
           </div>
         </section>
 
         <!-- Section 15 -->
-        <section id="sec-15" class="legal-section">
+        <section id="sec-10" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">15. Backups & Assumption of Data Loss Risk</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-15')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">10.0</span> Backups &amp; Assumption of Data Loss Risk</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-10')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1513,50 +1548,50 @@
             <p>You use Sheernox infrastructure at your own risk. While we provide automated backup solutions, routine system snapshots are taken solely for disaster recovery and are not guaranteed. You must maintain your own independent off-site copies of all critical data.</p>
           </div>
 
-          <div class="clause-block" id="clause-15-1">
+          <div class="clause-block" id="clause-10-1">
             <p>
-              <span class="clause-num">15.1 Customer Assumption of Risk:</span> Use of the Services is at Client’s sole risk. Sheernox is not responsible for files, databases, or content residing on your accounts. Client must maintain independent off-site backups.
+              <span class="clause-num">10.1 Customer Assumption of Risk:</span> Use of the Services is at Client’s sole risk. Sheernox is not responsible for files, databases, or content residing on your accounts. Client must maintain independent off-site backups.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-15-2">
+          <div class="clause-block" id="clause-10-2">
             <p>
-              <span class="clause-num">15.2 Courtesy Snapshots Disclaimer:</span> Any routine hypervisor snapshots created by Sheernox are strictly for internal disaster recovery and carry no warranty of completeness, availability, or restorable condition.
+              <span class="clause-num">10.2 Courtesy Snapshots Disclaimer:</span> Any routine hypervisor snapshots created by Sheernox are strictly for internal disaster recovery and carry no warranty of completeness, availability, or restorable condition.
             </p>
           </div>
         </section>
 
         <!-- Section 16 -->
-        <section id="sec-16" class="legal-section">
+        <section id="sec-11" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">16. Resource Usage, Security & Fair Use Policy</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-16')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">11.0</span> Resource Usage, Security &amp; Fair Use Policy</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-11')" title="Copy link to this section">#</button>
           </div>
 
-          <div class="clause-block" id="clause-16-1">
+          <div class="clause-block" id="clause-11-1">
             <p>
-              <span class="clause-num">16.1 Shared Server Fair Use:</span> Sheernox imposes hard limits on shared hosting accounts to prevent neighbor degradation. No shared account may consume more than 25% of server CPU or 1024MB RAM continuously for more than 90 seconds.
+              <span class="clause-num">11.1 Shared Server Fair Use:</span> Sheernox imposes hard limits on shared hosting accounts to prevent neighbor degradation. No shared account may consume more than 25% of server CPU or 1024MB RAM continuously for more than 90 seconds.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-16-2">
+          <div class="clause-block" id="clause-11-2">
             <p>
-              <span class="clause-num">16.2 Reverse Engineering Prohibition:</span> Client may not reverse-engineer, decompile, or disassemble any proprietary Host Materials, software, or network management daemons.
+              <span class="clause-num">11.2 Reverse Engineering Prohibition:</span> Client may not reverse-engineer, decompile, or disassemble any proprietary Host Materials, software, or network management daemons.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-16-3">
+          <div class="clause-block" id="clause-11-3">
             <p>
-              <span class="clause-num">16.3 Unlimited Policy Restrictions:</span> Where a hosting tier advertises unmetered disk or bandwidth, such capacity is intended strictly for live website files and normal operational data—not for personal file storage, archival dumps, media distribution repositories, or torrent networks.
+              <span class="clause-num">11.3 Unlimited Policy Restrictions:</span> Where a hosting tier advertises unmetered disk or bandwidth, such capacity is intended strictly for live website files and normal operational data—not for personal file storage, archival dumps, media distribution repositories, or torrent networks.
             </p>
           </div>
         </section>
 
         <!-- Section 17 -->
-        <section id="sec-17" class="legal-section">
+        <section id="sec-12" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">17. Service Level Agreement (SLA) & Uptime Guarantee</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-17')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">12.0</span> Service Level Agreement (SLA) &amp; Uptime Guarantee</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-12')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1564,15 +1599,15 @@
             <p>We commit to a 99.9% monthly uptime guarantee for our core cloud hypervisors and network transit. If availability falls below this threshold in a given month, you are eligible for service credits on your next invoice.</p>
           </div>
 
-          <div class="clause-block" id="clause-17-1">
+          <div class="clause-block" id="clause-12-1">
             <p>
-              <span class="clause-num">17.1 99.9% Uptime Commitment:</span> Sheernox warrants a 99.9% monthly availability SLA across core hypervisors, routing equipment, and IP transit.
+              <span class="clause-num">12.1 99.9% Uptime Commitment:</span> Sheernox warrants a 99.9% monthly availability SLA across core hypervisors, routing equipment, and IP transit.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-17-2">
+          <div class="clause-block" id="clause-12-2">
             <p>
-              <span class="clause-num">17.2 Service Credit Schedule:</span>
+              <span class="clause-num">12.2 Service Credit Schedule:</span>
             </p>
             <ul class="legal-sublist">
               <li><strong>99.5% &ndash; 99.89% Uptime:</strong> 10% credit of monthly hosting fee</li>
@@ -1581,126 +1616,132 @@
             </ul>
           </div>
 
-          <div class="clause-block" id="clause-17-3">
+          <div class="clause-block" id="clause-12-3">
             <p>
-              <span class="clause-num">17.3 Exclusions:</span> Credits exclude scheduled maintenance announced 24 hours in advance, client-side script errors, upstream fiber carrier cuts, and DDoS attacks exceeding contracted mitigation tiers.
+              <span class="clause-num">12.3 Exclusions:</span> Credits exclude scheduled maintenance announced 24 hours in advance, client-side script errors, upstream fiber carrier cuts, and DDoS attacks exceeding contracted mitigation tiers.
             </p>
           </div>
         </section>
 
         <!-- Section 18 -->
-        <section id="sec-18" class="legal-section">
+        <section id="sec-13" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">18. Price Change Policy</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-18')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">13.0</span> Price Change Policy</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-13')" title="Copy link to this section">#</button>
           </div>
 
-          <div class="clause-block" id="clause-18-1">
+          <div class="clause-block" id="clause-13-1">
             <p>
-              <span class="clause-num">18.1</span> Sheernox reserves the right to modify service fees upon thirty (30) days written notice prior to the end of the current billing period. Prepaid term agreements remain price-locked for their paid duration.
+              <span class="clause-num">13.1 Advance Written Notice of Price Adjustments:</span> Sheernox reserves the right to modify service fees upon thirty (30) days written notice prior to the end of the current billing period. Prepaid term agreements remain price-locked for their paid duration.
             </p>
           </div>
         </section>
 
         <!-- Section 19 -->
-        <section id="sec-19" class="legal-section">
+        <section id="sec-14" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">19. Indemnification</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-19')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">14.0</span> Indemnification</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-14')" title="Copy link to this section">#</button>
           </div>
 
-          <div class="clause-block" id="clause-19-1">
+          <div class="clause-block" id="clause-14-1">
             <p>
-              <span class="clause-num">19.1</span> Client agrees to defend, indemnify, and hold harmless Sheernox Technology Group, its sole proprietor, employees, and contractors from any claims, liabilities, losses, damages, fines, and legal expenses (including full legal costs on a solicitor-and-own-client basis) arising from: (a) Client’s breach of this Agreement, the AUP, or applicable laws; (b) any content, website, or software hosted or distributed by Client; or (c) any violation of third-party intellectual property or privacy rights.
+              <span class="clause-num">14.1 Comprehensive Client Indemnification:</span> Client agrees to defend, indemnify, and hold harmless Sheernox Technology Group, its sole proprietor, employees, and contractors from any claims, liabilities, losses, damages, fines, and legal expenses (including full legal costs on a solicitor-and-own-client basis) arising from: (a) Client’s breach of this Agreement, the AUP, or applicable laws; (b) any content, website, or software hosted or distributed by Client; or (c) any violation of third-party intellectual property or privacy rights.
             </p>
           </div>
         </section>
 
         <!-- Section 20 -->
-        <section id="sec-20" class="legal-section">
+        <section id="sec-15" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">20. Disclaimer of Warranties</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-20')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">15.0</span> Disclaimer of Warranties</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-15')" title="Copy link to this section">#</button>
           </div>
 
-          <div class="all-caps-box">
+          <div class="clause-block" id="clause-15-1">
+            <p><span class="clause-num">15.1 Statutory Disclaimer:</span></p>
+            <div class="all-caps-box">
             TO THE MAXIMUM EXTENT PERMITTED BY THE LAWS OF BRITISH COLUMBIA AND APPLICABLE CANADIAN LAW, THE SERVICES ARE PROVIDED STRICTLY ON AN "AS IS" AND "AS AVAILABLE" BASIS. SHEERNOX TECHNOLOGY GROUP DISCLAIMS ALL WARRANTIES, CONDITIONS, REPRESENTATIONS, OR GUARANTEES OF ANY KIND, WHETHER STATUTORY, EXPRESS, OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, OR UNINTERRUPTED ERROR-FREE PERFORMANCE. TO THE MAXIMUM EXTENT PERMITTED BY LAW, ALL STATUTORY WARRANTIES AND CONDITIONS UNDER THE BRITISH COLUMBIA <em>SALE OF GOODS ACT</em>, RSBC 1996, c. 410 AND SIMILAR PROVINCIAL ENACTMENTS ARE HEREBY EXPRESSLY EXCLUDED.
+            </div>
           </div>
         </section>
 
         <!-- Section 21 -->
-        <section id="sec-21" class="legal-section">
+        <section id="sec-16" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">21. Limitation of Liability</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-21')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">16.0</span> Limitation of Liability</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-16')" title="Copy link to this section">#</button>
           </div>
 
-          <div class="all-caps-box">
+          <div class="clause-block" id="clause-16-1">
+            <p><span class="clause-num">16.1 Aggregate Cap & Exclusions:</span></p>
+            <div class="all-caps-box">
             TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT SHALL SHEERNOX TECHNOLOGY GROUP BE LIABLE TO CLIENT OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF BUSINESS OPPORTUNITY, OR LOSS OF DATA, REGARDLESS OF THE THEORY OF LIABILITY (WHETHER IN CONTRACT, TORT, NEGLIGENCE, OR OTHERWISE). SHEERNOX’S TOTAL AGGREGATE LIABILITY UNDER OR RELATING TO THIS AGREEMENT SHALL BE STRICTLY LIMITED TO THE TOTAL FEES ACTUALLY PAID BY CLIENT TO SHEERNOX FOR THE PARTICULAR SERVICE AT ISSUE DURING THE THREE (3) MONTHS IMMEDIATELY PRECEDING THE CLAIM.
+            </div>
           </div>
         </section>
 
         <!-- Section 22 -->
-        <section id="sec-22" class="legal-section">
+        <section id="sec-17" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">22. General Legal Provisions & British Columbia Law</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-22')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">17.0</span> General Legal Provisions &amp; British Columbia Law</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-17')" title="Copy link to this section">#</button>
           </div>
 
-          <div class="clause-block" id="clause-22-1">
+          <div class="clause-block" id="clause-17-1">
             <p>
-              <span class="clause-num">22.1 Governing Law & Exclusive Jurisdiction:</span> This Agreement, and all matters arising out of or relating to it, shall be governed by and construed in accordance with the laws of the <strong>Province of British Columbia</strong> and the federal laws of <strong>Canada</strong> applicable therein. The parties submit to the exclusive personal jurisdiction and venue of the courts of British Columbia sitting in the <strong>City of Kamloops, British Columbia, Canada</strong>.
+              <span class="clause-num">17.1 Governing Law & Exclusive Jurisdiction:</span> This Agreement, and all matters arising out of or relating to it, shall be governed by and construed in accordance with the laws of the <strong>Province of British Columbia</strong> and the federal laws of <strong>Canada</strong> applicable therein. The parties submit to the exclusive personal jurisdiction and venue of the courts of British Columbia sitting in the <strong>City of Kamloops, British Columbia, Canada</strong>.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-22-2">
+          <div class="clause-block" id="clause-17-2">
             <p>
-              <span class="clause-num">22.2 Dispute Resolution & Arbitration:</span> Any dispute arising out of or in connection with this contract shall be referred to and finally resolved by arbitration administered by the Vancouver International Arbitration Centre (VanIAC) pursuant to its applicable rules, or under the British Columbia <em>Arbitration Act</em>, SBC 2020, c. 2. The place of arbitration shall be Kamloops or Vancouver, British Columbia, Canada, before a single arbitrator.
+              <span class="clause-num">17.2 Dispute Resolution & Arbitration:</span> Any dispute arising out of or in connection with this contract shall be referred to and finally resolved by arbitration administered by the Vancouver International Arbitration Centre (VanIAC) pursuant to its applicable rules, or under the British Columbia <em>Arbitration Act</em>, SBC 2020, c. 2. The place of arbitration shall be Kamloops or Vancouver, British Columbia, Canada, before a single arbitrator.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-22-3">
+          <div class="clause-block" id="clause-17-3">
             <p>
-              <span class="clause-num">22.3 Severability & No Waiver:</span> If any provision is declared invalid by a court of competent jurisdiction, the remaining provisions shall continue in full force. Failure to enforce any provision does not constitute a waiver.
+              <span class="clause-num">17.3 Severability & No Waiver:</span> If any provision is declared invalid by a court of competent jurisdiction, the remaining provisions shall continue in full force. Failure to enforce any provision does not constitute a waiver.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-22-4">
+          <div class="clause-block" id="clause-17-4">
             <p>
-              <span class="clause-num">22.4 Non-Solicitation:</span> Client agrees not to solicit, recruit, or hire any Sheernox engineer, system architect, or personnel during the term of Services and for twelve (12) months following termination.
+              <span class="clause-num">17.4 Non-Solicitation:</span> Client agrees not to solicit, recruit, or hire any Sheernox engineer, system architect, or personnel during the term of Services and for twelve (12) months following termination.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-22-5">
+          <div class="clause-block" id="clause-17-5">
             <p>
-              <span class="clause-num">22.5 Force Majeure:</span> Neither party shall be liable for failure to perform due to causes beyond reasonable control, including acts of God, extreme winter utility outages, fiber cable severance, war, or governmental actions.
+              <span class="clause-num">17.5 Force Majeure:</span> Neither party shall be liable for failure to perform due to causes beyond reasonable control, including acts of God, extreme winter utility outages, fiber cable severance, war, or governmental actions.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-22-6">
+          <div class="clause-block" id="clause-17-6">
             <p>
-              <span class="clause-num">22.6 Canadian Export Controls:</span> Client agrees to comply with all Canadian export and import laws, including the <em>Export and Import Permits Act</em>, R.S.C., 1985, c. E-19.
+              <span class="clause-num">17.6 Canadian Export Controls:</span> Client agrees to comply with all Canadian export and import laws, including the <em>Export and Import Permits Act</em>, R.S.C., 1985, c. E-19.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-22-7">
+          <div class="clause-block" id="clause-17-7">
             <p>
-              <span class="clause-num">22.7 Electronic Communications:</span> Client consents to receive all notices and communications electronically via the Client Portal or registered email pursuant to the BC <em>Electronic Transactions Act</em>.
+              <span class="clause-num">17.7 Electronic Communications:</span> Client consents to receive all notices and communications electronically via the Client Portal or registered email pursuant to the BC <em>Electronic Transactions Act</em>.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-22-8">
+          <div class="clause-block" id="clause-17-8">
             <p>
-              <span class="clause-num">22.8 Lawful Process & Upstream Cloud Disclosures:</span> Sheernox strictly honors customer confidentiality under Canadian law. Sheernox will not voluntarily surrender customer data, virtual disks, or communications to foreign law enforcement or intelligence agencies absent a valid, binding order, search warrant, or subpoena issued by a court of competent jurisdiction in British Columbia or Canada, or a domesticated order issued pursuant to the Canadian <em>Mutual Legal Assistance in Criminal Matters Act</em>, R.S.C. 1985, c. 30 (4th Supp.). However, Customer expressly acknowledges that certain upstream infrastructure hypervisors, transit carriers, and facility providers (e.g., Microsoft, AWS, Vultr) are subject to foreign personal jurisdiction, including the United States <em>CLOUD Act</em> (18 U.S.C. § 2713). Sheernox bears no liability or responsibility for disclosures or actions compelled directly against such upstream providers by lawful foreign judicial process over which Sheernox possesses no notice, standing, or technical control.
+              <span class="clause-num">17.8 Lawful Process & Upstream Cloud Disclosures:</span> Sheernox strictly honors customer confidentiality under Canadian law. Sheernox will not voluntarily surrender customer data, virtual disks, or communications to foreign law enforcement or intelligence agencies absent a valid, binding order, search warrant, or subpoena issued by a court of competent jurisdiction in British Columbia or Canada, or a domesticated order issued pursuant to the Canadian <em>Mutual Legal Assistance in Criminal Matters Act</em>, R.S.C. 1985, c. 30 (4th Supp.). However, Customer expressly acknowledges that certain upstream infrastructure hypervisors, transit carriers, and facility providers (e.g., Microsoft, AWS, Vultr) are subject to foreign personal jurisdiction, including the United States <em>CLOUD Act</em> (18 U.S.C. § 2713). Sheernox bears no liability or responsibility for disclosures or actions compelled directly against such upstream providers by lawful foreign judicial process over which Sheernox possesses no notice, standing, or technical control.
             </p>
           </div>
         </section>
 
         <!-- Section 23 -->
-        <section id="sec-23" class="legal-section">
+        <section id="sec-18" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">23. Custom Systems, Network Planning & On-Site Engineering</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-23')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">18.0</span> Custom Systems, Network Planning &amp; On-Site Engineering</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-18')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1708,21 +1749,21 @@
             <p>When Sheernox performs on-site installations, custom server architecture builds, network planning, or physical repairs, work is governed by an approved Statement of Work (SOW). The client must provide safe physical access and adequate electrical power at their facility.</p>
           </div>
 
-          <div class="clause-block" id="clause-23-1">
+          <div class="clause-block" id="clause-18-1">
             <p>
-              <span class="clause-num">23.1 Scope & Statements of Work:</span> Custom hardware fabrication, rack cabling, physical server deployment, and system architecture planning are detailed in formal SOW agreements.
+              <span class="clause-num">18.1 Scope & Statements of Work:</span> Custom hardware fabrication, rack cabling, physical server deployment, and system architecture planning are detailed in formal SOW agreements.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-23-2">
+          <div class="clause-block" id="clause-18-2">
             <p>
-              <span class="clause-num">23.2 Safe On-Site Access:</span> Client agrees to provide Sheernox technical personnel with safe, unrestricted physical and electrical access to designated data center racks, server closets, and facility premises during scheduled work windows.
+              <span class="clause-num">18.2 Safe On-Site Access:</span> Client agrees to provide Sheernox technical personnel with safe, unrestricted physical and electrical access to designated data center racks, server closets, and facility premises during scheduled work windows.
             </p>
           </div>
 
-          <div class="clause-block" id="clause-23-3">
+          <div class="clause-block" id="clause-18-3">
             <p>
-              <span class="clause-num">23.3 Hardware Warranties:</span> Physical hardware components supplied by Sheernox carry manufacturer warranties. Sheernox facilitates manufacturer warranty claims and RMA processing according to active service plans.
+              <span class="clause-num">18.3 Hardware Warranties:</span> Physical hardware components supplied by Sheernox carry manufacturer warranties. Sheernox facilitates manufacturer warranty claims and RMA processing according to active service plans.
             </p>
           </div>
         </section>
@@ -1773,91 +1814,88 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Scroll Progress Bar
+    // Reading Progress Bar
     window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop;
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
-      document.getElementById('progressBar').style.width = scrolled + '%';
+      const pBar = document.getElementById('progressBar');
+      if (pBar) pBar.style.width = scrolled + '%';
     });
 
-    // Scrollspy for TOC
-    const sections = document.querySelectorAll('.legal-section');
-    const navItems = document.querySelectorAll('.toc-item');
-
-    window.addEventListener('scroll', () => {
-      let currentId = '';
-      sections.forEach(section => {
-        const top = section.offsetTop - 120;
-        if (pageYOffset >= top) {
-          currentId = section.getAttribute('id');
-        }
-      });
-
-      navItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('data-target') === currentId) {
-          item.classList.add('active');
-        }
-      });
-    });
-
-    // Toggle Mobile Table of Contents Accordion
+    // Mobile TOC Toggle
     function toggleTOC() {
-      if (window.innerWidth <= 960) {
-        const card = document.getElementById('tocCard');
-        card.classList.toggle('open');
+      const card = document.getElementById('tocCard');
+      card.classList.toggle('open');
+    }
+
+    // Filter Table of Contents
+    function filterTOC() {
+      const query = document.getElementById('tocSearch').value.toLowerCase();
+      const items = document.querySelectorAll('#tocList li');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
+      });
+    }
+
+    // Copy Share Link
+    function copyShareLink() {
+      navigator.clipboard.writeText(window.location.href.split('#')[0]).then(() => {
+        showToast("Document link copied to clipboard");
+      });
+    }
+
+    // Copy Clause / Section Link
+    function copyClauseLink(clauseId) {
+      const url = window.location.href.split('#')[0] + '#' + clauseId;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast("Section permalink copied to clipboard");
+      });
+    }
+
+    // Toast Notification
+    function showToast(msg) {
+      let toast = document.getElementById('toast');
+      if (!toast) {
+        toast = document.getElementById('copyToast');
+      }
+      if (toast) {
+        const msgEl = document.getElementById('toastMsg') || toast;
+        msgEl.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
       }
     }
 
-    // Auto-close mobile TOC when section link is tapped
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
+    // Highlight Active TOC Item on Scroll & auto-close mobile on click
+    document.querySelectorAll('.toc-link').forEach(link => {
+      link.addEventListener('click', () => {
         if (window.innerWidth <= 960) {
           document.getElementById('tocCard')?.classList.remove('open');
         }
       });
     });
 
-    // TOC Filter
-    function filterTOC(val) {
-      const q = val.toLowerCase().trim();
-      navItems.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        if (!q || text.includes(q)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.legal-section');
+      const links = document.querySelectorAll('.toc-link');
+      let currentSectionId = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.pageYOffset >= sectionTop) {
+          currentSectionId = section.getAttribute('id');
         }
       });
-    }
 
-    // Toast and Copy Helpers
-    function showToast(msg) {
-      const toast = document.getElementById('copyToast');
-      document.getElementById('toastMsg').textContent = msg;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2500);
-    }
-
-    function copySectionLink(id) {
-      const url = window.location.origin + window.location.pathname + '#' + id;
-      navigator.clipboard.writeText(url).then(() => {
-        showToast('Section permalink copied to clipboard!');
-      }).catch(() => {
-        prompt('Copy section link:', url);
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSectionId) {
+          link.classList.add('active');
+        }
       });
-    }
-
-    function copyDocumentLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        showToast('Document link copied to clipboard!');
-      }).catch(() => {
-        prompt('Copy document link:', window.location.href);
-      });
-    }
+    });
   </script>
 </body>
 </html>

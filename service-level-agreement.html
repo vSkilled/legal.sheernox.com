@@ -410,7 +410,7 @@
 
     .toc-badge {
       font-size: 0.72rem;
-      color: var(--sn-accent-cyan);
+      color: #2563eb;
       font-weight: 700;
     }
 
@@ -444,28 +444,49 @@
       gap: 2px;
     }
 
-    .toc-item a {
-      display: block;
+        .toc-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
       padding: 6px 10px;
-      font-size: 0.82rem;
+      border-radius: 6px;
+      font-size: 0.84rem;
       color: var(--text-muted);
       text-decoration: none;
-      border-radius: 6px;
-      border-left: 2px solid transparent;
       transition: all 0.15s ease;
       line-height: 1.4;
     }
 
-    .toc-item a:hover {
-      background: #f1f5f9;
-      color: var(--text-main);
+    .toc-link:hover {
+      background: #dbeafe;
+      color: #1e40af;
     }
 
-    .toc-item.active a {
-      background: #e0f2fe;
-      color: #0369a1;
-      border-left-color: var(--sn-accent-cyan);
+    .toc-link.active {
+      background: #dbeafe;
+      color: #1d4ed8;
       font-weight: 600;
+    }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: #2563eb;
+      font-weight: 700;
+      min-width: 26px;
+      flex-shrink: 0;
+    }
+
+    .toc-link:hover .toc-num,
+    .toc-link.active .toc-num {
+      color: #1e3a8a;
     }
 
     /* Main Content */
@@ -674,13 +695,22 @@
     }
 
     .section-title {
-      font-size: 1.35rem;
+      font-size: 1.32rem;
       font-weight: 700;
       color: var(--text-main);
       letter-spacing: -0.015em;
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 1.12rem;
+      color: #2563eb;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
     }
 
     .clause-anchor-btn {
@@ -728,6 +758,15 @@
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+
+    .clause-num {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #2563eb;
+      margin-right: 8px;
+      display: inline;
     }
 
     .legal-sublist {
@@ -1048,26 +1087,28 @@
   <div class="layout-container">
 
     <!-- Table of Contents Sidebar -->
-    <aside class="legal-sidebar">
+        <aside class="legal-sidebar">
       <div class="toc-card" id="tocCard">
         <div class="toc-header" onclick="toggleTOC()">
           <span>Table of Contents</span>
           <div class="toc-header-right">
-            <span class="toc-badge">8 Core Sections</span>
-            <span class="toc-toggle-icon">&#9662;</span>
+            <span class="toc-badge">8 Sections</span>
+            <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </div>
         </div>
-        <div class="toc-body" id="tocBody">
-          <input type="text" id="tocFilter" class="toc-filter" placeholder="Filter SLA clauses..." oninput="filterTOC(this.value)">
+        <div class="toc-body">
+          <input type="text" id="tocSearch" class="toc-filter" placeholder="Filter SLA clauses..." oninput="filterTOC()">
           <ul class="toc-nav" id="tocList">
-            <li class="toc-item active" data-target="sec-scope"><a href="#sec-scope">Preamble &amp; Service Scope</a></li>
-            <li class="toc-item" data-target="sec-uptime"><a href="#sec-uptime">1. 99.9% Uptime Commitment</a></li>
-            <li class="toc-item" data-target="sec-incident-matrix"><a href="#sec-incident-matrix">2. Incident Severity &amp; Response Times</a></li>
-            <li class="toc-item" data-target="sec-credit-schedule"><a href="#sec-credit-schedule">3. Service Credit Calculation Schedule</a></li>
-            <li class="toc-item" data-target="sec-claims-procedure"><a href="#sec-claims-procedure">4. Claims Procedure &amp; Forfeiture</a></li>
-            <li class="toc-item" data-target="sec-maintenance"><a href="#sec-maintenance">5. Scheduled &amp; Emergency Maintenance</a></li>
-            <li class="toc-item" data-target="sec-exclusions"><a href="#sec-exclusions">6. SLA Exclusions &amp; Force Majeure</a></li>
-            <li class="toc-item" data-target="sec-sole-remedy"><a href="#sec-sole-remedy">7. Sole Remedy &amp; Liability Caps</a></li>
+            <li><a href="#sec-scope" class="toc-link"><span class="toc-num">0.0</span> Preamble &amp; Scope</a></li>
+            <li><a href="#sec-uptime" class="toc-link"><span class="toc-num">1.0</span> 99.9% Uptime Commitment</a></li>
+            <li><a href="#sec-incident-matrix" class="toc-link"><span class="toc-num">2.0</span> Severity &amp; Response Targets</a></li>
+            <li><a href="#sec-credit-schedule" class="toc-link"><span class="toc-num">3.0</span> Service Credit Schedule</a></li>
+            <li><a href="#sec-claims-procedure" class="toc-link"><span class="toc-num">4.0</span> Claims &amp; Forfeiture</a></li>
+            <li><a href="#sec-maintenance" class="toc-link"><span class="toc-num">5.0</span> Maintenance Windows</a></li>
+            <li><a href="#sec-exclusions" class="toc-link"><span class="toc-num">6.0</span> SLA Exclusions</a></li>
+            <li><a href="#sec-sole-remedy" class="toc-link"><span class="toc-num">7.0</span> Sole Remedy &amp; Caps</a></li>
           </ul>
         </div>
       </div>
@@ -1080,8 +1121,8 @@
         <!-- Preamble Section -->
         <section id="sec-scope" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">Preamble &amp; Service Scope</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-scope')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">0.0</span> Preamble &amp; Service Scope</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-scope')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1097,17 +1138,17 @@
         <!-- Section 1: 99.9% Uptime Commitment -->
         <section id="sec-uptime" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">1. 99.9% Monthly Uptime Commitment</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-uptime')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">1.0</span> 99.9% Monthly Uptime Commitment</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-uptime')" title="Copy link to this section">#</button>
           </div>
 
           <div class="clause-block" id="clause-1-1">
-            <h3 class="clause-title">1.1 Availability Standard</h3>
+            <h3 class="clause-title"><span class="clause-num">1.1</span> Availability Standard</h3>
             <p>Sheernox warrants that all production hosting hypervisors, bare-metal server network uplinks, storage arrays, and authoritative DNS clusters shall maintain an aggregate <strong>Monthly Uptime Percentage of not less than 99.9%</strong> during any given monthly billing cycle.</p>
           </div>
 
           <div class="clause-block" id="clause-1-2">
-            <h3 class="clause-title">1.2 Monthly Uptime Mathematical Calculation</h3>
+            <h3 class="clause-title"><span class="clause-num">1.2</span> Monthly Uptime Mathematical Calculation</h3>
             <p>Monthly Uptime Percentage is calculated on a calendar-month basis using the following industry-standard formula:</p>
             <p style="background: #f1f5f9; padding: 12px 16px; border-radius: 6px; font-family: var(--font-mono); font-size: 0.88rem; border-left: 3px solid var(--sn-accent-cyan);">
               Monthly Uptime % = [ (Total Scheduled Minutes in Month &minus; Downtime Minutes) / Total Scheduled Minutes in Month ] &times; 100
@@ -1116,7 +1157,7 @@
           </div>
 
           <div class="clause-block" id="clause-1-3">
-            <h3 class="clause-title">1.3 Application-Layer Exceptions</h3>
+            <h3 class="clause-title"><span class="clause-num">1.3</span> Application-Layer Exceptions</h3>
             <p>Downtime measures raw server, hypervisor, and network transit layer availability. Unreachability resulting from Customer code errors, WordPress PHP fatal errors, un-indexed MySQL queries stalling worker pools, expired SSL certificates managed by Customer, or Customer firewall configuration lockouts does not constitute qualifying Downtime under this SLA.</p>
           </div>
         </section>
@@ -1124,8 +1165,8 @@
         <!-- Section 2: Incident Severity & Response Times -->
         <section id="sec-incident-matrix" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">2. Incident Severity Levels &amp; Support Response Targets</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-incident-matrix')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">2.0</span> Incident Severity Levels &amp; Support Response Targets</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-incident-matrix')" title="Copy link to this section">#</button>
           </div>
 
           <p>Technical incidents submitted through our official client portal at <a href="https://my.sheernox.com" target="_blank" rel="noopener noreferrer">https://my.sheernox.com</a> or routed to <code>support@sheernox.com</code> are triaged according to the severity matrix below:</p>
@@ -1142,19 +1183,19 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Priority 1 (P1)<br>Critical Emergency</strong></td>
+                  <td><span class="clause-num">2.1A</span> <strong>Priority 1 (P1)<br>Critical Emergency</strong></td>
                   <td>Complete host, hypervisor, or network node failure. Customer production service is completely offline or critical data is inaccessible to public traffic.</td>
                   <td><strong>&lt; 15 Minutes</strong></td>
                   <td>24/7/365 Continuous Active Triage</td>
                 </tr>
                 <tr>
-                  <td><strong>Priority 2 (P2)<br>High Degradation</strong></td>
+                  <td><span class="clause-num">2.1B</span> <strong>Priority 2 (P2)<br>High Degradation</strong></td>
                   <td>Severe performance degradation, persistent high packet loss (&gt; 25%), or secondary service failure (e.g., outgoing SMTP queue stall, database replica desync).</td>
                   <td><strong>&lt; 60 Minutes</strong></td>
                   <td>24/7/365 Priority Queue</td>
                 </tr>
                 <tr>
-                  <td><strong>Priority 3 (P3)<br>Normal / Impairment</strong></td>
+                  <td><span class="clause-num">2.1C</span> <strong>Priority 3 (P3)<br>Normal / Impairment</strong></td>
                   <td>Non-critical administrative disruption, control panel error, DNS record sync delay, or staging environment outage with production unaffected.</td>
                   <td><strong>&lt; 4 Hours</strong></td>
                   <td>Standard Business Hours (08:00–20:00 PST)</td>
@@ -1177,8 +1218,8 @@
         <!-- Section 3: SLA Credit Schedule -->
         <section id="sec-credit-schedule" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">3. Service Credit Calculation Schedule</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-credit-schedule')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">3.0</span> Service Credit Calculation Schedule</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-credit-schedule')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1231,12 +1272,12 @@
         <!-- Section 4: Claims Procedure & Forfeiture -->
         <section id="sec-claims-procedure" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">4. Claims Procedure &amp; Forfeiture Conditions</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-claims-procedure')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">4.0</span> Claims Procedure &amp; Forfeiture Conditions</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-claims-procedure')" title="Copy link to this section">#</button>
           </div>
 
           <div class="clause-block" id="clause-4-1">
-            <h3 class="clause-title">4.1 Claim Submission Requirements</h3>
+            <h3 class="clause-title"><span class="clause-num">4.1</span> Claim Submission Requirements</h3>
             <p>To receive a Service Credit under this SLA, Customer must submit a formal credit request via the client portal (<a href="https://my.sheernox.com" target="_blank" rel="noopener noreferrer">https://my.sheernox.com</a>) or by written notice to <code>support@sheernox.com</code> within <strong>thirty (30) calendar days</strong> following the end of the calendar month during which the outage occurred.</p>
             <p>Each credit claim must include:</p>
             <ul class="legal-sublist">
@@ -1248,12 +1289,12 @@
           </div>
 
           <div class="clause-block" id="clause-4-2">
-            <h3 class="clause-title">4.2 Verification &amp; Credit Application</h3>
+            <h3 class="clause-title"><span class="clause-num">4.2</span> Verification &amp; Credit Application</h3>
             <p>Sheernox engineers will evaluate the submitted telemetry logs against our internal hypervisor, SNMP network interface, and edge router logs within ten (10) business days. Upon verification, the calculated credit will be applied as an account credit against Customer's subsequent monthly invoice in Canadian Dollars (CAD). Service Credits cannot be redeemed for cash, refunded, or transferred between distinct legal accounts.</p>
           </div>
 
           <div class="clause-block" id="clause-4-3">
-            <h3 class="clause-title">4.3 Forfeiture for Account Delinquency</h3>
+            <h3 class="clause-title"><span class="clause-num">4.3</span> Forfeiture for Account Delinquency</h3>
             <p>Customer forfeits all entitlement to SLA credits if Customer's billing account is overdue, past due, suspended for non-payment, or under active investigation for violations of our Acceptable Use Policy (AUP) at the time of the incident or claim submission.</p>
           </div>
         </section>
@@ -1261,23 +1302,23 @@
         <!-- Section 5: Scheduled & Emergency Maintenance -->
         <section id="sec-maintenance" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">5. Scheduled &amp; Emergency Maintenance Windows</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-maintenance')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">5.0</span> Scheduled &amp; Emergency Maintenance Windows</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-maintenance')" title="Copy link to this section">#</button>
           </div>
 
           <div class="clause-block" id="clause-5-1">
-            <h3 class="clause-title">5.1 Scheduled Maintenance Windows</h3>
+            <h3 class="clause-title"><span class="clause-num">5.1</span> Scheduled Maintenance Windows</h3>
             <p>To ensure hypervisor security, apply kernel live-patches, and upgrade edge switching hardware, Sheernox conducts scheduled maintenance. Standard maintenance windows occur between <strong>01:00 and 05:00 Pacific Standard Time (PST)</strong> on Tuesdays and Thursdays.</p>
             <p>Sheernox provides Customer with at least <strong>seventy-two (72) hours advance notice</strong> via email and our portal status dashboard prior to initiating scheduled maintenance that is expected to result in service interruptions.</p>
           </div>
 
           <div class="clause-block" id="clause-5-2">
-            <h3 class="clause-title">5.2 Emergency Critical Maintenance</h3>
+            <h3 class="clause-title"><span class="clause-num">5.2</span> Emergency Critical Maintenance</h3>
             <p>In the event of a zero-day hardware vulnerability, critical Linux kernel exploit, active power infrastructure hazard, or imminent physical security threat, Sheernox reserves the right to execute Emergency Maintenance with expedited notice or without prior notice. Sheernox will endeavor to notify affected customers as soon as technically practicable.</p>
           </div>
 
           <div class="clause-block" id="clause-5-3">
-            <h3 class="clause-title">5.3 Maintenance Excluded from Downtime</h3>
+            <h3 class="clause-title"><span class="clause-num">5.3</span> Maintenance Excluded from Downtime</h3>
             <p>Any downtime occurring within scheduled maintenance windows, or during justified emergency security patching lasting fewer than one hundred and twenty (120) minutes, is strictly excluded from Monthly Uptime calculations.</p>
           </div>
         </section>
@@ -1285,27 +1326,27 @@
         <!-- Section 6: SLA Exclusions & Force Majeure -->
         <section id="sec-exclusions" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">6. SLA Exclusions &amp; Force Majeure Events</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-exclusions')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">6.0</span> SLA Exclusions &amp; Force Majeure Events</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-exclusions')" title="Copy link to this section">#</button>
           </div>
 
           <p>The 99.9% uptime commitment and service credit schedule do not apply to any performance failure, downtime, or network unreachability resulting from:</p>
 
           <ul class="legal-sublist">
-            <li><strong>Force Majeure Events:</strong> Acts of God, atmospheric disturbances, wildland fires, earthquakes, municipal power substation collapse, armed conflict, civil unrest, labor disputes, or statutory governmental embargoes.</li>
-            <li><strong>Tier 1 Upstream Transit Cuts:</strong> Severing of subsea or trans-continental fiber optic lines beyond Sheernox's multi-homed BGP border router control.</li>
-            <li><strong>Volumetric DDoS Overwhelming Mitigation Capacity:</strong> Denial of Service attacks exceeding Sheernox's upstream multi-gigabit automated scrubbing capacity (e.g., volumetric floods exceeding 500 Gbps), during which traffic blackholing is implemented to preserve global infrastructure integrity.</li>
-            <li><strong>Customer System Administration:</strong> Actions, misconfigurations, kernel panics, bad firewall rules (e.g., <code>iptables -F</code>), database deadlocks, or unpatched application code executed by Customer or Customer's authorized users.</li>
-            <li><strong>AUP Enforcement Actions:</strong> Suspension or termination of services resulting from network abuse, phishing, spam transmission, copyright violations, or breach of the Acceptable Use Policy.</li>
-            <li><strong>Beta, Test, or Unmanaged Services:</strong> Services explicitly designated in billing as &quot;Beta&quot;, &quot;Development&quot;, &quot;Staging&quot;, &quot;Unmanaged Bare-Metal&quot;, or free promotional tiers.</li>
+            <li><span class="clause-num">6.1A</span> <strong>Force Majeure Events:</strong> Acts of God, atmospheric disturbances, wildland fires, earthquakes, municipal power substation collapse, armed conflict, civil unrest, labor disputes, or statutory governmental embargoes.</li>
+            <li><span class="clause-num">6.1B</span> <strong>Tier 1 Upstream Transit Cuts:</strong> Severing of subsea or trans-continental fiber optic lines beyond Sheernox's multi-homed BGP border router control.</li>
+            <li><span class="clause-num">6.1C</span> <strong>Volumetric DDoS Overwhelming Mitigation Capacity:</strong> Denial of Service attacks exceeding Sheernox's upstream multi-gigabit automated scrubbing capacity (e.g., volumetric floods exceeding 500 Gbps), during which traffic blackholing is implemented to preserve global infrastructure integrity.</li>
+            <li><span class="clause-num">6.1D</span> <strong>Customer System Administration:</strong> Actions, misconfigurations, kernel panics, bad firewall rules (e.g., <code>iptables -F</code>), database deadlocks, or unpatched application code executed by Customer or Customer's authorized users.</li>
+            <li><span class="clause-num">6.1E</span> <strong>AUP Enforcement Actions:</strong> Suspension or termination of services resulting from network abuse, phishing, spam transmission, copyright violations, or breach of the Acceptable Use Policy.</li>
+            <li><span class="clause-num">6.1F</span> <strong>Beta, Test, or Unmanaged Services:</strong> Services explicitly designated in billing as &quot;Beta&quot;, &quot;Development&quot;, &quot;Staging&quot;, &quot;Unmanaged Bare-Metal&quot;, or free promotional tiers.</li>
           </ul>
         </section>
 
         <!-- Section 7: Sole Remedy & Liability Caps -->
         <section id="sec-sole-remedy" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">7. Sole &amp; Exclusive Remedy &amp; Aggregate Caps</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-sole-remedy')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">7.0</span> Sole &amp; Exclusive Remedy &amp; Aggregate Caps</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-sole-remedy')" title="Copy link to this section">#</button>
           </div>
 
           <div class="statutory-callout">
@@ -1314,17 +1355,17 @@
           </div>
 
           <div class="clause-block" id="clause-7-1">
-            <h3 class="clause-title">7.1 Sole and Exclusive Remedy</h3>
+            <h3 class="clause-title"><span class="clause-num">7.1</span> Sole and Exclusive Remedy</h3>
             <p>The Service Credits set forth in Section 3 constitute Customer's <strong>sole and exclusive remedy</strong> for any failure of Sheernox to meet the uptime, response time, or performance warranties contained in this Agreement. Under no circumstances shall Customer be entitled to consequential, incidental, indirect, punitive, or loss-of-profit damages arising out of infrastructure downtime.</p>
           </div>
 
           <div class="clause-block" id="clause-7-2">
-            <h3 class="clause-title">7.2 Maximum Monthly Credit Cap</h3>
+            <h3 class="clause-title"><span class="clause-num">7.2</span> Maximum Monthly Credit Cap</h3>
             <p>The total cumulative Service Credits awarded to Customer in any single calendar month shall under no circumstances exceed <strong>one hundred percent (100%)</strong> of the total recurring subscription fee paid by Customer for the specific affected service during that calendar month.</p>
           </div>
 
           <div class="clause-block" id="clause-7-3">
-            <h3 class="clause-title">7.3 British Columbia Venue &amp; Statutory Alignment</h3>
+            <h3 class="clause-title"><span class="clause-num">7.3</span> British Columbia Venue &amp; Statutory Alignment</h3>
             <p>This SLA is governed by the laws of the Province of British Columbia and the federal laws of Canada. Any disputes arising out of the interpretation or enforcement of this SLA shall be resolved exclusively by the competent courts of British Columbia sitting in the City of Kamloops, or via expedited commercial arbitration under the Vancouver International Arbitration Centre (VanIAC) rules.</p>
           </div>
         </section>
@@ -1374,91 +1415,86 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     // Reading Progress Bar
     window.addEventListener('scroll', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
-      document.getElementById('progressBar').style.width = scrolled + '%';
+      const pBar = document.getElementById('progressBar');
+      if (pBar) pBar.style.width = scrolled + '%';
     });
 
-    // Active Section Tracking in Sidebar
-    const sections = document.querySelectorAll('.legal-section');
-    const navItems = document.querySelectorAll('.toc-item');
-
-    window.addEventListener('scroll', () => {
-      let currentId = '';
-      sections.forEach(section => {
-        const top = section.offsetTop - 120;
-        if (pageYOffset >= top) {
-          currentId = section.getAttribute('id');
-        }
-      });
-
-      navItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('data-target') === currentId) {
-          item.classList.add('active');
-        }
-      });
-    });
-
-    // Toggle Mobile Table of Contents Accordion
+    // Mobile TOC Toggle
     function toggleTOC() {
-      if (window.innerWidth <= 960) {
-        const card = document.getElementById('tocCard');
-        card.classList.toggle('open');
+      const card = document.getElementById('tocCard');
+      card.classList.toggle('open');
+    }
+
+    // Filter Table of Contents
+    function filterTOC() {
+      const query = document.getElementById('tocSearch').value.toLowerCase();
+      const items = document.querySelectorAll('#tocList li');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
+      });
+    }
+
+    // Copy Share Link
+    function copyShareLink() {
+      navigator.clipboard.writeText(window.location.href.split('#')[0]).then(() => {
+        showToast("Document link copied to clipboard");
+      });
+    }
+
+    // Copy Clause / Section Link
+    function copyClauseLink(clauseId) {
+      const url = window.location.href.split('#')[0] + '#' + clauseId;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast("Section permalink copied to clipboard");
+      });
+    }
+
+    // Toast Notification
+    function showToast(msg) {
+      let toast = document.getElementById('toast');
+      if (!toast) toast = document.getElementById('copyToast');
+      if (toast) {
+        const msgEl = document.getElementById('toastMsg') || toast;
+        msgEl.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
       }
     }
 
-    // Auto-close mobile TOC when section link is tapped
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
+    // Highlight Active TOC Item on Scroll & auto-close mobile on click
+    document.querySelectorAll('.toc-link').forEach(link => {
+      link.addEventListener('click', () => {
         if (window.innerWidth <= 960) {
           document.getElementById('tocCard')?.classList.remove('open');
         }
       });
     });
 
-    // TOC Filter
-    function filterTOC(val) {
-      const q = val.toLowerCase().trim();
-      navItems.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        if (!q || text.includes(q)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.legal-section');
+      const links = document.querySelectorAll('.toc-link');
+      let currentSectionId = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.pageYOffset >= sectionTop) {
+          currentSectionId = section.getAttribute('id');
         }
       });
-    }
 
-    // Toast and Copy Helpers
-    function showToast(msg) {
-      const toast = document.getElementById('copyToast');
-      document.getElementById('toastMsg').textContent = msg;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2500);
-    }
-
-    function copySectionLink(id) {
-      const url = window.location.origin + window.location.pathname + '#' + id;
-      navigator.clipboard.writeText(url).then(() => {
-        showToast('SLA clause link copied to clipboard!');
-      }).catch(() => {
-        prompt('Copy clause link:', url);
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSectionId) {
+          link.classList.add('active');
+        }
       });
-    }
-
-    function copyDocumentLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        showToast('SLA Policy link copied to clipboard!');
-      }).catch(() => {
-        prompt('Copy document link:', window.location.href);
-      });
-    }
+    });
   </script>
 </body>
 </html>

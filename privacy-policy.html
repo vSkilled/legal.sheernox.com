@@ -414,7 +414,7 @@
 
     .toc-badge {
       font-size: 0.72rem;
-      color: var(--sn-emerald);
+      color: #059669;
       font-weight: 700;
     }
 
@@ -448,28 +448,49 @@
       gap: 2px;
     }
 
-    .toc-item a {
-      display: block;
+        .toc-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
       padding: 6px 10px;
-      font-size: 0.82rem;
+      border-radius: 6px;
+      font-size: 0.84rem;
       color: var(--text-muted);
       text-decoration: none;
-      border-radius: 6px;
-      border-left: 2px solid transparent;
       transition: all 0.15s ease;
       line-height: 1.4;
     }
 
-    .toc-item a:hover {
+    .toc-link:hover {
       background: #ecfdf5;
       color: #065f46;
     }
 
-    .toc-item.active a {
-      background: #f0fdf4;
-      color: #047857;
-      border-left-color: var(--sn-emerald);
+    .toc-link.active {
+      background: #d1fae5;
+      color: #065f46;
       font-weight: 600;
+    }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: #059669;
+      font-weight: 700;
+      min-width: 26px;
+      flex-shrink: 0;
+    }
+
+    .toc-link:hover .toc-num,
+    .toc-link.active .toc-num {
+      color: #047857;
     }
 
     /* Main Document Prose Content */
@@ -657,13 +678,22 @@
     }
 
     .section-title {
-      font-size: 1.35rem;
+      font-size: 1.32rem;
       font-weight: 700;
       color: var(--text-main);
       letter-spacing: -0.015em;
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 1.12rem;
+      color: #059669;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
     }
 
     .clause-anchor-btn {
@@ -704,9 +734,12 @@
     }
 
     .clause-num {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
       font-weight: 700;
-      color: #047857;
-      margin-right: 6px;
+      color: #059669;
+      margin-right: 8px;
+      display: inline;
     }
 
     .legal-sublist {
@@ -1028,28 +1061,30 @@
   <div class="layout-container">
 
     <!-- Sticky Sidebar Table of Contents -->
-    <aside class="legal-sidebar">
+        <aside class="legal-sidebar">
       <div class="toc-card" id="tocCard">
         <div class="toc-header" onclick="toggleTOC()">
           <span>Table of Contents</span>
           <div class="toc-header-right">
             <span class="toc-badge">10 Sections</span>
-            <span class="toc-toggle-icon">▾</span>
+            <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </div>
         </div>
-        <div class="toc-body" id="tocBody">
-          <input type="text" id="tocFilter" class="toc-filter" placeholder="Filter privacy topics..." oninput="filterTOC(this.value)">
+        <div class="toc-body">
+          <input type="text" id="tocSearch" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC()">
           <ul class="toc-nav" id="tocList">
-            <li class="toc-item active" data-target="sec-controller"><a href="#sec-controller">1. Data Controller & Scope</a></li>
-            <li class="toc-item" data-target="sec-collected"><a href="#sec-collected">2. Information We Collect</a></li>
-            <li class="toc-item" data-target="sec-purposes"><a href="#sec-purposes">3. How We Use Personal Data</a></li>
-            <li class="toc-item" data-target="sec-services-scope"><a href="#sec-services-scope">4. Solution-Specific Processing</a></li>
-            <li class="toc-item" data-target="sec-subprocessors"><a href="#sec-subprocessors">5. Third-Party Sub-Processors</a></li>
-            <li class="toc-item" data-target="sec-cookies"><a href="#sec-cookies">6. Cookies & Tracking Controls</a></li>
-            <li class="toc-item" data-target="sec-retention"><a href="#sec-retention">7. Retention & Data Security</a></li>
-            <li class="toc-item" data-target="sec-rights"><a href="#sec-rights">8. Privacy Rights (Canada & Global)</a></li>
-            <li class="toc-item" data-target="sec-children"><a href="#sec-children">9. Children’s Privacy</a></li>
-            <li class="toc-item" data-target="sec-contact"><a href="#sec-contact">10. Contact & Privacy Officer</a></li>
+            <li><a href="#sec-controller" class="toc-link"><span class="toc-num">1.0</span> Controller &amp; Scope</a></li>
+            <li><a href="#sec-collected" class="toc-link"><span class="toc-num">2.0</span> Information We Collect</a></li>
+            <li><a href="#sec-purposes" class="toc-link"><span class="toc-num">3.0</span> How We Use Data</a></li>
+            <li><a href="#sec-services-scope" class="toc-link"><span class="toc-num">4.0</span> Solution Data Processing</a></li>
+            <li><a href="#sec-subprocessors" class="toc-link"><span class="toc-num">5.0</span> Sub-Processors &amp; Partners</a></li>
+            <li><a href="#sec-cookies" class="toc-link"><span class="toc-num">6.0</span> Cookies &amp; Tracking</a></li>
+            <li><a href="#sec-retention" class="toc-link"><span class="toc-num">7.0</span> Retention &amp; Security</a></li>
+            <li><a href="#sec-rights" class="toc-link"><span class="toc-num">8.0</span> Privacy Rights (PIPEDA/GDPR)</a></li>
+            <li><a href="#sec-children" class="toc-link"><span class="toc-num">9.0</span> Children's Privacy</a></li>
+            <li><a href="#sec-contact" class="toc-link"><span class="toc-num">10.0</span> Privacy Contact</a></li>
           </ul>
         </div>
       </div>
@@ -1062,8 +1097,8 @@
         <!-- Section 1 -->
         <section id="sec-controller" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">1. Data Controller & Policy Scope</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-controller')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">1.0</span> Data Controller &amp; Policy Scope</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-controller')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1090,8 +1125,8 @@
         <!-- Section 2 -->
         <section id="sec-collected" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">2. Information We Collect</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-collected')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">2.0</span> Information We Collect</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-collected')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1121,8 +1156,8 @@
         <!-- Section 3 -->
         <section id="sec-purposes" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">3. How We Use Personal Data</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-purposes')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">3.0</span> How We Use Personal Data</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-purposes')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1142,8 +1177,8 @@
         <!-- Section 4 -->
         <section id="sec-services-scope" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">4. Solution-Specific Data Processing</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-services-scope')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">4.0</span> Solution-Specific Data Processing</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-services-scope')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1185,8 +1220,8 @@
         <!-- Section 5 -->
         <section id="sec-subprocessors" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">5. Third-Party Sub-Processors & Infrastructure Partners</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-subprocessors')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">5.0</span> Third-Party Sub-Processors &amp; Infrastructure Partners</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-subprocessors')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1265,8 +1300,8 @@
         <!-- Section 6 -->
         <section id="sec-cookies" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">6. Cookies & Tracking Technologies</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-cookies')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">6.0</span> Cookies &amp; Tracking Technologies</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-cookies')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1290,8 +1325,8 @@
         <!-- Section 7 -->
         <section id="sec-retention" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">7. Data Retention & Security Safeguards</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-retention')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">7.0</span> Data Retention &amp; Security Safeguards</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-retention')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1315,8 +1350,8 @@
         <!-- Section 8 -->
         <section id="sec-rights" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">8. Canadian & Global Privacy Rights (PIPEDA, BC PIPA & GDPR)</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-rights')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">8.0</span> Canadian &amp; Global Privacy Rights (PIPEDA, BC PIPA &amp; GDPR)</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-rights')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1355,8 +1390,8 @@
         <!-- Section 9 -->
         <section id="sec-children" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">9. Children’s Online Privacy Protection</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-children')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">9.0</span> Children’s Online Privacy Protection</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-children')" title="Copy link to this section">#</button>
           </div>
 
           <div class="clause-block" id="clause-9-1">
@@ -1369,8 +1404,8 @@
         <!-- Section 10 -->
         <section id="sec-contact" class="legal-section">
           <div class="section-header">
-            <h2 class="section-title">10. Contact Information & Privacy Inquiries</h2>
-            <button class="clause-anchor-btn" onclick="copySectionLink('sec-contact')" title="Copy link to this section">#</button>
+            <h2 class="section-title"><span class="section-num">10.0</span> Contact Information &amp; Privacy Inquiries</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('sec-contact')" title="Copy link to this section">#</button>
           </div>
 
           <div class="key-takeaway">
@@ -1436,91 +1471,86 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Scroll Progress Bar
+    // Reading Progress Bar
     window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop;
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
-      document.getElementById('progressBar').style.width = scrolled + '%';
+      const pBar = document.getElementById('progressBar');
+      if (pBar) pBar.style.width = scrolled + '%';
     });
 
-    // Scrollspy for TOC
-    const sections = document.querySelectorAll('.legal-section');
-    const navItems = document.querySelectorAll('.toc-item');
-
-    window.addEventListener('scroll', () => {
-      let currentId = '';
-      sections.forEach(section => {
-        const top = section.offsetTop - 120;
-        if (pageYOffset >= top) {
-          currentId = section.getAttribute('id');
-        }
-      });
-
-      navItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('data-target') === currentId) {
-          item.classList.add('active');
-        }
-      });
-    });
-
-    // Toggle Mobile Table of Contents Accordion
+    // Mobile TOC Toggle
     function toggleTOC() {
-      if (window.innerWidth <= 960) {
-        const card = document.getElementById('tocCard');
-        card.classList.toggle('open');
+      const card = document.getElementById('tocCard');
+      card.classList.toggle('open');
+    }
+
+    // Filter Table of Contents
+    function filterTOC() {
+      const query = document.getElementById('tocSearch').value.toLowerCase();
+      const items = document.querySelectorAll('#tocList li');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
+      });
+    }
+
+    // Copy Share Link
+    function copyShareLink() {
+      navigator.clipboard.writeText(window.location.href.split('#')[0]).then(() => {
+        showToast("Document link copied to clipboard");
+      });
+    }
+
+    // Copy Clause / Section Link
+    function copyClauseLink(clauseId) {
+      const url = window.location.href.split('#')[0] + '#' + clauseId;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast("Section permalink copied to clipboard");
+      });
+    }
+
+    // Toast Notification
+    function showToast(msg) {
+      let toast = document.getElementById('toast');
+      if (!toast) toast = document.getElementById('copyToast');
+      if (toast) {
+        const msgEl = document.getElementById('toastMsg') || toast;
+        msgEl.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
       }
     }
 
-    // Auto-close mobile TOC when section link is tapped
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
+    // Highlight Active TOC Item on Scroll & auto-close mobile on click
+    document.querySelectorAll('.toc-link').forEach(link => {
+      link.addEventListener('click', () => {
         if (window.innerWidth <= 960) {
           document.getElementById('tocCard')?.classList.remove('open');
         }
       });
     });
 
-    // TOC Filter
-    function filterTOC(val) {
-      const q = val.toLowerCase().trim();
-      navItems.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        if (!q || text.includes(q)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.legal-section');
+      const links = document.querySelectorAll('.toc-link');
+      let currentSectionId = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.pageYOffset >= sectionTop) {
+          currentSectionId = section.getAttribute('id');
         }
       });
-    }
 
-    // Toast and Copy Helpers
-    function showToast(msg) {
-      const toast = document.getElementById('copyToast');
-      document.getElementById('toastMsg').textContent = msg;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2500);
-    }
-
-    function copySectionLink(id) {
-      const url = window.location.origin + window.location.pathname + '#' + id;
-      navigator.clipboard.writeText(url).then(() => {
-        showToast('Privacy section link copied to clipboard!');
-      }).catch(() => {
-        prompt('Copy section link:', url);
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSectionId) {
+          link.classList.add('active');
+        }
       });
-    }
-
-    function copyDocumentLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        showToast('Privacy Policy link copied to clipboard!');
-      }).catch(() => {
-        prompt('Copy document link:', window.location.href);
-      });
-    }
+    });
   </script>
 </body>
 </html>

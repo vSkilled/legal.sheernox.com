@@ -471,13 +471,20 @@
 
     .toc-num {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-subtle);
-      min-width: 20px;
+      font-size: 0.76rem;
+      color: var(--sn-primary-rose);
+      font-weight: 700;
+      min-width: 26px;
+      flex-shrink: 0;
     }
 
     .toc-link.active .toc-num {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
       color: var(--sn-primary-rose);
+      font-weight: 700;
+      min-width: 26px;
+      flex-shrink: 0;
     }
 
     /* Content Area */
@@ -523,14 +530,25 @@
       letter-spacing: -0.015em;
       display: flex;
       align-items: baseline;
-      gap: 10px;
+      gap: 12px;
+    }
+
+    .clause-num {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--sn-primary-rose);
+      margin-right: 8px;
+      display: inline;
     }
 
     .section-num {
       font-family: var(--font-mono);
-      font-size: 1.05rem;
+      font-size: 1.12rem;
       color: var(--sn-primary-rose);
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
     }
 
     .clause-anchor-btn {
@@ -1078,12 +1096,12 @@
   <div class="layout-container">
 
     <!-- Sticky Sidebar Table of Contents -->
-    <aside class="legal-sidebar">
+        <aside class="legal-sidebar">
       <div class="toc-card" id="tocCard">
         <div class="toc-header" onclick="toggleTOC()">
           <span>Table of Contents</span>
           <div class="toc-header-right">
-            <span class="toc-badge">9 Clauses</span>
+            <span class="toc-badge">9 Sections</span>
             <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
@@ -1092,15 +1110,15 @@
         <div class="toc-body">
           <input type="text" id="tocSearch" class="toc-filter" placeholder="Filter sections..." oninput="filterTOC()">
           <ul class="toc-nav" id="tocList">
-            <li><a href="#preamble" class="toc-link"><span class="toc-num">00</span> Statutory Mandate</a></li>
-            <li><a href="#canadian-regime" class="toc-link"><span class="toc-num">01</span> Notice-and-Notice Regime</a></li>
-            <li><a href="#valid-notice" class="toc-link"><span class="toc-num">02</span> Statutory Notice Criteria</a></li>
-            <li><a href="#forwarding" class="toc-link"><span class="toc-num">03</span> Mandatory Forwarding</a></li>
-            <li><a href="#log-retention" class="toc-link"><span class="toc-num">04</span> Statutory Log Retention</a></li>
-            <li><a href="#dmca-treatment" class="toc-link"><span class="toc-num">05</span> US DMCA Notices</a></li>
-            <li><a href="#subscriber-rights" class="toc-link"><span class="toc-num">06</span> Subscriber Rights &amp; Response</a></li>
-            <li><a href="#repeat-infringers" class="toc-link"><span class="toc-num">07</span> Repeat Infringer Policy</a></li>
-            <li><a href="#designated-agent" class="toc-link"><span class="toc-num">08</span> Designated Agent Contact</a></li>
+            <li><a href="#preamble" class="toc-link"><span class="toc-num">0.0</span> Statutory Mandate</a></li>
+            <li><a href="#canadian-regime" class="toc-link"><span class="toc-num">1.0</span> Notice-and-Notice Regime</a></li>
+            <li><a href="#valid-notice" class="toc-link"><span class="toc-num">2.0</span> Statutory Notice Criteria</a></li>
+            <li><a href="#forwarding" class="toc-link"><span class="toc-num">3.0</span> Forwarding Procedure</a></li>
+            <li><a href="#log-retention" class="toc-link"><span class="toc-num">4.0</span> Statutory Log Retention</a></li>
+            <li><a href="#dmca-treatment" class="toc-link"><span class="toc-num">5.0</span> US DMCA Notice Handling</a></li>
+            <li><a href="#subscriber-rights" class="toc-link"><span class="toc-num">6.0</span> Subscriber Response Rights</a></li>
+            <li><a href="#repeat-infringers" class="toc-link"><span class="toc-num">7.0</span> Repeat Infringer Policy</a></li>
+            <li><a href="#designated-agent" class="toc-link"><span class="toc-num">8.0</span> Designated Copyright Agent</a></li>
           </ul>
         </div>
       </div>
@@ -1113,8 +1131,8 @@
         <!-- Preamble -->
         <section class="legal-section" id="preamble">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">00.</span> Statutory Mandate &amp; Purpose</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('preamble')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">0.0</span> Statutory Mandate &amp; Purpose</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('preamble')" title="Copy link to this section">#</button>
           </div>
           <p>
             <strong>Sheernox Technology Group</strong> ("Sheernox", "we", "us", or "our"), an unincorporated sole proprietorship registered in the Province of British Columbia, Canada, operates digital infrastructure including web hosting, virtual private servers (VPS), cloud platforms, domain name systems, and managed network services.
@@ -1131,8 +1149,8 @@
         <!-- Section 1: Canadian Regime -->
         <section class="legal-section" id="canadian-regime">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">01.</span> The Canadian Notice-and-Notice Regime</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('canadian-regime')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">1.0</span> The Canadian Notice-and-Notice Regime</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('canadian-regime')" title="Copy link to this section">#</button>
           </div>
           <p>
             Under Sections 31.1, 41.25, and 41.26 of the Canadian <em>Copyright Act</em>, Canada maintains a statutory <strong>Notice-and-Notice</strong> regime governing internet intermediaries and hosting service providers.
@@ -1144,8 +1162,8 @@
             Instead, the statutory obligation of Sheernox as an intermediary is two-fold:
           </p>
           <ol>
-            <li><strong>Notice Forwarding:</strong> Forward the statutory notice of alleged infringement to the subscriber associated with the identified IP address or hosting account without delay and without charging any administrative fee (s. 41.26(1)(a)).</li>
-            <li><strong>Log Preservation:</strong> Preserve records enabling the identification of the subscriber for a statutory period of six (6) months, or twelve (12) months if formal court proceedings are initiated (s. 41.26(1)(b)).</li>
+            <li><span class="clause-num">1.1</span> <strong>Notice Forwarding:</strong> Forward the statutory notice of alleged infringement to the subscriber associated with the identified IP address or hosting account without delay and without charging any administrative fee (s. 41.26(1)(a)).</li>
+            <li><span class="clause-num">1.2</span> <strong>Log Preservation:</strong> Preserve records enabling the identification of the subscriber for a statutory period of six (6) months, or twelve (12) months if formal court proceedings are initiated (s. 41.26(1)(b)).</li>
           </ol>
           <div class="statutory-callout">
             <h4>Statutory Intermediary Exemption &bull; Section 31.1</h4>
@@ -1156,18 +1174,18 @@
         <!-- Section 2: Valid Notice Criteria -->
         <section class="legal-section" id="valid-notice">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">02.</span> Statutory Requirements for a Valid Notice</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('valid-notice')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">2.0</span> Statutory Requirements for a Valid Notice</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('valid-notice')" title="Copy link to this section">#</button>
           </div>
           <p>
             To be processed and forwarded under the Canadian <em>Copyright Act</em>, a notice of claimed infringement submitted to Sheernox must strictly satisfy all statutory criteria set out in Section 41.25(2):
           </p>
           <ul>
-            <li><strong>Claimant Identification:</strong> Full legal name, physical address, telephone number, and email address of the copyright owner, or an authorized agent acting on their behalf.</li>
-            <li><strong>Capacity &amp; Authority:</strong> A clear statement indicating whether the claimant is the copyright owner, or an authorized agent accompanied by proof of agency.</li>
-            <li><strong>Work Description:</strong> Accurate identification of the specific copyrighted work or works claimed to have been infringed (e.g., specific software, audio, video, literary work).</li>
-            <li><strong>Location Data &amp; Timestamps:</strong> The exact location data to which the claimed infringement relates, including the uniform resource locator (URL), fully qualified domain name (FQDN), or destination IP address, accompanied by the precise date, time, and timezone (UTC or PST) of the alleged activity.</li>
-            <li><strong>Infringing Action:</strong> Specification of the precise alleged infringing conduct (e.g., unauthorized hosting, peer-to-peer distribution, public performance).</li>
+            <li><span class="clause-num">2.1A</span> <strong>Claimant Identification:</strong> Full legal name, physical address, telephone number, and email address of the copyright owner, or an authorized agent acting on their behalf.</li>
+            <li><span class="clause-num">2.1B</span> <strong>Capacity &amp; Authority:</strong> A clear statement indicating whether the claimant is the copyright owner, or an authorized agent accompanied by proof of agency.</li>
+            <li><span class="clause-num">2.1C</span> <strong>Work Description:</strong> Accurate identification of the specific copyrighted work or works claimed to have been infringed (e.g., specific software, audio, video, literary work).</li>
+            <li><span class="clause-num">2.1D</span> <strong>Location Data &amp; Timestamps:</strong> The exact location data to which the claimed infringement relates, including the uniform resource locator (URL), fully qualified domain name (FQDN), or destination IP address, accompanied by the precise date, time, and timezone (UTC or PST) of the alleged activity.</li>
+            <li><span class="clause-num">2.1E</span> <strong>Infringing Action:</strong> Specification of the precise alleged infringing conduct (e.g., unauthorized hosting, peer-to-peer distribution, public performance).</li>
           </ul>
           <div class="critical-alert-box">
             <h4>Prohibited Notice Content &bull; Section 41.25(3) Compliance</h4>
@@ -1178,17 +1196,17 @@
         <!-- Section 3: Forwarding Procedure -->
         <section class="legal-section" id="forwarding">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">03.</span> Mandatory Electronic Forwarding Procedure</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('forwarding')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">3.0</span> Mandatory Electronic Forwarding Procedure</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('forwarding')" title="Copy link to this section">#</button>
           </div>
           <p>
             Upon receipt of a notice satisfying all legal requirements, Sheernox processes and forwards the notice in accordance with the following operational protocol:
           </p>
           <ol>
-            <li><strong>Technical Verification:</strong> Our abuse department validates that the target IP address or hostname was assigned to a Sheernox customer at the exact timestamp specified in the notice.</li>
-            <li><strong>Direct Forwarding:</strong> We transmit an exact, unedited copy of the notice to the primary email address registered on the subscriber's account within <strong>forty-eight (48) hours</strong> of validation.</li>
-            <li><strong>Claimant Confirmation:</strong> Sheernox issues an automated confirmation to the claimant confirming that the notice was successfully forwarded, or explaining why forwarding was technically impossible (e.g., IP address not in our pool, unassigned at timestamp).</li>
-            <li><strong>Confidentiality Preservation:</strong> At no point during this procedure does Sheernox disclose the name, physical address, email, telephone number, or any other personally identifying information (PII) of the subscriber to the claimant.</li>
+            <li><span class="clause-num">3.1</span> <strong>Technical Verification:</strong> Our abuse department validates that the target IP address or hostname was assigned to a Sheernox customer at the exact timestamp specified in the notice.</li>
+            <li><span class="clause-num">3.2</span> <strong>Direct Forwarding:</strong> We transmit an exact, unedited copy of the notice to the primary email address registered on the subscriber's account within <strong>forty-eight (48) hours</strong> of validation.</li>
+            <li><span class="clause-num">3.3</span> <strong>Claimant Confirmation:</strong> Sheernox issues an automated confirmation to the claimant confirming that the notice was successfully forwarded, or explaining why forwarding was technically impossible (e.g., IP address not in our pool, unassigned at timestamp).</li>
+            <li><span class="clause-num">3.4</span> <strong>Confidentiality Preservation:</strong> At no point during this procedure does Sheernox disclose the name, physical address, email, telephone number, or any other personally identifying information (PII) of the subscriber to the claimant.</li>
           </ol>
           <div class="key-takeaway">
             <span class="takeaway-badge">Privacy Assurance</span>
@@ -1199,16 +1217,16 @@
         <!-- Section 4: Log Retention -->
         <section class="legal-section" id="log-retention">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">04.</span> Statutory Log Retention Requirements</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('log-retention')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">4.0</span> Statutory Log Retention Requirements</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('log-retention')" title="Copy link to this section">#</button>
           </div>
           <p>
             Pursuant to Section 41.26(1)(b) of the <em>Copyright Act</em>, Sheernox is subject to strict statutory log preservation obligations:
           </p>
           <ul>
-            <li><strong>Standard 6-Month Retention:</strong> We preserve network assignment logs and server connection records enabling the identification of the subscriber associated with the notice for <strong>six (6) months</strong> from the date on which the notice of claimed infringement was received.</li>
-            <li><strong>Extended 12-Month Retention:</strong> If the copyright claimant commences formal court proceedings claiming infringement and serves written notice of the legal action on Sheernox before the expiration of the initial 6-month period, Sheernox will extend the retention of those records to <strong>one (1) year (12 months)</strong> from the date the initial notice was received.</li>
-            <li><strong>Disclosure Exclusively by Court Order:</strong> Subscriber identity records retained under this section will only be released to a copyright claimant upon receipt of a binding, valid court order issued by a Canadian court of competent jurisdiction (such as a <em>Norwich Pharmacal</em> order).</li>
+            <li><span class="clause-num">4.1</span> <strong>Standard 6-Month Retention:</strong> We preserve network assignment logs and server connection records enabling the identification of the subscriber associated with the notice for <strong>six (6) months</strong> from the date on which the notice of claimed infringement was received.</li>
+            <li><span class="clause-num">4.2</span> <strong>Extended 12-Month Retention:</strong> If the copyright claimant commences formal court proceedings claiming infringement and serves written notice of the legal action on Sheernox before the expiration of the initial 6-month period, Sheernox will extend the retention of those records to <strong>one (1) year (12 months)</strong> from the date the initial notice was received.</li>
+            <li><span class="clause-num">4.3</span> <strong>Disclosure Exclusively by Court Order:</strong> Subscriber identity records retained under this section will only be released to a copyright claimant upon receipt of a binding, valid court order issued by a Canadian court of competent jurisdiction (such as a <em>Norwich Pharmacal</em> order).</li>
           </ul>
           <div class="statutory-callout">
             <h4>Canadian Norwich Pharmacal Precedent</h4>
@@ -1219,8 +1237,8 @@
         <!-- Section 5: DMCA Treatment -->
         <section class="legal-section" id="dmca-treatment">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">05.</span> Treatment of United States DMCA Notices</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('dmca-treatment')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">5.0</span> Treatment of United States DMCA Notices</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('dmca-treatment')" title="Copy link to this section">#</button>
           </div>
           <p>
             Sheernox is a Canadian entity operating under the sovereign laws of British Columbia and Canada. The United States <em>Digital Millennium Copyright Act</em> (DMCA, 17 U.S.C. § 512) has no extraterritorial legal effect within Canada.
@@ -1229,33 +1247,33 @@
             Notwithstanding the territorial limitation of US law, Sheernox respects valid intellectual property claims and handles US DMCA communications as follows:
           </p>
           <ul>
-            <li><strong>Notice Conversion:</strong> If a DMCA notification contains the essential elements required under Section 41.25(2) of the Canadian <em>Copyright Act</em>, Sheernox treats it as a Canadian statutory notice and forwards it to the subscriber accordingly.</li>
-            <li><strong>Voluntary Takedown Discretion:</strong> Where a notice reveals blatant, egregious, or malicious mass copyright infringement (such as publicly exposed torrent trackers, unauthorized commercial stream scraping, or cyberlocker distribution), Sheernox reserves the right under Section 7 of our <a href="acceptable-use-policy.html" style="color: var(--sn-primary-rose); font-weight: 600;">Acceptable Use Policy (AUP)</a> to demand immediate remediation or suspend the infringing service independently of statutory notice procedures.</li>
+            <li><span class="clause-num">5.1</span> <strong>Notice Conversion:</strong> If a DMCA notification contains the essential elements required under Section 41.25(2) of the Canadian <em>Copyright Act</em>, Sheernox treats it as a Canadian statutory notice and forwards it to the subscriber accordingly.</li>
+            <li><span class="clause-num">5.2</span> <strong>Voluntary Takedown Discretion:</strong> Where a notice reveals blatant, egregious, or malicious mass copyright infringement (such as publicly exposed torrent trackers, unauthorized commercial stream scraping, or cyberlocker distribution), Sheernox reserves the right under Section 7 of our <a href="acceptable-use-policy.html" style="color: var(--sn-primary-rose); font-weight: 600;">Acceptable Use Policy (AUP)</a> to demand immediate remediation or suspend the infringing service independently of statutory notice procedures.</li>
           </ul>
         </section>
 
         <!-- Section 6: Subscriber Rights -->
         <section class="legal-section" id="subscriber-rights">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">06.</span> Subscriber Rights &amp; Response Options</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('subscriber-rights')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">6.0</span> Subscriber Rights &amp; Response Options</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('subscriber-rights')" title="Copy link to this section">#</button>
           </div>
           <p>
             If you are a Sheernox subscriber and receive a forwarded copyright infringement notice from our abuse department, please note the following crucial facts:
           </p>
           <ol>
-            <li><strong>Not a Fine or Conviction:</strong> A notice is merely an allegation by a third party. It does not mean you have been sued, found liable, or ordered to pay any sum of money by a court.</li>
-            <li><strong>No Payment Obligation:</strong> Under Canadian law, copyright notices cannot demand settlement fees. You are not legally required to pay any settlement fee requested in any communication.</li>
-            <li><strong>Voluntary Response:</strong> You are not legally compelled to reply to Sheernox regarding the notice. However, if you believe the notice was delivered in error or concerns authorized/licensed content, you may submit an explanatory statement to our abuse department for our records.</li>
-            <li><strong>Legal Counsel:</strong> If you are concerned about potential litigation, you should consult an independent Canadian legal practitioner specializing in intellectual property law.</li>
+            <li><span class="clause-num">6.1</span> <strong>Not a Fine or Conviction:</strong> A notice is merely an allegation by a third party. It does not mean you have been sued, found liable, or ordered to pay any sum of money by a court.</li>
+            <li><span class="clause-num">6.2</span> <strong>No Payment Obligation:</strong> Under Canadian law, copyright notices cannot demand settlement fees. You are not legally required to pay any settlement fee requested in any communication.</li>
+            <li><span class="clause-num">6.3</span> <strong>Voluntary Response:</strong> You are not legally compelled to reply to Sheernox regarding the notice. However, if you believe the notice was delivered in error or concerns authorized/licensed content, you may submit an explanatory statement to our abuse department for our records.</li>
+            <li><span class="clause-num">6.4</span> <strong>Legal Counsel:</strong> If you are concerned about potential litigation, you should consult an independent Canadian legal practitioner specializing in intellectual property law.</li>
           </ol>
         </section>
 
         <!-- Section 7: Repeat Infringers -->
         <section class="legal-section" id="repeat-infringers">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">07.</span> Repeat Infringer Termination Policy</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('repeat-infringers')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">7.0</span> Repeat Infringer Termination Policy</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('repeat-infringers')" title="Copy link to this section">#</button>
           </div>
           <p>
             In accordance with industry best practices and our Acceptable Use Policy, Sheernox maintains a strict policy regarding subscribers who repeatedly or willfully violate third-party intellectual property rights:
@@ -1298,8 +1316,8 @@
         <!-- Section 8: Designated Agent -->
         <section class="legal-section" id="designated-agent">
           <div class="section-header">
-            <h2 class="section-title"><span class="section-num">08.</span> Designated Copyright Compliance Agent</h2>
-            <button class="clause-anchor-btn" onclick="copyClauseLink('designated-agent')">Copy Link</button>
+            <h2 class="section-title"><span class="section-num">8.0</span> Designated Copyright Compliance Agent</h2>
+            <button class="clause-anchor-btn" onclick="copyClauseLink('designated-agent')" title="Copy link to this section">#</button>
           </div>
           <p>
             All formal notices of claimed infringement under the Canadian <em>Copyright Act</em>, as well as related legal inquiries, must be directed to the Sheernox Designated Copyright Compliance Agent:
