@@ -747,7 +747,7 @@
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 24px;
     }
 
     .footer-top {
@@ -759,9 +759,29 @@
     }
 
     .footer-brand {
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .footer-logo {
+      height: 24px;
+      width: auto;
+      display: block;
+    }
+
+    .footer-flag {
+      font-size: 1.15rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
     }
 
     .footer-legal-bar {
@@ -774,10 +794,16 @@
       color: #94a3b8;
       font-size: 0.82rem;
       text-decoration: none;
+      transition: color 0.15s ease;
     }
 
     .footer-link:hover {
       color: #ffffff;
+    }
+
+    .footer-link.active {
+      color: #ffffff;
+      font-weight: 600;
     }
 
     .footer-bottom {
@@ -785,10 +811,35 @@
       padding-top: 20px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
       font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .footer-desc {
+      color: #94a3b8;
+      max-width: 680px;
+    }
+
+    .footer-meta {
+      color: #64748b;
+      font-size: 0.76rem;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    @media (max-width: 840px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .footer-meta {
+        text-align: left;
+      }
     }
 
     /* Toast Notification */
@@ -1343,11 +1394,16 @@
 
   </div>
 
-  <!-- Global Footer -->
+    <!-- Global Footer -->
   <footer class="page-footer">
     <div class="footer-inner">
       <div class="footer-top">
-        <div class="footer-brand">&copy; 2026 Sheernox Technology Group &bull; Kamloops, BC, Canada</div>
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-link">
+            <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox Technology Group" class="footer-logo">
+          </a>
+          <span class="footer-flag" title="British Columbia, Canada" aria-label="Canada">🇨🇦</span>
+        </div>
         <div class="footer-legal-bar">
           <a href="terms-and-conditions.html" class="footer-link">Terms of Service</a>
           <a href="acceptable-use-policy.html" class="footer-link">Acceptable Use Policy</a>
@@ -1356,12 +1412,18 @@
           <a href="vulnerability-disclosure-policy.html" class="footer-link">VDP</a>
           <a href="copyright-policy.html" class="footer-link">Copyright Policy</a>
           <a href="web-design-terms.html" class="footer-link">Web Design Terms</a>
-          <a href="website-care-plan-terms.html" class="footer-link" style="color: #ffffff; font-weight: 600;">Care Plan Terms</a>
+          <a href="website-care-plan-terms.html" class="footer-link active">Care Plan Terms</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <div>Registered Sole Proprietorship in British Columbia, Canada &bull; Operating Address: 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8</div>
-        <div>Care Plan Terms Version: v1.0-WCP &bull; Last Revised: 2026-09-12</div>
+        <div class="footer-desc">
+          Sheernox Technology Group is a full suite web solutions provider based in 🇨🇦 British Columbia, Canada.<br>
+          Since 2009, Sheernox has provided individuals and businesses of all sizes with superior hosting and IT services.
+        </div>
+        <div class="footer-meta">
+          <div>&copy; <span id="year">2026</span> Sheernox Technology Group &bull; All Rights Reserved</div>
+          <div>Care Plan Terms Version: v1.0-WCP &bull; Last Revised: 2026-09-12</div>
+        </div>
       </div>
     </div>
   </footer>
