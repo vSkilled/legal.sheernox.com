@@ -72,11 +72,11 @@ sheernox_legal_portal/
 ├── favicon.ico                                # Official Sheernox browser favicon
 ├── index.html                                 # Central Legal Portal Directory & Search Hub
 ├── terms-and-conditions.html                  # Master Terms and Conditions of Service (v4.0-TOS)
-├── acceptable-use-policy.html                 # Acceptable Use Policy (v3.5-AUP)
+├── acceptable-use-policy.html                 # Acceptable Use Policy (v4.0-AUP)
 ├── privacy-policy.html                        # Privacy & Personal Information Policy (v4.0-PRIV)
-├── service-level-agreement.html               # Service Level Agreement & Incident Policy (v1.0-SLA)
-├── vulnerability-disclosure-policy.html       # Vulnerability Disclosure Policy (v1.0-VDP)
-├── copyright-policy.html                      # Copyright & Notice-and-Notice Policy (v1.0-CPR)
+├── service-level-agreement.html               # Service Level Agreement & Incident Policy (v1.5-SLA)
+├── vulnerability-disclosure-policy.html       # Vulnerability Disclosure Policy (v1.5-VDP)
+├── copyright-policy.html                      # Copyright & Notice-and-Notice Policy (v1.5-CPR)
 ├── web-design-terms.html                      # Web Design & Development Terms (v3.0-WDT)
 ├── website-care-plan-terms.html               # Website Care Plan & Maintenance Terms (v1.0-WCP)
 ├── pdf/                                       # Official Print-Ready Vector PDF Documents
@@ -100,11 +100,11 @@ sheernox_legal_portal/
 | Key | HTML Source | Target PDF Output | Document Title | Version Tag | Category |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `tos` | [`terms-and-conditions.html`](terms-and-conditions.html) | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.0-TOS` | Master Services Agreement |
-| `aup` | [`acceptable-use-policy.html`](acceptable-use-policy.html) | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v3.5-AUP` | Network & Infrastructure Policy |
+| `aup` | [`acceptable-use-policy.html`](acceptable-use-policy.html) | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v4.0-AUP` | Network & Infrastructure Policy |
 | `priv` | [`privacy-policy.html`](privacy-policy.html) | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.0-PRIV` | Privacy & Data Protection Policy |
-| `sla` | [`service-level-agreement.html`](service-level-agreement.html) | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.0-SLA` | Cloud Infrastructure & Operations |
-| `vdp` | [`vulnerability-disclosure-policy.html`](vulnerability-disclosure-policy.html) | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.0-VDP` | Cybersecurity & Trust Governance |
-| `cpr` | [`copyright-policy.html`](copyright-policy.html) | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.0-CPR` | Intellectual Property & Compliance |
+| `sla` | [`service-level-agreement.html`](service-level-agreement.html) | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.5-SLA` | Cloud Infrastructure & Operations |
+| `vdp` | [`vulnerability-disclosure-policy.html`](vulnerability-disclosure-policy.html) | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` | Cybersecurity & Trust Governance |
+| `cpr` | [`copyright-policy.html`](copyright-policy.html) | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` | Intellectual Property & Compliance |
 | `wdt` | [`web-design-terms.html`](web-design-terms.html) | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.0-WDT` | Agency Services Agreement |
 | `wcp` | [`website-care-plan-terms.html`](website-care-plan-terms.html) | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.0-WCP` | Creative & Agency SOW Schedule |
 | `hub` | [`index.html`](index.html) | N/A | Legal Portal Directory & Search Hub | N/A | Central Index Directory |
@@ -118,7 +118,7 @@ sheernox_legal_portal/
    - 14-day cancellation notice requirement via client portal ticket.
    - Upstream cloud provider disclosure regarding the US CLOUD Act (18 U.S.C. § 2713).
 
-2. **Acceptable Use Policy (`acceptable-use-policy.html` / `v3.5-AUP`)**:
+2. **Acceptable Use Policy (`acceptable-use-policy.html` / `v4.0-AUP`)**:
    - Technical multi-tenancy resource standards, CloudLinux LVE limits, and shared environment protection.
    - Prohibitions on network stress testing, botnets, crypto-mining, email harvesting, and outbound port abuse.
    - Automated quarantine null-routing for compromised virtual instances.
@@ -131,20 +131,20 @@ sheernox_legal_portal/
    - Disclosures on US CLOUD Act cross-border legal assistance treaties and data sovereign boundaries.
    - Direct escalation to designated Privacy Officer in Kamloops, BC, with OIPC BC complaint rights.
 
-4. **Service Level Agreement & Incident Policy (`service-level-agreement.html` / `v1.0-SLA`)**:
+4. **Service Level Agreement & Incident Policy (`service-level-agreement.html` / `v1.5-SLA`)**:
    - Explicit 99.9% monthly network and infrastructure availability guarantee calculated via mathematical formula:
      $$\text{Availability (\%)} = \frac{T - D}{T} \times 100$$
    - Incident severity matrix: P1 (Critical, $< 15$ min initial response) through P4 (Low, $< 12$ hr).
    - Tiered service credits: 10% for $99.0\%–99.89\%$, 25% for $95.0\%–98.99\%$, 50% for $90.0\%–94.99\%$, and 100% for $< 90.0\%$.
    - 30-day claims submission window; credits serve as the customer's sole and exclusive financial remedy.
 
-5. **Vulnerability Disclosure Policy (`vulnerability-disclosure-policy.html` / `v1.0-VDP`)**:
+5. **Vulnerability Disclosure Policy (`vulnerability-disclosure-policy.html` / `v1.5-VDP`)**:
    - Statutory Safe Harbor authorizing authorized security research under Sections 342.1 (*Unauthorized use of computer*) and 430(1.1) (*Mischief in relation to computer data*) of the Canadian *Criminal Code* (R.S.C. 1985, c. C-46).
    - Clear asset scope: `*.sheernox.com`, customer endpoints, APIs, and edge DNS clusters.
    - Ban on DoS/DDoS, data destruction, social engineering, and customer privacy violations.
    - 48-hour response confirmation, 5-day triage SLA, and 90-day coordinated disclosure timeline.
 
-6. **Copyright & Notice-and-Notice Policy (`copyright-policy.html` / `v1.0-CPR`)**:
+6. **Copyright & Notice-and-Notice Policy (`copyright-policy.html` / `v1.5-CPR`)**:
    - Full statutory alignment with Canada's **Notice-and-Notice** regime (Canadian *Copyright Act*, ss. 31.1, 41.25–41.26).
    - Obligation to forward statutory infringement notices to subscribers within 48 hours without fee.
    - Rejection of non-compliant notices containing settlement offers or statutory release fee demands (s. 41.25(3)).
@@ -193,11 +193,11 @@ python3 scripts/generate_pdfs.py
 
 # Generate a specific policy document
 python3 scripts/generate_pdfs.py --doc tos     # Master Terms and Conditions (v4.0-TOS)
-python3 scripts/generate_pdfs.py --doc aup     # Acceptable Use Policy (v3.5-AUP)
+python3 scripts/generate_pdfs.py --doc aup     # Acceptable Use Policy (v4.0-AUP)
 python3 scripts/generate_pdfs.py --doc priv    # Privacy Policy (v4.0-PRIV)
-python3 scripts/generate_pdfs.py --doc sla     # Service Level Agreement (v1.0-SLA)
-python3 scripts/generate_pdfs.py --doc vdp     # Vulnerability Disclosure Policy (v1.0-VDP)
-python3 scripts/generate_pdfs.py --doc cpr     # Copyright Policy (v1.0-CPR)
+python3 scripts/generate_pdfs.py --doc sla     # Service Level Agreement (v1.5-SLA)
+python3 scripts/generate_pdfs.py --doc vdp     # Vulnerability Disclosure Policy (v1.5-VDP)
+python3 scripts/generate_pdfs.py --doc cpr     # Copyright Policy (v1.5-CPR)
 python3 scripts/generate_pdfs.py --doc wdt     # Web Design Terms (v3.0-WDT)
 python3 scripts/generate_pdfs.py --doc wcp     # Website Care Plan Terms (v1.0-WCP)
 

@@ -37,15 +37,15 @@ except ImportError:
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PDF_DIR = REPO_ROOT / "pdf"
 
-LAST_REVISED_DATE = "2026-09-11"
+LAST_REVISED_DATE = "2026-09-12"
 
 DOC_REGISTRY = {
     "aup": {
         "source": "acceptable-use-policy.html",
         "category": "Network & Cloud Infrastructure Policy",
         "title": "Acceptable Use Policy (AUP)",
-        "version": "v3.5-AUP",
-        "last_revised": "2026-09-11",
+        "version": "v4.0-AUP",
+        "last_revised": "2026-09-12",
         "output_pdf": "Acceptable_Use_Policy.pdf",
         "accent_color": "#d97706",
     },
@@ -80,7 +80,7 @@ DOC_REGISTRY = {
         "source": "service-level-agreement.html",
         "category": "Cloud Infrastructure & Operations",
         "title": "Service Level Agreement & Incident Policy",
-        "version": "v1.0-SLA",
+        "version": "v1.5-SLA",
         "last_revised": "2026-09-12",
         "output_pdf": "Service_Level_Agreement.pdf",
         "accent_color": "#2563eb",
@@ -89,7 +89,7 @@ DOC_REGISTRY = {
         "source": "vulnerability-disclosure-policy.html",
         "category": "Cybersecurity & Trust Governance",
         "title": "Vulnerability Disclosure Policy (VDP)",
-        "version": "v1.0-VDP",
+        "version": "v1.5-VDP",
         "last_revised": "2026-09-12",
         "output_pdf": "Vulnerability_Disclosure_Policy.pdf",
         "accent_color": "#7c3aed",
@@ -98,7 +98,7 @@ DOC_REGISTRY = {
         "source": "copyright-policy.html",
         "category": "Intellectual Property & Compliance",
         "title": "Copyright & Notice-and-Notice Policy",
-        "version": "v1.0-CPR",
+        "version": "v1.5-CPR",
         "last_revised": "2026-09-12",
         "output_pdf": "Copyright_Notice_and_Notice_Policy.pdf",
         "accent_color": "#e11d48",
@@ -372,6 +372,16 @@ def get_css(last_revised, version, accent_color="#0284c7"):
       display: flex;
       align-items: center;
       gap: 6px;
+    }}
+
+    h3, .sub-heading {{
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 12px 0 6px 0;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+      break-after: avoid;
     }}
 
     .section-num {{

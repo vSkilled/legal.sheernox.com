@@ -15,12 +15,12 @@ This document is the authoritative operational guide for AI coding agents (and d
 | Key | HTML Source | Target PDF Output | Document Title | Version Tag |
 | :--- | :--- | :--- | :--- | :--- |
 | `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.0-TOS` |
-| `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v3.5-AUP` |
+| `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v4.0-AUP` |
 | `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.0-WDT` |
 | `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.0-PRIV` |
-| `sla` | `service-level-agreement.html` | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.0-SLA` |
-| `vdp` | `vulnerability-disclosure-policy.html` | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.0-VDP` |
-| `cpr` | `copyright-policy.html` | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.0-CPR` |
+| `sla` | `service-level-agreement.html` | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.5-SLA` |
+| `vdp` | `vulnerability-disclosure-policy.html` | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` |
+| `cpr` | `copyright-policy.html` | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` |
 | `wcp` | `website-care-plan-terms.html` | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.0-WCP` |
 | `hub` | `index.html` | N/A | Legal Portal Directory & Search Hub | N/A |
 
@@ -110,7 +110,7 @@ python3 scripts/generate_pdfs.py --browser /usr/bin/brave
 
 ### Revision Dates & Versioning Standards
 - **Standard ISO 8601 Date**: Always use `Last Revised: YYYY-MM-DD` (e.g., `2026-09-11`) consistently across all web pages and PDFs.
-- **Consistent Version Tags**: Format version tags strictly as `vX.X-KEY` (e.g., `v3.5-TOS`, `v3.5-AUP`, `v3.0-WDT`, `v3.5-PRIV`).
+- **Consistent Version Tags**: Format version tags strictly as `vX.X-KEY` (e.g., `v3.5-TOS`, `v4.0-AUP`, `v3.0-WDT`, `v3.5-PRIV`).
 - **0.5 Version Increments**: Versions must only increase in **0.5 increments** (e.g., `v3.0` -> `v3.5` -> `v4.0`).
 - **Colored Version Tag Display**: Web pages and PDF headers must render the version tag as a colored pill (`.version-pill`, cyan background/border, monospaced font).
 

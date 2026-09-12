@@ -1060,7 +1060,7 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
               99.9% Production Availability Guarantee
             </span>
-            <span class="version-pill">v1.0-SLA</span>
+            <span class="version-pill">v1.5-SLA</span>
           </div>
         </div>
 
@@ -1182,25 +1182,25 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><span class="clause-num">2.1A</span> <strong>Priority 1 (P1)<br>Critical Emergency</strong></td>
+                  <td><span class="clause-num">2.1</span> <strong>Priority 1 (P1)<br>Critical Emergency</strong></td>
                   <td>Complete host, hypervisor, or network node failure. Customer production service is completely offline or critical data is inaccessible to public traffic.</td>
                   <td><strong>&lt; 15 Minutes</strong></td>
                   <td>24/7/365 Continuous Active Triage</td>
                 </tr>
                 <tr>
-                  <td><span class="clause-num">2.1B</span> <strong>Priority 2 (P2)<br>High Degradation</strong></td>
+                  <td><span class="clause-num">2.2</span> <strong>Priority 2 (P2)<br>High Degradation</strong></td>
                   <td>Severe performance degradation, persistent high packet loss (&gt; 25%), or secondary service failure (e.g., outgoing SMTP queue stall, database replica desync).</td>
                   <td><strong>&lt; 60 Minutes</strong></td>
                   <td>24/7/365 Priority Queue</td>
                 </tr>
                 <tr>
-                  <td><span class="clause-num">2.1C</span> <strong>Priority 3 (P3)<br>Normal / Impairment</strong></td>
+                  <td><span class="clause-num">2.3</span> <strong>Priority 3 (P3)<br>Normal / Impairment</strong></td>
                   <td>Non-critical administrative disruption, control panel error, DNS record sync delay, or staging environment outage with production unaffected.</td>
                   <td><strong>&lt; 4 Hours</strong></td>
                   <td>Standard Business Hours (08:00–20:00 PST)</td>
                 </tr>
                 <tr>
-                  <td><strong>Priority 4 (P4)<br>Low / General</strong></td>
+                  <td><span class="clause-num">2.4</span> <strong>Priority 4 (P4)<br>Low / General</strong></td>
                   <td>General technical inquiries, billing inquiries, quota upgrade requests, architecture advice, or routine DNS propagation questions.</td>
                   <td><strong>&lt; 12 Hours</strong></td>
                   <td>Standard Business Hours (08:00–18:00 PST)</td>
@@ -1332,12 +1332,12 @@
           <p>The 99.9% uptime commitment and service credit schedule do not apply to any performance failure, downtime, or network unreachability resulting from:</p>
 
           <ul class="legal-sublist">
-            <li><span class="clause-num">6.1A</span> <strong>Force Majeure Events:</strong> Acts of God, atmospheric disturbances, wildland fires, earthquakes, municipal power substation collapse, armed conflict, civil unrest, labor disputes, or statutory governmental embargoes.</li>
-            <li><span class="clause-num">6.1B</span> <strong>Tier 1 Upstream Transit Cuts:</strong> Severing of subsea or trans-continental fiber optic lines beyond Sheernox's multi-homed BGP border router control.</li>
-            <li><span class="clause-num">6.1C</span> <strong>Volumetric DDoS Overwhelming Mitigation Capacity:</strong> Denial of Service attacks exceeding Sheernox's upstream multi-gigabit automated scrubbing capacity (e.g., volumetric floods exceeding 500 Gbps), during which traffic blackholing is implemented to preserve global infrastructure integrity.</li>
-            <li><span class="clause-num">6.1D</span> <strong>Customer System Administration:</strong> Actions, misconfigurations, kernel panics, bad firewall rules (e.g., <code>iptables -F</code>), database deadlocks, or unpatched application code executed by Customer or Customer's authorized users.</li>
-            <li><span class="clause-num">6.1E</span> <strong>AUP Enforcement Actions:</strong> Suspension or termination of services resulting from network abuse, phishing, spam transmission, copyright violations, or breach of the Acceptable Use Policy.</li>
-            <li><span class="clause-num">6.1F</span> <strong>Beta, Test, or Unmanaged Services:</strong> Services explicitly designated in billing as &quot;Beta&quot;, &quot;Development&quot;, &quot;Staging&quot;, &quot;Unmanaged Bare-Metal&quot;, or free promotional tiers.</li>
+            <li><span class="clause-num">6.1</span> <strong>Force Majeure Events:</strong> Acts of God, atmospheric disturbances, wildland fires, earthquakes, municipal power substation collapse, armed conflict, civil unrest, labor disputes, or statutory governmental embargoes.</li>
+            <li><span class="clause-num">6.2</span> <strong>Tier 1 Upstream Transit Cuts:</strong> Severing of subsea or trans-continental fiber optic lines beyond Sheernox's multi-homed BGP border router control.</li>
+            <li><span class="clause-num">6.3</span> <strong>Volumetric DDoS Overwhelming Mitigation Capacity:</strong> Denial of Service attacks exceeding Sheernox's upstream multi-gigabit automated scrubbing capacity (e.g., volumetric floods exceeding 500 Gbps), during which traffic blackholing is implemented to preserve global infrastructure integrity.</li>
+            <li><span class="clause-num">6.4</span> <strong>Customer System Administration:</strong> Actions, misconfigurations, kernel panics, bad firewall rules (e.g., <code>iptables -F</code>), database deadlocks, or unpatched application code executed by Customer or Customer's authorized users.</li>
+            <li><span class="clause-num">6.5</span> <strong>AUP Enforcement Actions:</strong> Suspension or termination of services resulting from network abuse, phishing, spam transmission, copyright violations, or breach of the Acceptable Use Policy.</li>
+            <li><span class="clause-num">6.6</span> <strong>Beta, Test, or Unmanaged Services:</strong> Services explicitly designated in billing as &quot;Beta&quot;, &quot;Development&quot;, &quot;Staging&quot;, &quot;Unmanaged Bare-Metal&quot;, or free promotional tiers.</li>
           </ul>
         </section>
 
@@ -1407,7 +1407,7 @@
         </div>
         <div class="footer-meta">
           <div>&copy; <span id="year">2026</span> Sheernox Technology Group &bull; All Rights Reserved</div>
-          <div>Service Level Agreement Version: v1.0-SLA &bull; Last Revised: 2026-09-12</div>
+          <div>Service Level Agreement Version: v1.5-SLA &bull; Last Revised: 2026-09-12</div>
         </div>
       </div>
     </div>
