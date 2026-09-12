@@ -241,77 +241,6 @@
       color: var(--text-main);
     }
 
-    /* Quick Filter Chips */
-    .quick-filter-chips {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 18px;
-      flex-wrap: wrap;
-    }
-
-    .chip-btn {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-family: inherit;
-      transition: all 0.2s ease;
-      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
-    }
-
-    .chip-btn:hover {
-      border-color: var(--sn-primary-blue);
-      color: var(--sn-primary-blue);
-      background: #f8fafc;
-    }
-
-    .chip-btn.active {
-      background: var(--sn-primary-blue);
-      border-color: var(--sn-primary-blue);
-      color: #ffffff;
-      box-shadow: 0 2px 8px rgba(15, 76, 129, 0.25);
-    }
-
-    /* Hero Trust Strip */
-    .hero-trust-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 26px;
-      font-size: 0.78rem;
-      color: var(--text-subtle);
-      font-weight: 500;
-      flex-wrap: wrap;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .trust-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #10b981;
-      display: inline-block;
-    }
-
-    .trust-divider {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: var(--border-color);
-    }
-
     /* Main Container */
     .main-wrap {
       max-width: 1180px;
@@ -702,13 +631,6 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      .hero-trust-bar {
-        flex-direction: column;
-        gap: 8px;
-      }
-      .trust-divider {
-        display: none;
-      }
     }
 
     /* Enterprise Info Callout */
@@ -811,13 +733,11 @@
   <!-- Top Navigation -->
   <nav class="top-nav">
     <div class="top-nav-inner">
-      <div class="nav-brand">
-        <a href="https://sheernox.com">
-          <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox" class="nav-logo">
-        </a>
+      <a href="index.html" class="nav-brand">
+        <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox" class="nav-logo">
         <div class="nav-divider"></div>
         <span class="nav-portal-label">Legal Portal</span>
-      </div>
+      </a>
       <div class="nav-actions">
         <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
       </div>
@@ -843,29 +763,6 @@
         <button type="button" id="clearSearchBtn" class="search-clear-btn" style="display: none;" onclick="clearSearch()" title="Clear search (Esc)">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
-      </div>
-
-      <div class="quick-filter-chips">
-        <button type="button" class="chip-btn active" onclick="filterByChip('all', this)">All Documents</button>
-        <button type="button" class="chip-btn" onclick="filterByChip('hosting', this)">Hosting &amp; SLA</button>
-        <button type="button" class="chip-btn" onclick="filterByChip('aup', this)">Acceptable Use</button>
-        <button type="button" class="chip-btn" onclick="filterByChip('privacy', this)">Privacy &amp; Data</button>
-        <button type="button" class="chip-btn" onclick="filterByChip('design', this)">Design &amp; SOW</button>
-      </div>
-
-      <div class="hero-trust-bar">
-        <div class="trust-item">
-          <span class="trust-dot"></span>
-          <span>British Columbia Sole Proprietorship</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span>Letter Vector PDFs Available</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span>ISO 8601 &amp; CASL Compliant</span>
-        </div>
       </div>
     </div>
   </section>
@@ -1163,8 +1060,6 @@
     const searchShortcut = document.getElementById('searchShortcut');
     const noResults = document.getElementById('noResults');
     const cards = document.querySelectorAll('.enterprise-card');
-    const chipBtns = document.querySelectorAll('.chip-btn');
-    let activeCategory = 'all';
 
     function applyFilters() {
       const q = filterInput.value.toLowerCase().trim();
@@ -1180,13 +1075,11 @@
       cards.forEach(c => {
         const title = c.getAttribute('data-title') || '';
         const keys = c.getAttribute('data-keywords') || '';
-        const category = c.getAttribute('data-category') || '';
         const body = c.textContent.toLowerCase();
 
         const matchesQuery = !q || title.includes(q) || keys.includes(q) || body.includes(q);
-        const matchesCategory = activeCategory === 'all' || category === activeCategory;
 
-        if (matchesQuery && matchesCategory) {
+        if (matchesQuery) {
           c.style.display = 'flex';
           matchCount++;
         } else {
@@ -1203,18 +1096,8 @@
 
     function clearSearch() {
       filterInput.value = '';
-      activeCategory = 'all';
-      chipBtns.forEach(btn => btn.classList.remove('active'));
-      if (chipBtns[0]) chipBtns[0].classList.add('active');
       applyFilters();
       filterInput.focus();
-    }
-
-    function filterByChip(category, btn) {
-      activeCategory = category;
-      chipBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      applyFilters();
     }
 
     // Keyboard shortcuts: '/' to search, 'Escape' to clear
@@ -1224,7 +1107,7 @@
         filterInput.focus();
         filterInput.select();
       } else if (e.key === 'Escape') {
-        if (filterInput.value || activeCategory !== 'all') {
+        if (filterInput.value) {
           clearSearch();
         }
         filterInput.blur();
