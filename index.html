@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheernox Legal & Policy Documents</title>
+  <meta name="description" content="Official repository for Sheernox client agreements, policies, and service level documentation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sn-dark-navy: #071322;
+      --sn-sidebar-navy: #0b192c;
+      --sn-primary-blue: #0f4c81;
+      --sn-accent-cyan: #0284c7;
+      --sn-amber: #f59e0b;
+      --sn-emerald: #10b981;
+      --sn-coral: #ef4444;
+      --canvas-bg: #f8fafc;
+      --surface-card: #ffffff;
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--canvas-bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      background-color: var(--sn-dark-navy);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .top-nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .nav-divider {
+      height: 24px;
+      width: 1.5px;
+      background: rgba(255, 255, 255, 0.25);
+      margin: 0 4px;
+    }
+
+    .nav-portal-label {
+      color: #ffffff;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-weight: 500;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #38bdf8;
+    }
+
+    .nav-btn {
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(180deg, #ffffff 0%, var(--canvas-bg) 100%);
+      border-bottom: 1px solid var(--border-color);
+      padding: 64px 24px 52px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero-pretitle {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sn-primary-blue);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .hero-pretitle::before, .hero-pretitle::after {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--border-color);
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 32px;
+    }
+
+    /* Search Input */
+    .search-box {
+      max-width: 580px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px 18px 14px 46px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--sn-primary-blue);
+      box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.12);
+    }
+
+    .search-icon-svg {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-subtle);
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+    }
+
+    /* Main Container */
+    .main-wrap {
+      max-width: 1180px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+      flex: 1;
+    }
+
+    /* Cards Grid */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 800px) {
+      .doc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .enterprise-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+      transition: all 0.25s ease;
+    }
+
+    .enterprise-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+      border-color: #cbd5e1;
+    }
+
+    /* Color Ribbon Indicator */
+    .card-ribbon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 4px;
+    }
+
+    .ribbon-blue { background-color: #0f4c81; }
+    .ribbon-amber { background-color: #f59e0b; }
+    .ribbon-emerald { background-color: #10b981; }
+    .ribbon-coral { background-color: #ef4444; }
+
+    .card-header-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-badge-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icon-blue { background: #e0f2fe; color: #0284c7; }
+    .icon-amber { background: #fef3c7; color: #d97706; }
+    .icon-emerald { background: #d1fae5; color: #059669; }
+    .icon-coral { background: #fee2e2; color: #dc2626; }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .type-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .pill-pdf {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    .pill-html {
+      background: #ecfdf5;
+      color: #047857;
+    }
+
+    .card-body {
+      margin-bottom: 24px;
+    }
+
+    .card-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .card-bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .card-bullet-list li {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-bullet-list li::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--text-subtle);
+    }
+
+    .card-actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .meta-url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .actions-cluster {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-copy {
+      background: #f1f5f9;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .btn-copy:hover {
+      background: #e2e8f0;
+      color: var(--text-main);
+    }
+
+    .btn-open {
+      background: var(--sn-primary-blue);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-open:hover {
+      background: #0a355c;
+    }
+
+    /* Enterprise Info Callout */
+    .enterprise-callout {
+      margin-top: 48px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .callout-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+
+    .callout-content p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .callout-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--sn-primary-blue);
+      text-decoration: none;
+    }
+
+    .callout-cta:hover {
+      text-decoration: underline;
+    }
+
+    /* Toast Notification */
+    .copy-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--sn-dark-navy);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100;
+    }
+
+    .copy-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 12px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--sn-primary-blue);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <div class="nav-brand">
+        <a href="https://sheernox.com">
+          <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox" class="nav-logo">
+        </a>
+        <div class="nav-divider"></div>
+        <span class="nav-portal-label">Legal Portal</span>
+      </div>
+      <div class="nav-actions">
+        <div class="nav-status">
+          <span class="status-dot"></span>
+          <span>CDN Active</span>
+        </div>
+        <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="hero-inner">
+      <div class="hero-pretitle">Governance & Compliance</div>
+      <h1 class="hero-title">Terms & Legal Documentation</h1>
+      <p class="hero-desc">
+        Access official legal policies, acceptable usage standards, and contract agreements for Sheernox cloud infrastructure and web design services.
+      </p>
+
+      <div class="search-box">
+        <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="filterInput" class="search-input" placeholder="Quick search by document name or keyword...">
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Grid -->
+  <main class="main-wrap">
+    <div class="doc-grid" id="documentGrid">
+
+      <!-- 1. Terms and Conditions -->
+      <div class="enterprise-card" data-title="terms and conditions" data-keywords="billing SLA liability payment subscription contracts">
+        <div class="card-ribbon ribbon-blue"></div>
+        <div>
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-badge-icon icon-blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+              <h2 class="card-title">Terms and Conditions</h2>
+            </div>
+            <span class="type-pill pill-pdf">PDF Document</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              Master service terms outlining customer obligations, account provisioning, fee schedules, SLA commitments, and dispute resolution.
+            </p>
+            <ul class="card-bullet-list">
+              <li>Account registration & billing cycle rules</li>
+              <li>Service Level Agreement (SLA) & uptime metrics</li>
+              <li>Cancellation, termination & refund conditions</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-actions-bar">
+          <span class="meta-url" title="cdn.sheernox.com/terms/Terms_and_Conditions.pdf">Terms_and_Conditions.pdf</span>
+          <div class="actions-cluster">
+            <button type="button" class="btn-copy" onclick="copyDocUrl('https://cdn.sheernox.com/terms/Terms_and_Conditions.pdf')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Link
+            </button>
+            <a href="https://cdn.sheernox.com/terms/Terms_and_Conditions.pdf" target="_blank" rel="noopener noreferrer" class="btn-open">
+              Open PDF
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Acceptable Use Policy -->
+      <div class="enterprise-card" data-title="acceptable use policy" data-keywords="aup abuse spam security bandwidth resource limits">
+        <div class="card-ribbon ribbon-amber"></div>
+        <div>
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-badge-icon icon-amber">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h2 class="card-title">Acceptable Use Policy</h2>
+            </div>
+            <span class="type-pill pill-pdf">PDF Document</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              Security standards and network behavior restrictions designed to protect shared infrastructure integrity and prevent malicious abuse.
+            </p>
+            <ul class="card-bullet-list">
+              <li>Zero tolerance for unsolicited mail / spam</li>
+              <li>Network security & intrusion prevention rules</li>
+              <li>Compute & disk I/O fair use limits</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-actions-bar">
+          <span class="meta-url" title="cdn.sheernox.com/terms/Acceptable_Use_Policy.pdf">Acceptable_Use_Policy.pdf</span>
+          <div class="actions-cluster">
+            <button type="button" class="btn-copy" onclick="copyDocUrl('https://cdn.sheernox.com/terms/Acceptable_Use_Policy.pdf')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Link
+            </button>
+            <a href="https://cdn.sheernox.com/terms/Acceptable_Use_Policy.pdf" target="_blank" rel="noopener noreferrer" class="btn-open">
+              Open PDF
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Privacy Policy -->
+      <div class="enterprise-card" data-title="privacy policy" data-keywords="privacy gdpr data cookies protection personal tracking">
+        <div class="card-ribbon ribbon-emerald"></div>
+        <div>
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-badge-icon icon-emerald">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <h2 class="card-title">Privacy Policy</h2>
+            </div>
+            <span class="type-pill pill-html">Web Policy</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              Discloses how personal information is gathered, stored, processed, and secured in adherence with global data regulations.
+            </p>
+            <ul class="card-bullet-list">
+              <li>Data collection & storage policies</li>
+              <li>Cookie usage & third-party service integration</li>
+              <li>Customer rights to data access & deletion</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-actions-bar">
+          <span class="meta-url" title="cdn.sheernox.com/terms/Privacy_Policy.html">Privacy_Policy.html</span>
+          <div class="actions-cluster">
+            <button type="button" class="btn-copy" onclick="copyDocUrl('https://cdn.sheernox.com/terms/Privacy_Policy.html')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Link
+            </button>
+            <a href="https://cdn.sheernox.com/terms/Privacy_Policy.html" target="_blank" rel="noopener noreferrer" class="btn-open">
+              Open Web Page
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Web Design Terms & Conditions -->
+      <div class="enterprise-card" data-title="web design terms and conditions" data-keywords="design development project approval milestones creative copyright">
+        <div class="card-ribbon ribbon-coral"></div>
+        <div>
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-badge-icon icon-coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+              </div>
+              <h2 class="card-title">Web Design Terms</h2>
+            </div>
+            <span class="type-pill pill-pdf">PDF Document</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              Specific commercial terms governing bespoke web design, custom software builds, revisions, IP handover, and delivery timelines.
+            </p>
+            <ul class="card-bullet-list">
+              <li>Project scope & revision thresholds</li>
+              <li>Milestone review & client sign-off procedures</li>
+              <li>Source code & design asset copyright transfer</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-actions-bar">
+          <span class="meta-url" title="cdn.sheernox.com/terms/Web_Design_Terms_and_Conditions.pdf">Web_Design_Terms.pdf</span>
+          <div class="actions-cluster">
+            <button type="button" class="btn-copy" onclick="copyDocUrl('https://cdn.sheernox.com/terms/Web_Design_Terms_and_Conditions.pdf')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Link
+            </button>
+            <a href="https://cdn.sheernox.com/terms/Web_Design_Terms_and_Conditions.pdf" target="_blank" rel="noopener noreferrer" class="btn-open">
+              Open PDF
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Enterprise Info Callout -->
+    <div class="enterprise-callout">
+      <div class="callout-content">
+        <h3>Enterprise Custom Master Services Agreement (MSA)</h3>
+        <p>Inquiring regarding custom Service Level Agreements, BAA, or custom contract negotiation?</p>
+      </div>
+      <a href="mailto:support@sheernox.com" class="callout-cta">
+        Inquire with Legal
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Copy Notification Toast -->
+  <div class="copy-toast" id="copyToast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>Direct document URL copied to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <ul class="footer-links">
+      <li><a href="https://sheernox.com">Main Portal</a></li>
+      <li><a href="https://my.sheernox.com">Support Portal</a></li>
+      <li><a href="mailto:support@sheernox.com">Compliance Office</a></li>
+    </ul>
+    <div>&copy; <span id="year"></span> Sheernox Technology Group. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Search filter
+    const filterInput = document.getElementById('filterInput');
+    const cards = document.querySelectorAll('.enterprise-card');
+
+    filterInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      cards.forEach(c => {
+        const title = c.getAttribute('data-title') || '';
+        const keys = c.getAttribute('data-keywords') || '';
+        const body = c.textContent.toLowerCase();
+        if (!q || title.includes(q) || keys.includes(q) || body.includes(q)) {
+          c.style.display = 'flex';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    });
+
+    // Copy to clipboard
+    function copyDocUrl(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        const toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      }).catch(err => {
+        prompt("Copy this URL:", url);
+      });
+    }
+  </script>
+</body>
+</html>
