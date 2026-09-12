@@ -69,6 +69,7 @@ sheernox_legal_portal/
 ├── .gitignore                                 # Production ignore rules
 ├── README.md                                  # Repository documentation and architecture guide
 ├── AGENTS.md                                  # AI Agent operational runbook & legal guardrails
+├── favicon.ico                                # Official Sheernox browser favicon
 ├── index.html                                 # Central Legal Portal Directory & Search Hub
 ├── terms-and-conditions.html                  # Master Terms and Conditions of Service (v4.0-TOS)
 ├── acceptable-use-policy.html                 # Acceptable Use Policy (v3.5-AUP)

@@ -46,6 +46,12 @@ jobs:
             --include "*.html" \
             --content-type "text/html; charset=utf-8"
 
+      - name: Deploy Favicon & Static Assets to Bunny S3
+        run: |
+          aws s3 cp favicon.ico "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}/favicon.ico" \
+            --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
+            --content-type "image/x-icon"
+
       - name: Deploy Vector PDFs to Bunny S3
         run: |
           aws s3 sync pdf/ "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}/pdf" \
@@ -58,6 +64,7 @@ jobs:
         run: |
           echo "Verifying live CDN endpoints on legal.sheernox.com..."
           curl -f -s -I "https://legal.sheernox.com/index.html" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/favicon.ico" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/pdf/Terms_and_Conditions.pdf" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/website-care-plan-terms.html" | head -n 5
           echo "Deployment verified successfully!"
