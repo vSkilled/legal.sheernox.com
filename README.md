@@ -46,7 +46,12 @@ sheernox_legal_portal/
 ├── terms-and-conditions.html    # Master Terms and Conditions (TOS, SLA, Infrastructure)
 ├── acceptable-use-policy.html   # Acceptable Use Policy (Hosting & VPS Resource Standards)
 ├── web-design-terms.html        # Web Design, Branding & Maintenance Care Agreement
-└── privacy-policy.html          # Global Data Protection & Privacy Policy (PIPEDA/GDPR)
+├── privacy-policy.html          # Global Data Protection & Privacy Policy (PIPEDA/GDPR)
+└── pdf/                         # Official Print-Ready Vector PDF Policy Documents
+    ├── Terms_and_Conditions.pdf
+    ├── Acceptable_Use_Policy.pdf
+    ├── Web_Design_Terms_and_Conditions.pdf
+    └── Privacy_Policy.pdf
 ```
 
 ### Production Document Index
