@@ -18,7 +18,10 @@ This repository contains the standalone, fully responsive, and accessible HTML5 
 
 All infrastructure, cloud hosting, managed care, and creative agency services are contracted with:
 
-- **Entity**: **Sheernox Technology Group** (Registered Sole Proprietorship)
+- **Entity**: **Sheernox Technology Group** (Registered Sole Proprietorship in British Columbia, Canada)
+- **Registration Number**: `FM0707819`
+- **Business Number**: `732754924BC0001`
+- **Original Registration Date**: `October 29, 2009`
 - **Official Physical & Mailing Address**: `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada`
 - **Governing Law**: Laws of the **Province of British Columbia** and the federal laws of **Canada** applicable therein.
 - **Exclusive Venue**: Courts of British Columbia sitting in the **City of Kamloops, British Columbia, Canada**.
@@ -99,22 +102,22 @@ sheernox_legal_portal/
 
 | Key | HTML Source | Target PDF Output | Document Title | Version Tag | Category |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `tos` | [`terms-and-conditions.html`](terms-and-conditions.html) | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.0-TOS` | Master Services Agreement |
+| `tos` | [`terms-and-conditions.html`](terms-and-conditions.html) | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.5-TOS` | Master Services Agreement |
 | `aup` | [`acceptable-use-policy.html`](acceptable-use-policy.html) | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v4.0-AUP` | Network & Infrastructure Policy |
-| `priv` | [`privacy-policy.html`](privacy-policy.html) | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.0-PRIV` | Privacy & Data Protection Policy |
+| `priv` | [`privacy-policy.html`](privacy-policy.html) | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.5-PRIV` | Privacy & Data Protection Policy |
 | `sla` | [`service-level-agreement.html`](service-level-agreement.html) | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.5-SLA` | Cloud Infrastructure & Operations |
 | `vdp` | [`vulnerability-disclosure-policy.html`](vulnerability-disclosure-policy.html) | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` | Cybersecurity & Trust Governance |
 | `cpr` | [`copyright-policy.html`](copyright-policy.html) | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` | Intellectual Property & Compliance |
-| `wdt` | [`web-design-terms.html`](web-design-terms.html) | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.0-WDT` | Agency Services Agreement |
-| `wcp` | [`website-care-plan-terms.html`](website-care-plan-terms.html) | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.0-WCP` | Creative & Agency SOW Schedule |
+| `wdt` | [`web-design-terms.html`](web-design-terms.html) | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.5-WDT` | Agency Services Agreement |
+| `wcp` | [`website-care-plan-terms.html`](website-care-plan-terms.html) | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.5-WCP` | Creative & Agency SOW Schedule |
 | `hub` | [`index.html`](index.html) | N/A | Legal Portal Directory & Search Hub | N/A | Central Index Directory |
 
 ### Document Summary & Legal Highlights
 
-1. **Master Terms and Conditions (`terms-and-conditions.html` / `v4.0-TOS`)**:
+1. **Master Terms and Conditions (`terms-and-conditions.html` / `v4.5-TOS`)**:
    - Master commercial services framework, billing cycles, domain management, and acceptable usage.
    - Exclusive jurisdiction in the Courts of British Columbia sitting in Kamloops, BC.
-   - \$5,000.00 CAD liquidated damages for domain typo-squatting, phishing, and brand impersonation.
+   - $5,000.00 CAD liquidated damages for domain typo-squatting, phishing, and brand impersonation.
    - 14-day cancellation notice requirement via client portal ticket.
    - Upstream cloud provider disclosure regarding the US CLOUD Act (18 U.S.C. § 2713).
 
@@ -122,10 +125,10 @@ sheernox_legal_portal/
    - Technical multi-tenancy resource standards, CloudLinux LVE limits, and shared environment protection.
    - Prohibitions on network stress testing, botnets, crypto-mining, email harvesting, and outbound port abuse.
    - Automated quarantine null-routing for compromised virtual instances.
-   - CASL anti-spam compliance enforcement; \$250.00 CAD delisting fee for outbound IP blocklisting.
+   - CASL anti-spam compliance enforcement; $250.00 CAD delisting fee for outbound IP blocklisting.
    - Zero-tolerance CSAM policy with mandatory reporting to Cybertip.ca and the RCMP.
 
-3. **Privacy & Personal Information Policy (`privacy-policy.html` / `v4.0-PRIV`)**:
+3. **Privacy & Personal Information Policy (`privacy-policy.html` / `v4.5-PRIV`)**:
    - Comprehensive data handling transparency complying with PIPEDA, BC PIPA, and international principles.
    - Self-hosted infrastructure guarantees, encrypted database retention (AES-256), and access controls.
    - Disclosures on US CLOUD Act cross-border legal assistance treaties and data sovereign boundaries.
@@ -151,14 +154,14 @@ sheernox_legal_portal/
    - Statutory 6-month log retention period (extendable to 12 months upon formal court notice).
    - Customer identity protection: Subscriber personal information is never disclosed without a Canadian court order.
 
-7. **Web Design & Development Terms (`web-design-terms.html` / `v3.0-WDT`)**:
+7. **Web Design & Development Terms (`web-design-terms.html` / `v3.5-WDT`)**:
    - Statement of Work (SOW) legal architecture for bespoke web design, custom engineering, and agency services.
    - 50% initial non-refundable mobilization deposit; progressive milestone billing.
    - 30-day post-launch code warranty covering reproducible defects and responsive layout bugs.
    - Criminal protection: Unauthorized deployment of unreleased deliverables constitutes theft under Sections 322–380 of the Canadian *Criminal Code*.
    - Intellectual property transfer occurs strictly upon receipt of 100% full cleared payment.
 
-8. **Website Care Plan & Maintenance Terms (`website-care-plan-terms.html` / `v1.0-WCP`)**:
+8. **Website Care Plan & Maintenance Terms (`website-care-plan-terms.html` / `v1.5-WCP`)**:
    - Recurring maintenance Statement of Work (SOW) schedule operating under `web-design-terms.html`.
    - 3 Care Plan tiers: Essential Care, Professional Care (2 hrs/mo included), and Enterprise Agency Care (5 hrs/mo included + 2h emergency malware response).
    - Staging-First testing protocol with automated visual regression and rollback guarantees.

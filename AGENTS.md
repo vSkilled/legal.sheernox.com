@@ -14,14 +14,14 @@ This document is the authoritative operational guide for AI coding agents (and d
 
 | Key | HTML Source | Target PDF Output | Document Title | Version Tag |
 | :--- | :--- | :--- | :--- | :--- |
-| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.0-TOS` |
+| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.5-TOS` |
 | `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v4.0-AUP` |
-| `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.0-WDT` |
-| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.0-PRIV` |
+| `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.5-WDT` |
+| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.5-PRIV` |
 | `sla` | `service-level-agreement.html` | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.5-SLA` |
 | `vdp` | `vulnerability-disclosure-policy.html` | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` |
 | `cpr` | `copyright-policy.html` | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` |
-| `wcp` | `website-care-plan-terms.html` | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.0-WCP` |
+| `wcp` | `website-care-plan-terms.html` | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.5-WCP` |
 | `hub` | `index.html` | N/A | Legal Portal Directory & Search Hub | N/A |
 
 ---
@@ -30,7 +30,7 @@ This document is the authoritative operational guide for AI coding agents (and d
 
 When modifying any document, ensure strict adherence to these legal parameters:
 
-1. **Entity Status**: **Sheernox Technology Group** is a **sole proprietorship** registered in the Province of British Columbia, Canada.
+1. **Entity Status**: **Sheernox Technology Group** is a **sole proprietorship** registered in the Province of British Columbia, Canada (Registration Number: `FM0707819`, Business Number: `732754924BC0001`, Original Registration Date: October 29, 2009).
 2. **Location & Address**:
    - **Registered Physical & Mailing Address**: `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada`.
    - All legal agreements, contact channels, and statutory disclosures must consistently reference this official address.
