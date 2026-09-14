@@ -547,33 +547,22 @@
     .card-actions-bar {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
       padding-top: 20px;
       border-top: 1px solid var(--border-subtle);
-    }
-
-    .meta-url {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--text-subtle);
-      max-width: 220px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
 
     .actions-cluster {
       display: flex;
       align-items: center;
-      gap: 10px;
+      width: 100%;
+      gap: 8px;
     }
 
     .btn-copy {
       background: #f8fafc;
       border: 1px solid var(--border-color);
       color: var(--text-muted);
-      padding: 6px 11px;
+      padding: 7px 12px;
       border-radius: 6px;
       font-size: 0.78rem;
       font-weight: 500;
@@ -585,6 +574,7 @@
       font-family: inherit;
       text-decoration: none;
       line-height: 1.4;
+      flex-shrink: 0;
     }
 
     .btn-copy:hover {
@@ -598,7 +588,7 @@
       background: #fff1f2;
       border: 1px solid #fecdd3;
       color: #be123c;
-      padding: 6px 11px;
+      padding: 7px 12px;
       border-radius: 6px;
       font-size: 0.78rem;
       font-weight: 600;
@@ -610,6 +600,7 @@
       font-family: inherit;
       text-decoration: none;
       line-height: 1.4;
+      flex-shrink: 0;
     }
 
     .btn-pdf:hover {
@@ -624,7 +615,7 @@
       background: #f1f5f9;
       border: 1px solid #cbd5e1;
       color: #334155;
-      padding: 6px 11px;
+      padding: 7px 12px;
       border-radius: 6px;
       font-size: 0.78rem;
       font-weight: 600;
@@ -636,6 +627,7 @@
       font-family: inherit;
       text-decoration: none;
       line-height: 1.4;
+      flex-shrink: 0;
     }
 
     .btn-txt:hover {
@@ -649,19 +641,23 @@
     .btn-open {
       background: linear-gradient(135deg, #0284c7 0%, #0f4c81 100%);
       color: #ffffff;
-      padding: 9px 20px;
+      padding: 9px 24px;
       border-radius: 8px;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       font-weight: 600;
       letter-spacing: 0.015em;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 7px;
       border: 1px solid rgba(2, 132, 199, 0.5);
       box-shadow: 0 2px 6px rgba(2, 132, 199, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       line-height: 1.4;
+      margin-left: auto;
+      flex: 1 1 auto;
+      max-width: 170px;
     }
 
     .btn-open:hover {
@@ -812,17 +808,21 @@
         align-items: flex-start;
       }
       .card-actions-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+        padding-top: 16px;
       }
       .actions-cluster {
         width: 100%;
-        justify-content: flex-start;
+        display: flex;
+        align-items: center;
         flex-wrap: wrap;
+        gap: 8px;
       }
-      .meta-url {
+      .btn-open {
+        flex: 1 1 100%;
         max-width: 100%;
+        margin-left: 0;
+        margin-top: 4px;
+        justify-content: center;
       }
       .enterprise-callout {
         flex-direction: column;
@@ -1115,7 +1115,6 @@
           </div>
         </div>
         <div class="card-actions-bar">
-          <span class="meta-url" title="terms-and-conditions.html">terms-and-conditions.html</span>
           <div class="actions-cluster">
             <a href="terms-and-conditions.txt" class="btn-txt" target="_blank" title="View Plain Text Version">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -1176,7 +1175,6 @@
           </div>
         </div>
         <div class="card-actions-bar">
-          <span class="meta-url" title="acceptable-use-policy.html">acceptable-use-policy.html</span>
           <div class="actions-cluster">
             <a href="acceptable-use-policy.txt" class="btn-txt" target="_blank" title="View Plain Text Version">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -1238,7 +1236,6 @@
           </div>
         </div>
         <div class="card-actions-bar">
-          <span class="meta-url" title="privacy-policy.html">privacy-policy.html</span>
           <div class="actions-cluster">
             <a href="privacy-policy.txt" class="btn-txt" target="_blank" title="View Plain Text Version">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -1299,7 +1296,6 @@
           </div>
         </div>
         <div class="card-actions-bar">
-          <span class="meta-url" title="service-level-agreement.html">service-level-agreement.html</span>
           <div class="actions-cluster">
             <a href="service-level-agreement.txt" class="btn-txt" target="_blank" title="View Plain Text Version">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -1360,7 +1356,6 @@
           </div>
         </div>
         <div class="card-actions-bar">
-          <span class="meta-url" title="vulnerability-disclosure-policy.html">vulnerability-disclosure-policy.html</span>
           <div class="actions-cluster">
             <a href="vulnerability-disclosure-policy.txt" class="btn-txt" target="_blank" title="View Plain Text Version">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -1422,7 +1417,6 @@
           </div>
         </div>
         <div class="card-actions-bar">
-          <span class="meta-url" title="copyright-policy.html">copyright-policy.html</span>
           <div class="actions-cluster">
             <a href="copyright-policy.txt" class="btn-txt" target="_blank" title="View Plain Text Version">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -1484,7 +1478,6 @@
           </div>
         </div>
         <div class="card-actions-bar">
-          <span class="meta-url" title="web-design-terms.html">web-design-terms.html</span>
           <div class="actions-cluster">
             <a href="web-design-terms.txt" class="btn-txt" target="_blank" title="View Plain Text Version">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -1545,7 +1538,6 @@
           </div>
         </div>
         <div class="card-actions-bar">
-          <span class="meta-url" title="website-care-plan-terms.html">website-care-plan-terms.html</span>
           <div class="actions-cluster">
             <a href="website-care-plan-terms.txt" class="btn-txt" target="_blank" title="View Plain Text Version">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
