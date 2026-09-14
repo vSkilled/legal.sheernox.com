@@ -65,7 +65,7 @@ Every page across the Legal Portal integrates a standardized, responsive enterpr
 This repository contains **strictly production-grade code** with zero build artifacts, temporary scratch files, or third-party package dependencies:
 
 ```text
-sheernox_legal_portal/
+legal.sheernox.com/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml                         # Automated CI/CD deployment to Bunny S3 storage

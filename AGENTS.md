@@ -6,7 +6,7 @@ This document is the authoritative operational guide for AI coding agents (and d
 
 ## 📋 Repository Overview & Core Principles
 
-- **Repository**: [`vSkilled/sheernox_legal_portal`](https://github.com/vSkilled/sheernox_legal_portal)
+- **Repository**: [`vSkilled/legal.sheernox.com`](https://github.com/vSkilled/legal.sheernox.com)
 - **Tech Stack**: 100% Static HTML5, Modern CSS3, Vanilla JavaScript, Python 3 PDF Generator.
 - **Production Standard**: **Strictly production-only code in git**. Never commit test templates, temporary scratch files, or intermediate rendering artifacts.
 
@@ -86,7 +86,7 @@ The PDF documents are built using **Variation 1 (Modern Tech Enterprise)** layou
 
 ### Generation Script
 
-A fully self-contained generator is maintained at [`scripts/generate_pdfs.py`](file:///home/falsebit/Documents/antigravity/sheernox_legal_portal/scripts/generate_pdfs.py). It automatically extracts legal prose from the HTML files, applies print-optimized CSS, and compiles vector PDFs via headless Chromium/Brave.
+A fully self-contained generator is maintained at [`scripts/generate_pdfs.py`](scripts/generate_pdfs.py). It automatically extracts legal prose from the HTML files, applies print-optimized CSS, and compiles vector PDFs via headless Chromium/Brave.
 
 ### Quick Commands
 
@@ -132,7 +132,7 @@ python3 scripts/generate_pdfs.py --browser /usr/bin/brave
 Copy and paste the prompt below when instructing an AI agent to make policy updates:
 
 ```markdown
-I need you to update the Sheernox Legal Portal in https://github.com/vSkilled/sheernox_legal_portal.
+I need you to update the Sheernox Legal Portal in https://github.com/vSkilled/legal.sheernox.com.
 
 Please read `AGENTS.md` thoroughly before beginning.
 
