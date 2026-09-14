@@ -7,6 +7,7 @@ Version:        v1.5-WCP
 Last Revised:   2026-09-13
 Web Policy:     https://legal.sheernox.com/website-care-plan-terms.html
 Plain Text:     https://legal.sheernox.com/website-care-plan-terms.txt
+PDF Document:   https://legal.sheernox.com/website-care-plan-terms.pdf
 General Admin:  support@sheernox.com
 Abuse & Sec:    abuse@sheernox.com
 ================================================================================

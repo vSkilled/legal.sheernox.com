@@ -7,6 +7,7 @@ Version:        v3.5-WDT
 Last Revised:   2026-09-13
 Web Policy:     https://legal.sheernox.com/web-design-terms.html
 Plain Text:     https://legal.sheernox.com/web-design-terms.txt
+PDF Document:   https://legal.sheernox.com/web-design-terms.pdf
 General Admin:  support@sheernox.com
 Abuse & Sec:    abuse@sheernox.com
 ================================================================================

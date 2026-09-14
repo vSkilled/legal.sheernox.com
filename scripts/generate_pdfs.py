@@ -35,7 +35,7 @@ except ImportError:
     from logo_data import LOGO_BASE64
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PDF_DIR = REPO_ROOT / "pdf"
+PDF_DIR = REPO_ROOT
 
 LAST_REVISED_DATE = "2026-09-12"
 
@@ -46,7 +46,7 @@ DOC_REGISTRY = {
         "title": "Acceptable Use Policy (AUP)",
         "version": "v4.0-AUP",
         "last_revised": "2026-09-12",
-        "output_pdf": "Acceptable_Use_Policy.pdf",
+        "output_pdf": "acceptable-use-policy.pdf",
         "accent_color": "#d97706",
     },
     "tos": {
@@ -55,7 +55,7 @@ DOC_REGISTRY = {
         "title": "Terms and Conditions of Service",
         "version": "v4.5-TOS",
         "last_revised": "2026-09-13",
-        "output_pdf": "Terms_and_Conditions.pdf",
+        "output_pdf": "terms-and-conditions.pdf",
         "accent_color": "#0284c7",
     },
     "wdt": {
@@ -64,7 +64,7 @@ DOC_REGISTRY = {
         "title": "Web Design & Development Terms and Conditions",
         "version": "v3.5-WDT",
         "last_revised": "2026-09-13",
-        "output_pdf": "Web_Design_Terms_and_Conditions.pdf",
+        "output_pdf": "web-design-terms.pdf",
         "accent_color": "#ea580c",
     },
     "priv": {
@@ -73,7 +73,7 @@ DOC_REGISTRY = {
         "title": "Privacy & Personal Information Policy",
         "version": "v4.5-PRIV",
         "last_revised": "2026-09-13",
-        "output_pdf": "Privacy_Policy.pdf",
+        "output_pdf": "privacy-policy.pdf",
         "accent_color": "#059669",
     },
     "sla": {
@@ -82,7 +82,7 @@ DOC_REGISTRY = {
         "title": "Service Level Agreement & Incident Policy",
         "version": "v1.5-SLA",
         "last_revised": "2026-09-12",
-        "output_pdf": "Service_Level_Agreement.pdf",
+        "output_pdf": "service-level-agreement.pdf",
         "accent_color": "#2563eb",
     },
     "vdp": {
@@ -91,7 +91,7 @@ DOC_REGISTRY = {
         "title": "Vulnerability Disclosure Policy (VDP)",
         "version": "v1.5-VDP",
         "last_revised": "2026-09-12",
-        "output_pdf": "Vulnerability_Disclosure_Policy.pdf",
+        "output_pdf": "vulnerability-disclosure-policy.pdf",
         "accent_color": "#7c3aed",
     },
     "cpr": {
@@ -100,7 +100,7 @@ DOC_REGISTRY = {
         "title": "Copyright & Notice-and-Notice Policy",
         "version": "v1.5-CPR",
         "last_revised": "2026-09-12",
-        "output_pdf": "Copyright_Notice_and_Notice_Policy.pdf",
+        "output_pdf": "copyright-policy.pdf",
         "accent_color": "#e11d48",
     },
     "wcp": {
@@ -109,7 +109,7 @@ DOC_REGISTRY = {
         "title": "Website Care Plan & Maintenance Terms",
         "version": "v1.5-WCP",
         "last_revised": "2026-09-13",
-        "output_pdf": "Website_Care_Plan_Terms.pdf",
+        "output_pdf": "website-care-plan-terms.pdf",
         "accent_color": "#0d9488",
     },
 }
@@ -717,7 +717,7 @@ def main():
             if ok:
                 success_count += 1
 
-    print(f"\n[✓] Completed: {success_count}/{len(targets)} PDF(s) generated successfully in {PDF_DIR.relative_to(REPO_ROOT)}/")
+    print(f"\n[✓] Completed: {success_count}/{len(targets)} PDF(s) generated successfully in public root")
     if success_count < len(targets):
         sys.exit(1)
 

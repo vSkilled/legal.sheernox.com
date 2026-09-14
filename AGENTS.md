@@ -14,14 +14,14 @@ This document is the authoritative operational guide for AI coding agents (and d
 
 | Key | HTML Source | Target PDF Output | Plain Text Output | Document Title | Version Tag |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | `terms-and-conditions.txt` | Terms and Conditions of Service | `v4.5-TOS` |
-| `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | `acceptable-use-policy.txt` | Acceptable Use Policy (AUP) | `v4.0-AUP` |
-| `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | `web-design-terms.txt` | Web Design & Development Terms | `v3.5-WDT` |
-| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | `privacy-policy.txt` | Privacy & Personal Information Policy | `v4.5-PRIV` |
-| `sla` | `service-level-agreement.html` | `pdf/Service_Level_Agreement.pdf` | `service-level-agreement.txt` | Service Level Agreement & Incident Policy | `v1.5-SLA` |
-| `vdp` | `vulnerability-disclosure-policy.html` | `pdf/Vulnerability_Disclosure_Policy.pdf` | `vulnerability-disclosure-policy.txt` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` |
-| `cpr` | `copyright-policy.html` | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | `copyright-policy.txt` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` |
-| `wcp` | `website-care-plan-terms.html` | `pdf/Website_Care_Plan_Terms.pdf` | `website-care-plan-terms.txt` | Website Care Plan & Maintenance Terms | `v1.5-WCP` |
+| `tos` | `terms-and-conditions.html` | `terms-and-conditions.pdf` | `terms-and-conditions.txt` | Terms and Conditions of Service | `v4.5-TOS` |
+| `aup` | `acceptable-use-policy.html` | `acceptable-use-policy.pdf` | `acceptable-use-policy.txt` | Acceptable Use Policy (AUP) | `v4.0-AUP` |
+| `wdt` | `web-design-terms.html` | `web-design-terms.pdf` | `web-design-terms.txt` | Web Design & Development Terms | `v3.5-WDT` |
+| `priv` | `privacy-policy.html` | `privacy-policy.pdf` | `privacy-policy.txt` | Privacy & Personal Information Policy | `v4.5-PRIV` |
+| `sla` | `service-level-agreement.html` | `service-level-agreement.pdf` | `service-level-agreement.txt` | Service Level Agreement & Incident Policy | `v1.5-SLA` |
+| `vdp` | `vulnerability-disclosure-policy.html` | `vulnerability-disclosure-policy.pdf` | `vulnerability-disclosure-policy.txt` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` |
+| `cpr` | `copyright-policy.html` | `copyright-policy.pdf` | `copyright-policy.txt` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` |
+| `wcp` | `website-care-plan-terms.html` | `website-care-plan-terms.pdf` | `website-care-plan-terms.txt` | Website Care Plan & Maintenance Terms | `v1.5-WCP` |
 | `hub` | `index.html` | N/A | N/A | Legal Portal Directory & Search Hub | N/A |
 
 ---
@@ -68,7 +68,7 @@ When modifying any document, ensure strict adherence to these legal parameters:
 - **CI/CD Workflow**: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
   - Automatically triggers on every `push` to `main` and `workflow_dispatch`.
   - Re-generates all vector PDFs via headless Chrome.
-  - Deploys static HTML, `pdf/`, and plain text `.txt` documents to Bunny S3 with strict Content-Types.
+  - Deploys static HTML, vector PDF (`.pdf`), and plain text (`.txt`) documents to Bunny S3 with strict Content-Types.
   - Automatically purges the Bunny.net CDN Pull Zone cache on every deployment to ensure instant edge propagation.
   - Runs automated live HTTP health checks against `https://legal.sheernox.com`.
 - **Encrypted GitHub Secrets**:
@@ -176,7 +176,7 @@ Operational Instructions:
 1. Update the appropriate HTML document(s) directly while maintaining the established semantic structure (`<article class="legal-prose">`, `.legal-section`, `.key-takeaway`, etc.).
 2. Update the "Last Revised" date to the current date in ISO 8601 format (`YYYY-MM-DD`) and increment the version tag by 0.5 (format: `vX.X-KEY`, e.g., `v3.5-TOS`).
 3. Ensure Canadian legal standards are strictly preserved (Kamloops BC sole proprietorship, support@sheernox.com for legal/privacy, abuse@sheernox.com for network abuse, official address: `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada`).
-4. Regenerate the production vector PDF(s) in `pdf/` using `python3 scripts/generate_pdfs.py`.
+4. Regenerate the production vector PDF(s) in the public root using `python3 scripts/generate_pdfs.py`.
 5. Regenerate the plain text document(s) using `python3 scripts/generate_txts.py`.
 6. Verify that PDFs render with the simplified top bar (no Governing Law, Entity Status, or Document Code) and show `Last Revised: YYYY-MM-DD • vX.X-KEY` in the footer of all pages.
 7. Keep the repository clean to production code only.

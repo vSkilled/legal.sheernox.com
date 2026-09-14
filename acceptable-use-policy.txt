@@ -7,6 +7,7 @@ Version:        v4.0-AUP
 Last Revised:   2026-09-12
 Web Policy:     https://legal.sheernox.com/acceptable-use-policy.html
 Plain Text:     https://legal.sheernox.com/acceptable-use-policy.txt
+PDF Document:   https://legal.sheernox.com/acceptable-use-policy.pdf
 General Admin:  support@sheernox.com
 Abuse & Sec:    abuse@sheernox.com
 ================================================================================

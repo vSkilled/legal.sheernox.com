@@ -58,11 +58,12 @@ jobs:
 
       - name: Deploy Vector PDFs to Bunny S3
         run: |
-          aws s3 sync pdf/ "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}/pdf" \
+          aws s3 sync . "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}" \
             --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
             --exclude "*" \
             --include "*.pdf" \
             --content-type "application/pdf"
+          aws s3 rm "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}/pdf" --recursive --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" || true
 
       - name: Deploy Plain Text Documents to Bunny S3
         run: |
@@ -97,7 +98,7 @@ jobs:
           echo "Verifying live CDN endpoints on legal.sheernox.com..."
           curl -f -s -I "https://legal.sheernox.com/index.html" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/favicon.ico" | head -n 5
-          curl -f -s -I "https://legal.sheernox.com/pdf/Terms_and_Conditions.pdf" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/terms-and-conditions.pdf" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/terms-and-conditions.txt" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/vulnerability-disclosure-policy.txt" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/website-care-plan-terms.html" | head -n 5

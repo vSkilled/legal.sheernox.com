@@ -29,6 +29,7 @@ DOC_REGISTRY = {
         "version": "v4.5-TOS",
         "last_revised": "2026-09-13",
         "output_txt": "terms-and-conditions.txt",
+        "output_pdf": "terms-and-conditions.pdf",
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
@@ -39,6 +40,7 @@ DOC_REGISTRY = {
         "version": "v4.0-AUP",
         "last_revised": "2026-09-12",
         "output_txt": "acceptable-use-policy.txt",
+        "output_pdf": "acceptable-use-policy.pdf",
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
@@ -49,6 +51,7 @@ DOC_REGISTRY = {
         "version": "v3.5-WDT",
         "last_revised": "2026-09-13",
         "output_txt": "web-design-terms.txt",
+        "output_pdf": "web-design-terms.pdf",
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
@@ -59,6 +62,7 @@ DOC_REGISTRY = {
         "version": "v4.5-PRIV",
         "last_revised": "2026-09-13",
         "output_txt": "privacy-policy.txt",
+        "output_pdf": "privacy-policy.pdf",
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
@@ -69,6 +73,7 @@ DOC_REGISTRY = {
         "version": "v1.5-SLA",
         "last_revised": "2026-09-12",
         "output_txt": "service-level-agreement.txt",
+        "output_pdf": "service-level-agreement.pdf",
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
@@ -79,6 +84,7 @@ DOC_REGISTRY = {
         "version": "v1.5-VDP",
         "last_revised": "2026-09-12",
         "output_txt": "vulnerability-disclosure-policy.txt",
+        "output_pdf": "vulnerability-disclosure-policy.pdf",
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
@@ -89,6 +95,7 @@ DOC_REGISTRY = {
         "version": "v1.5-CPR",
         "last_revised": "2026-09-12",
         "output_txt": "copyright-policy.txt",
+        "output_pdf": "copyright-policy.pdf",
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
@@ -99,6 +106,7 @@ DOC_REGISTRY = {
         "version": "v1.5-WCP",
         "last_revised": "2026-09-13",
         "output_txt": "website-care-plan-terms.txt",
+        "output_pdf": "website-care-plan-terms.pdf",
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
@@ -269,6 +277,7 @@ def build_txt_document(key, doc_info):
     lines.append(f"Last Revised:   {doc_info['last_revised']}")
     lines.append(f"Web Policy:     https://legal.sheernox.com/{doc_info['source']}")
     lines.append(f"Plain Text:     https://legal.sheernox.com/{doc_info['output_txt']}")
+    lines.append(f"PDF Document:   https://legal.sheernox.com/{doc_info['output_pdf']}")
     lines.append(f"General Admin:  {doc_info['support_email']}")
     lines.append(f"Abuse & Sec:    {doc_info['abuse_email']}")
     lines.append(DIVIDER_DOUBLE)

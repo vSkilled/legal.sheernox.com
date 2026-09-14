@@ -7,6 +7,7 @@ Version:        v1.5-SLA
 Last Revised:   2026-09-12
 Web Policy:     https://legal.sheernox.com/service-level-agreement.html
 Plain Text:     https://legal.sheernox.com/service-level-agreement.txt
+PDF Document:   https://legal.sheernox.com/service-level-agreement.pdf
 General Admin:  support@sheernox.com
 Abuse & Sec:    abuse@sheernox.com
 ================================================================================

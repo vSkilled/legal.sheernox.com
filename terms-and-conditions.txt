@@ -7,6 +7,7 @@ Version:        v4.5-TOS
 Last Revised:   2026-09-13
 Web Policy:     https://legal.sheernox.com/terms-and-conditions.html
 Plain Text:     https://legal.sheernox.com/terms-and-conditions.txt
+PDF Document:   https://legal.sheernox.com/terms-and-conditions.pdf
 General Admin:  support@sheernox.com
 Abuse & Sec:    abuse@sheernox.com
 ================================================================================
