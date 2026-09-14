@@ -1,0 +1,292 @@
+================================================================================
+SHEERNOX TECHNOLOGY GROUP - PRIVACY & PERSONAL INFORMATION POLICY
+================================================================================
+Document:       Privacy & Personal Information Policy
+Entity:         Sheernox Technology Group (Kamloops, BC, Canada)
+Version:        v4.5-PRIV
+Last Revised:   2026-09-13
+Web Policy:     https://legal.sheernox.com/privacy-policy.html
+Plain Text:     https://legal.sheernox.com/privacy-policy.txt
+General Admin:  support@sheernox.com
+Abuse & Sec:    abuse@sheernox.com
+================================================================================
+
+1.0 DATA CONTROLLER & POLICY SCOPE
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Sheernox Technology Group is a sole proprietorship registered at 1-1885
+Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada, acting as the data controller
+for your personal information. We operate under the privacy standards of
+Canada's PIPEDA, British Columbia's PIPA, and international privacy regulations.
+
+This Privacy Policy governs the manner in which Sheernox Technology Group
+("Sheernox", "We", "Us", or "Our"), a sole proprietorship registered at 1-1885
+Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada, collects, uses, maintains, and
+discloses information collected from users, clients, and visitors (each, a
+"User") of our websites, client portal (my.sheernox.com), cloud infrastructure,
+and hosting services.
+
+1.1 Registered Entity & Data Controller:
+    SHEERNOX TECHNOLOGY GROUP (Registered Sole Proprietorship in British
+    Columbia, Canada) Registration Number: FM0707819 Business Number:
+    732754924BC0001 Original Registration Date: October 29, 2009 1-1885
+    Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada Contact Email:
+    support@sheernox.com Direct Client Portal: https://my.sheernox.com
+
+2.0 INFORMATION WE COLLECT
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+We collect personal details you provide during registration (name, company,
+email, phone, billing address), technical usage data (IP address, browser
+telemetry), and payment details handled securely by certified payment
+processors.
+
+2.1 Direct Account Information:
+    When registering for Sheernox services or opening support tickets, we
+    collect: full name, corporate name, email address, telephone number,
+    physical mailing address, billing details, and login credentials.
+
+2.2 Technical & Usage Telemetry:
+    When navigating our websites and client dashboard, we collect standard
+    server logs, IP addresses, browser user-agent strings, referring URLs,
+    operating system signatures, and session timestamps.
+
+2.3 Payment Information:
+    Credit card and banking transactions are tokenized and processed through
+    PCI-DSS Level 1 certified gateways (Stripe, PayPal). Sheernox does not store
+    full credit card numbers or CVV codes on our local servers.
+
+3.0 HOW WE USE PERSONAL DATA
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+We process your data strictly to deliver services, bill your account, prevent
+fraud and security threats, send critical server announcements, and provide 24/7
+technical support. We never sell your personal data.
+
+We process your Personal Data on the following lawful bases under GDPR Article 6
+and PIPEDA:
+
+- Contractual Performance: Provisioning web hosting accounts, configuring domain
+  names, managing cloud hypervisors, and processing invoices.
+- Security & Legitimate Interests: Monitoring network integrity, thwarting
+  brute-force attacks, filtering outbound spam, and safeguarding our IP
+  reputation.
+- Legal Compliance: Maintaining financial records, tax accounting, and
+  responding to lawful subpoenas or court orders.
+- Consent: Sending voluntary product updates, newsletters, or marketing alerts
+  where explicit opt-in is provided.
+
+4.0 SOLUTION-SPECIFIC DATA PROCESSING
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Depending on what services you use, we process specific data: WHOIS info for
+domains, mail routing headers for email spam protection, edge caching logs for
+CDN, and encrypted offsite copies for backups.
+
+4.1 Domain Name Registrations:
+    To register and maintain domains, registrant contact data is transmitted to
+    accredited ICANN registrars and registry operators. WHOIS privacy masking is
+    enabled by default where supported.
+
+4.2 Email Hosting & SPAM Filtering:
+    Outbound and inbound email transmissions pass through automated spam and
+    virus inspection filters. Message headers and routing logs are maintained
+    for thirty (30) days for deliverability diagnostics.
+
+4.3 DNS & CDN Edge Networks:
+    DNS queries and CDN proxy traffic pass through global edge nodes (including
+    Cloudflare and Anycast networks) to mitigate volumetric DDoS attacks and
+    accelerate asset delivery. Edge logs cache IP requests temporarily for
+    security telemetry.
+
+4.4 Storage & Disaster Recovery Backups:
+    Automated snapshots and scheduled client backups are encrypted using AES-256
+    before transmission to isolated offsite data vaults.
+
+4.5 Website Care & Maintenance Retainers:
+    When performing CMS updates and plugin maintenance, authorized Sheernox
+    engineers may access client staging or production administrative dashboards
+    under strict non-disclosure obligations.
+
+5.0 THIRD-PARTY SUB-PROCESSORS & INFRASTRUCTURE PARTNERS
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+We work with trusted enterprise cloud hosting and infrastructure partners to
+deliver compute, edge caching, payments, and system monitoring. Each partner is
+bound by strict confidentiality and data protection standards.
+
+We engage vetted third-party service providers to support our platform
+infrastructure:
+
+--------------------------------------------------------------------------------
+[Stripe & PayPal]
+  Role & Purpose: Payment gateway & recurring billing
+  Data Processed: Billing name, tokenized payment card, address
+
+[OVHcloud (OVH.com)]
+  Role & Purpose: Bare-metal dedicated server infrastructure, network transit &
+                  DDoS mitigation
+  Data Processed: Hosted server disk volumes, system logs & encrypted client
+                  assets
+
+[Vultr (The Constant Company)]
+  Role & Purpose: High-performance cloud compute, VPS instances & NVMe block
+                  storage
+  Data Processed: Virtual server filesystem data, operating system snapshots &
+                  ephemeral routing data
+
+[Microsoft Azure]
+  Role & Purpose: Enterprise cloud compute, hypervisor virtualization & regional
+                  infrastructure services
+  Data Processed: System disk images, containerized workloads & operational
+                  diagnostic telemetry
+
+[Google Cloud Compute (GCP)]
+  Role & Purpose: Cloud compute nodes, redundant hypervisor failover &
+                  distributed object storage
+  Data Processed: Virtual machine instances, encrypted snapshot archives &
+                  networking telemetry
+
+[Cloudflare]
+  Role & Purpose: Edge CDN caching, DNS & DDoS mitigation
+  Data Processed: IP address, request headers, web traffic telemetry
+
+[Bunny.net CDN]
+  Role & Purpose: Static asset delivery & portal caching
+  Data Processed: Anonymized asset requests & cache hits
+
+[Amazon Web Services (AWS)]
+  Role & Purpose: Encrypted cold-storage disaster recovery
+  Data Processed: Encrypted database and file archives
+
+[Uptime Robot]
+  Role & Purpose: Infrastructure health & SLA monitoring
+  Data Processed: Server endpoint responsiveness metrics
+--------------------------------------------------------------------------------
+
+5.1 Cross-Border Transfers & US CLOUD Act Disclosure:
+    Sheernox Technology Group is headquartered in British Columbia, Canada.
+    While we endeavor to host data within Canadian or European data centers
+    where requested, certain infrastructure partners (including Microsoft
+    Corporation, Google LLC, The Constant Company [Vultr], Amazon Web Services,
+    Inc., and Cloudflare, Inc.) are corporate entities organized under the laws
+    of the United States. Pursuant to foreign legal frameworks—including the
+    United States Clarifying Lawful Oversight of Use of Data (CLOUD) Act (18
+    U.S.C. § 2713) and foreign intelligence surveillance authorities—data stored
+    or processed on systems operated by US-headquartered providers may be
+    subject to lawful production orders, search warrants, or subpoenas issued by
+    foreign law enforcement or judicial authorities, without invoking the
+    Canada–United States Mutual Legal Assistance Treaty (MLAT). To mitigate
+    cross-border exposure, Sheernox encourages and supports client-side
+    encryption (including TLS 1.3 in transit, LUKS/BitLocker storage encryption,
+    and client-managed cryptographic keys) so that underlying filesystem data
+    remains unreadable ciphertext.
+
+6.0 COOKIES & TRACKING TECHNOLOGIES
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+We use essential cookies to keep you logged into the client portal and preserve
+session security. You can manage or disable optional cookies through your
+browser settings.
+
+6.1 Essential Cookies:
+    Required for authentication in the Sheernox Client Portal, CSRF security
+    verification, and shopping cart persistence during checkout. These cannot be
+    disabled without breaking portal functionality.
+
+6.2 Performance & Analytics:
+    Aggregated, anonymized analytics measuring site speed, error rates, and
+    popular navigation routes to improve system responsiveness.
+
+7.0 DATA RETENTION & SECURITY SAFEGUARDS
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+We store your data as long as your account remains active. After account
+cancellation, data is removed from active servers within 30 days, while billing
+records are preserved for 7 years to satisfy statutory tax laws.
+
+7.1 Security Architecture:
+    We implement modern administrative, technical, and physical safeguards: TLS
+    1.3 encryption in transit, strict role-based access control, SSH key
+    authentication, automated intrusion detection, and multi-factor
+    authentication for administrative personnel.
+
+7.2 Retention Schedule:
+    Upon account termination, hosted server content and database records are
+    purged within thirty (30) days. Invoices and financial accounting
+    transaction histories are retained for seven (7) years to satisfy statutory
+    revenue audits.
+
+8.0 CANADIAN & GLOBAL PRIVACY RIGHTS (PIPEDA, BC PIPA & GDPR)
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Under Canadian federal and British Columbia provincial law, you have the right
+to access, inspect, and correct your personal information. Sheernox never sells
+customer data, and you have the statutory right to address any unresolved
+privacy concerns with the BC Privacy Commissioner.
+
+As a sole proprietorship established in British Columbia, Canada, Sheernox
+complies with the Personal Information Protection and Electronic Documents Act
+(PIPEDA, S.C. 2000, c. 5) and the British Columbia Personal Information
+Protection Act (PIPA, SBC 2003, c. 63). We also honor reciprocal data subject
+rights under the European General Data Protection Regulation (GDPR) and
+California CCPA/CPRA:
+
+8.1 Core Rights:
+    - Right of Access & Transparency: Request written confirmation of whether we
+      hold personal information concerning you, the purposes for which it has
+      been used, and any third-party sub-processors to whom it has been
+      disclosed.
+    - Right of Rectification: Request correction of inaccurate, outdated, or
+      incomplete personal data via our portal or by notifying our Privacy
+      Officer.
+    - Right to Withdraw Consent: Withdraw consent for non-essential data
+      processing at any time, subject to legal or contractual restrictions.
+    - Right to Erasure & Deletion: Request deletion of your personal data upon
+      closure of your account, subject to statutory 7-year financial audit
+      retentions.
+    - Right to Data Portability: Obtain a structured, machine-readable export of
+      account records and customer data.
+
+8.2 Regulatory Oversight & Complaints:
+    If you are dissatisfied with our response to a privacy request, you have the
+    statutory right to lodge a complaint with:
+    - Office of the Information and Privacy Commissioner for British Columbia
+      (OIPC BC): PO Box 9038 Stn Prov Govt, Victoria B.C. V8W 9A4 •
+      www.oipc.bc.ca
+    - Office of the Privacy Commissioner of Canada (OPC): 30 Victoria Street,
+      Gatineau, Quebec K1A 1H3 • www.priv.gc.ca
+
+9.0 CHILDREN’S ONLINE PRIVACY PROTECTION
+--------------------------------------------------------------------------------
+9.1 Age Restriction:
+    Sheernox technology services are designed strictly for adult commercial
+    operators, businesses, and individuals aged eighteen (18) or older. We do
+    not knowingly solicit or collect personal information from children under
+    the age of 13.
+
+10.0 CONTACT INFORMATION & PRIVACY INQUIRIES
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+If you have any questions, requests, or privacy complaints, please contact our
+Compliance Office via email or physical mail. We respond within thirty (30)
+days.
+
+10.1 Privacy Inquiries Contact:
+    Data Protection & Privacy Inquiries Sheernox Technology Group 1-1885
+    Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada Email: support@sheernox.com
+    (Attn: Data Privacy Officer) Client Support Portal: https://my.sheernox.com
+
+================================================================================
+OFFICIAL CONTACT & GOVERNING JURISDICTION COORDINATES
+--------------------------------------------------------------------------------
+Entity:                  Sheernox Technology Group (Sole Proprietorship)
+Registration Number:     FM0707819 (Province of British Columbia)
+Business Number:         732754924BC0001 (Canada Revenue Agency)
+Physical Address:        1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada
+Governing Law:           Province of British Columbia and Federal Laws of Canada
+Exclusive Legal Venue:   Courts of British Columbia in Kamloops, BC, Canada
+General & Legal Inquiries: support@sheernox.com
+Abuse & Security Incidents: abuse@sheernox.com
+Client Support Hub:      https://my.sheernox.com
+================================================================================

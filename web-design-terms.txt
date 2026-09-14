@@ -1,0 +1,456 @@
+================================================================================
+SHEERNOX TECHNOLOGY GROUP - WEB DESIGN & DEVELOPMENT TERMS AND CONDITIONS
+================================================================================
+Document:       Web Design & Development Terms and Conditions
+Entity:         Sheernox Technology Group (Kamloops, BC, Canada)
+Version:        v3.5-WDT
+Last Revised:   2026-09-13
+Web Policy:     https://legal.sheernox.com/web-design-terms.html
+Plain Text:     https://legal.sheernox.com/web-design-terms.txt
+General Admin:  support@sheernox.com
+Abuse & Sec:    abuse@sheernox.com
+================================================================================
+
+0.0 PREAMBLE & SCOPE OF AGENCY SERVICES
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+This Master Agreement sets the standard terms for all creative, branding, UI/UX
+design, custom web engineering, e-commerce, application development, and ongoing
+website care services provided by Sheernox Technology Group. Specific
+deliverables, technologies, timelines, and budgets are defined in your project
+Statement of Work (SOW).
+
+This Creative & Web Development Services Agreement is entered into by and
+between Sheernox Technology Group ("Sheernox", "Agency", "We", "Us", or "Our"),
+a sole proprietorship registered in the Province of British Columbia, Canada
+(Registration Number: FM0707819, Business Number: 732754924BC0001, Original
+Registration Date: October 29, 2009), based at 1-1885 Grasslands Blvd, Kamloops,
+BC, V2B 0B8, Canada, and the commissioning client, business, or individual
+("Customer", "Client", or "You") identified in an accompanying Statement of
+Work, estimate, project proposal, or service invoice.
+
+0.1 Scope of Agency Services:
+    Sheernox provides comprehensive digital agency and engineering solutions,
+    including but not limited to:
+    - Website Design & Development: Bespoke corporate websites, marketing
+      landing pages, headless/decoupled architectures, static sites, and Content
+      Management Systems (CMS).
+    - Web Applications & Custom Portals: Single-page applications (SPAs), secure
+      client portals, dashboards, custom databases, and API integrations.
+    - E-Commerce Solutions: Online storefront design, catalog setup, inventory
+      workflows, and PCI-compliant third-party checkout integrations.
+    - Branding & UI/UX Architecture: Brand identity guidelines, logo design,
+      design systems, wireframes, interactive user flows, and high-fidelity
+      clickable prototypes.
+    - Website Care & Support Retainers: Proactive security patching, core/plugin
+      dependency management, cloud backups, and ongoing technical maintenance.
+
+0.2 Contracting Capacity & Order Formation:
+    Services are performed only for individuals and commercial entities who are
+    eighteen (18) years of age or older. An "order" or "engagement" constitutes
+    a legally binding contract formed upon receipt of written or electronic
+    instructions, including signed Statements of Work (SOW), email
+    confirmations, deposit payments, or electronic authorization via the
+    Sheernox Client Portal (my.sheernox.com).
+
+0.3 SOW Hierarchy:
+    Where project deliverables, schedules, milestone payments, or technical
+    stacks are specified in an approved Statement of Work, such specifications
+    shall control in the event of any direct conflict with the general terms
+    herein. Infrastructure hosting, domain registrations, and DNS management
+    remain co-governed by the Master Terms and Conditions and Acceptable Use
+    Policy.
+
+1.0 PROJECT LIFECYCLE & STAGING REVIEW
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Projects follow a structured, collaborative lifecycle: Discovery → Design &
+Prototyping → Development → Staging QA → Production Launch. You review working
+builds on a secure staging server before public release.
+
+Upon execution of a Statement of Work and receipt of the required initiation
+deposit, Sheernox schedules and executes the project through the following
+progressive lifecycle:
+
+1.1 Discovery & Technical Architecture:
+    Sheernox collaborates with Client to define project goals, user journeys,
+    functional specifications, content requirements, and technical architecture
+    documented in the project brief or SOW.
+
+1.2 UI/UX Concepts & Prototyping:
+    Sheernox produces interactive wireframes, component design systems, or
+    visual design concepts for Client review and aesthetic alignment.
+
+1.3 Engineering & Integration:
+    Following design milestone sign-off, Sheernox builds the frontend
+    interfaces, server-side logic, database schemas, third-party API connectors,
+    and content structures.
+
+1.4 Staging Review & Quality Assurance:
+    Prior to public deployment, deliverables are assembled and tested on a
+    secure, authenticated Sheernox staging subdomain for cross-device
+    validation, performance auditing, and Client functional inspection.
+
+1.5 Final Delivery & Public Deployment:
+    Following final milestone acceptance and settlement of project invoices,
+    Sheernox coordinates DNS cutover, SSL certificate provisioning, and
+    production deployment.
+
+2.0 TECHNOLOGY STACKS & ARCHITECTURE FLEXIBILITY
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Sheernox does not force you into a single platform or proprietary CMS. We
+engineer solutions across modern CMSs, headless frameworks, static site
+generators, e-commerce engines, or custom web apps based on what best suits your
+project requirements.
+
+2.1 Technology Agnostic Architecture:
+    Sheernox develops across a broad spectrum of modern software stacks. The
+    specific technology stack is chosen collaboratively and detailed in the
+    project SOW, which may include:
+    - Content Management Systems: Traditional, decoupled, or headless CMS
+      platforms (e.g. WordPress, Shopify, Webflow, Craft CMS, Strapi, Sanity, or
+      Ghost).
+    - Modern Jamstack & Static Frameworks: Pre-rendered, high-performance static
+      architectures (e.g. Astro, Next.js, Nuxt, SvelteKit, Hugo, or clean
+      semantic HTML5/CSS/JavaScript).
+    - Custom Web Applications: Bespoke single-page applications, custom
+      relational database architectures (PostgreSQL, MySQL), RESTful/GraphQL
+      APIs, and serverless edge functions.
+    - E-Commerce Platforms: Tailored shopping carts, automated checkout funnels,
+      catalog filtering, and multi-currency payment processing.
+
+2.2 Administrative Access & Handover:
+    Where an administrative CMS, headless dashboard, or self-service backend is
+    scoped in the SOW, Sheernox configures administrative credentials, security
+    roles, and delivers orientation documentation or training as specified.
+
+2.3 Out-of-Scope Hourly Services:
+    Any feature request, third-party plugin integration, bespoke database
+    migration, or consulting service not itemized in the approved SOW or
+    estimate shall be deemed out of scope and billed on a time-and-materials
+    basis at Sheernox’s prevailing professional hourly rates.
+
+3.0 TECHNICAL SPECIFICATIONS & DEVELOPER DISCRETION
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+While project goals, branding, and functional requirements are decided
+collaboratively with you, Sheernox maintains technical discretion over coding
+practices, framework patterns, and database structures to ensure code quality,
+speed, and security.
+
+3.1 Professional Engineering Standards:
+    Sheernox agrees to build deliverables following industry-recognized web
+    engineering standards, semantic markup conventions, responsive UI
+    principles, accessibility fundamentals, and modern security hardening
+    guidelines.
+
+3.2 Technical Discretion:
+    All decisions regarding specific coding techniques, programming languages,
+    build pipelines, dependency libraries, component structures, database
+    schemas, relational mapping, font subsetting, and responsive implementation
+    logic remain the professional prerogative of Sheernox Technology Group in
+    fulfilling the agreed functional requirements of the SOW.
+
+4.0 CLIENT COLLABORATION, REVISIONS & SIGN-OFF
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Design milestones include up to two consolidated rounds of minor revisions. You
+have 10 business days to provide feedback or approvals; silence beyond 10 days
+counts as milestone acceptance so schedules stay on track. Dormant projects (30+
+days inactive) may incur a reactivation fee.
+
+4.1 Consolidated Revision Rounds:
+    Unless otherwise specified in the SOW, each design and layout milestone
+    includes up to two (2) consolidated rounds of feedback and minor revisions
+    to typography, color balance, visual assets, and content placement.
+
+4.2 10-Day Deemed Acceptance:
+    Client agrees to review deliverables and provide written feedback or formal
+    milestone approval within ten (10) business days of milestone presentation.
+    Failure to communicate feedback within ten (10) business days constitutes
+    constructive acceptance of that deliverable milestone.
+
+4.3 Scope Expansion & Change Orders:
+    Requests for major structural changes, architectural redesigns, or feature
+    additions exceeding the approved SOW will be scoped under a written Change
+    Order reflecting revised costs and delivery schedules.
+
+4.4 Project Dormancy & Reactivation:
+    If a project is stalled or delayed due to Client inaction, missing assets,
+    or lack of feedback for more than thirty (30) consecutive calendar days,
+    Sheernox may pause the project, invoice for all hours and milestones
+    completed to date, and require a project reactivation fee to re-allocate
+    engineering resources.
+
+5.0 HOSTING, EXTERNAL DEPLOYMENTS & FILE FEE
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Projects are optimized to run on Sheernox cloud servers. If you choose to host
+on third-party cloud environments or request an export archive package, a $250
+CAD deployment packaging fee covers engineering labor, and third-party hosting
+server warranties are disclaimed.
+
+5.1 Managed Sheernox Cloud Infrastructure:
+    Turn-key deployment on Sheernox cloud servers provides integrated
+    performance optimization, automated snapshot backups, SSL management,
+    Anycast CDN edge routing, and 24/7 server monitoring.
+
+5.2 External Cloud Hosting & $250 CAD Packaging Fee:
+    Client may elect to deploy their completed website to a third-party server,
+    cloud platform (e.g. AWS, Cloudflare, Vercel, Netlify, or client-owned
+    infrastructure), or request an offline archive package. External deployment,
+    database migration, and archival bundling automatically incur a $250.00 CAD
+    deployment & file packaging fee.
+    Clarification: This fee compensates the DevOps engineering labor required to
+    sanitize configuration secrets, export databases, package assets, and verify
+    dependency compatibility for external third-party environments.
+
+5.3 Third-Party Server Warranty Disclaimer:
+    Deploying to external servers relieves Sheernox from all liability
+    concerning server downtime, third-party infrastructure faults, operating
+    system incompatibilities, or data loss. Sheernox is not responsible for
+    troubleshooting external third-party server environments unless retained
+    under a separate Server Management agreement.
+
+6.0 30-DAY POST-LAUNCH WARRANTY
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+We stand behind our work. For 30 days after launch, Sheernox will fix any
+functional bugs or defects that deviate from the approved project scope at no
+extra charge.
+
+6.1 Thirty-Day Bug Resolution Window:
+    Sheernox warrants that for thirty (30) calendar days following public
+    production deployment or project handoff, Sheernox will investigate and
+    repair reproducible functional bugs, broken styling, or code defects that
+    fail to conform to the agreed SOW specifications at no additional cost to
+    Client.
+
+6.2 Warranty Exclusions:
+    This warranty does not apply to: (a) issues arising from Client or
+    third-party modifications to source code, databases, or CMS settings; (b)
+    disruptions caused by third-party APIs, plugins, or software updates
+    released after launch; (c) server environment changes on non-Sheernox
+    hosting; or (d) browser deprecations occurring after delivery.
+
+7.0 WEBSITE CARE & ONGOING MAINTENANCE
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Ongoing maintenance is not included in initial design packages by default. Once
+the 30-day warranty ends, clients not enrolled in a Website Care plan are
+responsible for software updates and security patches. Ongoing support can be
+added via a monthly maintenance retainer.
+
+7.1 Separate Care Plans:
+    Website Care packages (including regular core updates, security patches,
+    plugin compatibility testing, automated off-site backups, and uptime
+    monitoring) are offered separately under recurring monthly or annual
+    retainers and are not bundled into base design and development contracts.
+
+7.2 Client Upkeep on Unmanaged Sites:
+    Client acknowledges that if they are not subscribed to an active Website
+    Care plan, Client assumes full responsibility for all software maintenance,
+    security updates, and performance monitoring once the 30-day warranty
+    concludes. Subsequent maintenance, bug fixes, or feature updates will be
+    charged on a per-incident or hourly basis.
+
+8.0 CLIENT MATERIALS, THIRD-PARTY ASSETS & APIS
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+You must own or have rights to all text, logos, and photos you provide to us.
+You are responsible for commercial font licenses, third-party software
+subscriptions, and API costs (e.g. Stripe, Google Maps).
+
+8.1 Client Materials & Warranty:
+    Client warrants that all copy, photographs, trademarks, brand assets, and
+    media provided to Sheernox are owned by Client or properly licensed. Client
+    agrees to defend, indemnify, and hold harmless Sheernox from any third-party
+    intellectual property or copyright claims arising from client-furnished
+    content.
+
+8.2 Commercial Fonts, Plugins & API Integrations:
+    Commercial stock assets, web font licenses, proprietary plugins, and
+    third-party SaaS services (e.g. Stripe, PayPal, Google Maps, SendGrid,
+    Shopify, Algolia) required for project functionality are licensed to Client.
+    Client remains responsible for ongoing software license renewals, SaaS
+    subscription fees, and API usage charges. Sheernox is not liable for changes
+    or outages in third-party API services.
+
+9.0 INTELLECTUAL PROPERTY, COPYRIGHT & CODE THEFT
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+Once all project invoices are paid in full, full copyright in your custom
+website design and bespoke code is automatically transferred to you. Taking,
+scraping, or deploying files before full payment is treated as criminal theft
+under Canadian law. Sheernox retains the right to showcase the work in our
+portfolio.
+
+9.1 IP Retention Until Full Payment:
+    All bespoke visual layouts, custom code, graphics, and project deliverables
+    remain the exclusive intellectual property of Sheernox Technology Group
+    until all project invoices are settled in full.
+
+9.2 Automatic Transfer Upon Settlement:
+    Upon full and final settlement of all project invoices, Sheernox
+    automatically transfers to Customer all right, title, and copyright in the
+    bespoke visual design, layout styling, graphics, and custom source code
+    written specifically for Customer under the SOW.
+
+9.3 Pre-Existing Agency Tools & Open Source:
+    Sheernox retains ownership of its pre-existing codebases, developer
+    boilerplates, internal scripts, and reusable framework components ("Agency
+    Tools"). Sheernox grants Customer a perpetual, worldwide, non-exclusive,
+    royalty-free license to use such Agency Tools solely as incorporated into
+    the delivered project. Third-party open-source libraries (MIT, Apache, GPL)
+    remain subject to their respective open-source licenses.
+
+9.4 Criminal Code of Canada Protection:
+    Any unauthorized extraction, scraping, deployment, or theft of project
+    deliverables or staging assets prior to full payment constitutes criminal
+    theft corresponding to Sections 322 through 380 of the Criminal Code of
+    Canada (R.S.C., 1985, c. C-46) and will be prosecuted under criminal and
+    civil law.
+
+9.5 Portfolio & Case Study Rights:
+    Sheernox reserves the professional right to showcase completed project
+    designs, screenshots, case studies, and live links in its design portfolio,
+    marketing presentations, and agency promotional channels.
+
+10.0 PAYMENT TERMS, DEPOSITS & DELINQUENCY
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+A 50% non-refundable deposit is required to start work. Invoices are net 30
+days, with 1.8% monthly late interest. Unpaid accounts may have staging or site
+access suspended, and delinquent balances will be pursued through the Small
+Claims Court of BC with full legal costs.
+
+10.1 50% Non-Refundable Deposit:
+    Unless an alternative milestone payment schedule is stipulated in the SOW,
+    Customer shall pay an initiation deposit equal to fifty percent (50%) of the
+    total project estimate prior to work commencement. The initiation deposit is
+    non-refundable.
+
+10.2 Milestone Settlements:
+    Subsequent milestone payments are due upon completion of designated project
+    phases, with final balances payable prior to public production release or
+    code repository handoff.
+
+10.3 Net 30 Terms & 1.8% Monthly Late Interest:
+    Invoices are payable net thirty (30) days from issuance. Overdue balances
+    accrue late interest at 1.8% per month (23.87% per annum compounded monthly)
+    for each month or fraction thereof that payment remains outstanding.
+
+10.4 Suspension Remedies:
+    In the event of non-payment or uncommunicated payment delays, Sheernox may
+    pause active work, disable staging or live website access, and remove
+    project web pages from public view until accounts are brought current.
+
+10.5 Small Claims Court Enforcement:
+    Sheernox reserves the right to pursue unpaid accounts through the Small
+    Claims Court of British Columbia or the Supreme Court of British Columbia.
+    Customer agrees to pay all collection agency expenses, court filing fees,
+    and legal fees incurred by Sheernox on a full solicitor-and-own-client
+    indemnity basis.
+
+11.0 REFUND POLICY & DISPUTE ADMINISTRATIVE FEES
+--------------------------------------------------------------------------------
+11.1 Non-Refundable Payments:
+    All payments made to Sheernox Technology Group are strictly non-refundable
+    once work has commenced. All overcharges or billing discrepancies must be
+    reported in writing within twenty-one (21) days of transaction date.
+
+11.2 Frivolous Chargeback Fee ($250 – $500 CAD):
+    If Customer initiates an unjustified credit card chargeback for valid
+    services performed under this Agreement or an approved SOW, Customer agrees
+    to pay an Administrative Fee of not less than $250.00 CAD and not more than
+    $500.00 CAD to cover investigation and merchant dispute administrative
+    costs.
+
+12.0 CROSS-BROWSER & DEVICE STANDARDS
+--------------------------------------------------------------------------------
+12.1 Modern Evergreen Browsers:
+    Deliverables are engineered to render reliably across current evergreen
+    desktop and mobile browsers (Google Chrome, Apple Safari, Mozilla Firefox,
+    Microsoft Edge) and modern iOS/Android viewport sizes.
+
+12.2 Legacy Engines Disclaimed:
+    Sheernox expressly disclaims compatibility with obsolete, discontinued, or
+    non-standard browsers, including Microsoft Internet Explorer, legacy
+    Trident/Presto engines, or unpatched legacy mobile operating systems.
+
+13.0 LIMITATION OF LIABILITY, INDEMNITY & SURVIVAL
+--------------------------------------------------------------------------------
+13.1 Third-Party End-User Disputes:
+    Sheernox is not a party to and disclaims liability for disputes between
+    Customer (the website owner) and Customer's end-users, clients, or
+    subscribers.
+
+13.2 Consequential Damages & Business Interruption:
+    Sheernox shall not be liable for any indirect, incidental, special, or
+    consequential damages, including loss of business revenue, search engine
+    ranking shifts, downtime losses, or missed business opportunities.
+
+13.3 Security Vulnerabilities & Attack Disclaimers:
+    Sheernox builds systems adhering to professional security standards;
+    however, Sheernox is not liable for damages caused by compromised Customer
+    credentials, zero-day software vulnerabilities, unauthorized hacking,
+    malware injection on client hardware, or distributed denial of service
+    (DDoS) attacks.
+
+13.4 Content, Editorial & Typographical Disclaimers:
+    Sheernox is not liable for typographical errors, spelling mistakes, literary
+    phrasing, or grammatical inaccuracies in content provided or approved by
+    Customer, nor for damages resulting from client-supplied visual media.
+
+13.5 Total Liability Cap:
+    Sheernox's total aggregate liability for any and all claims arising out of
+    or related to an engagement shall not exceed the total fees actually
+    received by Sheernox from Customer under the specific Statement of Work
+    giving rise to the claim.
+
+13.6 Survival:
+    This document in its entirety, including all limitation of liability,
+    indemnity, intellectual property, and payment enforcement provisions, shall
+    survive the completion, expiration, or termination of this Agreement.
+
+14.0 GOVERNING LAW & BRITISH COLUMBIA VENUE
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+This agreement is governed exclusively by the laws of British Columbia and
+Canada. Any legal proceedings must take place in the courts of Kamloops, BC.
+Initiating an order or payment constitutes binding acceptance.
+
+14.1 British Columbia Governing Law & Venue:
+    This Agreement and any Statement of Work shall be governed by and construed
+    pursuant to the laws of the Province of British Columbia and the federal
+    laws of Canada applicable therein. Any legal action or proceeding arising
+    out of or related to this Agreement shall be brought exclusively in the
+    courts of British Columbia sitting in the City of Kamloops, British
+    Columbia, Canada.
+
+14.2 Electronic Execution & Implied Authority:
+    Agreement to these terms is legally formed pursuant to the British Columbia
+    Electronic Transactions Act (SBC 2001, c. 10). Customer’s legal execution is
+    implied upon written approval of an SOW, digital confirmation, or initiation
+    of payment to Sheernox Technology Group.
+
+14.3 Taxes & Currency:
+    All prices are stated in Canadian Dollars (CAD) unless explicitly designated
+    otherwise in a formal SOW. Applicable Goods and Services Tax (GST) and
+    British Columbia Provincial Sales Tax (PST) will be assessed in accordance
+    with statutory regulations.
+
+================================================================================
+OFFICIAL CONTACT & GOVERNING JURISDICTION COORDINATES
+--------------------------------------------------------------------------------
+Entity:                  Sheernox Technology Group (Sole Proprietorship)
+Registration Number:     FM0707819 (Province of British Columbia)
+Business Number:         732754924BC0001 (Canada Revenue Agency)
+Physical Address:        1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada
+Governing Law:           Province of British Columbia and Federal Laws of Canada
+Exclusive Legal Venue:   Courts of British Columbia in Kamloops, BC, Canada
+General & Legal Inquiries: support@sheernox.com
+Abuse & Security Incidents: abuse@sheernox.com
+Client Support Hub:      https://my.sheernox.com
+================================================================================

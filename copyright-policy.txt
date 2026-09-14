@@ -1,0 +1,274 @@
+================================================================================
+SHEERNOX TECHNOLOGY GROUP - COPYRIGHT NOTICE & NOTICE-AND-NOTICE POLICY
+================================================================================
+Document:       Copyright Notice & Notice-and-Notice Policy
+Entity:         Sheernox Technology Group (Kamloops, BC, Canada)
+Version:        v1.5-CPR
+Last Revised:   2026-09-12
+Web Policy:     https://legal.sheernox.com/copyright-policy.html
+Plain Text:     https://legal.sheernox.com/copyright-policy.txt
+General Admin:  support@sheernox.com
+Abuse & Sec:    abuse@sheernox.com
+================================================================================
+
+0.0 STATUTORY MANDATE & PURPOSE
+--------------------------------------------------------------------------------
+Sheernox Technology Group ("Sheernox", "we", "us", or "our"), an unincorporated
+sole proprietorship registered in the Province of British Columbia, Canada,
+operates digital infrastructure including web hosting, virtual private servers
+(VPS), cloud platforms, domain name systems, and managed network services.
+
+Sheernox respects the legitimate intellectual property rights of copyright
+holders worldwide while rigorously upholding the statutory due process, digital
+privacy rights, and legislative balance enacted under Canadian law. This
+Copyright & Notice-and-Notice Policy sets forth our compliance procedures under
+the Canadian Copyright Act (R.S.C. 1985, c. C-42, as amended), delineating the
+rights and obligations of copyright owners, Sheernox subscribers, and our
+designated compliance operations.
+
+[CORE SUMMARY]
+Sheernox complies fully with the Canadian Copyright Act Notice-and-Notice
+regime. We forward formal infringement notices to subscribers without fee,
+retain identity records for 6 to 12 months as mandated by law, and never release
+subscriber identities without a Canadian court order.
+
+1.0 THE CANADIAN NOTICE-AND-NOTICE REGIME
+--------------------------------------------------------------------------------
+Under Sections 31.1, 41.25, and 41.26 of the Canadian Copyright Act, Canada
+maintains a statutory Notice-and-Notice regime governing internet intermediaries
+and hosting service providers.
+
+Unlike the United States "Notice-and-Takedown" model under 17 U.S.C. § 512,
+Canadian law does not require or authorize a network intermediary to
+unilaterally censor, takedown, or disable access to subscriber content upon
+receipt of an unadjudicated infringement notice from a third party.
+
+Instead, the statutory obligation of Sheernox as an intermediary is two-fold:
+
+1.1 Notice Forwarding:
+    Forward the statutory notice of alleged infringement to the subscriber
+    associated with the identified IP address or hosting account without delay
+    and without charging any administrative fee (s. 41.26(1)(a)).
+
+1.2 Log Preservation:
+    Preserve records enabling the identification of the subscriber for a
+    statutory period of six (6) months, or twelve (12) months if formal court
+    proceedings are initiated (s. 41.26(1)(b)).
+
+--------------------------------------------------------------------------------
+[STATUTORY INTERMEDIARY EXEMPTION • SECTION 31.1]
+Section 31.1(1) of the Canadian Copyright Act provides an express statutory
+exemption from copyright infringement liability for providers who act solely as
+intermediaries providing digital infrastructure, routing, or hosting services.
+--------------------------------------------------------------------------------
+
+2.0 STATUTORY REQUIREMENTS FOR A VALID NOTICE
+--------------------------------------------------------------------------------
+To be processed and forwarded under the Canadian Copyright Act, a notice of
+claimed infringement submitted to Sheernox must strictly satisfy all statutory
+criteria set out in Section 41.25(2):
+
+2.1 Claimant Identification:
+    Full legal name, physical address, telephone number, and email address of
+    the copyright owner, or an authorized agent acting on their behalf.
+
+2.2 Capacity & Authority:
+    A clear statement indicating whether the claimant is the copyright owner, or
+    an authorized agent accompanied by proof of agency.
+
+2.3 Work Description:
+    Accurate identification of the specific copyrighted work or works claimed to
+    have been infringed (e.g., specific software, audio, video, literary work).
+
+2.4 Location Data & Timestamps:
+    The exact location data to which the claimed infringement relates, including
+    the uniform resource locator (URL), fully qualified domain name (FQDN), or
+    destination IP address, accompanied by the precise date, time, and timezone
+    (UTC or PST) of the alleged activity.
+
+2.5 Infringing Action:
+    Specification of the precise alleged infringing conduct (e.g., unauthorized
+    hosting, peer-to-peer distribution, public performance).
+
+--------------------------------------------------------------------------------
+[PROHIBITED NOTICE CONTENT • SECTION 41.25(3) COMPLIANCE]
+Pursuant to Section 41.25(3) of the Copyright Act and the Copyright Regulations,
+notices containing offers to settle, demands for monetary payment, requests for
+personal information, or hyperlinks to settlement platforms are non-compliant
+under Canadian law. Sheernox is legally prohibited from forwarding non-compliant
+notices.
+--------------------------------------------------------------------------------
+
+3.0 MANDATORY ELECTRONIC FORWARDING PROCEDURE
+--------------------------------------------------------------------------------
+Upon receipt of a notice satisfying all legal requirements, Sheernox processes
+and forwards the notice in accordance with the following operational protocol:
+
+3.1 Technical Verification:
+    Our abuse department validates that the target IP address or hostname was
+    assigned to a Sheernox customer at the exact timestamp specified in the
+    notice.
+
+3.2 Direct Forwarding:
+    We transmit an exact, unedited copy of the notice to the primary email
+    address registered on the subscriber's account within forty-eight (48) hours
+    of validation.
+
+3.3 Claimant Confirmation:
+    Sheernox issues an automated confirmation to the claimant confirming that
+    the notice was successfully forwarded, or explaining why forwarding was
+    technically impossible (e.g., IP address not in our pool, unassigned at
+    timestamp).
+
+3.4 Confidentiality Preservation:
+    At no point during this procedure does Sheernox disclose the name, physical
+    address, email, telephone number, or any other personally identifying
+    information (PII) of the subscriber to the claimant.
+
+[PRIVACY ASSURANCE]
+Forwarding an infringement notice does not constitute an admission of
+wrongdoing. Your personal identity remains strictly protected by Canadian
+privacy laws (PIPEDA / BC PIPA) and will never be shared with the claimant
+during notice forwarding.
+
+4.0 STATUTORY LOG RETENTION REQUIREMENTS
+--------------------------------------------------------------------------------
+Pursuant to Section 41.26(1)(b) of the Copyright Act, Sheernox is subject to
+strict statutory log preservation obligations:
+
+4.1 Standard 6-Month Retention:
+    We preserve network assignment logs and server connection records enabling
+    the identification of the subscriber associated with the notice for six (6)
+    months from the date on which the notice of claimed infringement was
+    received.
+
+4.2 Extended 12-Month Retention:
+    If the copyright claimant commences formal court proceedings claiming
+    infringement and serves written notice of the legal action on Sheernox
+    before the expiration of the initial 6-month period, Sheernox will extend
+    the retention of those records to one (1) year (12 months) from the date the
+    initial notice was received.
+
+4.3 Disclosure Exclusively by Court Order:
+    Subscriber identity records retained under this section will only be
+    released to a copyright claimant upon receipt of a binding, valid court
+    order issued by a Canadian court of competent jurisdiction (such as a
+    Norwich Pharmacal order).
+
+--------------------------------------------------------------------------------
+[CANADIAN NORWICH PHARMACAL PRECEDENT]
+Under Canadian common law (e.g., Voltage Pictures v. John Doe), courts balance
+copyright enforcement with consumer privacy. Intermediaries may only disclose
+identity records where a claimant satisfies strict judicial criteria and covers
+reasonable compliance costs.
+--------------------------------------------------------------------------------
+
+5.0 TREATMENT OF UNITED STATES DMCA NOTICES
+--------------------------------------------------------------------------------
+Sheernox is a Canadian entity operating under the sovereign laws of British
+Columbia and Canada. The United States Digital Millennium Copyright Act (DMCA,
+17 U.S.C. § 512) has no extraterritorial legal effect within Canada.
+
+Notwithstanding the territorial limitation of US law, Sheernox respects valid
+intellectual property claims and handles US DMCA communications as follows:
+
+5.1 Notice Conversion:
+    If a DMCA notification contains the essential elements required under
+    Section 41.25(2) of the Canadian Copyright Act, Sheernox treats it as a
+    Canadian statutory notice and forwards it to the subscriber accordingly.
+
+5.2 Voluntary Takedown Discretion:
+    Where a notice reveals blatant, egregious, or malicious mass copyright
+    infringement (such as publicly exposed torrent trackers, unauthorized
+    commercial stream scraping, or cyberlocker distribution), Sheernox reserves
+    the right under Section 7 of our Acceptable Use Policy (AUP) to demand
+    immediate remediation or suspend the infringing service independently of
+    statutory notice procedures.
+
+6.0 SUBSCRIBER RIGHTS & RESPONSE OPTIONS
+--------------------------------------------------------------------------------
+If you are a Sheernox subscriber and receive a forwarded copyright infringement
+notice from our abuse department, please note the following crucial facts:
+
+6.1 Not a Fine or Conviction:
+    A notice is merely an allegation by a third party. It does not mean you have
+    been sued, found liable, or ordered to pay any sum of money by a court.
+
+6.2 No Payment Obligation:
+    Under Canadian law, copyright notices cannot demand settlement fees. You are
+    not legally required to pay any settlement fee requested in any
+    communication.
+
+6.3 Voluntary Response:
+    You are not legally compelled to reply to Sheernox regarding the notice.
+    However, if you believe the notice was delivered in error or concerns
+    authorized/licensed content, you may submit an explanatory statement to our
+    abuse department for our records.
+
+6.4 Legal Counsel:
+    If you are concerned about potential litigation, you should consult an
+    independent Canadian legal practitioner specializing in intellectual
+    property law.
+
+7.0 REPEAT INFRINGER TERMINATION POLICY
+--------------------------------------------------------------------------------
+In accordance with industry best practices and our Acceptable Use Policy,
+Sheernox maintains a strict policy regarding subscribers who repeatedly or
+willfully violate third-party intellectual property rights:
+
+--------------------------------------------------------------------------------
+[Stage 1: Informational Notice]
+  Incident Threshold: 1st to 2nd validated notice
+  Sheernox Operational Action: Notice forwarded via email; subscriber alerted to
+                               verify shared network security, open wireless
+                               access points, or software licenses.
+
+[Stage 2: Compliance Review]
+  Incident Threshold: 3rd validated notice within 90 days
+  Sheernox Operational Action: Account flagged for abuse review. Ticket issued
+                               requiring subscriber confirmation of copyright
+                               compliance within 48 hours.
+
+[Stage 3: Service Suspension]
+  Incident Threshold: Persistent unaddressed notices
+  Sheernox Operational Action: Temporary network isolation or hosting suspension
+                               pending formal resolution.
+
+[Stage 4: Account Termination]
+  Incident Threshold: Willful mass infringement or court order
+  Sheernox Operational Action: Permanent termination of all services without
+                               refund; permanent ban from Sheernox
+                               infrastructure pursuant to AUP Section 7.
+--------------------------------------------------------------------------------
+
+8.0 DESIGNATED COPYRIGHT COMPLIANCE AGENT
+--------------------------------------------------------------------------------
+All formal notices of claimed infringement under the Canadian Copyright Act, as
+well as related legal inquiries, must be directed to the Sheernox Designated
+Copyright Compliance Agent:
+
+--------------------------------------------------------------------------------
+[DESIGNATED AGENT COORDINATES]
+Entity: Sheernox Technology Group Attention: Copyright & Abuse Compliance
+Officer Official Physical Address: 1-1885 Grasslands Blvd, Kamloops, BC, V2B
+0B8, Canada Designated Electronic Mailbox: abuse@sheernox.com General Support &
+Billing Inquiries: support@sheernox.com Client Portal: https://my.sheernox.com
+--------------------------------------------------------------------------------
+
+Notices sent by regular mail must allow adequate transit time. For expedited
+statutory processing, electronic submission to abuse@sheernox.com is strongly
+recommended.
+
+================================================================================
+OFFICIAL CONTACT & GOVERNING JURISDICTION COORDINATES
+--------------------------------------------------------------------------------
+Entity:                  Sheernox Technology Group (Sole Proprietorship)
+Registration Number:     FM0707819 (Province of British Columbia)
+Business Number:         732754924BC0001 (Canada Revenue Agency)
+Physical Address:        1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada
+Governing Law:           Province of British Columbia and Federal Laws of Canada
+Exclusive Legal Venue:   Courts of British Columbia in Kamloops, BC, Canada
+General & Legal Inquiries: support@sheernox.com
+Abuse & Security Incidents: abuse@sheernox.com
+Client Support Hub:      https://my.sheernox.com
+================================================================================

@@ -1,0 +1,260 @@
+================================================================================
+SHEERNOX TECHNOLOGY GROUP - SERVICE LEVEL AGREEMENT & INCIDENT POLICY (SLA)
+================================================================================
+Document:       Service Level Agreement & Incident Policy (SLA)
+Entity:         Sheernox Technology Group (Kamloops, BC, Canada)
+Version:        v1.5-SLA
+Last Revised:   2026-09-12
+Web Policy:     https://legal.sheernox.com/service-level-agreement.html
+Plain Text:     https://legal.sheernox.com/service-level-agreement.txt
+General Admin:  support@sheernox.com
+Abuse & Sec:    abuse@sheernox.com
+================================================================================
+
+0.0 PREAMBLE & SERVICE SCOPE
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+This Service Level Agreement (SLA) guarantees that your hosted websites,
+databases, virtual private servers (VPS), dedicated bare-metal nodes, and edge
+network routing maintain 99.9% monthly availability. If our core infrastructure
+fails to meet this high standard, you are eligible for monetary service credits
+applied directly to your monthly invoice.
+
+This Service Level Agreement ("SLA") constitutes a binding operational schedule
+incorporated into the Master Terms and Conditions of Sheernox Technology Group,
+a sole proprietorship registered in the Province of British Columbia, Canada,
+having its official registered office at 1-1885 Grasslands Blvd, Kamloops, BC,
+V2B 0B8, Canada ("Sheernox", "we", "us", or "our"). This Agreement applies to
+all active, paid subscribers ("Client", "Customer", "you") utilizing Sheernox
+cloud hosting, managed compute instances, dedicated bare-metal servers, Anycast
+DNS, edge CDN transit, and associated internet infrastructure solutions.
+
+This SLA defines our quantitative operational availability metrics, our
+technical support triage commitments, the formal procedure for claiming downtime
+compensation, and the express legal boundaries of our infrastructure performance
+liability.
+
+1.0 99.9% MONTHLY UPTIME COMMITMENT
+--------------------------------------------------------------------------------
+1.1 Availability Standard:
+    Sheernox warrants that all production hosting hypervisors, bare-metal server
+    network uplinks, storage arrays, and authoritative DNS clusters shall
+    maintain an aggregate Monthly Uptime Percentage of not less than 99.9%
+    during any given monthly billing cycle.
+
+1.2 Monthly Uptime Mathematical Calculation:
+    Monthly Uptime Percentage is calculated on a calendar-month basis using the
+    following industry-standard formula:
+    Monthly Uptime % = [ (Total Scheduled Minutes in Month − Downtime Minutes) /
+    Total Scheduled Minutes in Month ] × 100
+    For the purposes of this calculation, "Downtime" is defined as a verifiable
+    state of continuous packet drop, hypervisor crash, or total network
+    unreachability exceeding sixty (60) consecutive seconds, measured by
+    Sheernox's multi-region external telemetry nodes (including UptimeRobot,
+    Datadog, and internal hypervisor ping probes).
+
+1.3 Application-Layer Exceptions:
+    Downtime measures raw server, hypervisor, and network transit layer
+    availability. Unreachability resulting from Customer code errors, WordPress
+    PHP fatal errors, un-indexed MySQL queries stalling worker pools, expired
+    SSL certificates managed by Customer, or Customer firewall configuration
+    lockouts does not constitute qualifying Downtime under this SLA.
+
+2.0 INCIDENT SEVERITY LEVELS & SUPPORT RESPONSE TARGETS
+--------------------------------------------------------------------------------
+Technical incidents submitted through our official client portal at
+https://my.sheernox.com or routed to support@sheernox.com are triaged according
+to the severity matrix below:
+
+--------------------------------------------------------------------------------
+[2.1 Priority 1 (P1) Critical Emergency]
+  Incident Definition & Impact: Complete host, hypervisor, or network node
+                                failure. Customer production service is
+                                completely offline or critical data is
+                                inaccessible to public traffic.
+  Initial Response Target: < 15 Minutes
+  Coverage Window: 24/7/365 Continuous Active Triage
+
+[2.2 Priority 2 (P2) High Degradation]
+  Incident Definition & Impact: Severe performance degradation, persistent high
+                                packet loss (> 25%), or secondary service
+                                failure (e.g., outgoing SMTP queue stall,
+                                database replica desync).
+  Initial Response Target: < 60 Minutes
+  Coverage Window: 24/7/365 Priority Queue
+
+[2.3 Priority 3 (P3) Normal / Impairment]
+  Incident Definition & Impact: Non-critical administrative disruption, control
+                                panel error, DNS record sync delay, or staging
+                                environment outage with production unaffected.
+  Initial Response Target: < 4 Hours
+  Coverage Window: Standard Business Hours (08:00–20:00 PST)
+
+[2.4 Priority 4 (P4) Low / General]
+  Incident Definition & Impact: General technical inquiries, billing inquiries,
+                                quota upgrade requests, architecture advice, or
+                                routine DNS propagation questions.
+  Initial Response Target: < 12 Hours
+  Coverage Window: Standard Business Hours (08:00–18:00 PST)
+--------------------------------------------------------------------------------
+
+*Initial Response Target indicates the elapsed time from ticket submission to
+active written triage by a qualified systems engineer.
+
+3.0 SERVICE CREDIT CALCULATION SCHEDULE
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+If our monthly uptime drops below 99.9%, you receive monetary credits based on
+the tiered schedule below. If uptime drops below 90% in any calendar month, you
+receive a 100% full credit for that month's service fee.
+
+In the event that Sheernox fails to achieve the 99.9% uptime commitment during a
+calendar month, Customer shall be eligible to receive a non-refundable Service
+Credit calculated as a percentage of the Customer's net recurring monthly
+subscription fee for the affected service:
+
+Monthly Verified Uptime  Cumulative Monthly Outage     SLA Credit Percentage
+                         Duration
+--------------------------------------------------------------------------------
+99.9% – 100.0%           0 to 43 minutes 12 seconds    Standard Baseline (0%
+                                                       Credit)
+99.0% – 99.89%           43m 13s to 7 hours 18         10% Monthly Service
+                         minutes                       Credit
+95.0% – 98.99%           7h 19m to 36 hours 0 minutes  25% Monthly Service
+                                                       Credit
+90.0% – 94.99%           36h 1m to 72 hours 0 minutes  50% Monthly Service
+                                                       Credit
+< 90.0%                  Greater than 72 hours         100% Monthly Service
+                         Downtime                      Credit
+
+4.0 CLAIMS PROCEDURE & FORFEITURE CONDITIONS
+--------------------------------------------------------------------------------
+4.1 Claim Submission Requirements:
+    To receive a Service Credit under this SLA, Customer must submit a formal
+    credit request via the client portal (https://my.sheernox.com) or by written
+    notice to support@sheernox.com within thirty (30) calendar days following
+    the end of the calendar month during which the outage occurred.
+    Each credit claim must include:
+    - Customer account username and primary billing email address.
+    - Identifier(s) of the affected service (e.g., Domain Name, VPS hostname, or
+      Dedicated Server IP).
+    - Dates, exact timestamps (including timezone, preferably UTC or PST), and
+      duration of the claimed outage.
+    - Outage logs, external monitor traceroutes, or HTTP error status codes
+      corroborating the incident.
+
+4.2 Verification & Credit Application:
+    Sheernox engineers will evaluate the submitted telemetry logs against our
+    internal hypervisor, SNMP network interface, and edge router logs within ten
+    (10) business days. Upon verification, the calculated credit will be applied
+    as an account credit against Customer's subsequent monthly invoice in
+    Canadian Dollars (CAD). Service Credits cannot be redeemed for cash,
+    refunded, or transferred between distinct legal accounts.
+
+4.3 Forfeiture for Account Delinquency:
+    Customer forfeits all entitlement to SLA credits if Customer's billing
+    account is overdue, past due, suspended for non-payment, or under active
+    investigation for violations of our Acceptable Use Policy (AUP) at the time
+    of the incident or claim submission.
+
+5.0 SCHEDULED & EMERGENCY MAINTENANCE WINDOWS
+--------------------------------------------------------------------------------
+5.1 Scheduled Maintenance Windows:
+    To ensure hypervisor security, apply kernel live-patches, and upgrade edge
+    switching hardware, Sheernox conducts scheduled maintenance. Standard
+    maintenance windows occur between 01:00 and 05:00 Pacific Standard Time
+    (PST) on Tuesdays and Thursdays.
+    Sheernox provides Customer with at least seventy-two (72) hours advance
+    notice via email and our portal status dashboard prior to initiating
+    scheduled maintenance that is expected to result in service interruptions.
+
+5.2 Emergency Critical Maintenance:
+    In the event of a zero-day hardware vulnerability, critical Linux kernel
+    exploit, active power infrastructure hazard, or imminent physical security
+    threat, Sheernox reserves the right to execute Emergency Maintenance with
+    expedited notice or without prior notice. Sheernox will endeavor to notify
+    affected customers as soon as technically practicable.
+
+5.3 Maintenance Excluded from Downtime:
+    Any downtime occurring within scheduled maintenance windows, or during
+    justified emergency security patching lasting fewer than one hundred and
+    twenty (120) minutes, is strictly excluded from Monthly Uptime calculations.
+
+6.0 SLA EXCLUSIONS & FORCE MAJEURE EVENTS
+--------------------------------------------------------------------------------
+The 99.9% uptime commitment and service credit schedule do not apply to any
+performance failure, downtime, or network unreachability resulting from:
+
+6.1 Force Majeure Events:
+    Acts of God, atmospheric disturbances, wildland fires, earthquakes,
+    municipal power substation collapse, armed conflict, civil unrest, labor
+    disputes, or statutory governmental embargoes.
+
+6.2 Tier 1 Upstream Transit Cuts:
+    Severing of subsea or trans-continental fiber optic lines beyond Sheernox's
+    multi-homed BGP border router control.
+
+6.3 Volumetric DDoS Overwhelming Mitigation Capacity:
+    Denial of Service attacks exceeding Sheernox's upstream multi-gigabit
+    automated scrubbing capacity (e.g., volumetric floods exceeding 500 Gbps),
+    during which traffic blackholing is implemented to preserve global
+    infrastructure integrity.
+
+6.4 Customer System Administration:
+    Actions, misconfigurations, kernel panics, bad firewall rules (e.g.,
+    iptables -F), database deadlocks, or unpatched application code executed by
+    Customer or Customer's authorized users.
+
+6.5 AUP Enforcement Actions:
+    Suspension or termination of services resulting from network abuse,
+    phishing, spam transmission, copyright violations, or breach of the
+    Acceptable Use Policy.
+
+6.6 Beta, Test, or Unmanaged Services:
+    Services explicitly designated in billing as "Beta", "Development",
+    "Staging", "Unmanaged Bare-Metal", or free promotional tiers.
+
+7.0 SOLE & EXCLUSIVE REMEDY & AGGREGATE CAPS
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+[STATUTORY LIMITATION OF REMEDY]
+Under British Columbia law, this section sets forth Customer's exclusive
+monetary recourse for any failure of server uptime, network availability, or
+infrastructure performance.
+--------------------------------------------------------------------------------
+
+7.1 Sole and Exclusive Remedy:
+    The Service Credits set forth in Section 3 constitute Customer's sole and
+    exclusive remedy for any failure of Sheernox to meet the uptime, response
+    time, or performance warranties contained in this Agreement. Under no
+    circumstances shall Customer be entitled to consequential, incidental,
+    indirect, punitive, or loss-of-profit damages arising out of infrastructure
+    downtime.
+
+7.2 Maximum Monthly Credit Cap:
+    The total cumulative Service Credits awarded to Customer in any single
+    calendar month shall under no circumstances exceed one hundred percent
+    (100%) of the total recurring subscription fee paid by Customer for the
+    specific affected service during that calendar month.
+
+7.3 British Columbia Venue & Statutory Alignment:
+    This SLA is governed by the laws of the Province of British Columbia and the
+    federal laws of Canada. Any disputes arising out of the interpretation or
+    enforcement of this SLA shall be resolved exclusively by the competent
+    courts of British Columbia sitting in the City of Kamloops, or via expedited
+    commercial arbitration under the Vancouver International Arbitration Centre
+    (VanIAC) rules.
+
+================================================================================
+OFFICIAL CONTACT & GOVERNING JURISDICTION COORDINATES
+--------------------------------------------------------------------------------
+Entity:                  Sheernox Technology Group (Sole Proprietorship)
+Registration Number:     FM0707819 (Province of British Columbia)
+Business Number:         732754924BC0001 (Canada Revenue Agency)
+Physical Address:        1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada
+Governing Law:           Province of British Columbia and Federal Laws of Canada
+Exclusive Legal Venue:   Courts of British Columbia in Kamloops, BC, Canada
+General & Legal Inquiries: support@sheernox.com
+Abuse & Security Incidents: abuse@sheernox.com
+Client Support Hub:      https://my.sheernox.com
+================================================================================

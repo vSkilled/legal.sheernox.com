@@ -7,22 +7,22 @@ This document is the authoritative operational guide for AI coding agents (and d
 ## 📋 Repository Overview & Core Principles
 
 - **Repository**: [`vSkilled/legal.sheernox.com`](https://github.com/vSkilled/legal.sheernox.com)
-- **Tech Stack**: 100% Static HTML5, Modern CSS3, Vanilla JavaScript, Python 3 PDF Generator.
+- **Tech Stack**: 100% Static HTML5, Modern CSS3, Vanilla JavaScript, Python 3 PDF Generator, Python 3 Plain Text Generator.
 - **Production Standard**: **Strictly production-only code in git**. Never commit test templates, temporary scratch files, or intermediate rendering artifacts.
 
 ### Document Registry
 
-| Key | HTML Source | Target PDF Output | Document Title | Version Tag |
-| :--- | :--- | :--- | :--- | :--- |
-| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.5-TOS` |
-| `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v4.0-AUP` |
-| `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.5-WDT` |
-| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.5-PRIV` |
-| `sla` | `service-level-agreement.html` | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.5-SLA` |
-| `vdp` | `vulnerability-disclosure-policy.html` | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` |
-| `cpr` | `copyright-policy.html` | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` |
-| `wcp` | `website-care-plan-terms.html` | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.5-WCP` |
-| `hub` | `index.html` | N/A | Legal Portal Directory & Search Hub | N/A |
+| Key | HTML Source | Target PDF Output | Plain Text Output | Document Title | Version Tag |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `tos` | `terms-and-conditions.html` | `pdf/Terms_and_Conditions.pdf` | `terms-and-conditions.txt` | Terms and Conditions of Service | `v4.5-TOS` |
+| `aup` | `acceptable-use-policy.html` | `pdf/Acceptable_Use_Policy.pdf` | `acceptable-use-policy.txt` | Acceptable Use Policy (AUP) | `v4.0-AUP` |
+| `wdt` | `web-design-terms.html` | `pdf/Web_Design_Terms_and_Conditions.pdf` | `web-design-terms.txt` | Web Design & Development Terms | `v3.5-WDT` |
+| `priv` | `privacy-policy.html` | `pdf/Privacy_Policy.pdf` | `privacy-policy.txt` | Privacy & Personal Information Policy | `v4.5-PRIV` |
+| `sla` | `service-level-agreement.html` | `pdf/Service_Level_Agreement.pdf` | `service-level-agreement.txt` | Service Level Agreement & Incident Policy | `v1.5-SLA` |
+| `vdp` | `vulnerability-disclosure-policy.html` | `pdf/Vulnerability_Disclosure_Policy.pdf` | `vulnerability-disclosure-policy.txt` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` |
+| `cpr` | `copyright-policy.html` | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | `copyright-policy.txt` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` |
+| `wcp` | `website-care-plan-terms.html` | `pdf/Website_Care_Plan_Terms.pdf` | `website-care-plan-terms.txt` | Website Care Plan & Maintenance Terms | `v1.5-WCP` |
+| `hub` | `index.html` | N/A | N/A | Legal Portal Directory & Search Hub | N/A |
 
 ---
 
@@ -68,7 +68,8 @@ When modifying any document, ensure strict adherence to these legal parameters:
 - **CI/CD Workflow**: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
   - Automatically triggers on every `push` to `main` and `workflow_dispatch`.
   - Re-generates all vector PDFs via headless Chrome.
-  - Deploys static HTML and `pdf/` documents to Bunny S3 with strict Content-Types.
+  - Deploys static HTML, `pdf/`, and plain text `.txt` documents to Bunny S3 with strict Content-Types.
+  - Automatically purges the Bunny.net CDN Pull Zone cache on every deployment to ensure instant edge propagation.
   - Runs automated live HTTP health checks against `https://legal.sheernox.com`.
 - **Encrypted GitHub Secrets**:
   - `BUNNY_STORAGE_BUCKET`
@@ -76,6 +77,8 @@ When modifying any document, ensure strict adherence to these legal parameters:
   - `BUNNY_STORAGE_SECRET_ACCESS_KEY`
   - `BUNNY_STORAGE_ENDPOINT`
   - `BUNNY_STORAGE_REGION`
+  - `BUNNY_PULL_ZONE_ID`
+  - `BUNNY_API_KEY`
   - *Never commit secrets, tokens, or credentials into repository files.*
 
 ---
@@ -127,6 +130,36 @@ python3 scripts/generate_pdfs.py --browser /usr/bin/brave
 
 ---
 
+## 📄 Automated Plain Text (.TXT) Generation System
+
+All policy documents feature an official 80-column monospaced plain text version matching the layout of `vulnerability-disclosure-policy.txt`.
+
+### Generation Script
+
+A fully self-contained text generator is maintained at [`scripts/generate_txts.py`](scripts/generate_txts.py). It parses legal prose directly from the HTML source, calculates column wrapping, formats ASCII data tables and callouts, and writes the `.txt` files.
+
+### Quick Commands
+
+```bash
+# Generate all 8 plain text policy documents (preserves hand-crafted VDP by default)
+python3 scripts/generate_txts.py
+
+# Force re-generation of all documents including VDP
+python3 scripts/generate_txts.py --force
+
+# Generate only a specific document
+python3 scripts/generate_txts.py --doc tos      # Terms and Conditions
+python3 scripts/generate_txts.py --doc aup      # Acceptable Use Policy
+python3 scripts/generate_txts.py --doc wdt      # Web Design Terms
+python3 scripts/generate_txts.py --doc priv     # Privacy Policy
+python3 scripts/generate_txts.py --doc sla      # Service Level Agreement
+python3 scripts/generate_txts.py --doc vdp      # Vulnerability Disclosure Policy
+python3 scripts/generate_txts.py --doc cpr      # Copyright Policy
+python3 scripts/generate_txts.py --doc wcp      # Website Care Plan Terms
+```
+
+---
+
 ## 🤖 High-Level Prompt for Future AI Agents
 
 Copy and paste the prompt below when instructing an AI agent to make policy updates:
@@ -144,9 +177,10 @@ Operational Instructions:
 2. Update the "Last Revised" date to the current date in ISO 8601 format (`YYYY-MM-DD`) and increment the version tag by 0.5 (format: `vX.X-KEY`, e.g., `v3.5-TOS`).
 3. Ensure Canadian legal standards are strictly preserved (Kamloops BC sole proprietorship, support@sheernox.com for legal/privacy, abuse@sheernox.com for network abuse, official address: `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada`).
 4. Regenerate the production vector PDF(s) in `pdf/` using `python3 scripts/generate_pdfs.py`.
-5. Verify that PDFs render with the simplified top bar (no Governing Law, Entity Status, or Document Code) and show `Last Revised: YYYY-MM-DD • vX.X-KEY` in the footer of all pages.
-6. Keep the repository clean to production code only.
-7. Commit and push the changes to `origin/main`.
+5. Regenerate the plain text document(s) using `python3 scripts/generate_txts.py`.
+6. Verify that PDFs render with the simplified top bar (no Governing Law, Entity Status, or Document Code) and show `Last Revised: YYYY-MM-DD • vX.X-KEY` in the footer of all pages.
+7. Keep the repository clean to production code only.
+8. Commit and push the changes to `origin/main`.
 ```
 
 ---
@@ -158,5 +192,6 @@ Before committing any update:
 2. [ ] **Email Verification**: Is abuse routed to `abuse@sheernox.com` and all other legal/privacy routed to `support@sheernox.com`?
 3. [ ] **Address Check**: Is the official physical address `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada` accurately included across all documents?
 4. [ ] **PDF Re-generation**: Was `python3 scripts/generate_pdfs.py` executed successfully?
-5. [ ] **Visual Layout Check**: Were page counts and page breaks checked (`break-inside: avoid` intact)?
-6. [ ] **Clean Git Tree**: Are only production files staged? (`git status` shows no scratch or debug files).
+5. [ ] **Plain Text Re-generation**: Was `python3 scripts/generate_txts.py` executed successfully?
+6. [ ] **Visual Layout Check**: Were page counts and page breaks checked (`break-inside: avoid` intact)?
+7. [ ] **Clean Git Tree**: Are only production files staged? (`git status` shows no scratch or debug files).

@@ -1,0 +1,282 @@
+================================================================================
+SHEERNOX TECHNOLOGY GROUP - WEBSITE CARE PLAN & MAINTENANCE TERMS
+================================================================================
+Document:       Website Care Plan & Maintenance Terms
+Entity:         Sheernox Technology Group (Kamloops, BC, Canada)
+Version:        v1.5-WCP
+Last Revised:   2026-09-13
+Web Policy:     https://legal.sheernox.com/website-care-plan-terms.html
+Plain Text:     https://legal.sheernox.com/website-care-plan-terms.txt
+General Admin:  support@sheernox.com
+Abuse & Sec:    abuse@sheernox.com
+================================================================================
+
+0.0 PREAMBLE & RELATIONSHIP TO MASTER TERMS
+--------------------------------------------------------------------------------
+These Website Care Plan & Maintenance Terms ("Care Terms") constitute an ongoing
+recurring Statement of Work (SOW) schedule entered into between Sheernox
+Technology Group ("Sheernox", "we", "us", or "our"), a sole proprietorship
+registered in the Province of British Columbia, Canada (Registration Number:
+FM0707819, Business Number: 732754924BC0001, Original Registration Date: October
+29, 2009), and the client identified in the applicable service order ("Client").
+
+These Care Terms are incorporated by reference into, and governed by, the
+Sheernox Web Design & Development Terms and Conditions and the General Terms and
+Conditions of Service. In the event of an express conflict regarding ongoing
+maintenance and support retainers, these Care Terms take precedence.
+
+[AT A GLANCE]
+Our Website Care Plans protect your digital investment through scheduled core
+and plugin updates, automated offsite cloud backups, uptime monitoring, and
+included developer hours on a recurring monthly retainer.
+
+1.0 CARE PLAN TIERS & SERVICE DELIVERABLES MATRIX
+--------------------------------------------------------------------------------
+Sheernox provides three standardized tiers of website care retainers. The
+specific deliverables, monitoring cadences, and developer allocations applicable
+to each plan are set forth below:
+
+--------------------------------------------------------------------------------
+[1.1 Core & Plugin Updates]
+  Essential Care: Weekly automated/reviewed
+  Professional Care: Weekly staging-verified
+  Enterprise Agency Care: Continuous priority staging
+
+[1.2 Offsite Cloud Backups]
+  Essential Care: Daily (30-day retention)
+  Professional Care: Daily (60-day retention)
+  Enterprise Agency Care: Real-time / Hourly (90-day retention)
+
+[1.3 Uptime Monitoring]
+  Essential Care: 15-minute intervals
+  Professional Care: 5-minute intervals
+  Enterprise Agency Care: 1-minute intervals (SMS alert)
+
+[1.4 Included Content Hours]
+  Essential Care: None (billed hourly)
+  Professional Care: 2 Hours / month
+  Enterprise Agency Care: 5 Hours / month
+
+[1.5 Support Response SLA]
+  Essential Care: ≤ 24 business hours
+  Professional Care: ≤ 8 business hours
+  Enterprise Agency Care: ≤ 2 business hours (Priority)
+
+[1.6 Malware Remediation]
+  Essential Care: Backup restore only
+  Professional Care: Full cleanup included
+  Enterprise Agency Care: Immediate 2h emergency cleanup
+
+[1.7 Performance Optimization]
+  Essential Care: Basic caching
+  Professional Care: Monthly speed review
+  Enterprise Agency Care: Continuous CDN & DB tuning
+
+[1.8 Reporting & Audits]
+  Essential Care: Monthly automated report
+  Professional Care: Monthly executive report
+  Enterprise Agency Care: Quarterly UX & SEO audit
+--------------------------------------------------------------------------------
+
+The selected tier and its recurring monthly fee are confirmed upon checkout
+within the Sheernox Client Portal.
+
+2.0 MAINTENANCE SCOPE & OPERATIONAL BOUNDARIES
+--------------------------------------------------------------------------------
+The scope of ongoing website maintenance under this SOW is designed to preserve
+the operational health, security, and integrity of existing web properties.
+Specifically included within routine maintenance:
+
+2.1 Content Management System (CMS) Updates:
+    Application of minor and major core security releases for supported
+    platforms (WordPress, Drupal, Headless CMS frameworks).
+
+2.2 Third-Party Plugin & Extension Patching:
+    Routine updating of verified plugins, extensions, and themes to mitigate
+    known Common Vulnerabilities and Exposures (CVEs).
+
+2.3 Database Hygiene & Maintenance:
+    Periodic pruning of post revisions, transient data, spam comment queues, and
+    overhead tables to maintain database responsiveness.
+
+2.4 Security Scanning:
+    Daily remote security integrity scans to detect file alterations, injected
+    scripts, phishing kits, and blacklisting status with search engines.
+
+2.5 Broken Link & 404 Auditing:
+    Automated monthly scanning of internal hyperlinks to ensure clean navigation
+    and search engine crawling hygiene.
+
+3.0 INCLUDED CONTENT SUPPORT HOURS & TURNAROUND RULES
+--------------------------------------------------------------------------------
+Plans including monthly support hours (Professional and Enterprise Agency) may
+be utilized for minor content updates and standard technical adjustments:
+
+3.1 Eligible Tasks:
+    Text copy additions and revisions, replacing existing imagery, publishing
+    customer-provided blog posts, updating contact information, modifying
+    navigation menu links, updating existing web form fields, and minor CSS
+    aesthetic adjustments.
+
+3.2 Task Submission:
+    Support requests must be submitted through our verified client ticketing
+    portal at https://my.sheernox.com or via email to support@sheernox.com from
+    an authorized contact email.
+
+3.3 Turnaround Target:
+    Content update requests under 1 hour in scope are completed within
+    twenty-four (24) to forty-eight (48) business hours (Monday through Friday,
+    09:00–17:00 PST).
+
+3.4 Use-It-or-Lose-It (Non-Rollover Policy):
+    Monthly content hours are allocated on a strict monthly retainer basis to
+    reserve dedicated engineering capacity. Unused hours do not accumulate,
+    transfer, or roll over into subsequent billing cycles and cannot be redeemed
+    for cash or credit.
+
+[NON-ROLLOVER POLICY]
+Retainer hours reserve active agency capacity each month. Because our team
+allocates dedicated developer time every billing cycle, unused support hours
+expire at the end of each billing period.
+
+4.0 STAGING-FIRST DEPLOYMENT PROTOCOL
+--------------------------------------------------------------------------------
+To eliminate the risk of production downtime or broken client-facing
+functionality caused by incompatible plugin updates, Sheernox enforces a
+rigorous Staging-First Protocol for all Professional and Enterprise tiers:
+
+4.1 Sandbox Cloning:
+    Before updates are applied to the live production website, a complete
+    staging snapshot is deployed on an isolated staging server.
+
+4.2 Automated & Visual Regression Testing:
+    Core updates and extension dependencies are tested on staging. Visual
+    regression checks are performed across key templates (homepage, checkout,
+    contact forms).
+
+4.3 Safe Deployment:
+    Once verified conflict-free, updates are synchronized to the production
+    environment during low-traffic maintenance windows.
+
+4.4 Rollback Guarantee:
+    In the event an unforeseen conflict manifests post-deployment, Sheernox
+    executes an immediate restoration from the pre-update snapshot at no extra
+    charge.
+
+5.0 OUT-OF-SCOPE SERVICES & ADDITIONAL HOURLY RATES
+--------------------------------------------------------------------------------
+Care Plans are strictly focused on operational maintenance, health, and minor
+content adjustments. Major design overhauls, software engineering, and
+architectural refactoring fall outside standard care scopes.
+
+--------------------------------------------------------------------------------
+[WORK DEFINED AS OUT OF SCOPE]
+Major graphic redesigns, building new multi-page website sections, custom plugin
+or API development, CRM/ERP database synchronization, migrating e-commerce
+shopping carts, and search engine penalty remediation require separate scoping
+and formal quotes.
+--------------------------------------------------------------------------------
+
+Clients with an active Care Plan benefit from discounted preferred engineering
+rates for any approved out-of-scope work:
+
+--------------------------------------------------------------------------------
+[5.1 Care Plan Active Subscribers]
+  Hourly Billing Rate (CAD): $95.00 CAD / hr (Preferred Rate)
+  Billing Increments: 30-minute minimums
+  Quoting Procedure: Written quote provided prior to commencement.
+
+[5.2 Non-Retainer / Ad-Hoc Clients]
+  Hourly Billing Rate (CAD): $125.00 CAD / hr (Standard Agency Rate)
+  Billing Increments: 1-hour minimums
+  Quoting Procedure: Upfront deposit required before scheduling.
+--------------------------------------------------------------------------------
+
+All additional hourly fees are billed in Canadian Dollars (CAD) and are subject
+to applicable GST (5%) and BC PST (7%).
+
+6.0 SECURITY INCIDENTS & MALWARE RECOVERY
+--------------------------------------------------------------------------------
+While Sheernox employs industry-leading security practices, no web application
+connected to the internet can be guaranteed 100% immune from novel zero-day
+exploits or credential compromise.
+
+In the event of a confirmed security incident or malware infection on an
+enrolled website:
+
+6.1 Immediate Isolation:
+    The affected application is immediately placed in maintenance mode to
+    prevent malware propagation and protect website visitors.
+
+6.2 Remediation Protocol:
+    Our security engineers clean infected core and plugin directories, restore
+    known clean state files from verified offsite backups, audit database tables
+    for injected payloads, and update all administrative credentials and API
+    keys.
+
+6.3 Coverage Limitation:
+    Full manual malware scrubbing and hack recovery are included at no
+    additional charge for Professional and Enterprise Care Plan subscribers. For
+    Essential Care subscribers, Sheernox will restore the most recent uninfected
+    backup snapshot free of charge; in-depth forensic code scrubbing is billed
+    at our preferred hourly rate.
+
+7.0 MUTUAL ACCESS, THIRD PARTIES & WARRANTY BOUNDARY
+--------------------------------------------------------------------------------
+To maintain stability, the client agrees to the following operational
+boundaries:
+
+- Access Credentials: The client must provide Sheernox with full administrative
+  CMS credentials, hosting control panel access, and DNS access necessary to
+  perform maintenance.
+- Client & Third-Party Modifications: If the client, client employees, or
+  external third-party agencies access the website backend and install unvetted
+  plugins, edit core system files, or alter database schemas without prior
+  consultation with Sheernox, any subsequent downtime, broken features, or
+  security breaches are excluded from maintenance coverage. Remediation of such
+  conflicts will be billed at our preferred out-of-scope hourly rate.
+- Third-Party Software Disclaimers: Sheernox does not author third-party themes,
+  CMS platforms, or commercial plugins. We are not liable for software bugs,
+  deprecation, or licensing costs imposed by independent third-party vendors.
+
+--------------------------------------------------------------------------------
+[WARRANTY BOUNDARY]
+Sheernox warrants that maintenance services will be delivered in a professional,
+workmanlike manner in accordance with Canadian commercial standards. Unapproved
+third-party code tampering immediately voids our maintenance conflict warranty.
+--------------------------------------------------------------------------------
+
+8.0 BILLING, PAYMENT & 30-DAY CANCELLATION
+--------------------------------------------------------------------------------
+Website Care Plans operate as recurring monthly subscriptions subject to the
+following commercial conditions:
+
+- Automatic Recurring Billing: Monthly subscription fees are billed in advance
+  on a recurring 30-day billing cycle to the credit card on file via Stripe.
+- Late Payment & Grace Period: If automatic payment fails, a 5-calendar-day
+  grace period is provided. If payment remains outstanding after 5 days,
+  maintenance services and automated backup synchronizations are suspended until
+  the account balance is cleared.
+- Cancellation Policy: Either party may cancel a Care Plan at any time by
+  providing thirty (30) days' advance written notice via our client support
+  ticket system at https://my.sheernox.com or by emailing support@sheernox.com.
+- No Mid-Cycle Refunds: Care Plan fees are non-refundable for partial months.
+  Service continues through the conclusion of the paid 30-day billing cycle.
+- Offboarding Site Snapshot: Upon completion of the 30-day cancellation period,
+  Sheernox generates and delivers a final, complete offsite backup archive
+  (database SQL dump and compressed media directory) to the client at no extra
+  charge.
+
+================================================================================
+OFFICIAL CONTACT & GOVERNING JURISDICTION COORDINATES
+--------------------------------------------------------------------------------
+Entity:                  Sheernox Technology Group (Sole Proprietorship)
+Registration Number:     FM0707819 (Province of British Columbia)
+Business Number:         732754924BC0001 (Canada Revenue Agency)
+Physical Address:        1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada
+Governing Law:           Province of British Columbia and Federal Laws of Canada
+Exclusive Legal Venue:   Courts of British Columbia in Kamloops, BC, Canada
+General & Legal Inquiries: support@sheernox.com
+Abuse & Security Incidents: abuse@sheernox.com
+Client Support Hub:      https://my.sheernox.com
+================================================================================

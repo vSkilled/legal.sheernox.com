@@ -32,6 +32,10 @@ jobs:
         run: |
           python3 scripts/generate_pdfs.py --browser /usr/bin/google-chrome
 
+      - name: Regenerate & Verify Plain Text Documents
+        run: |
+          python3 scripts/generate_txts.py
+
       - name: Configure AWS CLI Credentials for Bunny S3
         run: |
           aws configure set aws_access_key_id "${{ secrets.BUNNY_STORAGE_ACCESS_KEY_ID }}"
@@ -60,11 +64,32 @@ jobs:
             --include "*.pdf" \
             --content-type "application/pdf"
 
+      - name: Deploy Plain Text Documents to Bunny S3
+        run: |
+          aws s3 sync . "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}" \
+            --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
+            --exclude "*" \
+            --include "*.txt" \
+            --content-type "text/plain; charset=utf-8"
+
+      - name: Purge Bunny Pull Zone Cache
+        env:
+          BUNNY_PULL_ZONE_ID: ${{ secrets.BUNNY_PULL_ZONE_ID }}
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+        run: |
+          echo "Purging Bunny CDN cache for legal.sheernox.com..."
+          curl -s -f -X POST "https://api.bunny.net/pullzone/${BUNNY_PULL_ZONE_ID}/purgeCache" \
+            -H "AccessKey: ${BUNNY_API_KEY}"
+          echo "Cache purge triggered successfully. Waiting 3s for edge propagation..."
+          sleep 3
+
       - name: Verify Live Deployment
         run: |
           echo "Verifying live CDN endpoints on legal.sheernox.com..."
           curl -f -s -I "https://legal.sheernox.com/index.html" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/favicon.ico" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/pdf/Terms_and_Conditions.pdf" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/terms-and-conditions.txt" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/vulnerability-disclosure-policy.txt" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/website-care-plan-terms.html" | head -n 5
           echo "Deployment verified successfully!"

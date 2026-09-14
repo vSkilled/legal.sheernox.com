@@ -80,8 +80,9 @@ legal.sheernox.com/
 ├── service-level-agreement.html               # Service Level Agreement & Incident Policy (v1.5-SLA)
 ├── vulnerability-disclosure-policy.html       # Vulnerability Disclosure Policy (v1.5-VDP)
 ├── copyright-policy.html                      # Copyright & Notice-and-Notice Policy (v1.5-CPR)
-├── web-design-terms.html                      # Web Design & Development Terms (v3.0-WDT)
-├── website-care-plan-terms.html               # Website Care Plan & Maintenance Terms (v1.0-WCP)
+├── web-design-terms.html                      # Web Design & Development Terms (v3.5-WDT)
+├── website-care-plan-terms.html               # Website Care Plan & Maintenance Terms (v1.5-WCP)
+├── *.txt                                      # Official 80-Column Monospaced Plain Text Versions
 ├── pdf/                                       # Official Print-Ready Vector PDF Documents
 │   ├── Terms_and_Conditions.pdf
 │   ├── Acceptable_Use_Policy.pdf
@@ -91,8 +92,9 @@ legal.sheernox.com/
 │   ├── Copyright_Notice_and_Notice_Policy.pdf
 │   ├── Web_Design_Terms_and_Conditions.pdf
 │   └── Website_Care_Plan_Terms.pdf
-└── scripts/                                   # Automated Vector PDF Generation Tooling
+└── scripts/                                   # Automated PDF and Plain Text Generation Tooling
     ├── generate_pdfs.py                       # Standalone multi-browser headless PDF compiler
+    ├── generate_txts.py                       # Automated 80-column plain text policy compiler
     └── logo_data.py                           # Embedded base64 vector brand logo
 ```
 
@@ -100,17 +102,17 @@ legal.sheernox.com/
 
 ## 📋 Comprehensive Document Registry
 
-| Key | HTML Source | Target PDF Output | Document Title | Version Tag | Category |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `tos` | [`terms-and-conditions.html`](terms-and-conditions.html) | `pdf/Terms_and_Conditions.pdf` | Terms and Conditions of Service | `v4.5-TOS` | Master Services Agreement |
-| `aup` | [`acceptable-use-policy.html`](acceptable-use-policy.html) | `pdf/Acceptable_Use_Policy.pdf` | Acceptable Use Policy (AUP) | `v4.0-AUP` | Network & Infrastructure Policy |
-| `priv` | [`privacy-policy.html`](privacy-policy.html) | `pdf/Privacy_Policy.pdf` | Privacy & Personal Information Policy | `v4.5-PRIV` | Privacy & Data Protection Policy |
-| `sla` | [`service-level-agreement.html`](service-level-agreement.html) | `pdf/Service_Level_Agreement.pdf` | Service Level Agreement & Incident Policy | `v1.5-SLA` | Cloud Infrastructure & Operations |
-| `vdp` | [`vulnerability-disclosure-policy.html`](vulnerability-disclosure-policy.html) | `pdf/Vulnerability_Disclosure_Policy.pdf` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` | Cybersecurity & Trust Governance |
-| `cpr` | [`copyright-policy.html`](copyright-policy.html) | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` | Intellectual Property & Compliance |
-| `wdt` | [`web-design-terms.html`](web-design-terms.html) | `pdf/Web_Design_Terms_and_Conditions.pdf` | Web Design & Development Terms | `v3.5-WDT` | Agency Services Agreement |
-| `wcp` | [`website-care-plan-terms.html`](website-care-plan-terms.html) | `pdf/Website_Care_Plan_Terms.pdf` | Website Care Plan & Maintenance Terms | `v1.5-WCP` | Creative & Agency SOW Schedule |
-| `hub` | [`index.html`](index.html) | N/A | Legal Portal Directory & Search Hub | N/A | Central Index Directory |
+| Key | HTML Source | Target PDF Output | Plain Text Output | Document Title | Version Tag | Category |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `tos` | [`terms-and-conditions.html`](terms-and-conditions.html) | `pdf/Terms_and_Conditions.pdf` | [`terms-and-conditions.txt`](terms-and-conditions.txt) | Terms and Conditions of Service | `v4.5-TOS` | Master Services Agreement |
+| `aup` | [`acceptable-use-policy.html`](acceptable-use-policy.html) | `pdf/Acceptable_Use_Policy.pdf` | [`acceptable-use-policy.txt`](acceptable-use-policy.txt) | Acceptable Use Policy (AUP) | `v4.0-AUP` | Network & Infrastructure Policy |
+| `priv` | [`privacy-policy.html`](privacy-policy.html) | `pdf/Privacy_Policy.pdf` | [`privacy-policy.txt`](privacy-policy.txt) | Privacy & Personal Information Policy | `v4.5-PRIV` | Privacy & Data Protection Policy |
+| `sla` | [`service-level-agreement.html`](service-level-agreement.html) | `pdf/Service_Level_Agreement.pdf` | [`service-level-agreement.txt`](service-level-agreement.txt) | Service Level Agreement & Incident Policy | `v1.5-SLA` | Cloud Infrastructure & Operations |
+| `vdp` | [`vulnerability-disclosure-policy.html`](vulnerability-disclosure-policy.html) | `pdf/Vulnerability_Disclosure_Policy.pdf` | [`vulnerability-disclosure-policy.txt`](vulnerability-disclosure-policy.txt) | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` | Cybersecurity & Trust Governance |
+| `cpr` | [`copyright-policy.html`](copyright-policy.html) | `pdf/Copyright_Notice_and_Notice_Policy.pdf` | [`copyright-policy.txt`](copyright-policy.txt) | Copyright & Notice-and-Notice Policy | `v1.5-CPR` | Intellectual Property & Compliance |
+| `wdt` | [`web-design-terms.html`](web-design-terms.html) | `pdf/Web_Design_Terms_and_Conditions.pdf` | [`web-design-terms.txt`](web-design-terms.txt) | Web Design & Development Terms | `v3.5-WDT` | Agency Services Agreement |
+| `wcp` | [`website-care-plan-terms.html`](website-care-plan-terms.html) | `pdf/Website_Care_Plan_Terms.pdf` | [`website-care-plan-terms.txt`](website-care-plan-terms.txt) | Website Care Plan & Maintenance Terms | `v1.5-WCP` | Creative & Agency SOW Schedule |
+| `hub` | [`index.html`](index.html) | N/A | N/A | Legal Portal Directory & Search Hub | N/A | Central Index Directory |
 
 ### Document Summary & Legal Highlights
 
