@@ -1,274 +1,170 @@
-# Sheernox Legal Portal
+# Sheernox Legal Portal (`legal.sheernox.com`)
 
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-emerald?style=flat-square)](#)
-[![CDN Deployment](https://img.shields.io/badge/CDN-legal.sheernox.com-0284c7?style=flat-square)](https://legal.sheernox.com)
-[![Storage](https://img.shields.io/badge/Storage-Bunny.net%20S3-f59e0b?style=flat-square)](#)
-[![Jurisdiction](https://img.shields.io/badge/Jurisdiction-British%20Columbia%2C%20Canada-0284c7?style=flat-square)](#)
-[![Documents](https://img.shields.io/badge/Documents-8%20Policies%20%7C%208%20PDFs-6366f1?style=flat-square)](#)
-[![Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-0f4c81?style=flat-square)](#)
-[![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20Runtime-10b981?style=flat-square)](#)
+[![Framework](https://img.shields.io/badge/Framework-Astro%207-bc52ee?style=flat-square)](https://astro.build)
+[![Language](https://img.shields.io/badge/Language-TypeScript%20%7C%20Python%203-3178c6?style=flat-square)](#)
+[![CDN Deployment](https://img.shields.io/badge/CDN-Bunny.net%20S3-f59e0b?style=flat-square)](https://legal.sheernox.com)
+[![Status](https://img.shields.io/badge/Status-Production%20Live-10b981?style=flat-square)](https://legal.sheernox.com)
 
-Official customer legal agreements, compliance policies, service level commitments, and security governance repository for **Sheernox Technology Group**.
+The public legal documentation portal, policy registry, and automated document generation pipeline for **Sheernox Technology Group**.
 
-This repository contains the standalone, fully responsive, and accessible HTML5 web agreements that power the public legal hub at [sheernox.com](https://sheernox.com) and the client portal at [my.sheernox.com](https://my.sheernox.com), alongside automated tooling for generating official print-ready vector PDF documents and automatic S3-compatible deployment to [legal.sheernox.com](https://legal.sheernox.com) on Bunny.net CDN.
+This repository hosts the client agreements, service level guarantees, cybersecurity policies, and compliance standards powering [legal.sheernox.com](https://legal.sheernox.com). It compiles static HTML pages via **Astro 7**, generates production vector PDFs via headless Chromium, formats 80-column monospaced plain-text documents, and deploys directly to Bunny.net edge CDN storage.
 
 ---
 
-## 🏛️ Entity & Legal Jurisdiction
+## 🏗️ Architecture & Tech Stack
 
-All infrastructure, cloud hosting, managed care, and creative agency services are contracted with:
-
-- **Entity**: **Sheernox Technology Group** (Registered Sole Proprietorship in British Columbia, Canada)
-- **Registration Number**: `FM0707819`
-- **Business Number**: `732754924BC0001`
-- **Original Registration Date**: `October 29, 2009`
-- **Official Physical & Mailing Address**: `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada`
-- **Governing Law**: Laws of the **Province of British Columbia** and the federal laws of **Canada** applicable therein.
-- **Exclusive Venue**: Courts of British Columbia sitting in the **City of Kamloops, British Columbia, Canada**.
-- **Dispute Resolution & Arbitration**: Administered under the British Columbia *Arbitration Act* (SBC 2020, c. 2) or the Vancouver International Arbitration Centre (**VanIAC**). Small claims debt recovery is enforced through the **Small Claims Court of British Columbia**.
-- **Currency & Monetary Units**: All contractual figures, service retainers, and liquidated damage assessments are denominated in **Canadian Dollars (CAD)** and subject to Canadian Goods and Services Tax (**GST**, 5%) and British Columbia Provincial Sales Tax (**PST**, 7%).
-
-### Statutory Framework
-- **Electronic Formation**: Fully enforceable electronic contracting under the British Columbia *Electronic Transactions Act* (SBC 2001, c. 10).
-- **Anti-Spam Compliance**: Governed by Canada’s Anti-Spam Legislation (**CASL**, S.C. 2010, c. 23).
-- **Copyright & Notice-and-Notice**: Formal compliance with Sections 31.1, 41.25, and 41.26 of the Canadian *Copyright Act* (R.S.C. 1985, c. C-42).
-- **Cybersecurity Safe Harbor**: Express research authorization under Sections 342.1 and 430(1.1) of the Canadian *Criminal Code* (R.S.C. 1985, c. C-46).
-- **Child Protection (Zero Tolerance)**: Mandatory reporting of CSAM to **Cybertip.ca** (Canadian Centre for Child Protection) and the Royal Canadian Mounted Police (**RCMP**).
-- **Privacy & Data Protection**: Aligned with Canada's *Personal Information Protection and Electronic Documents Act* (**PIPEDA**) and BC's *Personal Information Protection Act* (**PIPA**, SBC 2003, c. 63) under the Office of the Information and Privacy Commissioner for British Columbia (**OIPC BC**).
-- **Cross-Border Statutory Disclosures**: Upstream cloud infrastructure disclosures regarding extraterritorial legal processes, including the United States Clarifying Lawful Overseas Use of Data Act (**CLOUD Act**, 18 U.S.C. § 2713).
-- **Warranty Exclusions**: Implied statutory warranties excluded to the fullest extent permitted under the British Columbia *Sale of Goods Act* (RSBC 1996, c. 410).
+- **Static Site Generator**: [Astro 7](https://astro.build) with `build: { format: 'file' }` for root-level `.html` static file output matching CDN routing requirements.
+- **Component Architecture**: Reusable Astro components for shared navigation (`NetworkHeader.astro`, `PortalHeader.astro`), document headers (`DocHero.astro`), interactive sidebar navigation (`TableOfContents.astro` with scrollspy), and global footers (`SiteFooter.astro`).
+- **Styling**: Modern CSS3 with centralized design tokens, CSS variables, responsive mobile drawer navigation, and comprehensive `@media print` layouts.
+- **Automated PDF Engine**: Self-contained Python 3 headless Chromium compiler generating vector-grade PDF legal agreements.
+- **Plain-Text Engine**: Automated Python 3 DOM parser producing standardized 80-column monospaced plain-text files.
+- **CI/CD & Storage**: GitHub Actions pipeline building static routes, compiling assets, deploying to Bunny.net S3 storage via `aws s3 sync --delete`, and executing instant CDN edge cache purges.
 
 ---
 
-## 🌐 Sheernox Technology Group Network Header
+## 📋 Document Registry
 
-Every page across the Legal Portal integrates a standardized, responsive enterprise multi-brand navigation bar positioned at the top of the viewport (`.network-bar`), showcasing the Sheernox corporate network:
+| Key | Astro Source | Target Deployed HTML | Target PDF Output | Plain Text Output | Document Title | Version Tag |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `tos` | `src/pages/terms-and-conditions.astro` | `terms-and-conditions.html` | `terms-and-conditions.pdf` | `terms-and-conditions.txt` | Terms and Conditions of Service | `v4.5-TOS` |
+| `aup` | `src/pages/acceptable-use-policy.astro` | `acceptable-use-policy.html` | `acceptable-use-policy.pdf` | `acceptable-use-policy.txt` | Acceptable Use Policy (AUP) | `v4.0-AUP` |
+| `priv` | `src/pages/privacy-policy.astro` | `privacy-policy.html` | `privacy-policy.pdf` | `privacy-policy.txt` | Privacy & Personal Information Policy | `v4.5-PRIV` |
+| `sla` | `src/pages/service-level-agreement.astro` | `service-level-agreement.html` | `service-level-agreement.pdf` | `service-level-agreement.txt` | Service Level Agreement & Incident Policy | `v1.5-SLA` |
+| `vdp` | `src/pages/vulnerability-disclosure-policy.astro` | `vulnerability-disclosure-policy.html` | `vulnerability-disclosure-policy.pdf` | `vulnerability-disclosure-policy.txt` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` |
+| `cpr` | `src/pages/copyright-policy.astro` | `copyright-policy.html` | `copyright-policy.pdf` | `copyright-policy.txt` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` |
+| `wdt` | `src/pages/web-design-terms.astro` | `web-design-terms.html` | `web-design-terms.pdf` | `web-design-terms.txt` | Web Design & Development Terms | `v3.5-WDT` |
+| `wcp` | `src/pages/website-care-plan-terms.astro` | `website-care-plan-terms.html` | `website-care-plan-terms.pdf` | `website-care-plan-terms.txt` | Website Care Plan & Maintenance Terms | `v1.5-WCP` |
+| `hub` | `src/pages/index.astro` | `index.html` | N/A | N/A | Legal Portal Directory & Search Hub | N/A |
 
+---
+
+## 🚀 Quick Start & Development Commands
+
+### Prerequisites
+- **Node.js**: `v20.x` or `v22.x+`
+- **Python**: `3.10+` with `beautifulsoup4` (`pip install beautifulsoup4`)
+- **Browser** (for PDF generation): Google Chrome, Brave, or Chromium
+
+### Setup & Local Server
+
+```bash
+# Install dependencies
+npm install
+
+# Start local development server
+npm run dev
+
+# Run Astro TypeScript and component diagnostics
+npm test
+
+# Build static production bundle to dist/
+npm run build
+
+# Preview built distribution locally
+npm run preview
 ```
-[ Sheernox.com (Active) | HostBlizzard.com | VPSTitan.com | UptimeHawk.com | 4Up.ca ]    [ Sheernox Technology Group ]
-```
-
-- **Participating Brands**:
-  1. [`Sheernox.com`](https://sheernox.com) — Active portal state highlighted in cyan gradient.
-  2. [`HostBlizzard.com`](https://hostblizzard.com) — Web, cloud, and reseller hosting platform.
-  3. [`VPSTitan.com`](https://vpstitan.com) — High-performance virtual private server infrastructure.
-  4. [`UptimeHawk.com`](https://uptimehawk.com) — 24/7/365 infrastructure monitoring and telemetry.
-  5. [`4Up.ca`](https://4up.ca) — Canadian domain services and network solutions.
-- **Enterprise Entity Badge**: Displays `Sheernox Technology Group` on desktop displays.
-- **Mobile Responsive**: Horizontally scrollable tab bar on mobile displays (`< 840px`) with hidden scrollbars to prevent page-level horizontal overflow.
-- **Print Optimization**: Automatically suppressed on `@media print` across all documents.
 
 ---
 
-### 📁 Repository Structure & Production Files
+## 🖨️ Document Generation Tooling
 
-This repository contains the Astro 7 source code, shared layouts, components, static public assets, and automated Python PDF/text generators:
+### Automated Vector PDF Generator
+Compiles production print-ready vector PDFs directly from the built static HTML in `dist/`:
+
+```bash
+# Generate all 8 PDF documents into dist/ and sync public/
+npm run generate:pdfs
+
+# Or invoke the Python script directly with custom parameters
+python3 scripts/generate_pdfs.py --source-dir dist --output-dir dist
+
+# Compile a specific document (e.g., Terms of Service)
+python3 scripts/generate_pdfs.py --doc tos --source-dir dist --output-dir dist
+
+# Specify an explicit browser binary
+python3 scripts/generate_pdfs.py --browser /usr/bin/google-chrome
+```
+
+### Automated Plain Text (.TXT) Generator
+Parses the semantic legal prose from `dist/` and generates 80-column monospaced plain-text versions:
+
+```bash
+# Generate all plain-text policies into dist/ and sync public/
+npm run generate:txts
+
+# Or invoke the Python script directly
+python3 scripts/generate_txts.py --source-dir dist --output-dir dist
+
+# Compile a single document
+python3 scripts/generate_txts.py --doc sla --source-dir dist --output-dir dist
+
+# Force re-generation of all documents (including hand-crafted VDP)
+python3 scripts/generate_txts.py --force --source-dir dist --output-dir dist
+```
+
+---
+
+## 📁 Repository Structure
 
 ```text
 legal.sheernox.com/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml                         # Automated CI/CD deployment to Bunny S3 storage
-├── .gitignore                                 # Production ignore rules (node_modules, dist, .astro)
-├── README.md                                  # Repository documentation and architecture guide
-├── AGENTS.md                                  # AI Agent operational runbook & legal guardrails
-├── astro.config.mjs                           # Astro 7 configuration (format: 'file', sitemap)
-├── package.json                               # Dependencies & build scripts
-├── tsconfig.json                              # TypeScript strict configuration
-├── public/                                    # Static assets deployed directly to CDN root
-│   ├── favicon.ico                            # Official Sheernox browser favicon
-│   ├── security.txt                           # Vulnerability contact coordinates
-│   ├── .well-known/security.txt               # RFC 9116 security contact
-│   ├── *.pdf                                  # Production vector PDFs (root on CDN)
-│   └── *.txt                                  # Official 80-column monospaced text versions
+│       └── deploy.yml            # CI/CD: Node 22 build, Python asset compile, Bunny S3 sync
+├── .gitignore                    # Production git ignore (node_modules, dist, .astro)
+├── README.md                     # Technical architecture, setup & operational documentation
+├── AGENTS.md                     # AI Agent runbook & statutory legal parameters
+├── astro.config.mjs              # Astro 7 configuration (file output format, sitemap)
+├── package.json                  # Scripts & dependencies
+├── tsconfig.json                 # TypeScript strict configuration
+├── public/                       # Static root assets copied verbatim to dist/
+│   ├── favicon.ico               # Official Sheernox browser favicon
+│   ├── security.txt              # Security vulnerability reporting metadata
+│   ├── .well-known/security.txt  # RFC 9116 security contact endpoint
+│   ├── *.pdf                     # Generated vector PDF documents
+│   └── *.txt                     # Generated 80-column monospaced text documents
 ├── src/
-│   ├── components/                            # Reusable Astro UI components
-│   │   ├── NetworkHeader.astro                # Standardized Sheernox multi-brand top bar
-│   │   ├── PortalHeader.astro                 # Sticky Legal Portal branding & navigation
-│   │   ├── DocHero.astro                      # Policy title, version tag & action buttons
-│   │   ├── TableOfContents.astro              # Sidebar TOC with search & scrollspy
-│   │   ├── SiteFooter.astro                   # Official entity coordinates & BC legal info
-│   │   └── Toast.astro                        # Interactive notification toast
+│   ├── components/               # Shared Astro components
+│   │   ├── NetworkHeader.astro   # Unified Sheernox multi-brand network bar
+│   │   ├── PortalHeader.astro    # Sticky Legal Portal header & navigation
+│   │   ├── DocHero.astro         # Document metadata header, version tag & action buttons
+│   │   ├── TableOfContents.astro # Sticky sidebar TOC with filter & active scrollspy
+│   │   ├── SiteFooter.astro      # Global footer with statutory entity coordinates
+│   │   └── Toast.astro           # Toast notification element
 │   ├── data/
-│   │   └── documents.ts                       # Document registry, versions & metadata
+│   │   └── documents.ts          # Central metadata registry (versions, dates, slugs)
 │   ├── layouts/
-│   │   └── LegalDocumentLayout.astro          # Shared policy page layout
-│   ├── pages/                                 # Page routes (compiles to dist/*.html)
-│   │   ├── index.astro                        # Central Legal Portal Directory & Search Hub
-│   │   └── *.astro                            # 8 Policy page components
+│   │   └── LegalDocumentLayout.astro # Base legal page layout wrapping <article class="legal-prose">
+│   ├── pages/                    # Astro page routes
+│   │   ├── index.astro           # Portal search hub & interactive directory
+│   │   └── *.astro               # 8 Legal policy page components
 │   └── styles/
-│       ├── legal.css                          # Shared design system & print styles
-│       └── hub.css                            # Hub directory & search card styles
-└── scripts/                                   # Automated PDF and Plain Text Generation Tooling
-    ├── generate_pdfs.py                       # Standalone multi-browser headless PDF compiler
-    ├── generate_txts.py                       # Automated 80-column plain text policy compiler
-    └── logo_data.py                           # Embedded base64 vector brand logo
+│       ├── legal.css             # Shared design system, typography, callouts & print styles
+│       └── hub.css               # Directory cards, search input & filter styles
+└── scripts/                      # Automated asset compilers
+    ├── generate_pdfs.py          # Headless Chromium vector PDF generator
+    ├── generate_txts.py          # 80-column monospaced plain-text generator
+    └── logo_data.py              # Embedded base64 vector brand logo
 ```
 
 ---
 
-## 📋 Comprehensive Document Registry
+## 🌐 CI/CD & Deployment Pipeline
 
-| Key | Astro Source | Target Deployed HTML | Target PDF Output | Plain Text Output | Document Title | Version Tag | Category |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `tos` | `src/pages/terms-and-conditions.astro` | `terms-and-conditions.html` | `terms-and-conditions.pdf` | `terms-and-conditions.txt` | Terms and Conditions of Service | `v4.5-TOS` | Master Services Agreement |
-| `aup` | `src/pages/acceptable-use-policy.astro` | `acceptable-use-policy.html` | `acceptable-use-policy.pdf` | `acceptable-use-policy.txt` | Acceptable Use Policy (AUP) | `v4.0-AUP` | Network & Infrastructure Policy |
-| `priv` | `src/pages/privacy-policy.astro` | `privacy-policy.html` | `privacy-policy.pdf` | `privacy-policy.txt` | Privacy & Personal Information Policy | `v4.5-PRIV` | Privacy & Data Protection Policy |
-| `sla` | `src/pages/service-level-agreement.astro` | `service-level-agreement.html` | `service-level-agreement.pdf` | `service-level-agreement.txt` | Service Level Agreement & Incident Policy | `v1.5-SLA` | Cloud Infrastructure & Operations |
-| `vdp` | `src/pages/vulnerability-disclosure-policy.astro` | `vulnerability-disclosure-policy.html` | `vulnerability-disclosure-policy.pdf` | `vulnerability-disclosure-policy.txt` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` | Cybersecurity & Trust Governance |
-| `cpr` | `src/pages/copyright-policy.astro` | `copyright-policy.html` | `copyright-policy.pdf` | `copyright-policy.txt` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` | Intellectual Property & Compliance |
-| `wdt` | `src/pages/web-design-terms.astro` | `web-design-terms.html` | `web-design-terms.pdf` | `web-design-terms.txt` | Web Design & Development Terms | `v3.5-WDT` | Agency Services Agreement |
-| `wcp` | `src/pages/website-care-plan-terms.astro` | `website-care-plan-terms.html` | `website-care-plan-terms.pdf` | `website-care-plan-terms.txt` | Website Care Plan & Maintenance Terms | `v1.5-WCP` | Creative & Agency SOW Schedule |
-| `hub` | `src/pages/index.astro` | `index.html` | N/A | N/A | Legal Portal Directory & Search Hub | N/A | Central Index Directory |
+Every push to `main` (or manual `workflow_dispatch`) triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
 
-### Document Summary & Legal Highlights
-
-1. **Master Terms and Conditions (`terms-and-conditions.html` / `v4.5-TOS`)**:
-   - Master commercial services framework, billing cycles, domain management, and acceptable usage.
-   - Exclusive jurisdiction in the Courts of British Columbia sitting in Kamloops, BC.
-   - $5,000.00 CAD liquidated damages for domain typo-squatting, phishing, and brand impersonation.
-   - 14-day cancellation notice requirement via client portal ticket.
-   - Upstream cloud provider disclosure regarding the US CLOUD Act (18 U.S.C. § 2713).
-
-2. **Acceptable Use Policy (`acceptable-use-policy.html` / `v4.0-AUP`)**:
-   - Technical multi-tenancy resource standards, CloudLinux LVE limits, and shared environment protection.
-   - Prohibitions on network stress testing, botnets, crypto-mining, email harvesting, and outbound port abuse.
-   - Automated quarantine null-routing for compromised virtual instances.
-   - CASL anti-spam compliance enforcement; $250.00 CAD delisting fee for outbound IP blocklisting.
-   - Zero-tolerance CSAM policy with mandatory reporting to Cybertip.ca and the RCMP.
-
-3. **Privacy & Personal Information Policy (`privacy-policy.html` / `v4.5-PRIV`)**:
-   - Comprehensive data handling transparency complying with PIPEDA, BC PIPA, and international principles.
-   - Self-hosted infrastructure guarantees, encrypted database retention (AES-256), and access controls.
-   - Disclosures on US CLOUD Act cross-border legal assistance treaties and data sovereign boundaries.
-   - Direct escalation to designated Privacy Officer in Kamloops, BC, with OIPC BC complaint rights.
-
-4. **Service Level Agreement & Incident Policy (`service-level-agreement.html` / `v1.5-SLA`)**:
-   - Explicit 99.9% monthly network and infrastructure availability guarantee calculated via mathematical formula:
-     $$\text{Availability (\%)} = \frac{T - D}{T} \times 100$$
-   - Incident severity matrix: P1 (Critical, $< 15$ min initial response) through P4 (Low, $< 12$ hr).
-   - Tiered service credits: 10% for $99.0\%–99.89\%$, 25% for $95.0\%–98.99\%$, 50% for $90.0\%–94.99\%$, and 100% for $< 90.0\%$.
-   - 30-day claims submission window; credits serve as the customer's sole and exclusive financial remedy.
-
-5. **Vulnerability Disclosure Policy (`vulnerability-disclosure-policy.html` / `v1.5-VDP`)**:
-   - Statutory Safe Harbor authorizing authorized security research under Sections 342.1 (*Unauthorized use of computer*) and 430(1.1) (*Mischief in relation to computer data*) of the Canadian *Criminal Code* (R.S.C. 1985, c. C-46).
-   - Clear asset scope: `*.sheernox.com`, customer endpoints, APIs, and edge DNS clusters.
-   - Ban on DoS/DDoS, data destruction, social engineering, and customer privacy violations.
-   - 48-hour response confirmation, 5-day triage SLA, and 90-day coordinated disclosure timeline.
-
-6. **Copyright & Notice-and-Notice Policy (`copyright-policy.html` / `v1.5-CPR`)**:
-   - Full statutory alignment with Canada's **Notice-and-Notice** regime (Canadian *Copyright Act*, ss. 31.1, 41.25–41.26).
-   - Obligation to forward statutory infringement notices to subscribers within 48 hours without fee.
-   - Rejection of non-compliant notices containing settlement offers or statutory release fee demands (s. 41.25(3)).
-   - Statutory 6-month log retention period (extendable to 12 months upon formal court notice).
-   - Customer identity protection: Subscriber personal information is never disclosed without a Canadian court order.
-
-7. **Web Design & Development Terms (`web-design-terms.html` / `v3.5-WDT`)**:
-   - Statement of Work (SOW) legal architecture for bespoke web design, custom engineering, and agency services.
-   - 50% initial non-refundable mobilization deposit; progressive milestone billing.
-   - 30-day post-launch code warranty covering reproducible defects and responsive layout bugs.
-   - Criminal protection: Unauthorized deployment of unreleased deliverables constitutes theft under Sections 322–380 of the Canadian *Criminal Code*.
-   - Intellectual property transfer occurs strictly upon receipt of 100% full cleared payment.
-
-8. **Website Care Plan & Maintenance Terms (`website-care-plan-terms.html` / `v1.5-WCP`)**:
-   - Recurring maintenance Statement of Work (SOW) schedule operating under `web-design-terms.html`.
-   - 3 Care Plan tiers: Essential Care, Professional Care (2 hrs/mo included), and Enterprise Agency Care (5 hrs/mo included + 2h emergency malware response).
-   - Staging-First testing protocol with automated visual regression and rollback guarantees.
-   - Non-rollover monthly support hours ("use-it-or-lose-it"); discounted subscriber rate (\$95.00 CAD/hr vs \$125.00 CAD/hr standard).
-   - Automated recurring billing via Stripe with 30-day written cancellation protocol.
+1. **Environment Setup**: Configures Node.js 22 and Python 3.11 with Google Chrome.
+2. **Diagnostics**: Executes `npm test` (`astro check`) for type-safety and syntax validation.
+3. **Static Build**: Runs `npm run build` to generate all static HTML routes to `dist/`.
+4. **Asset Generation**: Re-generates all 8 vector PDFs and 8 plain-text documents directly into `dist/`.
+5. **Storage Sync**: Synchronizes `dist/` to Bunny.net S3 storage root (`s3://${BUNNY_STORAGE_BUCKET}`) using AWS CLI with `--delete`.
+6. **CDN Cache Purge**: Calls the Bunny.net REST API to purge the CDN Pull Zone cache for instant edge propagation.
+7. **Health Verification**: Performs live HTTP `HEAD` checks against `https://legal.sheernox.com` endpoints.
 
 ---
 
-## 🎨 Design System & Interactive Capabilities
+## 📬 Contact & Routing Channels
 
-The portal features a modern, accessible interface tailored for rapid clause discovery and legal readability:
-
-- **Enterprise Network Header**: Persistent multi-brand top bar linking to Sheernox corporate network websites.
-- **Dynamic Scrollspy Sidebar**: Table of Contents (TOC) tracks reading progress in real-time with smooth scrolling.
-- **Client-Side Clause Search**: Live filter inputs on individual policy sidebars and central hub search filter clauses and cards by keyword instantly without page reloads.
-- **Reading Progress Bar**: Top 3px gradient progress bar tracks exact viewport reading completion.
-- **"In Plain English" Key Takeaways**: Executive callout summaries translating dense legal prose into concise operational guidelines.
-- **Clause Permalinks (`#`)**: Deep-link permalink anchor buttons copy direct section URLs with toast feedback.
-- **Mobile Responsive Architecture**: Responsive layout hiding desktop sidebars on mobile screens, providing a clean collapsible mobile Table of Contents accordion, and ensuring zero horizontal page overflow (`scrollWidth === clientWidth`).
-- **Accessible WCAG AA Typography**: Clean font pairings using Google Fonts (`Inter` for body copy, `JetBrains Mono` for IP addresses, clause codes, and monetary figures).
-- **Print Optimization**: Comprehensive print stylesheets (`@media print`) hide navigation bars, search inputs, sidebars, progress indicators, and footers, preserving clean margins and page break rules.
-
----
-
-## 🖨️ Automated Vector PDF Generation
-
-A fully self-contained, zero-dependency PDF compiler is provided at [`scripts/generate_pdfs.py`](scripts/generate_pdfs.py). It parses the semantic HTML legal prose, injects enterprise print styling (Variation 1 layout), and compiles vector PDFs via headless Chromium/Brave:
-
-```bash
-# Generate all 8 legal policy PDFs
-python3 scripts/generate_pdfs.py
-
-# Generate a specific policy document
-python3 scripts/generate_pdfs.py --doc tos     # Master Terms and Conditions (v4.0-TOS)
-python3 scripts/generate_pdfs.py --doc aup     # Acceptable Use Policy (v4.0-AUP)
-python3 scripts/generate_pdfs.py --doc priv    # Privacy Policy (v4.0-PRIV)
-python3 scripts/generate_pdfs.py --doc sla     # Service Level Agreement (v1.5-SLA)
-python3 scripts/generate_pdfs.py --doc vdp     # Vulnerability Disclosure Policy (v1.5-VDP)
-python3 scripts/generate_pdfs.py --doc cpr     # Copyright Policy (v1.5-CPR)
-python3 scripts/generate_pdfs.py --doc wdt     # Web Design Terms (v3.0-WDT)
-python3 scripts/generate_pdfs.py --doc wcp     # Website Care Plan Terms (v1.0-WCP)
-
-# Specify a custom browser executable
-python3 scripts/generate_pdfs.py --browser /usr/bin/brave
-```
-
-### PDF Layout Specifications
-- **Top Brand Banner**: Deep navy `#071322` header with embedded vector Sheernox logo and cyan Canadian jurisdiction badge (`British Columbia • Canada`).
-- **Metadata Subheader**: Clean layout showing category, document title, revision date, and version pill tag (`vX.X-KEY`).
-- **Page Numbers & Running Footers**: Dynamic `Page X of Y` footer and revision stamp on every page.
-- **Orphan & Widow Prevention**: `break-inside: avoid;` on callout boxes, tables, and clause blocks; `break-after: avoid;` on section headings.
-
----
-
-## 🚀 Local Development & Deployment
-
-The portal is **100% static** and requires **zero runtime dependencies or build steps**.
-
-### Local Testing
-
-Serve repository files locally using any HTTP server:
-
-```bash
-# Python 3 built-in server
-python3 -m http.server 8080
-
-# Node.js (npx)
-npx serve .
-
-# PHP built-in server
-php -S localhost:8080
-```
-
-Open `http://localhost:8080` in your web browser.
-
-### Production Hosting Options
-
-- **GitHub Pages**: Deploy directly from the `main` branch root (`/`).
-- **Cloudflare Pages / Vercel / Netlify**: Connect repository with no build command and publish root `/`.
-- **Nginx / Apache**: Copy static files directly to the webroot directory (`/var/www/html/`).
-
----
-
-## 🛡️ Abuse & Compliance Communication Channels
-
-To report network abuse, security vulnerabilities, or statutory copyright notices:
-
-- **Network Abuse, Phishing, Malware & Copyright Infringement**: `abuse@sheernox.com`
-- **Legal, Compliance, Privacy & Vulnerability Disclosure Inquiries**: `support@sheernox.com`
-- **Customer Account & Support Portal**: [`https://my.sheernox.com`](https://my.sheernox.com)
-- **Official Physical Address**:
-  Sheernox Technology Group
-  1-1885 Grasslands Blvd
-  Kamloops, BC, V2B 0B8
-  Canada
-
----
-
-## ⚖️ Copyright & Proprietary Notice
-
-&copy; 2026 **Sheernox Technology Group**. All rights reserved. Registered sole proprietorship in the Province of British Columbia, Canada.
+- **Network Abuse, Phishing & Copyright / DMCA**: `abuse@sheernox.com`
+- **Legal, Privacy & General Inquiries**: `support@sheernox.com`
+- **Customer Account Portal**: [`https://my.sheernox.com`](https://my.sheernox.com)

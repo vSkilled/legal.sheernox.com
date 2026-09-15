@@ -3,12 +3,13 @@
 Sheernox Legal Portal - Plain Text (.TXT) Policy Generator
 ==========================================================
 Generates high-fidelity, monospaced 80-column plain text versions of all legal
-policy documents from HTML sources, matching the styling of vulnerability-disclosure-policy.txt.
+policy documents from built HTML sources, matching the styling of vulnerability-disclosure-policy.txt.
 
 Usage:
-  python3 scripts/generate_txts.py              # Generate all plain text documents
-  python3 scripts/generate_txts.py --doc sla    # Generate only SLA
-  python3 scripts/generate_txts.py --doc tos    # Generate only Terms and Conditions
+  python3 scripts/generate_txts.py --source-dir dist --output-dir dist
+  python3 scripts/generate_txts.py --doc sla
+  python3 scripts/generate_txts.py --doc tos
+  python3 scripts/generate_txts.py --force
 """
 
 import os

@@ -6,14 +6,13 @@ Generates high-fidelity, vector-grade PDF legal policy documents from HTML sourc
 using the "Variation 1: Modern Tech Enterprise" styling layout.
 
 Usage:
-  python3 scripts/generate_pdfs.py              # Generate all 4 documents
-  python3 scripts/generate_pdfs.py --doc aup    # Generate only AUP
-  python3 scripts/generate_pdfs.py --doc tos    # Generate only Terms and Conditions
-  python3 scripts/generate_pdfs.py --doc wdt    # Generate only Web Design Terms
-  python3 scripts/generate_pdfs.py --doc priv   # Generate only Privacy Policy
+  python3 scripts/generate_pdfs.py --source-dir dist --output-dir dist
+  python3 scripts/generate_pdfs.py --doc tos
+  python3 scripts/generate_pdfs.py --doc aup
+  python3 scripts/generate_pdfs.py --browser /usr/bin/google-chrome
 
 Requirements:
-  - Python 3.8+
+  - Python 3.10+
   - beautifulsoup4 (`pip install beautifulsoup4`)
   - Headless Chromium-based browser (Brave, Google Chrome, or Chromium)
 """
