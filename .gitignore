@@ -27,3 +27,11 @@ pdfs/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Node & Astro build artifacts
+node_modules/
+dist/
+.astro/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

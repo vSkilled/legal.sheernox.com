@@ -1,0 +1,27 @@
+{
+  "name": "legal.sheernox.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official Sheernox Legal Portal, built with Astro 7",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "generate:pdfs": "python3 scripts/generate_pdfs.py --source-dir dist --output-dir dist",
+    "generate:txts": "python3 scripts/generate_txts.py --source-dir dist --output-dir dist",
+    "test": "astro check",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.2",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "happy-dom": "^20.14.5"
+  }
+}

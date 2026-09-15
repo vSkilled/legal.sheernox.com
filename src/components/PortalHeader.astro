@@ -1,0 +1,149 @@
+---
+interface Props {
+  showBackToMain?: boolean;
+}
+
+const { showBackToMain = true } = Astro.props;
+---
+
+<nav class="top-nav" aria-label="Portal Navigation">
+  <div class="top-nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox" class="nav-logo" />
+      <div class="nav-divider"></div>
+      <span class="nav-portal-label">Legal Portal</span>
+    </a>
+    <div class="nav-actions">
+      {showBackToMain && (
+        <a href="https://sheernox.com" class="nav-link" target="_blank" rel="noopener noreferrer">
+          <span class="nav-link-full">&larr; Back to Sheernox.com</span>
+          <span class="nav-link-short">&larr; Sheernox</span>
+        </a>
+      )}
+      <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .top-nav {
+    background-color: var(--sn-dark-navy, #071322);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .top-nav-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .nav-divider {
+    height: 22px;
+    width: 1.5px;
+    background: rgba(255, 255, 255, 0.25);
+    margin: 0 4px;
+  }
+
+  .nav-portal-label {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nav-link {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .nav-link-short {
+    display: none;
+  }
+
+  .nav-btn {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  @media (max-width: 640px) {
+    .top-nav {
+      padding: 10px 16px;
+    }
+    .nav-brand .nav-divider,
+    .nav-brand .nav-portal-label {
+      display: none;
+    }
+    .nav-logo {
+      height: 24px;
+    }
+    .nav-actions {
+      gap: 8px;
+    }
+    .nav-link {
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+    .nav-link-full {
+      display: none;
+    }
+    .nav-link-short {
+      display: inline;
+    }
+    .nav-btn {
+      padding: 5px 10px;
+      font-size: 0.78rem;
+    }
+  }
+
+  @media print {
+    .top-nav {
+      display: none !important;
+    }
+  }
+</style>

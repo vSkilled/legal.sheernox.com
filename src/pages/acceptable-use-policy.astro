@@ -1,0 +1,337 @@
+---
+import LegalDocumentLayout from '../layouts/LegalDocumentLayout.astro';
+import { DOC_BY_SLUG } from '../data/documents';
+
+const doc = DOC_BY_SLUG.get('acceptable-use-policy')!;
+
+const tocItems = [
+  {
+    "id": "sec-preamble",
+    "num": "0.0",
+    "title": "Preamble & Responsibility"
+  },
+  {
+    "id": "sec-1",
+    "num": "1.0",
+    "title": "General System Standards"
+  },
+  {
+    "id": "sec-2",
+    "num": "2.0",
+    "title": "Prohibited Network Uses"
+  },
+  {
+    "id": "sec-3",
+    "num": "3.0",
+    "title": "No Unlawful Use"
+  },
+  {
+    "id": "sec-4",
+    "num": "4.0",
+    "title": "Resource Fair Use Policy"
+  },
+  {
+    "id": "sec-5",
+    "num": "5.0",
+    "title": "Unlimited Resource Limits"
+  },
+  {
+    "id": "sec-6",
+    "num": "6.0",
+    "title": "Enforcement & Delisting Fees"
+  },
+  {
+    "id": "sec-7",
+    "num": "7.0",
+    "title": "Communications Privacy"
+  },
+  {
+    "id": "sec-8",
+    "num": "8.0",
+    "title": "Reporting Abuse Violations"
+  }
+];
+
+const badgeText = "9 Sections";
+const metaDescription = "Official Acceptable Use Policy of Sheernox Technology Group, a sole proprietorship registered at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada. Outlines network security, resource limits, and anti-abuse enforcement.";
+---
+
+<LegalDocumentLayout doc={doc} tocItems={tocItems} badgeText={badgeText} metaDescription={metaDescription}>
+<!-- Critical Warning Box -->
+<div class="critical-alert-box">
+<div class="alert-icon">⚠️</div>
+<div>
+<h3>CRITICAL POLICY WARNING</h3>
+<p>Abuse of your service will result in your accounts being suspended or terminated. Each customer is responsible for any misuse occurring on our systems and network.</p>
+</div>
+</div>
+<!-- Preamble Section -->
+<section class="legal-section" id="sec-preamble">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">0.0</span> Preamble &amp; Scope of Customer Responsibility</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-preamble')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>This Acceptable Use Policy (AUP) protects Sheernox, our servers, and all clients from negative impacts caused by inappropriate activities. Sheernox Technology Group is a Canadian sole proprietorship registered at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada. Your use of our services constitutes continuous acceptance of this policy under British Columbia and Canadian law.</p>
+</div>
+<p>
+            This Acceptable Use Policy defines the policy of <strong>Sheernox Technology Group</strong>, a sole proprietorship registered at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada, and its included networks, infrastructure, and operating divisions (collectively, "Sheernox"), designed to protect Sheernox and persons and entities using Sheernox products and services, including Internet service, cloud hypervisors, server hardware, and software systems (collectively, "Customers"), from negative impact caused by inappropriate or unlawful activities.
+          </p>
+<p>
+            Sheernox Technology Group reserves the right to modify this policy from time to time. Customers shall adhere to this policy and are subject to the terms and conditions herein. Each customer’s use of Sheernox Technology Group’s products and/or services constitutes acceptance of the Acceptable Use Policy in effect at the time of use. If at any time a customer elects not to accept this policy, the customer shall discontinue use of Sheernox Technology Group’s products and/or services immediately.
+          </p>
+<p>
+            Each customer is responsible for ensuring that its access to and management activities on its systems, data, and content does not impose risks to or negative impacts on Sheernox Technology Group or other sites or systems. Each customer is responsible for any misuse of accounts on its systems located at Sheernox Technology Group. Each customer shall adhere to all local, provincial, federal, and applicable international laws regulating customer operations.
+          </p>
+</section>
+<!-- Section #1 -->
+<section class="legal-section" id="sec-1">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">1.0</span> General System &amp; Content Standards (Illustrative Examples)</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-1')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>The rules below illustrate prohibited behavior and are not an exhaustive list. You cannot use Sheernox web hosting or VPS infrastructure for illegal activities, software piracy, network disruption, credential cracking, spam, pyramid schemes, or child exploitation. CSAM is reported immediately to Cybertip.ca and the RCMP.</p>
+</div>
+<p>
+            Every Customer is directly accountable for ensuring that any account, website, web application, container, database, or virtual machine hosted with Sheernox Technology Group is not knowingly, recklessly, or negligently utilized for unacceptable activities. <strong>The following provisions provide illustrative examples of prohibited conduct and do not constitute an exhaustive or exclusive list.</strong> Sheernox reserves the absolute operational discretion to determine whether any specific conduct violates the spirit of this Policy:
+          </p>
+<ul>
+<li><span class="clause-num">1.1</span> <strong>Unlawful, Obscene, or Defamatory Material:</strong> The posting, transmission, re-transmission, caching, or storage of material through any products or services provided by Sheernox that: (a) violates any local, provincial, federal, or applicable international law or regulation; (b) is legally defamatory, libelous, or scandalous; (c) constitutes hate speech or incitement to violence contrary to the <em>Criminal Code of Canada</em>; or (d) is harassing due to language, frequency, or transmission volume.</li>
+<li><span class="clause-num">1.2</span> <strong>Zero-Tolerance for Child Sexual Abuse Material (CSAM):</strong> Any creation, hosting, caching, distribution, transmission, or linking to Child Sexual Abuse Material. Sheernox enforces an absolute zero-tolerance policy. Violations result in immediate permanent account termination, IP isolation, and mandatory reporting with digital evidence preservation to <strong>Cybertip.ca</strong> and the <strong>Royal Canadian Mounted Police (RCMP)</strong>.</li>
+<li><span class="clause-num">1.3</span> <strong>Intellectual Property Infringement &amp; Software Piracy:</strong> The installation, distribution, mirroring, linking to, or indexing of unlicensed software ("warez"), software cracking utilities, serial number generators, copyright-infringing digital media, or counterfeit designer goods. Infringements are addressed pursuant to the Canadian <em>Copyright Act</em> Notice-and-Notice regime.</li>
+<li><span class="clause-num">1.4</span> <strong>Deceptive Marketing &amp; Consumer Fraud:</strong> Engaging in fraudulent business practices, deceptive telemarketing, or false representations contrary to the Canadian <em>Competition Act</em> or provincial consumer protection legislation, including fake e-commerce shops, fraudulent tech support scams, and deceptive lead generation.</li>
+<li><span class="clause-num">1.5</span> <strong>Network &amp; Infrastructure Degradation:</strong> Any actions that degrade, disrupt, or impair the stability, performance, or enjoyment of Sheernox's cloud hypervisors, network transit, edge routing, or shared servers by other subscribers, or generating abnormal traffic loads unrelated to standard commercial web operations.</li>
+<li><span class="clause-num">1.6</span> <strong>Malicious Code &amp; Weaponized Payloads:</strong> Introducing, hosting, distributing, or executing malicious programs—including computer viruses, Trojan horses, ransomware, rootkits, keyloggers, worm propagation routines, or exploit kits—on or through Sheernox servers, hypervisors, or client accounts.</li>
+<li><span class="clause-num">1.7</span> <strong>Unauthorized Access &amp; Intrusion Attempts:</strong> Any action attempting to compromise, probe, or breach the security of any system, network, account, or hypervisor. This includes unauthorized access to data, attempting to bypass user authentication barriers, cracking hashed credentials, or unauthorized modification of system files.</li>
+<li><span class="clause-num">1.8</span> <strong>Interception &amp; Unauthorized Monitoring:</strong> Any form of unauthorized packet sniffing, network tapping, traffic inspection, or data interception on shared hypervisor bridges, virtual switches, or public network interfaces.</li>
+<li><span class="clause-num">1.9</span> <strong>Denial of Service Attacks:</strong> Launching, participating in, facilitating, or amplifying Denial of Service (DoS or DDoS) attacks against any host, server, router, network service, or terminal session.</li>
+<li><span class="clause-num">1.10</span> <strong>Account &amp; Payment Fraud:</strong> Providing false, fictitious, or forged information on electronic account registrations, utilizing unauthorized or stolen credit cards or payment credentials, or attempting to circumvent bandwidth, disk quota, or compute metering systems.</li>
+<li><span class="clause-num">1.11</span> <strong>Spam &amp; Unsolicited Communications (CASL Compliance):</strong> Transmitting Unsolicited Commercial Electronic Messages (CEMs), bulk unsolicited emails ("spam"), or unverified marketing blasts in violation of <em>Canada's Anti-Spam Legislation</em> (CASL) and international anti-spam statutes. This includes using scraped, harvested, or purchased recipient lists, or utilizing email addresses obtained without verifiable express or implied consent.</li>
+<li><span class="clause-num">1.12</span> <strong>Email Forgery &amp; Routing Manipulation:</strong> Forging, altering, or obfuscating email transmission headers, return path addresses, DKIM signatures, or IP routing data to disguise the origin of commercial electronic messages.</li>
+<li><span class="clause-num">1.13</span> <strong>Ponzi, Pyramid &amp; Fraudulent Financial Schemes:</strong> Operating, marketing, or facilitating pyramid schemes, Ponzi schemes, fraudulent multi-level marketing (MLM), fake cryptocurrency investment platforms, or High-Yield Investment Programs (HYIP).</li>
+<li><span class="clause-num">1.14</span> <strong>Spam-Advertising Hosted Sites ("Spamvertising"):</strong> Utilizing unsolicited emails or automated comment spam originating from external networks to advertise or drive traffic to any website, domain, or service hosted on Sheernox infrastructure.</li>
+<li><span class="clause-num">1.15</span> <strong>Export Controls &amp; Sanctions Violations:</strong> Exporting, re-exporting, or providing digital assets in contravention of Canadian export controls, economic sanctions, or the <em>Export and Import Permits Act</em> (R.S.C., 1985, c. E-19), including restricted cryptographic algorithms or restricted defense technology.</li>
+<li><span class="clause-num">1.16</span> <strong>Defamatory &amp; Harassment Platforms:</strong> Operating websites or services whose primary purpose is targeted harassment, doxxing, defamation, or extortion of individuals or commercial entities.</li>
+<li><span class="clause-num">1.17</span> <strong>Unpatched Software &amp; Negligent Hosting:</strong> Operating abandoned, end-of-life, or critically unpatched web software, outdated CMS installations (e.g. WordPress, Joomla, Drupal), or vulnerable web plugins that present an active security liability to shared hypervisor nodes.</li>
+<li><span class="clause-num">1.18</span> <strong>Privacy &amp; Identity Violations:</strong> Collecting, harvesting, or publishing personally identifiable information or financial credentials without statutory authorization, contrary to the Canadian <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and British Columbia’s <em>Personal Information Protection Act</em> (PIPA).</li>
+<li><span class="clause-num">1.19</span> <strong>Reputational &amp; Operational Harm:</strong> Engaging in any conduct, whether lawful or unlawful, that Sheernox determines in its professional engineering judgment to be harmful to system stability, IP reputation, upstream carrier agreements, or customer goodwill.</li>
+</ul>
+<p>
+<em>Please note that the examples set forth above are strictly illustrative. Sheernox reserves the full right to suspend or terminate services for any behavior, content, or system operation that compromises network integrity, security, or statutory legal compliance.</em>
+</p>
+</section>
+<!-- Section #2 -->
+<section class="legal-section" id="sec-2">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">2.0</span> Prohibited Network &amp; Technical Activities</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-2')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>Engaging in abusive network activities—such as DDoS attacks, port scanning, botnets, crypto-mining, open proxies, Tor exit nodes, or hypervisor stress-testing—results in immediate suspension or termination. These examples illustrate prohibited technical uses and are not exhaustive.</p>
+</div>
+<p>
+            The following technical uses, background daemons, and network configurations are strictly prohibited across Sheernox shared hosting, managed servers, and Virtual Private Server (VPS) infrastructure. <strong>The categories below provide representative technical examples and do not constitute an exhaustive catalog of prohibited actions:</strong>
+</p>
+<ul>
+<li><span class="clause-num">2.1</span> <strong>Denial of Service (DoS / DDoS) Operations:</strong> Launching, amplifying, participating in, or maintaining software designed to execute distributed denial of service attacks, SYN floods, UDP amplification, or layer-7 HTTP floods against any target.</li>
+<li><span class="clause-num">2.2</span> <strong>DDoS-for-Hire &amp; Booter Platforms:</strong> Operating, marketing, or hosting "Booter", "Stresser", IP stress-testing, or commercial DDoS-for-hire attack services and target APIs.</li>
+<li><span class="clause-num">2.3</span> <strong>Unauthorized Port Scanning &amp; Network Probing:</strong> Executing automated port scans, vulnerability probes, SYN sweeps, or unauthorized security audits against external Internet hosts or internal Sheernox IP ranges without advance written consent.</li>
+<li><span class="clause-num">2.4</span> <strong>Botnet Command &amp; Control (C2) Infrastructure:</strong> Hosting, controlling, distributing, or maintaining Command and Control (C2) servers, botnet distribution nodes, or zombie networks.</li>
+<li><span class="clause-num">2.5</span> <strong>Cryptocurrency Mining:</strong> Utilizing shared hosting CPUs, VPS hypervisor cores, graphics processing units (GPUs), or NVMe storage I/O for the mining of cryptocurrencies (such as Bitcoin, Monero, Ethereum, or Chia proof-of-space plotting) without an explicit dedicated compute enterprise contract.</li>
+<li><span class="clause-num">2.6</span> <strong>Tor Exit Nodes &amp; Public Darknet Relays:</strong> Operating Tor exit nodes, I2P public gateways, or routing unverified darknet exit traffic through Sheernox IP space, which attracts blacklists and abuse complaints.</li>
+<li><span class="clause-num">2.7</span> <strong>Open Proxies &amp; Unauthenticated Tunnels:</strong> Operating open, unauthenticated HTTP, HTTPS, or SOCKS proxies, or public VPN gateways that enable third parties to route unauthorized, anonymous traffic through our network.</li>
+<li><span class="clause-num">2.8</span> <strong>Open Recursive DNS Resolvers:</strong> Running publicly accessible recursive DNS resolvers that can be weaponized for UDP amplification reflection attacks.</li>
+<li><span class="clause-num">2.9</span> <strong>IP Spoofing &amp; Layer-2 Manipulation:</strong> Falsifying IP packet header source addresses, forging ARP replies, or spoofing MAC addresses across virtual network adapters.</li>
+<li><span class="clause-num">2.10</span> <strong>Phishing &amp; Financial Deception Engines:</strong> Deploying deceptive credential harvesting websites, fake banking portals, spoofed webmail authentication forms, or social engineering landing pages.</li>
+<li><span class="clause-num">2.11</span> <strong>Automated Traffic Generators &amp; Hit Inflation:</strong> Utilizing artificial traffic fabrication software, auto-surf exchanges (e.g., HitLeap, 10KHits), click-fraud bots, or automated search engine query flooding routines.</li>
+<li><span class="clause-num">2.12</span> <strong>Aggressive Scrapers &amp; Form-Spam Daemons:</strong> Running continuous automated scrapers that aggressively harvest content contrary to remote site robots.txt guidelines or terms of service, or executing automated form-spamming software.</li>
+<li><span class="clause-num">2.13</span> <strong>Hypervisor &amp; Hardware Stress-Testing:</strong> Executing synthetic benchmark stress-tests (e.g., Prime95, FurMark) or distributed compute packages (e.g., Folding@home, BOINC) that artificially pin hypervisor CPU cores or exhaust thermal envelopes to the detriment of co-hosted virtual machines.</li>
+<li><span class="clause-num">2.14</span> <strong>Noisy Neighbor Hypervisor Abuse:</strong> Configuring virtual machines in a manner that monopolizes host bus adapters (HBAs), generates sustained I/O queue bottlenecks, or thrashes shared storage arrays, degrading adjacent tenant VPS performance.</li>
+<li><span class="clause-num">2.15</span> <strong>Unsecured Management Interfaces:</strong> Exposing unauthenticated, sensitive control daemons directly to the public Internet, including unsecured Docker sockets, exposed Kubernetes APIs, or unauthenticated Redis, Elasticsearch, or MongoDB database ports.</li>
+<li><strong>Media Stream Ripping &amp; Copyright Circumvention:</strong> Hosting automated stream-ripping software, IPTV restreaming servers, satellite card-sharing daemons (e.g., CCcam, Multics), or software designed to strip digital rights management (DRM) protections.</li>
+<li><strong>Unlicensed Private Game Emulators:</strong> Operating unauthorized, unlicensed private server emulators for commercial games that violate intellectual property rights or frequently attract volumetric DDoS extortion attacks.</li>
+</ul>
+</section>
+<!-- Section #3 -->
+<section class="legal-section" id="sec-3">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">3.0</span> No Unlawful or Prohibited Use</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-3')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-3-1">
+<p>
+<span class="clause-num">3.1</span> <strong>Fundamental Condition:</strong> As an express condition of your use of the Services, you will not use the Services (nor permit any end-user to use the Services) for any purpose that is unlawful under Canadian law, British Columbia provincial law, or prohibited by this AUP. You may not use the Services in any manner that could damage, disable, overburden, or impair any Sheernox facility, hypervisor, router, or edge network, or interfere with any other party's use and enjoyment of the Services.
+            </p>
+</div>
+<div class="clause-block" id="clause-3-2">
+<p>
+<span class="clause-num">3.2</span> <strong>Unauthorized Access Prohibited:</strong> You may not attempt to gain unauthorized access to any accounts, computer systems, hypervisors, or networks connected to Sheernox through hacking, password mining, API exploitation, or any other unauthorized means.
+            </p>
+</div>
+</section>
+<!-- Section #4 -->
+<section class="legal-section" id="sec-4">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">4.0</span> Hosting &amp; Infrastructure Resource Fair Use Policy</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-4')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>Shared hosting and multi-tenant VPS nodes operate on fair resource sharing. We enforce defined compute, database query, memory, and networking limits so that no single customer degrades performance for other businesses hosted on the same physical infrastructure.</p>
+</div>
+<p>
+            Server resources in a shared hosting or multi-tenant cloud environment are communal resources. In order to ensure enterprise-grade stability, uptime, and performance for all subscribers, Sheernox enforces clear resource consumption guidelines. While numerical thresholds are established below, resource abuse is evaluated holistically; the final determination of what constitutes service degradation or unmanaged compute abuse resides exclusively with Sheernox Technology Group.
+          </p>
+<p>
+<em>These policies safeguard the performance and quality of service provided across our network. Adherence ensures your infrastructure remains reliable, performant, and protected.</em>
+</p>
+<h3 id="sec-4-1" style="font-size: 1.05rem; font-weight: 700; color: #0f172a; margin: 24px 0 12px 0; padding-bottom: 4px; border-bottom: 1px solid #e2e8f0;">Shared, Reseller, and Managed Hosting Constraints</h3>
+<div class="clause-block" id="clause-4-1">
+<p>
+<span class="clause-num">4.1</span> <strong>MySQL / MariaDB Databases:</strong>
+</p>
+<ul class="legal-sublist">
+<li>Limit simultaneous database connections to reasonable levels; do not maintain permanent persistent connections that exhaust connection pools.</li>
+<li>Queries executing longer than thirty (30) seconds or requiring temporary on-disk tables exceeding 2GB may be killed automatically to prevent hypervisor I/O lockup.</li>
+<li>Database storage must be directly utilized by an active website hosted on the same Sheernox account. Remote database hosting for external applications is prohibited on shared plans.</li>
+</ul>
+</div>
+<div class="clause-block" id="clause-4-2">
+<p>
+<span class="clause-num">4.2</span> <strong>Cron Job Scheduling:</strong> Automated cron jobs must not be scheduled at intervals shorter than fifteen (15) minutes. Scripts triggered by cron jobs must execute efficiently and terminate within 180 seconds. Cascading or overlapping scheduled tasks are strictly prohibited.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-3">
+<p>
+<span class="clause-num">4.3</span> <strong>CPU &amp; Memory Quotas:</strong> An account on Shared or Reseller hosting may not consume more than 25% of server CPU or 1024MB RAM continuously for longer than ninety (90) seconds. Sustained spikes will result in temporary process throttling (via CloudLinux LVE or cgroups) or a requirement to upgrade to an isolated Cloud VPS tier.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-4">
+<p>
+<span class="clause-num">4.4</span> <strong>Web &amp; Script Processes:</strong> Long-running standalone background daemons (such as shoutcast servers, background bots, or persistent websockets) may not be executed on standard shared hosting environments.
+            </p>
+</div>
+<h3 id="sec-4-2" style="font-size: 1.05rem; font-weight: 700; color: #0f172a; margin: 28px 0 12px 0; padding-bottom: 4px; border-bottom: 1px solid #e2e8f0;">Virtual Private Servers (VPS) and Dedicated Infrastructure</h3>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>VPS customers have administrative root access and are solely responsible for securing their operating system and applications. In the event of compromise or outbound network attacks, Sheernox may immediately isolate or null-route the server to safeguard the host hypervisor.</p>
+</div>
+<div class="clause-block" id="clause-4-5">
+<p>
+<span class="clause-num">4.5</span> <strong>Root Access &amp; Administrative Responsibility:</strong> Customers provisioned with root or administrative access to VPS or dedicated hardware are fully responsible for the security posture of their guest operating system, application stack, firewall configuration, user authentication, and prompt installation of vendor security patches.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-6">
+<p>
+<span class="clause-num">4.6</span> <strong>Multi-Tenant Hypervisor Fair Use &amp; Noisy Neighbor Mitigation:</strong> Cloud VPS instances share underlying physical host CPUs, NVMe storage fabrics, and network interfaces. Operating workloads that generate sustained 100% CPU lock, continuous memory ballooning, or excessive disk I/O thrashing that degrades adjacent tenant instances is prohibited. Sheernox may temporarily throttle or deprioritize abusive guest processes.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-7">
+<p>
+<span class="clause-num">4.7</span> <strong>Outbound Abuse, Null-Routing &amp; Emergency Quarantine:</strong> In the event an unmanaged VPS is compromised, generates outbound DDoS traffic, emits spam, participates in brute-force scanning, or is targeted by incoming volumetric attacks exceeding mitigation capacity, Sheernox reserves the right to immediately null-route the IP address or isolate the virtual machine on a quarantine network without prior notice to protect infrastructure integrity.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-8">
+<p>
+<span class="clause-num">4.8</span> <strong>Network Configurations &amp; Authorized IP Addressing:</strong> VPS customers must configure only the specific IP addresses and subnets explicitly assigned to their instance by Sheernox. Configuring unassigned IP addresses, ARP spoofing, broadcast storm generation, unauthorized DHCP servers, or bridging foreign network interfaces is grounds for immediate termination.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-9">
+<p>
+<span class="clause-num">4.9</span> <strong>Unmanaged Backup &amp; Snapshot Responsibilities:</strong> Unless Customer maintains an active subscription to Sheernox Managed Backup Services, Customer is solely responsible for generating, verifying, and maintaining off-site backups of virtual disk snapshots, database dumps, and application configurations.
+            </p>
+</div>
+</section>
+<!-- Section #5 -->
+<section class="legal-section" id="sec-5">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">5.0</span> Unlimited Resource Policy &amp; Practical Limits</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-5')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>"Unlimited" hosting plans provide ample storage and bandwidth for typical small-to-medium business websites. They cannot be converted into free cloud backup storage, file vaults, video streaming mirrors, or mass mailing lists.</p>
+</div>
+<div class="clause-block" id="clause-5-1">
+<p>
+<span class="clause-num">5.1</span> <strong>Email Accounts:</strong> Individual POP3/IMAP mailboxes must be utilized for normal business correspondence. Storing multi-gigabyte personal desktop file archives within email accounts is prohibited. Outbound mailing is capped at 500 emails per hour per domain on shared infrastructure.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-2">
+<p>
+<span class="clause-num">5.2</span> <strong>Databases:</strong> Relational MySQL/MariaDB databases must support active web applications hosted directly on Sheernox infrastructure. External remote database hosting, public data repositories, or continuous IoT telemetry ingestion is not permitted under shared unlimited plans.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-3">
+<p>
+<span class="clause-num">5.3</span> <strong>Restrictions on "Unlimited" Usage:</strong> Unlimited storage and bandwidth allotments are granted exclusively for standard website content, HTML files, stylesheets, images, and documents directly linked from the hosted domain. Accounts may not be repurposed for:
+            </p>
+<ul class="legal-sublist">
+<li>Off-site backup vaults, personal computer backups, or secondary disk mirrors.</li>
+<li>Public file sharing repositories, ISO download mirrors, or video streaming sites.</li>
+<li>Hosting torrent tracker files or file-locker distribution scripts.</li>
+</ul>
+</div>
+</section>
+<!-- Section #6 -->
+<section class="legal-section" id="sec-6">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">6.0</span> Enforcement, Suspension &amp; Blacklisting Fees</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-6')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-6-1">
+<p>
+<span class="clause-num">6.1</span> <strong>Right to Enforce:</strong> Failure to adhere to any provision of this AUP may result in immediate warning, temporary resource throttling, suspension, or permanent termination of service without refund.
+            </p>
+</div>
+<div class="clause-block" id="clause-6-2">
+<p>
+<span class="clause-num">6.2</span> <strong>Delisting Remediation Fee ($150 CAD):</strong> If customer activity causes Sheernox IP ranges to be blacklisted on major security registries (Spamhaus, Barracuda, SORBS, etc.), a clean-up and delisting fee of $250.00 CAD will be charged to the customer's account to cover engineering overhead.
+            </p>
+</div>
+</section>
+<!-- Section #7 -->
+<section class="legal-section" id="sec-7">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">7.0</span> Electronic Communications Privacy Under Canadian Law</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-7')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-7-1">
+<p>
+<span class="clause-num">7.1</span> <strong>Privacy Protections:</strong> Sheernox treats customer data and communications as confidential in accordance with the Canadian <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and British Columbia’s <em>Personal Information Protection Act</em> (PIPA).
+            </p>
+</div>
+<div class="clause-block" id="clause-7-2">
+<p>
+<span class="clause-num">7.2</span> <strong>Lawful Interception:</strong> Sheernox will not monitor, intercept, or disclose private customer communications except: (a) as required by lawful court order, search warrant, or statutory subpoena issued by a court of competent jurisdiction in Canada; (b) as necessary to protect the integrity, security, and operation of Sheernox systems; or (c) to report child exploitation material to Cybertip.ca and law enforcement.
+            </p>
+</div>
+</section>
+<!-- Section #8 -->
+<section class="legal-section" id="sec-8">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">8.0</span> Reporting Violations &amp; Abuse Routing</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-8')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>To report network abuse, spam, or security violations originating from Sheernox IP allocations, submit an incident report with full log evidence to our Abuse Department.</p>
+</div>
+<div class="clause-block" id="clause-8-1">
+<p>
+<span class="clause-num">8.1</span> <strong>Abuse Contact:</strong> Reports of violations of this Acceptable Use Policy originating from Sheernox IP space should be directed with full technical evidence to:
+            </p>
+<p style="margin-left: 20px; font-family: var(--font-mono); font-size: 0.85rem; color: #b45309;">
+              Abuse Department<br/>
+              Sheernox Technology Group<br/>
+              1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada<br/>
+              Email: abuse@sheernox.com<br/>
+              Client Portal: https://my.sheernox.com
+            </p>
+</div>
+</section>
+</LegalDocumentLayout>

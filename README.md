@@ -60,30 +60,45 @@ Every page across the Legal Portal integrates a standardized, responsive enterpr
 
 ---
 
-## 📁 Repository Structure & Production Files
+### 📁 Repository Structure & Production Files
 
-This repository contains **strictly production-grade code** with zero build artifacts, temporary scratch files, or third-party package dependencies:
+This repository contains the Astro 7 source code, shared layouts, components, static public assets, and automated Python PDF/text generators:
 
 ```text
 legal.sheernox.com/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml                         # Automated CI/CD deployment to Bunny S3 storage
-├── .gitignore                                 # Production ignore rules
+├── .gitignore                                 # Production ignore rules (node_modules, dist, .astro)
 ├── README.md                                  # Repository documentation and architecture guide
 ├── AGENTS.md                                  # AI Agent operational runbook & legal guardrails
-├── favicon.ico                                # Official Sheernox browser favicon
-├── index.html                                 # Central Legal Portal Directory & Search Hub
-├── terms-and-conditions.html                  # Master Terms and Conditions of Service (v4.0-TOS)
-├── acceptable-use-policy.html                 # Acceptable Use Policy (v4.0-AUP)
-├── privacy-policy.html                        # Privacy & Personal Information Policy (v4.0-PRIV)
-├── service-level-agreement.html               # Service Level Agreement & Incident Policy (v1.5-SLA)
-├── vulnerability-disclosure-policy.html       # Vulnerability Disclosure Policy (v1.5-VDP)
-├── copyright-policy.html                      # Copyright & Notice-and-Notice Policy (v1.5-CPR)
-├── web-design-terms.html                      # Web Design & Development Terms (v3.5-WDT)
-├── website-care-plan-terms.html               # Website Care Plan & Maintenance Terms (v1.5-WCP)
-├── *.txt                                      # Official 80-Column Monospaced Plain Text Versions
-├── *.pdf                                      # Official Print-Ready Vector PDF Documents (Root)
+├── astro.config.mjs                           # Astro 7 configuration (format: 'file', sitemap)
+├── package.json                               # Dependencies & build scripts
+├── tsconfig.json                              # TypeScript strict configuration
+├── public/                                    # Static assets deployed directly to CDN root
+│   ├── favicon.ico                            # Official Sheernox browser favicon
+│   ├── security.txt                           # Vulnerability contact coordinates
+│   ├── .well-known/security.txt               # RFC 9116 security contact
+│   ├── *.pdf                                  # Production vector PDFs (root on CDN)
+│   └── *.txt                                  # Official 80-column monospaced text versions
+├── src/
+│   ├── components/                            # Reusable Astro UI components
+│   │   ├── NetworkHeader.astro                # Standardized Sheernox multi-brand top bar
+│   │   ├── PortalHeader.astro                 # Sticky Legal Portal branding & navigation
+│   │   ├── DocHero.astro                      # Policy title, version tag & action buttons
+│   │   ├── TableOfContents.astro              # Sidebar TOC with search & scrollspy
+│   │   ├── SiteFooter.astro                   # Official entity coordinates & BC legal info
+│   │   └── Toast.astro                        # Interactive notification toast
+│   ├── data/
+│   │   └── documents.ts                       # Document registry, versions & metadata
+│   ├── layouts/
+│   │   └── LegalDocumentLayout.astro          # Shared policy page layout
+│   ├── pages/                                 # Page routes (compiles to dist/*.html)
+│   │   ├── index.astro                        # Central Legal Portal Directory & Search Hub
+│   │   └── *.astro                            # 8 Policy page components
+│   └── styles/
+│       ├── legal.css                          # Shared design system & print styles
+│       └── hub.css                            # Hub directory & search card styles
 └── scripts/                                   # Automated PDF and Plain Text Generation Tooling
     ├── generate_pdfs.py                       # Standalone multi-browser headless PDF compiler
     ├── generate_txts.py                       # Automated 80-column plain text policy compiler
@@ -94,17 +109,17 @@ legal.sheernox.com/
 
 ## 📋 Comprehensive Document Registry
 
-| Key | HTML Source | Target PDF Output | Plain Text Output | Document Title | Version Tag | Category |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `tos` | [`terms-and-conditions.html`](terms-and-conditions.html) | [`terms-and-conditions.pdf`](terms-and-conditions.pdf) | [`terms-and-conditions.txt`](terms-and-conditions.txt) | Terms and Conditions of Service | `v4.5-TOS` | Master Services Agreement |
-| `aup` | [`acceptable-use-policy.html`](acceptable-use-policy.html) | [`acceptable-use-policy.pdf`](acceptable-use-policy.pdf) | [`acceptable-use-policy.txt`](acceptable-use-policy.txt) | Acceptable Use Policy (AUP) | `v4.0-AUP` | Network & Infrastructure Policy |
-| `priv` | [`privacy-policy.html`](privacy-policy.html) | [`privacy-policy.pdf`](privacy-policy.pdf) | [`privacy-policy.txt`](privacy-policy.txt) | Privacy & Personal Information Policy | `v4.5-PRIV` | Privacy & Data Protection Policy |
-| `sla` | [`service-level-agreement.html`](service-level-agreement.html) | [`service-level-agreement.pdf`](service-level-agreement.pdf) | [`service-level-agreement.txt`](service-level-agreement.txt) | Service Level Agreement & Incident Policy | `v1.5-SLA` | Cloud Infrastructure & Operations |
-| `vdp` | [`vulnerability-disclosure-policy.html`](vulnerability-disclosure-policy.html) | [`vulnerability-disclosure-policy.pdf`](vulnerability-disclosure-policy.pdf) | [`vulnerability-disclosure-policy.txt`](vulnerability-disclosure-policy.txt) | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` | Cybersecurity & Trust Governance |
-| `cpr` | [`copyright-policy.html`](copyright-policy.html) | [`copyright-policy.pdf`](copyright-policy.pdf) | [`copyright-policy.txt`](copyright-policy.txt) | Copyright & Notice-and-Notice Policy | `v1.5-CPR` | Intellectual Property & Compliance |
-| `wdt` | [`web-design-terms.html`](web-design-terms.html) | [`web-design-terms.pdf`](web-design-terms.pdf) | [`web-design-terms.txt`](web-design-terms.txt) | Web Design & Development Terms | `v3.5-WDT` | Agency Services Agreement |
-| `wcp` | [`website-care-plan-terms.html`](website-care-plan-terms.html) | [`website-care-plan-terms.pdf`](website-care-plan-terms.pdf) | [`website-care-plan-terms.txt`](website-care-plan-terms.txt) | Website Care Plan & Maintenance Terms | `v1.5-WCP` | Creative & Agency SOW Schedule |
-| `hub` | [`index.html`](index.html) | N/A | N/A | Legal Portal Directory & Search Hub | N/A | Central Index Directory |
+| Key | Astro Source | Target Deployed HTML | Target PDF Output | Plain Text Output | Document Title | Version Tag | Category |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `tos` | `src/pages/terms-and-conditions.astro` | `terms-and-conditions.html` | `terms-and-conditions.pdf` | `terms-and-conditions.txt` | Terms and Conditions of Service | `v4.5-TOS` | Master Services Agreement |
+| `aup` | `src/pages/acceptable-use-policy.astro` | `acceptable-use-policy.html` | `acceptable-use-policy.pdf` | `acceptable-use-policy.txt` | Acceptable Use Policy (AUP) | `v4.0-AUP` | Network & Infrastructure Policy |
+| `priv` | `src/pages/privacy-policy.astro` | `privacy-policy.html` | `privacy-policy.pdf` | `privacy-policy.txt` | Privacy & Personal Information Policy | `v4.5-PRIV` | Privacy & Data Protection Policy |
+| `sla` | `src/pages/service-level-agreement.astro` | `service-level-agreement.html` | `service-level-agreement.pdf` | `service-level-agreement.txt` | Service Level Agreement & Incident Policy | `v1.5-SLA` | Cloud Infrastructure & Operations |
+| `vdp` | `src/pages/vulnerability-disclosure-policy.astro` | `vulnerability-disclosure-policy.html` | `vulnerability-disclosure-policy.pdf` | `vulnerability-disclosure-policy.txt` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` | Cybersecurity & Trust Governance |
+| `cpr` | `src/pages/copyright-policy.astro` | `copyright-policy.html` | `copyright-policy.pdf` | `copyright-policy.txt` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` | Intellectual Property & Compliance |
+| `wdt` | `src/pages/web-design-terms.astro` | `web-design-terms.html` | `web-design-terms.pdf` | `web-design-terms.txt` | Web Design & Development Terms | `v3.5-WDT` | Agency Services Agreement |
+| `wcp` | `src/pages/website-care-plan-terms.astro` | `website-care-plan-terms.html` | `website-care-plan-terms.pdf` | `website-care-plan-terms.txt` | Website Care Plan & Maintenance Terms | `v1.5-WCP` | Creative & Agency SOW Schedule |
+| `hub` | `src/pages/index.astro` | `index.html` | N/A | N/A | Legal Portal Directory & Search Hub | N/A | Central Index Directory |
 
 ### Document Summary & Legal Highlights
 

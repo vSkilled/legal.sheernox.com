@@ -1,0 +1,305 @@
+---
+import LegalDocumentLayout from '../layouts/LegalDocumentLayout.astro';
+import { DOC_BY_SLUG } from '../data/documents';
+
+const doc = DOC_BY_SLUG.get('website-care-plan-terms')!;
+
+const tocItems = [
+  {
+    "id": "preamble",
+    "num": "0.0",
+    "title": "Preamble & Master SOW"
+  },
+  {
+    "id": "plan-tiers",
+    "num": "1.0",
+    "title": "Care Plan Tiers & Matrix"
+  },
+  {
+    "id": "maintenance-scope",
+    "num": "2.0",
+    "title": "Maintenance Scope"
+  },
+  {
+    "id": "content-hours",
+    "num": "3.0",
+    "title": "Content Support Hours"
+  },
+  {
+    "id": "staging-protocol",
+    "num": "4.0",
+    "title": "Staging-First Protocol"
+  },
+  {
+    "id": "out-of-scope",
+    "num": "5.0",
+    "title": "Out-of-Scope Hourly Rates"
+  },
+  {
+    "id": "security-remediation",
+    "num": "6.0",
+    "title": "Security & Malware Recovery"
+  },
+  {
+    "id": "access-warranty",
+    "num": "7.0",
+    "title": "Access & Warranty Boundary"
+  },
+  {
+    "id": "billing-cancellation",
+    "num": "8.0",
+    "title": "Billing & 30-Day Cancellation"
+  }
+];
+
+const badgeText = "9 Sections";
+const metaDescription = "Official Website Care Plan & Maintenance Terms of Sheernox Technology Group, Kamloops, BC, Canada. Retainer tiers, update scopes, content support hours, staging protocols, and billing schedules.";
+---
+
+<LegalDocumentLayout doc={doc} tocItems={tocItems} badgeText={badgeText} metaDescription={metaDescription}>
+<!-- Preamble -->
+<section class="legal-section" id="preamble">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">0.0</span> Preamble &amp; Relationship to Master Terms</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('preamble')" title="Copy link to this section">#</button>
+</div>
+<p>
+            These Website Care Plan &amp; Maintenance Terms ("Care Terms") constitute an ongoing recurring Statement of Work (SOW) schedule entered into between <strong>Sheernox Technology Group</strong> ("Sheernox", "we", "us", or "our"), a sole proprietorship registered in the Province of British Columbia, Canada (Registration Number: <code>FM0707819</code>, Business Number: <code>732754924BC0001</code>, Original Registration Date: October 29, 2009), and the client identified in the applicable service order ("Client").
+          </p>
+<p>
+            These Care Terms are incorporated by reference into, and governed by, the Sheernox <a href="web-design-terms.html" style="color: var(--sn-primary-teal); font-weight: 600;">Web Design &amp; Development Terms and Conditions</a> and the <a href="terms-and-conditions.html" style="color: var(--sn-primary-teal); font-weight: 600;">General Terms and Conditions of Service</a>. In the event of an express conflict regarding ongoing maintenance and support retainers, these Care Terms take precedence.
+          </p>
+<div class="key-takeaway">
+<span class="takeaway-badge">At a Glance</span>
+<p>Our Website Care Plans protect your digital investment through scheduled core and plugin updates, automated offsite cloud backups, uptime monitoring, and included developer hours on a recurring monthly retainer.</p>
+</div>
+</section>
+<!-- Section 1: Plan Tiers -->
+<section class="legal-section" id="plan-tiers">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">1.0</span> Care Plan Tiers &amp; Service Deliverables Matrix</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('plan-tiers')" title="Copy link to this section">#</button>
+</div>
+<p>
+            Sheernox provides three standardized tiers of website care retainers. The specific deliverables, monitoring cadences, and developer allocations applicable to each plan are set forth below:
+          </p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Feature / Service Area</th>
+<th>Essential Care</th>
+<th>Professional Care</th>
+<th>Enterprise Agency Care</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="clause-num">1.1</span> <strong>Core &amp; Plugin Updates</strong></td>
+<td>Weekly automated/reviewed</td>
+<td>Weekly staging-verified</td>
+<td>Continuous priority staging</td>
+</tr>
+<tr>
+<td><span class="clause-num">1.2</span> <strong>Offsite Cloud Backups</strong></td>
+<td>Daily (30-day retention)</td>
+<td>Daily (60-day retention)</td>
+<td>Real-time / Hourly (90-day retention)</td>
+</tr>
+<tr>
+<td><span class="clause-num">1.3</span> <strong>Uptime Monitoring</strong></td>
+<td>15-minute intervals</td>
+<td>5-minute intervals</td>
+<td>1-minute intervals (SMS alert)</td>
+</tr>
+<tr>
+<td><span class="clause-num">1.4</span> <strong>Included Content Hours</strong></td>
+<td>None (billed hourly)</td>
+<td><strong>2 Hours / month</strong></td>
+<td><strong>5 Hours / month</strong></td>
+</tr>
+<tr>
+<td><span class="clause-num">1.5</span> <strong>Support Response SLA</strong></td>
+<td>≤ 24 business hours</td>
+<td>≤ 8 business hours</td>
+<td>≤ 2 business hours (Priority)</td>
+</tr>
+<tr>
+<td><span class="clause-num">1.6</span> <strong>Malware Remediation</strong></td>
+<td>Backup restore only</td>
+<td>Full cleanup included</td>
+<td>Immediate 2h emergency cleanup</td>
+</tr>
+<tr>
+<td><span class="clause-num">1.7</span> <strong>Performance Optimization</strong></td>
+<td>Basic caching</td>
+<td>Monthly speed review</td>
+<td>Continuous CDN &amp; DB tuning</td>
+</tr>
+<tr>
+<td><span class="clause-num">1.8</span> <strong>Reporting &amp; Audits</strong></td>
+<td>Monthly automated report</td>
+<td>Monthly executive report</td>
+<td>Quarterly UX &amp; SEO audit</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
+            The selected tier and its recurring monthly fee are confirmed upon checkout within the <a href="https://my.sheernox.com" style="color: var(--sn-primary-teal); font-weight: 600;">Sheernox Client Portal</a>.
+          </p>
+</section>
+<!-- Section 2: Maintenance Scope -->
+<section class="legal-section" id="maintenance-scope">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">2.0</span> Maintenance Scope &amp; Operational Boundaries</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('maintenance-scope')" title="Copy link to this section">#</button>
+</div>
+<p>
+            The scope of ongoing website maintenance under this SOW is designed to preserve the operational health, security, and integrity of existing web properties. Specifically included within routine maintenance:
+          </p>
+<ul>
+<li><span class="clause-num">2.1</span> <strong>Content Management System (CMS) Updates:</strong> Application of minor and major core security releases for supported platforms (WordPress, Drupal, Headless CMS frameworks).</li>
+<li><span class="clause-num">2.2</span> <strong>Third-Party Plugin &amp; Extension Patching:</strong> Routine updating of verified plugins, extensions, and themes to mitigate known Common Vulnerabilities and Exposures (CVEs).</li>
+<li><span class="clause-num">2.3</span> <strong>Database Hygiene &amp; Maintenance:</strong> Periodic pruning of post revisions, transient data, spam comment queues, and overhead tables to maintain database responsiveness.</li>
+<li><span class="clause-num">2.4</span> <strong>Security Scanning:</strong> Daily remote security integrity scans to detect file alterations, injected scripts, phishing kits, and blacklisting status with search engines.</li>
+<li><span class="clause-num">2.5</span> <strong>Broken Link &amp; 404 Auditing:</strong> Automated monthly scanning of internal hyperlinks to ensure clean navigation and search engine crawling hygiene.</li>
+</ul>
+</section>
+<!-- Section 3: Content Hours -->
+<section class="legal-section" id="content-hours">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">3.0</span> Included Content Support Hours &amp; Turnaround Rules</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('content-hours')" title="Copy link to this section">#</button>
+</div>
+<p>
+            Plans including monthly support hours (Professional and Enterprise Agency) may be utilized for minor content updates and standard technical adjustments:
+          </p>
+<ul>
+<li><span class="clause-num">3.1</span> <strong>Eligible Tasks:</strong> Text copy additions and revisions, replacing existing imagery, publishing customer-provided blog posts, updating contact information, modifying navigation menu links, updating existing web form fields, and minor CSS aesthetic adjustments.</li>
+<li><span class="clause-num">3.2</span> <strong>Task Submission:</strong> Support requests must be submitted through our verified client ticketing portal at <span class="mono-code">https://my.sheernox.com</span> or via email to <span class="mono-code">support@sheernox.com</span> from an authorized contact email.</li>
+<li><span class="clause-num">3.3</span> <strong>Turnaround Target:</strong> Content update requests under 1 hour in scope are completed within <strong>twenty-four (24) to forty-eight (48) business hours</strong> (Monday through Friday, 09:00–17:00 PST).</li>
+<li><span class="clause-num">3.4</span> <strong>Use-It-or-Lose-It (Non-Rollover Policy):</strong> Monthly content hours are allocated on a strict monthly retainer basis to reserve dedicated engineering capacity. <strong>Unused hours do not accumulate, transfer, or roll over</strong> into subsequent billing cycles and cannot be redeemed for cash or credit.</li>
+</ul>
+<div class="key-takeaway">
+<span class="takeaway-badge">Non-Rollover Policy</span>
+<p>Retainer hours reserve active agency capacity each month. Because our team allocates dedicated developer time every billing cycle, unused support hours expire at the end of each billing period.</p>
+</div>
+</section>
+<!-- Section 4: Staging-First Protocol -->
+<section class="legal-section" id="staging-protocol">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">4.0</span> Staging-First Deployment Protocol</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('staging-protocol')" title="Copy link to this section">#</button>
+</div>
+<p>
+            To eliminate the risk of production downtime or broken client-facing functionality caused by incompatible plugin updates, Sheernox enforces a rigorous <strong>Staging-First Protocol</strong> for all Professional and Enterprise tiers:
+          </p>
+<ul>
+<li><span class="clause-num">4.1</span> <strong>Sandbox Cloning:</strong> Before updates are applied to the live production website, a complete staging snapshot is deployed on an isolated staging server.</li>
+<li><span class="clause-num">4.2</span> <strong>Automated &amp; Visual Regression Testing:</strong> Core updates and extension dependencies are tested on staging. Visual regression checks are performed across key templates (homepage, checkout, contact forms).</li>
+<li><span class="clause-num">4.3</span> <strong>Safe Deployment:</strong> Once verified conflict-free, updates are synchronized to the production environment during low-traffic maintenance windows.</li>
+<li><span class="clause-num">4.4</span> <strong>Rollback Guarantee:</strong> In the event an unforeseen conflict manifests post-deployment, Sheernox executes an immediate restoration from the pre-update snapshot at no extra charge.</li>
+</ul>
+</section>
+<!-- Section 5: Out of Scope Rates -->
+<section class="legal-section" id="out-of-scope">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">5.0</span> Out-of-Scope Services &amp; Additional Hourly Rates</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('out-of-scope')" title="Copy link to this section">#</button>
+</div>
+<p>
+            Care Plans are strictly focused on operational maintenance, health, and minor content adjustments. Major design overhauls, software engineering, and architectural refactoring fall outside standard care scopes.
+          </p>
+<div class="critical-alert-box">
+<h4>Work Defined as Out of Scope</h4>
+<p>Major graphic redesigns, building new multi-page website sections, custom plugin or API development, CRM/ERP database synchronization, migrating e-commerce shopping carts, and search engine penalty remediation require separate scoping and formal quotes.</p>
+</div>
+<p>
+            Clients with an active Care Plan benefit from discounted preferred engineering rates for any approved out-of-scope work:
+          </p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Client Service Category</th>
+<th>Hourly Billing Rate (CAD)</th>
+<th>Billing Increments</th>
+<th>Quoting Procedure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="clause-num">5.1</span> <strong>Care Plan Active Subscribers</strong></td>
+<td><strong>$95.00 CAD / hr</strong> (Preferred Rate)</td>
+<td>30-minute minimums</td>
+<td>Written quote provided prior to commencement.</td>
+</tr>
+<tr>
+<td><span class="clause-num">5.2</span> <strong>Non-Retainer / Ad-Hoc Clients</strong></td>
+<td><strong>$125.00 CAD / hr</strong> (Standard Agency Rate)</td>
+<td>1-hour minimums</td>
+<td>Upfront deposit required before scheduling.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
+            All additional hourly fees are billed in Canadian Dollars (CAD) and are subject to applicable GST (5%) and BC PST (7%).
+          </p>
+</section>
+<!-- Section 6: Security & Malware Recovery -->
+<section class="legal-section" id="security-remediation">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">6.0</span> Security Incidents &amp; Malware Recovery</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('security-remediation')" title="Copy link to this section">#</button>
+</div>
+<p>
+            While Sheernox employs industry-leading security practices, no web application connected to the internet can be guaranteed 100% immune from novel zero-day exploits or credential compromise.
+          </p>
+<p>
+            In the event of a confirmed security incident or malware infection on an enrolled website:
+          </p>
+<ul>
+<li><span class="clause-num">6.1</span> <strong>Immediate Isolation:</strong> The affected application is immediately placed in maintenance mode to prevent malware propagation and protect website visitors.</li>
+<li><span class="clause-num">6.2</span> <strong>Remediation Protocol:</strong> Our security engineers clean infected core and plugin directories, restore known clean state files from verified offsite backups, audit database tables for injected payloads, and update all administrative credentials and API keys.</li>
+<li><span class="clause-num">6.3</span> <strong>Coverage Limitation:</strong> Full manual malware scrubbing and hack recovery are included at no additional charge for Professional and Enterprise Care Plan subscribers. For Essential Care subscribers, Sheernox will restore the most recent uninfected backup snapshot free of charge; in-depth forensic code scrubbing is billed at our preferred hourly rate.</li>
+</ul>
+</section>
+<!-- Section 7: Access & Warranty Boundary -->
+<section class="legal-section" id="access-warranty">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">7.0</span> Mutual Access, Third Parties &amp; Warranty Boundary</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('access-warranty')" title="Copy link to this section">#</button>
+</div>
+<p>
+            To maintain stability, the client agrees to the following operational boundaries:
+          </p>
+<ul>
+<li><strong>Access Credentials:</strong> The client must provide Sheernox with full administrative CMS credentials, hosting control panel access, and DNS access necessary to perform maintenance.</li>
+<li><strong>Client &amp; Third-Party Modifications:</strong> If the client, client employees, or external third-party agencies access the website backend and install unvetted plugins, edit core system files, or alter database schemas without prior consultation with Sheernox, <strong>any subsequent downtime, broken features, or security breaches are excluded from maintenance coverage</strong>. Remediation of such conflicts will be billed at our preferred out-of-scope hourly rate.</li>
+<li><strong>Third-Party Software Disclaimers:</strong> Sheernox does not author third-party themes, CMS platforms, or commercial plugins. We are not liable for software bugs, deprecation, or licensing costs imposed by independent third-party vendors.</li>
+</ul>
+<div class="statutory-callout">
+<h4>Warranty Boundary</h4>
+<p>Sheernox warrants that maintenance services will be delivered in a professional, workmanlike manner in accordance with Canadian commercial standards. Unapproved third-party code tampering immediately voids our maintenance conflict warranty.</p>
+</div>
+</section>
+<!-- Section 8: Billing & Cancellation -->
+<section class="legal-section" id="billing-cancellation">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">8.0</span> Billing, Payment &amp; 30-Day Cancellation</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('billing-cancellation')" title="Copy link to this section">#</button>
+</div>
+<p>
+            Website Care Plans operate as recurring monthly subscriptions subject to the following commercial conditions:
+          </p>
+<ol>
+<li><strong>Automatic Recurring Billing:</strong> Monthly subscription fees are billed in advance on a recurring 30-day billing cycle to the credit card on file via Stripe.</li>
+<li><strong>Late Payment &amp; Grace Period:</strong> If automatic payment fails, a 5-calendar-day grace period is provided. If payment remains outstanding after 5 days, maintenance services and automated backup synchronizations are suspended until the account balance is cleared.</li>
+<li><strong>Cancellation Policy:</strong> Either party may cancel a Care Plan at any time by providing <strong>thirty (30) days' advance written notice</strong> via our client support ticket system at <span class="mono-code">https://my.sheernox.com</span> or by emailing <span class="mono-code">support@sheernox.com</span>.</li>
+<li><strong>No Mid-Cycle Refunds:</strong> Care Plan fees are non-refundable for partial months. Service continues through the conclusion of the paid 30-day billing cycle.</li>
+<li><strong>Offboarding Site Snapshot:</strong> Upon completion of the 30-day cancellation period, Sheernox generates and delivers a final, complete offsite backup archive (database SQL dump and compressed media directory) to the client at no extra charge.</li>
+</ol>
+</section>
+</LegalDocumentLayout>

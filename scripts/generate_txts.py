@@ -249,8 +249,10 @@ def format_table(table_tag):
             
     return "\n".join(lines)
 
-def build_txt_document(key, doc_info):
-    source_file = REPO_ROOT / doc_info["source"]
+def build_txt_document(key, doc_info, source_dir=None):
+    if source_dir is None:
+        source_dir = REPO_ROOT / "dist" if (REPO_ROOT / "dist").exists() else REPO_ROOT
+    source_file = Path(source_dir) / doc_info["source"]
     with open(source_file, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
         
@@ -452,21 +454,35 @@ def main():
     parser = argparse.ArgumentParser(description="Sheernox Plain Text Legal Policy Generator")
     parser.add_argument("--doc", choices=list(DOC_REGISTRY.keys()), help="Generate a specific policy document")
     parser.add_argument("--force", action="store_true", help="Force overwrite of all files including hand-crafted VDP")
+    parser.add_argument("--source-dir", default=None, help="Directory containing source HTML files (default: dist/ or repo root)")
+    parser.add_argument("--output-dir", default=None, help="Directory where TXTs will be written (default: dist/ or repo root)")
     args = parser.parse_args()
     
+    source_dir = Path(args.source_dir) if args.source_dir else (REPO_ROOT / "dist" if (REPO_ROOT / "dist").exists() else REPO_ROOT)
+    output_dir = Path(args.output_dir) if args.output_dir else (REPO_ROOT / "dist" if (REPO_ROOT / "dist").exists() else REPO_ROOT)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    public_dir = REPO_ROOT / "public"
+
     targets = [args.doc] if args.doc else list(DOC_REGISTRY.keys())
     
-    print(f"[*] Processing plain text generation for: {', '.join(targets)}")
+    print(f"[*] Processing plain text generation for: {', '.join(targets)} (source: {source_dir}, dest: {output_dir})")
     for key in targets:
         info = DOC_REGISTRY[key]
-        dest_file = REPO_ROOT / info["output_txt"]
+        dest_file = output_dir / info["output_txt"]
         if key == "vdp" and dest_file.exists() and not args.force and not args.doc:
             print(f"[*] Preserving perfected hand-crafted {info['output_txt']} (use --force to overwrite)")
             continue
-        print(f"[*] Generating: {info['title']} -> {info['output_txt']}")
-        content = build_txt_document(key, info)
+        print(f"[*] Generating: {info['title']} -> {dest_file}")
+        content = build_txt_document(key, info, source_dir=source_dir)
         with open(dest_file, "w", encoding="utf-8") as f:
             f.write(content)
+        
+        # Also sync to public/ if public exists and output_dir is not public
+        if public_dir.exists() and output_dir.resolve() != public_dir.resolve():
+            pub_file = public_dir / info["output_txt"]
+            with open(pub_file, "w", encoding="utf-8") as f:
+                f.write(content)
+
         print(f"[+] Successfully wrote {len(content.splitlines())} lines to {info['output_txt']}")
 
 if __name__ == "__main__":

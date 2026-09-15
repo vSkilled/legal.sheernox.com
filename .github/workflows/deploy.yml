@@ -18,23 +18,38 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install Python Dependencies & Browser
+      - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install beautifulsoup4
 
+      - name: Install Node Dependencies
+        run: npm ci
+
+      - name: Run Component Diagnostics
+        run: npm test
+
+      - name: Build Static Site with Astro 7
+        run: npm run build
+
       - name: Regenerate & Verify Vector PDFs
         run: |
-          python3 scripts/generate_pdfs.py --browser /usr/bin/google-chrome
+          python3 scripts/generate_pdfs.py --browser /usr/bin/google-chrome --source-dir dist --output-dir dist
 
       - name: Regenerate & Verify Plain Text Documents
         run: |
-          python3 scripts/generate_txts.py
+          python3 scripts/generate_txts.py --source-dir dist --output-dir dist
 
       - name: Configure AWS CLI Credentials for Bunny S3
         run: |
@@ -42,36 +57,11 @@ jobs:
           aws configure set aws_secret_access_key "${{ secrets.BUNNY_STORAGE_SECRET_ACCESS_KEY }}"
           aws configure set default.region "${{ secrets.BUNNY_STORAGE_REGION }}"
 
-      - name: Deploy HTML Pages to Bunny S3
+      - name: Sync dist/ to Bunny S3 Storage Root
         run: |
-          aws s3 sync . "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}" \
+          aws s3 sync dist/ "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}" \
             --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
-            --exclude "*" \
-            --include "*.html" \
-            --content-type "text/html; charset=utf-8"
-
-      - name: Deploy Favicon & Static Assets to Bunny S3
-        run: |
-          aws s3 cp favicon.ico "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}/favicon.ico" \
-            --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
-            --content-type "image/x-icon"
-
-      - name: Deploy Vector PDFs to Bunny S3
-        run: |
-          aws s3 sync . "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}" \
-            --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
-            --exclude "*" \
-            --include "*.pdf" \
-            --content-type "application/pdf"
-          aws s3 rm "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}/pdf" --recursive --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" || true
-
-      - name: Deploy Plain Text Documents to Bunny S3
-        run: |
-          aws s3 sync . "s3://${{ secrets.BUNNY_STORAGE_BUCKET }}" \
-            --endpoint-url "${{ secrets.BUNNY_STORAGE_ENDPOINT }}" \
-            --exclude "*" \
-            --include "*.txt" \
-            --content-type "text/plain; charset=utf-8"
+            --delete
 
       - name: Purge Bunny Pull Zone Cache
         env:
@@ -98,6 +88,7 @@ jobs:
           echo "Verifying live CDN endpoints on legal.sheernox.com..."
           curl -f -s -I "https://legal.sheernox.com/index.html" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/favicon.ico" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/terms-and-conditions.html" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/terms-and-conditions.pdf" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/terms-and-conditions.txt" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/vulnerability-disclosure-policy.txt" | head -n 5

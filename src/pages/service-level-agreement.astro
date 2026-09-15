@@ -1,0 +1,275 @@
+---
+import LegalDocumentLayout from '../layouts/LegalDocumentLayout.astro';
+import { DOC_BY_SLUG } from '../data/documents';
+
+const doc = DOC_BY_SLUG.get('service-level-agreement')!;
+
+const tocItems = [
+  {
+    "id": "sec-scope",
+    "num": "0.0",
+    "title": "Preamble & Scope"
+  },
+  {
+    "id": "sec-uptime",
+    "num": "1.0",
+    "title": "99.9% Uptime Commitment"
+  },
+  {
+    "id": "sec-incident-matrix",
+    "num": "2.0",
+    "title": "Severity & Response Targets"
+  },
+  {
+    "id": "sec-credit-schedule",
+    "num": "3.0",
+    "title": "Service Credit Schedule"
+  },
+  {
+    "id": "sec-claims-procedure",
+    "num": "4.0",
+    "title": "Claims & Forfeiture"
+  },
+  {
+    "id": "sec-maintenance",
+    "num": "5.0",
+    "title": "Maintenance Windows"
+  },
+  {
+    "id": "sec-exclusions",
+    "num": "6.0",
+    "title": "SLA Exclusions"
+  },
+  {
+    "id": "sec-sole-remedy",
+    "num": "7.0",
+    "title": "Sole Remedy & Caps"
+  }
+];
+
+const badgeText = "8 Sections";
+const metaDescription = "Official Service Level Agreement (SLA) and Incident Management Policy of Sheernox Technology Group, Kamloops, BC, Canada. Outlines 99.9% uptime commitment, response matrices, and credit schedules.";
+---
+
+<LegalDocumentLayout doc={doc} tocItems={tocItems} badgeText={badgeText} metaDescription={metaDescription}>
+<!-- Preamble Section -->
+<section class="legal-section" id="sec-scope">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">0.0</span> Preamble &amp; Service Scope</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-scope')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>This Service Level Agreement (SLA) guarantees that your hosted websites, databases, virtual private servers (VPS), dedicated bare-metal nodes, and edge network routing maintain 99.9% monthly availability. If our core infrastructure fails to meet this high standard, you are eligible for monetary service credits applied directly to your monthly invoice.</p>
+</div>
+<p>This Service Level Agreement ("SLA") constitutes a binding operational schedule incorporated into the Master Terms and Conditions of <strong>Sheernox Technology Group</strong>, a sole proprietorship registered in the Province of British Columbia, Canada, having its official registered office at <code>1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada</code> ("Sheernox", "we", "us", or "our"). This Agreement applies to all active, paid subscribers ("Client", "Customer", "you") utilizing Sheernox cloud hosting, managed compute instances, dedicated bare-metal servers, Anycast DNS, edge CDN transit, and associated internet infrastructure solutions.</p>
+<p>This SLA defines our quantitative operational availability metrics, our technical support triage commitments, the formal procedure for claiming downtime compensation, and the express legal boundaries of our infrastructure performance liability.</p>
+</section>
+<!-- Section 1: 99.9% Uptime Commitment -->
+<section class="legal-section" id="sec-uptime">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">1.0</span> 99.9% Monthly Uptime Commitment</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-uptime')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-1-1">
+<h3 class="clause-title"><span class="clause-num">1.1</span> Availability Standard</h3>
+<p>Sheernox warrants that all production hosting hypervisors, bare-metal server network uplinks, storage arrays, and authoritative DNS clusters shall maintain an aggregate <strong>Monthly Uptime Percentage of not less than 99.9%</strong> during any given monthly billing cycle.</p>
+</div>
+<div class="clause-block" id="clause-1-2">
+<h3 class="clause-title"><span class="clause-num">1.2</span> Monthly Uptime Mathematical Calculation</h3>
+<p>Monthly Uptime Percentage is calculated on a calendar-month basis using the following industry-standard formula:</p>
+<p style="background: #f1f5f9; padding: 12px 16px; border-radius: 6px; font-family: var(--font-mono); font-size: 0.88rem; border-left: 3px solid var(--sn-accent-cyan);">
+              Monthly Uptime % = [ (Total Scheduled Minutes in Month − Downtime Minutes) / Total Scheduled Minutes in Month ] × 100
+            </p>
+<p>For the purposes of this calculation, "Downtime" is defined as a verifiable state of continuous packet drop, hypervisor crash, or total network unreachability exceeding sixty (60) consecutive seconds, measured by Sheernox's multi-region external telemetry nodes (including UptimeRobot, Datadog, and internal hypervisor ping probes).</p>
+</div>
+<div class="clause-block" id="clause-1-3">
+<h3 class="clause-title"><span class="clause-num">1.3</span> Application-Layer Exceptions</h3>
+<p>Downtime measures raw server, hypervisor, and network transit layer availability. Unreachability resulting from Customer code errors, WordPress PHP fatal errors, un-indexed MySQL queries stalling worker pools, expired SSL certificates managed by Customer, or Customer firewall configuration lockouts does not constitute qualifying Downtime under this SLA.</p>
+</div>
+</section>
+<!-- Section 2: Incident Severity & Response Times -->
+<section class="legal-section" id="sec-incident-matrix">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">2.0</span> Incident Severity Levels &amp; Support Response Targets</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-incident-matrix')" title="Copy link to this section">#</button>
+</div>
+<p>Technical incidents submitted through our official client portal at <a href="https://my.sheernox.com" rel="noopener noreferrer" target="_blank">https://my.sheernox.com</a> or routed to <code>support@sheernox.com</code> are triaged according to the severity matrix below:</p>
+<div class="table-wrapper">
+<table class="data-table">
+<thead>
+<tr>
+<th>Severity Level</th>
+<th>Incident Definition &amp; Impact</th>
+<th>Initial Response Target</th>
+<th>Coverage Window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="clause-num">2.1</span> <strong>Priority 1 (P1)<br/>Critical Emergency</strong></td>
+<td>Complete host, hypervisor, or network node failure. Customer production service is completely offline or critical data is inaccessible to public traffic.</td>
+<td><strong>&lt; 15 Minutes</strong></td>
+<td>24/7/365 Continuous Active Triage</td>
+</tr>
+<tr>
+<td><span class="clause-num">2.2</span> <strong>Priority 2 (P2)<br/>High Degradation</strong></td>
+<td>Severe performance degradation, persistent high packet loss (&gt; 25%), or secondary service failure (e.g., outgoing SMTP queue stall, database replica desync).</td>
+<td><strong>&lt; 60 Minutes</strong></td>
+<td>24/7/365 Priority Queue</td>
+</tr>
+<tr>
+<td><span class="clause-num">2.3</span> <strong>Priority 3 (P3)<br/>Normal / Impairment</strong></td>
+<td>Non-critical administrative disruption, control panel error, DNS record sync delay, or staging environment outage with production unaffected.</td>
+<td><strong>&lt; 4 Hours</strong></td>
+<td>Standard Business Hours (08:00–20:00 PST)</td>
+</tr>
+<tr>
+<td><span class="clause-num">2.4</span> <strong>Priority 4 (P4)<br/>Low / General</strong></td>
+<td>General technical inquiries, billing inquiries, quota upgrade requests, architecture advice, or routine DNS propagation questions.</td>
+<td><strong>&lt; 12 Hours</strong></td>
+<td>Standard Business Hours (08:00–18:00 PST)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="meta-tag" style="margin-top: 8px;">
+<em>*Initial Response Target indicates the elapsed time from ticket submission to active written triage by a qualified systems engineer.</em>
+</p>
+</section>
+<!-- Section 3: SLA Credit Schedule -->
+<section class="legal-section" id="sec-credit-schedule">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">3.0</span> Service Credit Calculation Schedule</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-credit-schedule')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>If our monthly uptime drops below 99.9%, you receive monetary credits based on the tiered schedule below. If uptime drops below 90% in any calendar month, you receive a 100% full credit for that month's service fee.</p>
+</div>
+<p>In the event that Sheernox fails to achieve the 99.9% uptime commitment during a calendar month, Customer shall be eligible to receive a non-refundable Service Credit calculated as a percentage of the Customer's net recurring monthly subscription fee for the affected service:</p>
+<div class="table-wrapper">
+<table class="data-table">
+<thead>
+<tr>
+<th>Monthly Verified Uptime</th>
+<th>Cumulative Monthly Outage Duration</th>
+<th>SLA Credit Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>99.9% – 100.0%</strong></td>
+<td>0 to 43 minutes 12 seconds</td>
+<td>Standard Baseline (0% Credit)</td>
+</tr>
+<tr>
+<td><strong>99.0% – 99.89%</strong></td>
+<td>43m 13s to 7 hours 18 minutes</td>
+<td><strong>10% Monthly Service Credit</strong></td>
+</tr>
+<tr>
+<td><strong>95.0% – 98.99%</strong></td>
+<td>7h 19m to 36 hours 0 minutes</td>
+<td><strong>25% Monthly Service Credit</strong></td>
+</tr>
+<tr>
+<td><strong>90.0% – 94.99%</strong></td>
+<td>36h 1m to 72 hours 0 minutes</td>
+<td><strong>50% Monthly Service Credit</strong></td>
+</tr>
+<tr>
+<td><strong>&lt; 90.0%</strong></td>
+<td>Greater than 72 hours Downtime</td>
+<td><strong>100% Monthly Service Credit</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 4: Claims Procedure & Forfeiture -->
+<section class="legal-section" id="sec-claims-procedure">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">4.0</span> Claims Procedure &amp; Forfeiture Conditions</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-claims-procedure')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-4-1">
+<h3 class="clause-title"><span class="clause-num">4.1</span> Claim Submission Requirements</h3>
+<p>To receive a Service Credit under this SLA, Customer must submit a formal credit request via the client portal (<a href="https://my.sheernox.com" rel="noopener noreferrer" target="_blank">https://my.sheernox.com</a>) or by written notice to <code>support@sheernox.com</code> within <strong>thirty (30) calendar days</strong> following the end of the calendar month during which the outage occurred.</p>
+<p>Each credit claim must include:</p>
+<ul class="legal-sublist">
+<li>Customer account username and primary billing email address.</li>
+<li>Identifier(s) of the affected service (e.g., Domain Name, VPS hostname, or Dedicated Server IP).</li>
+<li>Dates, exact timestamps (including timezone, preferably UTC or PST), and duration of the claimed outage.</li>
+<li>Outage logs, external monitor traceroutes, or HTTP error status codes corroborating the incident.</li>
+</ul>
+</div>
+<div class="clause-block" id="clause-4-2">
+<h3 class="clause-title"><span class="clause-num">4.2</span> Verification &amp; Credit Application</h3>
+<p>Sheernox engineers will evaluate the submitted telemetry logs against our internal hypervisor, SNMP network interface, and edge router logs within ten (10) business days. Upon verification, the calculated credit will be applied as an account credit against Customer's subsequent monthly invoice in Canadian Dollars (CAD). Service Credits cannot be redeemed for cash, refunded, or transferred between distinct legal accounts.</p>
+</div>
+<div class="clause-block" id="clause-4-3">
+<h3 class="clause-title"><span class="clause-num">4.3</span> Forfeiture for Account Delinquency</h3>
+<p>Customer forfeits all entitlement to SLA credits if Customer's billing account is overdue, past due, suspended for non-payment, or under active investigation for violations of our Acceptable Use Policy (AUP) at the time of the incident or claim submission.</p>
+</div>
+</section>
+<!-- Section 5: Scheduled & Emergency Maintenance -->
+<section class="legal-section" id="sec-maintenance">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">5.0</span> Scheduled &amp; Emergency Maintenance Windows</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-maintenance')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-5-1">
+<h3 class="clause-title"><span class="clause-num">5.1</span> Scheduled Maintenance Windows</h3>
+<p>To ensure hypervisor security, apply kernel live-patches, and upgrade edge switching hardware, Sheernox conducts scheduled maintenance. Standard maintenance windows occur between <strong>01:00 and 05:00 Pacific Standard Time (PST)</strong> on Tuesdays and Thursdays.</p>
+<p>Sheernox provides Customer with at least <strong>seventy-two (72) hours advance notice</strong> via email and our portal status dashboard prior to initiating scheduled maintenance that is expected to result in service interruptions.</p>
+</div>
+<div class="clause-block" id="clause-5-2">
+<h3 class="clause-title"><span class="clause-num">5.2</span> Emergency Critical Maintenance</h3>
+<p>In the event of a zero-day hardware vulnerability, critical Linux kernel exploit, active power infrastructure hazard, or imminent physical security threat, Sheernox reserves the right to execute Emergency Maintenance with expedited notice or without prior notice. Sheernox will endeavor to notify affected customers as soon as technically practicable.</p>
+</div>
+<div class="clause-block" id="clause-5-3">
+<h3 class="clause-title"><span class="clause-num">5.3</span> Maintenance Excluded from Downtime</h3>
+<p>Any downtime occurring within scheduled maintenance windows, or during justified emergency security patching lasting fewer than one hundred and twenty (120) minutes, is strictly excluded from Monthly Uptime calculations.</p>
+</div>
+</section>
+<!-- Section 6: SLA Exclusions & Force Majeure -->
+<section class="legal-section" id="sec-exclusions">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">6.0</span> SLA Exclusions &amp; Force Majeure Events</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-exclusions')" title="Copy link to this section">#</button>
+</div>
+<p>The 99.9% uptime commitment and service credit schedule do not apply to any performance failure, downtime, or network unreachability resulting from:</p>
+<ul class="legal-sublist">
+<li><span class="clause-num">6.1</span> <strong>Force Majeure Events:</strong> Acts of God, atmospheric disturbances, wildland fires, earthquakes, municipal power substation collapse, armed conflict, civil unrest, labor disputes, or statutory governmental embargoes.</li>
+<li><span class="clause-num">6.2</span> <strong>Tier 1 Upstream Transit Cuts:</strong> Severing of subsea or trans-continental fiber optic lines beyond Sheernox's multi-homed BGP border router control.</li>
+<li><span class="clause-num">6.3</span> <strong>Volumetric DDoS Overwhelming Mitigation Capacity:</strong> Denial of Service attacks exceeding Sheernox's upstream multi-gigabit automated scrubbing capacity (e.g., volumetric floods exceeding 500 Gbps), during which traffic blackholing is implemented to preserve global infrastructure integrity.</li>
+<li><span class="clause-num">6.4</span> <strong>Customer System Administration:</strong> Actions, misconfigurations, kernel panics, bad firewall rules (e.g., <code>iptables -F</code>), database deadlocks, or unpatched application code executed by Customer or Customer's authorized users.</li>
+<li><span class="clause-num">6.5</span> <strong>AUP Enforcement Actions:</strong> Suspension or termination of services resulting from network abuse, phishing, spam transmission, copyright violations, or breach of the Acceptable Use Policy.</li>
+<li><span class="clause-num">6.6</span> <strong>Beta, Test, or Unmanaged Services:</strong> Services explicitly designated in billing as "Beta", "Development", "Staging", "Unmanaged Bare-Metal", or free promotional tiers.</li>
+</ul>
+</section>
+<!-- Section 7: Sole Remedy & Liability Caps -->
+<section class="legal-section" id="sec-sole-remedy">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">7.0</span> Sole &amp; Exclusive Remedy &amp; Aggregate Caps</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-sole-remedy')" title="Copy link to this section">#</button>
+</div>
+<div class="statutory-callout">
+<h4>Statutory Limitation of Remedy</h4>
+<p>Under British Columbia law, this section sets forth Customer's exclusive monetary recourse for any failure of server uptime, network availability, or infrastructure performance.</p>
+</div>
+<div class="clause-block" id="clause-7-1">
+<h3 class="clause-title"><span class="clause-num">7.1</span> Sole and Exclusive Remedy</h3>
+<p>The Service Credits set forth in Section 3 constitute Customer's <strong>sole and exclusive remedy</strong> for any failure of Sheernox to meet the uptime, response time, or performance warranties contained in this Agreement. Under no circumstances shall Customer be entitled to consequential, incidental, indirect, punitive, or loss-of-profit damages arising out of infrastructure downtime.</p>
+</div>
+<div class="clause-block" id="clause-7-2">
+<h3 class="clause-title"><span class="clause-num">7.2</span> Maximum Monthly Credit Cap</h3>
+<p>The total cumulative Service Credits awarded to Customer in any single calendar month shall under no circumstances exceed <strong>one hundred percent (100%)</strong> of the total recurring subscription fee paid by Customer for the specific affected service during that calendar month.</p>
+</div>
+<div class="clause-block" id="clause-7-3">
+<h3 class="clause-title"><span class="clause-num">7.3</span> British Columbia Venue &amp; Statutory Alignment</h3>
+<p>This SLA is governed by the laws of the Province of British Columbia and the federal laws of Canada. Any disputes arising out of the interpretation or enforcement of this SLA shall be resolved exclusively by the competent courts of British Columbia sitting in the City of Kamloops, or via expedited commercial arbitration under the Vancouver International Arbitration Centre (VanIAC) rules.</p>
+</div>
+</section>
+</LegalDocumentLayout>

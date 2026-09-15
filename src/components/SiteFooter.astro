@@ -1,0 +1,54 @@
+---
+interface Props {
+  currentSlug?: string;
+}
+
+const { currentSlug = '' } = Astro.props;
+
+const policyLinks = [
+  { slug: 'terms-and-conditions', href: 'terms-and-conditions.html', label: 'Terms of Service' },
+  { slug: 'acceptable-use-policy', href: 'acceptable-use-policy.html', label: 'Acceptable Use Policy' },
+  { slug: 'privacy-policy', href: 'privacy-policy.html', label: 'Privacy Policy' },
+  { slug: 'service-level-agreement', href: 'service-level-agreement.html', label: 'SLA' },
+  { slug: 'vulnerability-disclosure-policy', href: 'vulnerability-disclosure-policy.html', label: 'VDP' },
+  { slug: 'copyright-policy', href: 'copyright-policy.html', label: 'Copyright Policy' },
+  { slug: 'web-design-terms', href: 'web-design-terms.html', label: 'Web Design Terms' },
+  { slug: 'website-care-plan-terms', href: 'website-care-plan-terms.html', label: 'Care Plan Terms' },
+];
+---
+
+<footer class="page-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-link" aria-label="Sheernox Legal Portal Home">
+          <img src="https://cdn.sheernox.com/logo/white_icon_with_white_text/logo_300.png" alt="Sheernox Technology Group" class="footer-logo" />
+        </a>
+        <span class="footer-flag" title="British Columbia, Canada" aria-label="Canada">🇨🇦</span>
+      </div>
+      <nav class="footer-legal-bar" aria-label="Legal Documents Navigation">
+        {
+          policyLinks.map((link) => (
+            <a
+              href={link.href}
+              class={`footer-link ${currentSlug === link.slug ? 'active' : ''}`}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-desc">
+        Sheernox Technology Group is a full suite web solutions provider based in 🇨🇦 British Columbia, Canada.<br />
+        Since 2009, Sheernox has provided individuals and businesses of all sizes with superior hosting and IT services.
+      </div>
+      <div class="footer-meta">
+        <div>&copy; <span id="year">{new Date().getFullYear()}</span> Sheernox Technology Group &bull; All Rights Reserved</div>
+        <div>1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada &bull; Reg: FM0707819</div>
+        <div>Governed under the laws of British Columbia &amp; Canada</div>
+      </div>
+    </div>
+  </div>
+</footer>

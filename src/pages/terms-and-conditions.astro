@@ -1,0 +1,666 @@
+---
+import LegalDocumentLayout from '../layouts/LegalDocumentLayout.astro';
+import { DOC_BY_SLUG } from '../data/documents';
+
+const doc = DOC_BY_SLUG.get('terms-and-conditions')!;
+
+const tocItems = [
+  {
+    "id": "sec-preamble",
+    "num": "0.0",
+    "title": "Preamble & Party Definitions"
+  },
+  {
+    "id": "sec-1",
+    "num": "1.0",
+    "title": "Services & Solutions Scope"
+  },
+  {
+    "id": "sec-2",
+    "num": "2.0",
+    "title": "Revisions to User Agreement"
+  },
+  {
+    "id": "sec-3",
+    "num": "3.0",
+    "title": "Duration & Cancellation Policy"
+  },
+  {
+    "id": "sec-4",
+    "num": "4.0",
+    "title": "Account Set Up & Verification"
+  },
+  {
+    "id": "sec-5",
+    "num": "5.0",
+    "title": "Intellectual Property & URL Policy"
+  },
+  {
+    "id": "sec-6",
+    "num": "6.0",
+    "title": "Copyright & Notice-and-Notice"
+  },
+  {
+    "id": "sec-7",
+    "num": "7.0",
+    "title": "Content & Acceptable Use"
+  },
+  {
+    "id": "sec-8",
+    "num": "8.0",
+    "title": "Zero Tolerance Anti-Spam (CASL)"
+  },
+  {
+    "id": "sec-9",
+    "num": "9.0",
+    "title": "Payment, Taxes & Invoicing"
+  },
+  {
+    "id": "sec-10",
+    "num": "10.0",
+    "title": "Backups & Data Risk Assumption"
+  },
+  {
+    "id": "sec-11",
+    "num": "11.0",
+    "title": "Resource Usage, Security & Fair Use"
+  },
+  {
+    "id": "sec-12",
+    "num": "12.0",
+    "title": "Uptime SLA (99.9% Guarantee)"
+  },
+  {
+    "id": "sec-13",
+    "num": "13.0",
+    "title": "Price Change Policy"
+  },
+  {
+    "id": "sec-14",
+    "num": "14.0",
+    "title": "Comprehensive Indemnification"
+  },
+  {
+    "id": "sec-15",
+    "num": "15.0",
+    "title": "Disclaimer of Warranties"
+  },
+  {
+    "id": "sec-16",
+    "num": "16.0",
+    "title": "Limitation of Liability"
+  },
+  {
+    "id": "sec-17",
+    "num": "17.0",
+    "title": "General Provisions & BC Law"
+  },
+  {
+    "id": "sec-18",
+    "num": "18.0",
+    "title": "Custom Systems & On-Site Work"
+  }
+];
+
+const badgeText = "19 Sections";
+const metaDescription = "Official Master Terms and Conditions and Service Level Agreement of Sheernox Technology Group, a sole proprietorship registered at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada.";
+---
+
+<LegalDocumentLayout doc={doc} tocItems={tocItems} badgeText={badgeText} metaDescription={metaDescription}>
+<!-- Preamble Section -->
+<section class="legal-section" id="sec-preamble">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">0.0</span> Preamble &amp; Party Definitions</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-preamble')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>This Master Service Agreement is entered into between you (the Client) and Sheernox Technology Group, a Canadian sole proprietorship registered at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada. By subscribing to, purchasing, or using any Sheernox services, you agree to be legally bound by this Agreement and our incorporated operational policies under British Columbia and Canadian law.</p>
+</div>
+<p>
+            The use of services provided by <strong>Sheernox Technology Group</strong>, a sole proprietorship established and registered under the laws of the Province of British Columbia, Canada (Registration Number: <code>FM0707819</code>, Business Number: <code>732754924BC0001</code>, Original Registration Date: October 29, 2009), based at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada, including any affiliated networks, operating divisions, and trade names (hereafter referred to as <em>"Sheernox Technology Group"</em>, <em>"Sheernox"</em>, <em>"We"</em>, <em>"Us"</em>, or <em>"Our"</em>), is subject to the following Master Terms and Conditions.
+          </p>
+<div class="clause-block" id="clause-p-1">
+<p>
+<span class="clause-num">0.1</span> <strong>Sheernox Technology Group:</strong> is the publisher, owner, and operator of <code>sheernox.com</code> and associated client management portals (the "Site") through which Sheernox makes available web hosting, cloud computing infrastructure, managed networks, and total technology solutions (the "Services"). For purposes of this Agreement, references to "Site" or "Services" include all hardware, virtual machines, cloud hypervisors, software licenses, network infrastructure, and physical facilities necessary to deliver said capabilities.
+            </p>
+</div>
+<div class="clause-block" id="clause-p-2">
+<p>
+<span class="clause-num">0.2</span> <strong>You, the Client:</strong> — As Our Client and the subscriber, purchaser, or user of the Site or Services, this Agreement refers to You through any second-person pronouns, such as <em>"Your"</em> or <em>"Yours"</em>.
+            </p>
+</div>
+<div class="statutory-callout">
+<div class="statutory-header">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>
+              Electronic Acceptance Notice (British Columbia Electronic Transactions Act)
+            </div>
+<div class="statutory-content">
+              PLEASE READ THE FOLLOWING HOSTING AND TECHNOLOGY SERVICES TERMS AND CONDITIONS CAREFULLY. BY SUBSCRIBING TO, PURCHASING, ACCESSING, OR USING SHEERNOX TECHNOLOGY GROUP’S SERVICES, YOU AGREE TO BE BOUND BY ALL TERMS AND CONDITIONS OF THIS AGREEMENT. YOUR ELECTRONIC ACCEPTANCE OF THIS AGREEMENT CONSTITUTES A BINDING LEGAL SIGNATURE EXECUTED PURSUANT TO THE BRITISH COLUMBIA <em>ELECTRONIC TRANSACTIONS ACT</em>, SBC 2001, c. 10 AND APPLICABLE CANADIAN FEDERAL AND PROVINCIAL LAWS. IF YOU DO NOT AGREE WITH ALL TERMS, YOU MUST NOT PROCEED WITH ACCOUNT REGISTRATION OR USE OF SERVICES.
+            </div>
+</div>
+<p>
+<strong>Incorporations by Reference:</strong> This Master Agreement represents the foundational contract between the parties. Additional guidelines and rules published on Our Site are specifically incorporated herein by reference and form an integral part of this Agreement:
+          </p>
+<ul class="legal-sublist">
+<li><strong>Acceptable Use Policy (AUP):</strong> <a href="acceptable-use-policy.html">acceptable-use-policy.html</a></li>
+<li><strong>Web Design, Branding &amp; Care Agreement:</strong> <a href="web-design-terms.html">web-design-terms.html</a> (Governing bespoke design, UX architecture, and ongoing CMS maintenance retainers)</li>
+<li><strong>Data Protection &amp; Privacy Policy:</strong> <a href="privacy-policy.html">privacy-policy.html</a> (Governing personal information handling under PIPEDA and BC PIPA)</li>
+</ul>
+</section>
+<!-- Section 1 -->
+<section class="legal-section" id="sec-1">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">1.0</span> Services &amp; Complete Solutions Scope</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-1')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>Sheernox provides a comprehensive, end-to-end spectrum of technology solutions—from web hosting, VPS, dedicated servers, and domain names to email hosting, CDN, backups, managed servers, and physical on-site systems engineering. All service orders are subject to identity verification and formal acceptance by Sheernox.</p>
+</div>
+<div class="clause-block" id="clause-1-1">
+<p>
+<span class="clause-num">1.1</span> <strong>Complete Solution Spectrum:</strong> At the time of initial registration or execution of a Statement of Work, Client selects from the list of available Services. Sheernox Technology Group provides total end-to-end solutions across nine core capability areas:
+            </p>
+<div style="margin: 12px 0 16px;">
+<span class="service-grid-pill">Shared, Reseller, Cloud, VPS &amp; Dedicated Server Hosting</span>
+<span class="service-grid-pill">Domain Names &amp; Domain Resellers</span>
+<span class="service-grid-pill">Email Hosting &amp; SPAM Protection</span>
+<span class="service-grid-pill">Branding and Website Design</span>
+<span class="service-grid-pill">Website Care and Maintenance</span>
+<span class="service-grid-pill">Server Monitoring and Management</span>
+<span class="service-grid-pill">DNS &amp; Content Delivery Networks (CDN)</span>
+<span class="service-grid-pill">Storage and Automated Backup Solutions</span>
+<span class="service-grid-pill">Custom System Builds, Network Planning, Architecture Design &amp; On-Site Install/Repair</span>
+</div>
+</div>
+<div class="clause-block" id="clause-1-2">
+<p>
+<span class="clause-num">1.2</span> <strong>Formal Acceptance:</strong> All subscriptions and orders are subject to formal acceptance by Sheernox. Your subscription will be deemed accepted when Sheernox delivers automated or electronic confirmation credentials to You. Sheernox reserves the right to refuse, decline, or cancel any subscription order for any lawful reason, including inability to verify identity or detection of fraudulent payment credentials.
+            </p>
+</div>
+<div class="clause-block" id="clause-1-3">
+<p>
+<span class="clause-num">1.3</span> <strong>Multi-Domain Operational Discretion:</strong> When first-person pronouns (Us, We, Our) or "Site" are referenced, they encompass all websites, digital properties, hypervisors, and customer portals operated by Sheernox Technology Group, unless specifically exempted.
+            </p>
+</div>
+</section>
+<!-- Section 2 -->
+<section class="legal-section" id="sec-2">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">2.0</span> Revisions to User Agreement</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-2')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>We may update this Agreement periodically. When changes are made, we update the revision date and notify clients. If you object to an updated term, you must notify us in writing within 30 days to terminate your account, otherwise continued use constitutes agreement.</p>
+</div>
+<div class="clause-block" id="clause-2-1">
+<p>
+<span class="clause-num">2.1</span> <strong>Right of Revision:</strong> From time to time, Sheernox may revise, amend, or supplement this Agreement and incorporated policies. We reserve the right to do so, and Client agrees to be bound by all revisions, amendments, and modifications.
+            </p>
+</div>
+<div class="clause-block" id="clause-2-2">
+<p>
+<span class="clause-num">2.2</span> <strong>Revision Notice &amp; Timestamp:</strong> When changes are made, Sheernox will update the "Last Revised" date at the head of the document. Sheernox may also post notices on the Client Portal (<code>my.sheernox.com</code>) or send electronic notifications to Client's registered primary email address.
+            </p>
+</div>
+<div class="clause-block" id="clause-2-3">
+<p>
+<span class="clause-num">2.3</span> <strong>Termination Due to Revisions:</strong> Should Client object to any revision, Client must provide written notice of termination via the support ticket system within thirty (30) days of the revision posting. Failure to provide timely notice constitutes full constructive acceptance of the revised terms.
+            </p>
+</div>
+<div class="clause-block" id="clause-2-4">
+<p>
+<span class="clause-num">2.4</span> <strong>Periodic Review Waiver:</strong> Client waives any right to challenge amendments based on failure to periodically review this Agreement or maintain an accurate contact email.
+            </p>
+</div>
+</section>
+<!-- Section 3 -->
+<section class="legal-section" id="sec-3">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">3.0</span> Duration of Agreement &amp; Cancellation Policy</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-3')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>Service plans renew automatically at the end of each billing cycle. If you do not wish to renew, you must submit a cancellation request through the client portal at least 14 days before your renewal date. You are solely responsible for downloading and backing up all your files before submitting a cancellation.</p>
+</div>
+<div class="clause-block" id="clause-3-1">
+<p>
+<span class="clause-num">3.1</span> <strong>Term &amp; Auto-Renewal:</strong> The Initial Term commences upon confirmation of Your order. Upon expiration of the Initial Term, this Agreement automatically renews for successive renewal periods matching the selected billing frequency (monthly, quarterly, semi-annually, annually, or multi-year) at prevailing standard rates.
+            </p>
+</div>
+<div class="clause-block" id="clause-3-2">
+<p>
+<span class="clause-num">3.2</span> <strong>Fourteen (14) Days Non-Renewal Notice:</strong> Client must provide at least fourteen (14) days advance written notice prior to the end of the current billing cycle if Client elects not to renew recurring hosting or management services.
+            </p>
+</div>
+<div class="clause-block" id="clause-3-3">
+<p>
+<span class="clause-num">3.3</span> <strong>Termination by Sheernox:</strong> Sheernox may terminate this Agreement and the customer’s account at any time, for any reason, by providing written electronic notice. Where termination is for convenience by Sheernox, Client shall receive a pro-rata refund for the unexpired portion of prepaid hosting fees.
+            </p>
+</div>
+<div class="clause-block" id="clause-3-4">
+<p>
+<span class="clause-num">3.4</span> <strong>Immediate Termination for Cause:</strong> In the event Sheernox terminates this Agreement due to Client’s breach of this Agreement, the AUP, or unlawful activity, no refund of any kind shall be issued.
+            </p>
+</div>
+<div class="clause-block" id="clause-3-5">
+<p>
+<span class="clause-num">3.5</span> <strong>Cancellation Procedure via Client Portal:</strong> Cancellations must be submitted directly through the authenticated Sheernox Client Portal support ticketing system at <code>my.sheernox.com</code>. We require verification of primary account ownership to prevent fraudulent destruction of services.
+            </p>
+</div>
+<div class="clause-block" id="clause-3-6">
+<p>
+<span class="clause-num">3.6</span> <strong>Post-Termination Cessation:</strong> Termination of this Agreement immediately terminates all access to the Services, hypervisors, mailboxes, and control panels.
+            </p>
+</div>
+<div class="clause-block" id="clause-3-6">
+<p>
+<span class="clause-num">3.7</span> <strong>Sole Responsibility for Data Backups:</strong> If either party cancels or terminates this Agreement for any reason, Client is solely responsible for creating independent backups of all data, web content, databases, and emails prior to cancellation. Sheernox has no obligation to maintain, forward, or preserve customer data following termination.
+            </p>
+</div>
+</section>
+<!-- Section 4 -->
+<section class="legal-section" id="sec-4">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">4.0</span> Account Set Up &amp; Verification</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-4')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-4-1">
+<p>
+<span class="clause-num">4.1</span> <strong>User Credentials:</strong> Upon registration, Sheernox provides a username and access credentials. Client must maintain the strict confidentiality of all administrative credentials, API secrets, and server root/SSH keys.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-2">
+<p>
+<span class="clause-num">4.2</span> <strong>External Primary Email Requirement:</strong> Client must provide a valid primary email address that is <em>not</em> hosted on the domain being provisioned by Sheernox. This external email is critical for password resets, billing alerts, server notifications, and emergency incident communication.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-3">
+<p>
+<span class="clause-num">4.3</span> <strong>Truthful Contact Information:</strong> Providing false, fraudulent, or incomplete contact details, fake company names, or disposable numbers constitutes a material breach resulting in immediate account termination.
+            </p>
+</div>
+<div class="clause-block" id="clause-4-4">
+<p>
+<span class="clause-num">4.4</span> <strong>Full Account Liability:</strong> Client is legally responsible for all actions and bandwidth transpiring under Client’s authenticated account credentials, whether authorized by Client or resulting from compromised client-side devices.
+            </p>
+</div>
+</section>
+<!-- Section 5 -->
+<section class="legal-section" id="sec-5">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">5.0</span> Intellectual Property Rights &amp; URL / Trademark Policy</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-5')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>You retain ownership of your content. You cannot register or use domains or URLs that imitate, copy, or typo-squat on Sheernox’s trademarks. Registering infringing domains incurs a $5,000 CAD liquidated damages fee per domain, plus all associated legal, investigative, and arbitration recovery costs.</p>
+</div>
+<div class="clause-block" id="clause-5-1">
+<p>
+<span class="clause-num">5.1</span> <strong>Client IP Ownership:</strong> As between You and Sheernox Technology Group, Sheernox acknowledges that Client retains all right, title, and interest in and to all proprietary content, software, and images uploaded to the Services.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-2">
+<p>
+<span class="clause-num">5.2</span> <strong>Limited Hosting License:</strong> Client grants Sheernox a limited, non-exclusive, worldwide license to host, cache, copy, transmit, and display Client content solely to the extent necessary to perform the Services.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-3">
+<p>
+<span class="clause-num">5.3</span> <strong>Trademark Protection:</strong> This Agreement does not grant Client any license or right to use Sheernox Technology Group’s trademarks, service marks, or logos without prior written authorization.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-4">
+<p>
+<span class="clause-num">5.4</span> <strong>Confusingly Similar URLs Prohibited:</strong> Client is strictly prohibited from registering or operating any Uniform Resource Locator (URL) or Internet domain name that contains any of Sheernox’s trademarks, trade names, or brands, or that is confusingly similar to Sheernox URLs.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-5">
+<p>
+<span class="clause-num">5.5</span> <strong>Typo-Squatting:</strong> Client may not register any domain name consisting of or containing common or likely misspellings, permutations, or typo-squatting variants of Sheernox trademarks or domains.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-6">
+<p>
+<span class="clause-num">5.6</span> <strong>Pre-Clearance Inquiry:</strong> If Client is unclear whether a proposed URL violates this section, Client must contact Sheernox. If Sheernox does not respond within thirty (30) days, Client must consider registration of the URL to be a violation and refrain from registering.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-7">
+<p>
+<span class="clause-num">5.7</span> <strong>Immediate Transfer &amp; $5,000 CAD Liquidated Damages:</strong> If Client registers any URL in violation of this Agreement, Client shall immediately transfer the offending domain to Sheernox upon demand, and agrees to pay Sheernox $5,000.00 CAD in stipulated liquidated damages per infringing domain.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-8">
+<p>
+<span class="clause-num">5.8</span> <strong>Genuine Pre-Estimate of Damages:</strong> Client acknowledges that this liquidated damages amount is not a penalty, but represents a genuine and reasonable pre-estimate of damages given the uncertainty of brand impairment and market confusion.
+            </p>
+</div>
+<div class="clause-block" id="clause-5-9">
+<p>
+<span class="clause-num">5.9</span> <strong>Legal Fees &amp; Recovery Costs:</strong> If Sheernox retains legal counsel, initiates proceedings before the courts of British Columbia, or files an ICANN UDRP or CIRA CDRP complaint to recover an offending URL, Client shall reimburse Sheernox for all legal fees (on a solicitor-and-own-client basis), administrative costs, filing disbursements, and travel expenses incurred.
+            </p>
+</div>
+</section>
+<!-- Section 6 -->
+<section class="legal-section" id="sec-6">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">6.0</span> Copyright Infringement &amp; Canadian Notice-and-Notice Regime</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-6')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>Sheernox complies with Canada's Copyright Act Notice-and-Notice regime. If a copyright owner claims infringement, we forward the statutory notice directly to you and maintain legally required records. Repeated infringement results in account termination.</p>
+</div>
+<div class="clause-block" id="clause-6-1">
+<p>
+<span class="clause-num">6.1</span> <strong>Compliance with Canadian Copyright Act:</strong> Sheernox respects intellectual property rights and adheres to the Canadian <em>Copyright Act</em>, R.S.C., 1985, c. C-42, including the statutory <strong>Notice-and-Notice Regime</strong> (sections 31.1, 41.25, and 41.26).
+            </p>
+</div>
+<div class="clause-block" id="clause-6-2">
+<p>
+<span class="clause-num">6.2</span> <strong>Statutory Notice Requirements:</strong> A notice of claimed copyright infringement submitted to Sheernox must be in writing and state: (a) the claimant’s name and address; (b) the copyrighted work claimed to be infringed; (c) the claimant’s interest or right in the work; (d) the electronic location data (URL) and IP address; and (e) the date and time of the alleged infringement. Notices must be directed to:
+            </p>
+<p style="margin-left: 20px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--sn-primary-blue);">
+              Copyright &amp; Compliance Office<br/>
+              Sheernox Technology Group<br/>
+              1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada<br/>
+              Email: support@sheernox.com (Attn: Legal &amp; Compliance / Copyright Agent)
+            </p>
+</div>
+<div class="clause-block" id="clause-6-3">
+<p>
+<span class="clause-num">6.3</span> <strong>Forwarding &amp; Record Retention:</strong> Upon receipt of a conforming statutory notice, Sheernox will forward the notice electronically to the customer associated with the IP address or hosted account, and will retain records determining the identity of the customer for a minimum of six (6) months (or one (1) year where court proceedings are instituted).
+            </p>
+</div>
+<div class="clause-block" id="clause-6-4">
+<p>
+<span class="clause-num">6.4</span> <strong>Repeat Infringer Policy:</strong> Sheernox maintains a policy providing for the immediate termination of accounts and hosting services of subscribers who are identified as repeat copyright infringers.
+            </p>
+</div>
+</section>
+<!-- Section 12 -->
+<section class="legal-section" id="sec-7">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">7.0</span> Content and Acceptable Use Policy</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-7')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>All hosted content must comply with our Acceptable Use Policy and Canadian law. Child sexual abuse material is strictly zero-tolerance and immediately reported to Cybertip.ca and the RCMP. If you operate user-generated content or reseller platforms, you are responsible for monitoring and taking down abusive downstream content.</p>
+</div>
+<div class="clause-block" id="clause-7-1">
+<p>
+<span class="clause-num">7.1</span> <strong>Compliance with AUP:</strong> Client agrees to comply in full with Sheernox’s <a href="acceptable-use-policy.html">Acceptable Use Policy</a>. Any violation of the AUP constitutes a material breach of this Agreement.
+            </p>
+</div>
+<div class="clause-block" id="clause-7-2">
+<p>
+<span class="clause-num">7.2</span> <strong>No Affirmative Monitoring Duty:</strong> Sheernox does not actively pre-screen or monitor content hosted on servers. Sheernox disclaims any liability for third-party or client-generated content.
+            </p>
+</div>
+<div class="clause-block" id="clause-7-3">
+<p>
+<span class="clause-num">7.3</span> <strong>Child Sexual Abuse Material (Zero Tolerance):</strong> Sheernox maintains absolute zero tolerance for child sexual abuse material (CSAM) or any form of child exploitation under the <em>Criminal Code of Canada</em>, R.S.C., 1985, c. C-46. Sheernox will immediately terminate offending services and report full account data, access logs, and content to <strong>Cybertip.ca</strong> (the Canadian Centre for Child Protection) and the <strong>Royal Canadian Mounted Police (RCMP)</strong>.
+            </p>
+</div>
+<div class="clause-block" id="clause-7-4">
+<p>
+<span class="clause-num">7.4</span> <strong>Reseller &amp; Service Provider Downstream Duties:</strong> If Client operates a reseller, platform, or user-generated content service, Client is solely responsible for ensuring all downstream sub-users and hosted sites adhere strictly to this Agreement. Client must maintain an active abuse handling workflow and take prompt corrective action upon notification.
+            </p>
+</div>
+</section>
+<!-- Section 13 -->
+<section class="legal-section" id="sec-8">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">8.0</span> Zero Tolerance Anti-Spam Policy (CASL Compliance)</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-8')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>We enforce strict compliance with Canada's Anti-Spam Legislation (CASL). You cannot send unsolicited commercial emails. Causing Sheernox IP ranges to be blacklisted results in immediate account suspension and a $250.00 CAD remediation fee per listing.</p>
+</div>
+<div class="clause-block" id="clause-8-1">
+<p>
+<span class="clause-num">8.1</span> <strong>Mandatory CASL Adherence:</strong> Client agrees to comply fully with <em>Canada's Anti-Spam Legislation</em> (CASL), S.C. 2010, c. 23. Sending unsolicited commercial electronic messages (CEMs), purchasing email lists, or harvesting addresses without verifiable express or implied consent is strictly prohibited.
+            </p>
+</div>
+<div class="clause-block" id="clause-8-2">
+<p>
+<span class="clause-num">8.2</span> <strong>Blacklist Delisting Fee:</strong> If Client’s mailing activities result in any Sheernox IP address being listed on anti-spam blocklists (Spamhaus, Barracuda, SORBS, etc.), Client will be assessed a mandatory clean-up and delisting fee of $250.00 CAD per incident.
+            </p>
+</div>
+</section>
+<!-- Section 14 -->
+<section class="legal-section" id="sec-9">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">9.0</span> Payment, Taxes &amp; Invoicing Terms</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-9')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-9-1">
+<p>
+<span class="clause-num">9.1</span> <strong>Advance Invoicing:</strong> Payment for recurring hosting and services is due in advance of the service interval covered. Invoices are dispatched electronically fourteen (14) days prior to the due date.
+            </p>
+</div>
+<div class="clause-block" id="clause-9-2">
+<p>
+<span class="clause-num">9.2</span> <strong>Canadian &amp; Provincial Taxes:</strong> Client agrees to pay all applicable federal Goods and Services Tax (GST), British Columbia Provincial Sales Tax (PST), Harmonized Sales Tax (HST), and any provincial or local retail taxes applicable to the Services.
+            </p>
+</div>
+<div class="clause-block" id="clause-9-3">
+<p>
+<span class="clause-num">9.3</span> <strong>Solicitor-and-Own-Client Collection Costs:</strong> Client agrees to pay all legal fees, collection agency commissions, court disbursements, and administrative costs incurred by Sheernox in collecting any past-due amounts on a solicitor-and-own-client basis.
+            </p>
+</div>
+<div class="clause-block" id="clause-9-4">
+<p>
+<span class="clause-num">9.4</span> <strong>7-Day Abandonment &amp; Termination:</strong> Accounts past due by more than seven (7) days are subject to automated suspension. Accounts remaining delinquent past thirty (30) days are deemed abandoned; services will be permanently terminated and data purged.
+            </p>
+</div>
+<div class="clause-block" id="clause-9-5">
+<p>
+<span class="clause-num">9.5</span> <strong>Non-Refundable Items:</strong> Domain name registrations, SSL certificates, software licenses (cPanel, CloudLinux, LiteSpeed), and architectural engineering labor are non-refundable under all circumstances.
+            </p>
+</div>
+</section>
+<!-- Section 15 -->
+<section class="legal-section" id="sec-10">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">10.0</span> Backups &amp; Assumption of Data Loss Risk</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-10')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>You use Sheernox infrastructure at your own risk. While we provide automated backup solutions, routine system snapshots are taken solely for disaster recovery and are not guaranteed. You must maintain your own independent off-site copies of all critical data.</p>
+</div>
+<div class="clause-block" id="clause-10-1">
+<p>
+<span class="clause-num">10.1</span> <strong>Customer Assumption of Risk:</strong> Use of the Services is at Client’s sole risk. Sheernox is not responsible for files, databases, or content residing on your accounts. Client must maintain independent off-site backups.
+            </p>
+</div>
+<div class="clause-block" id="clause-10-2">
+<p>
+<span class="clause-num">10.2</span> <strong>Courtesy Snapshots Disclaimer:</strong> Any routine hypervisor snapshots created by Sheernox are strictly for internal disaster recovery and carry no warranty of completeness, availability, or restorable condition.
+            </p>
+</div>
+</section>
+<!-- Section 16 -->
+<section class="legal-section" id="sec-11">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">11.0</span> Resource Usage, Security &amp; Fair Use Policy</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-11')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-11-1">
+<p>
+<span class="clause-num">11.1</span> <strong>Shared Server Fair Use:</strong> Sheernox imposes hard limits on shared hosting accounts to prevent neighbor degradation. No shared account may consume more than 25% of server CPU or 1024MB RAM continuously for more than 90 seconds.
+            </p>
+</div>
+<div class="clause-block" id="clause-11-2">
+<p>
+<span class="clause-num">11.2</span> <strong>Reverse Engineering Prohibition:</strong> Client may not reverse-engineer, decompile, or disassemble any proprietary Host Materials, software, or network management daemons.
+            </p>
+</div>
+<div class="clause-block" id="clause-11-3">
+<p>
+<span class="clause-num">11.3</span> <strong>Unlimited Policy Restrictions:</strong> Where a hosting tier advertises unmetered disk or bandwidth, such capacity is intended strictly for live website files and normal operational data—not for personal file storage, archival dumps, media distribution repositories, or torrent networks.
+            </p>
+</div>
+</section>
+<!-- Section 17 -->
+<section class="legal-section" id="sec-12">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">12.0</span> Service Level Agreement (SLA) &amp; Uptime Guarantee</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-12')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>We commit to a 99.9% monthly uptime guarantee for our core cloud hypervisors and network transit. If availability falls below this threshold in a given month, you are eligible for service credits on your next invoice.</p>
+</div>
+<div class="clause-block" id="clause-12-1">
+<p>
+<span class="clause-num">12.1</span> <strong>99.9% Uptime Commitment:</strong> Sheernox warrants a 99.9% monthly availability SLA across core hypervisors, routing equipment, and IP transit.
+            </p>
+</div>
+<div class="clause-block" id="clause-12-2">
+<p>
+<span class="clause-num">12.2</span> <strong>Service Credit Schedule:</strong>
+</p>
+<ul class="legal-sublist">
+<li><strong>99.5% – 99.89% Uptime:</strong> 10% credit of monthly hosting fee</li>
+<li><strong>99.0% – 99.49% Uptime:</strong> 25% credit of monthly hosting fee</li>
+<li><strong>Below 99.0% Uptime:</strong> 50% credit of monthly hosting fee</li>
+</ul>
+</div>
+<div class="clause-block" id="clause-12-3">
+<p>
+<span class="clause-num">12.3</span> <strong>Exclusions:</strong> Credits exclude scheduled maintenance announced 24 hours in advance, client-side script errors, upstream fiber carrier cuts, and DDoS attacks exceeding contracted mitigation tiers.
+            </p>
+</div>
+</section>
+<!-- Section 18 -->
+<section class="legal-section" id="sec-13">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">13.0</span> Price Change Policy</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-13')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-13-1">
+<p>
+<span class="clause-num">13.1</span> <strong>Advance Written Notice of Price Adjustments:</strong> Sheernox reserves the right to modify service fees upon thirty (30) days written notice prior to the end of the current billing period. Prepaid term agreements remain price-locked for their paid duration.
+            </p>
+</div>
+</section>
+<!-- Section 19 -->
+<section class="legal-section" id="sec-14">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">14.0</span> Indemnification</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-14')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-14-1">
+<p>
+<span class="clause-num">14.1</span> <strong>Comprehensive Client Indemnification:</strong> Client agrees to defend, indemnify, and hold harmless Sheernox Technology Group, its sole proprietor, employees, and contractors from any claims, liabilities, losses, damages, fines, and legal expenses (including full legal costs on a solicitor-and-own-client basis) arising from: (a) Client’s breach of this Agreement, the AUP, or applicable laws; (b) any content, website, or software hosted or distributed by Client; or (c) any violation of third-party intellectual property or privacy rights.
+            </p>
+</div>
+</section>
+<!-- Section 20 -->
+<section class="legal-section" id="sec-15">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">15.0</span> Disclaimer of Warranties</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-15')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-15-1">
+<p><span class="clause-num">15.1</span> <strong>Statutory Disclaimer:</strong></p>
+<div class="all-caps-box">
+            TO THE MAXIMUM EXTENT PERMITTED BY THE LAWS OF BRITISH COLUMBIA AND APPLICABLE CANADIAN LAW, THE SERVICES ARE PROVIDED STRICTLY ON AN "AS IS" AND "AS AVAILABLE" BASIS. SHEERNOX TECHNOLOGY GROUP DISCLAIMS ALL WARRANTIES, CONDITIONS, REPRESENTATIONS, OR GUARANTEES OF ANY KIND, WHETHER STATUTORY, EXPRESS, OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, OR UNINTERRUPTED ERROR-FREE PERFORMANCE. TO THE MAXIMUM EXTENT PERMITTED BY LAW, ALL STATUTORY WARRANTIES AND CONDITIONS UNDER THE BRITISH COLUMBIA <em>SALE OF GOODS ACT</em>, RSBC 1996, c. 410 AND SIMILAR PROVINCIAL ENACTMENTS ARE HEREBY EXPRESSLY EXCLUDED.
+            </div>
+</div>
+</section>
+<!-- Section 21 -->
+<section class="legal-section" id="sec-16">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">16.0</span> Limitation of Liability</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-16')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-16-1">
+<p><span class="clause-num">16.1</span> <strong>Aggregate Cap &amp; Exclusions:</strong></p>
+<div class="all-caps-box">
+            TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT SHALL SHEERNOX TECHNOLOGY GROUP BE LIABLE TO CLIENT OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF BUSINESS OPPORTUNITY, OR LOSS OF DATA, REGARDLESS OF THE THEORY OF LIABILITY (WHETHER IN CONTRACT, TORT, NEGLIGENCE, OR OTHERWISE). SHEERNOX’S TOTAL AGGREGATE LIABILITY UNDER OR RELATING TO THIS AGREEMENT SHALL BE STRICTLY LIMITED TO THE TOTAL FEES ACTUALLY PAID BY CLIENT TO SHEERNOX FOR THE PARTICULAR SERVICE AT ISSUE DURING THE THREE (3) MONTHS IMMEDIATELY PRECEDING THE CLAIM.
+            </div>
+</div>
+</section>
+<!-- Section 22 -->
+<section class="legal-section" id="sec-17">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">17.0</span> General Legal Provisions &amp; British Columbia Law</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-17')" title="Copy link to this section">#</button>
+</div>
+<div class="clause-block" id="clause-17-1">
+<p>
+<span class="clause-num">17.1</span> <strong>Governing Law &amp; Exclusive Jurisdiction:</strong> This Agreement, and all matters arising out of or relating to it, shall be governed by and construed in accordance with the laws of the <strong>Province of British Columbia</strong> and the federal laws of <strong>Canada</strong> applicable therein. The parties submit to the exclusive personal jurisdiction and venue of the courts of British Columbia sitting in the <strong>City of Kamloops, British Columbia, Canada</strong>.
+            </p>
+</div>
+<div class="clause-block" id="clause-17-2">
+<p>
+<span class="clause-num">17.2</span> <strong>Dispute Resolution &amp; Arbitration:</strong> Any dispute arising out of or in connection with this contract shall be referred to and finally resolved by arbitration administered by the Vancouver International Arbitration Centre (VanIAC) pursuant to its applicable rules, or under the British Columbia <em>Arbitration Act</em>, SBC 2020, c. 2. The place of arbitration shall be Kamloops or Vancouver, British Columbia, Canada, before a single arbitrator.
+            </p>
+</div>
+<div class="clause-block" id="clause-17-3">
+<p>
+<span class="clause-num">17.3</span> <strong>Severability &amp; No Waiver:</strong> If any provision is declared invalid by a court of competent jurisdiction, the remaining provisions shall continue in full force. Failure to enforce any provision does not constitute a waiver.
+            </p>
+</div>
+<div class="clause-block" id="clause-17-4">
+<p>
+<span class="clause-num">17.4</span> <strong>Non-Solicitation:</strong> Client agrees not to solicit, recruit, or hire any Sheernox engineer, system architect, or personnel during the term of Services and for twelve (12) months following termination.
+            </p>
+</div>
+<div class="clause-block" id="clause-17-5">
+<p>
+<span class="clause-num">17.5</span> <strong>Force Majeure:</strong> Neither party shall be liable for failure to perform due to causes beyond reasonable control, including acts of God, extreme winter utility outages, fiber cable severance, war, or governmental actions.
+            </p>
+</div>
+<div class="clause-block" id="clause-17-6">
+<p>
+<span class="clause-num">17.6</span> <strong>Canadian Export Controls:</strong> Client agrees to comply with all Canadian export and import laws, including the <em>Export and Import Permits Act</em>, R.S.C., 1985, c. E-19.
+            </p>
+</div>
+<div class="clause-block" id="clause-17-7">
+<p>
+<span class="clause-num">17.7</span> <strong>Electronic Communications:</strong> Client consents to receive all notices and communications electronically via the Client Portal or registered email pursuant to the BC <em>Electronic Transactions Act</em>.
+            </p>
+</div>
+<div class="clause-block" id="clause-17-8">
+<p>
+<span class="clause-num">17.8</span> <strong>Lawful Process &amp; Upstream Cloud Disclosures:</strong> Sheernox strictly honors customer confidentiality under Canadian law. Sheernox will not voluntarily surrender customer data, virtual disks, or communications to foreign law enforcement or intelligence agencies absent a valid, binding order, search warrant, or subpoena issued by a court of competent jurisdiction in British Columbia or Canada, or a domesticated order issued pursuant to the Canadian <em>Mutual Legal Assistance in Criminal Matters Act</em>, R.S.C. 1985, c. 30 (4th Supp.). However, Customer expressly acknowledges that certain upstream infrastructure hypervisors, transit carriers, and facility providers (e.g., Microsoft, AWS, Vultr) are subject to foreign personal jurisdiction, including the United States <em>CLOUD Act</em> (18 U.S.C. § 2713). Sheernox bears no liability or responsibility for disclosures or actions compelled directly against such upstream providers by lawful foreign judicial process over which Sheernox possesses no notice, standing, or technical control.
+            </p>
+</div>
+</section>
+<!-- Section 23 -->
+<section class="legal-section" id="sec-18">
+<div class="section-header">
+<h2 class="section-title"><span class="section-num">18.0</span> Custom Systems, Network Planning &amp; On-Site Engineering</h2>
+<button class="clause-anchor-btn" onclick="copyClauseLink('sec-18')" title="Copy link to this section">#</button>
+</div>
+<div class="key-takeaway">
+<span class="takeaway-badge">In Plain English</span>
+<p>When Sheernox performs on-site installations, custom server architecture builds, network planning, or physical repairs, work is governed by an approved Statement of Work (SOW). The client must provide safe physical access and adequate electrical power at their facility.</p>
+</div>
+<div class="clause-block" id="clause-18-1">
+<p>
+<span class="clause-num">18.1</span> <strong>Scope &amp; Statements of Work:</strong> Custom hardware fabrication, rack cabling, physical server deployment, and system architecture planning are detailed in formal SOW agreements.
+            </p>
+</div>
+<div class="clause-block" id="clause-18-2">
+<p>
+<span class="clause-num">18.2</span> <strong>Safe On-Site Access:</strong> Client agrees to provide Sheernox technical personnel with safe, unrestricted physical and electrical access to designated data center racks, server closets, and facility premises during scheduled work windows.
+            </p>
+</div>
+<div class="clause-block" id="clause-18-3">
+<p>
+<span class="clause-num">18.3</span> <strong>Hardware Warranties:</strong> Physical hardware components supplied by Sheernox carry manufacturer warranties. Sheernox facilitates manufacturer warranty claims and RMA processing according to active service plans.
+            </p>
+</div>
+</section>
+</LegalDocumentLayout>

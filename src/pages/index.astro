@@ -1,0 +1,342 @@
+---
+import { LEGAL_DOCUMENTS } from '../data/documents';
+import NetworkHeader from '../components/NetworkHeader.astro';
+import PortalHeader from '../components/PortalHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/legal.css';
+import '../styles/hub.css';
+
+const title = "Sheernox Legal & Policy Documents";
+const description = "Official repository for Sheernox client agreements, policies, and service level documentation.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://legal.sheernox.com/index.html" />
+
+    <!-- OpenGraph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://legal.sheernox.com/index.html" />
+    <meta property="og:site_name" content="Sheernox Legal Portal" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Top Network Bar -->
+    <NetworkHeader activeProperty="sheernox" />
+
+    <!-- Top Navigation -->
+    <PortalHeader showBackToMain={false} />
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-inner">
+        <div class="hero-pretitle">Governance &amp; Compliance</div>
+        <h1 class="hero-title">Terms &amp; Legal Documentation</h1>
+        <p class="hero-desc">
+          Official master agreements, service level guarantees, acceptable use standards, and design policies for Sheernox cloud hosting, infrastructure, and end-to-end technology solutions.
+        </p>
+
+        <div class="search-box">
+          <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            id="filterInput"
+            class="search-input"
+            placeholder="Quick search by document name, topic, or keyword..."
+            autocomplete="off"
+            aria-label="Quick search agreements"
+          />
+          <span class="search-shortcut" id="searchShortcut" title="Press / to focus">/</span>
+          <button
+            type="button"
+            id="clearSearchBtn"
+            class="search-clear-btn"
+            style="display: none;"
+            onclick="clearSearch()"
+            title="Clear search (Esc)"
+            aria-label="Clear search query"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Grid -->
+    <main class="main-wrap">
+      <div class="doc-grid" id="documentGrid">
+        {
+          LEGAL_DOCUMENTS.map((doc) => {
+            const pillClass = doc.colorTheme === 'blue' ? 'version-pill' : `version-pill pill-${doc.colorTheme}`;
+            return (
+              <div
+                class={`enterprise-card card-${doc.colorTheme}`}
+                data-category={doc.categorySlug}
+                data-title={doc.title.toLowerCase()}
+                data-keywords={doc.keywords.toLowerCase()}
+                onclick={`handleCardClick(event, '${doc.sourceHtml}')`}
+              >
+                <div class={`card-ribbon ribbon-${doc.colorTheme}`}></div>
+                <div>
+                  <div class="card-header-row">
+                    <div class="card-title-group">
+                      <div class={`card-badge-icon icon-${doc.colorTheme}`}>
+                        {doc.slug === 'terms-and-conditions' && (
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                          </svg>
+                        )}
+                        {doc.slug === 'acceptable-use-policy' && (
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                          </svg>
+                        )}
+                        {doc.slug === 'privacy-policy' && (
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                          </svg>
+                        )}
+                        {doc.slug === 'service-level-agreement' && (
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                          </svg>
+                        )}
+                        {doc.slug === 'vulnerability-disclosure-policy' && (
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                          </svg>
+                        )}
+                        {doc.slug === 'copyright-policy' && (
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path>
+                          </svg>
+                        )}
+                        {doc.slug === 'web-design-terms' && (
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                          </svg>
+                        )}
+                        {doc.slug === 'website-care-plan-terms' && (
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                          </svg>
+                        )}
+                      </div>
+                      <div>
+                        <h2 class="card-title">{doc.shortTitle}</h2>
+                        <div class="card-meta-line">
+                          <span class={pillClass}>{doc.version}</span>
+                          <span class="meta-revised">Revised {doc.lastRevised}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-desc">{doc.desc}</p>
+                    <ul class="card-bullet-list">
+                      {doc.bullets.map((b) => (
+                        <li>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-actions-bar">
+                  <div class="actions-cluster">
+                    <a href={doc.outputTxt} class="btn-txt" target="_blank" rel="noopener noreferrer" title="View Plain Text Version">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                      </svg>
+                      TXT
+                    </a>
+                    <a href={doc.outputPdf} class="btn-pdf" target="_blank" rel="noopener noreferrer" title="Download Vector PDF">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                      </svg>
+                      PDF
+                    </a>
+                    <button type="button" class="btn-copy" onclick={`copyDocUrl('${doc.sourceHtml}')`}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                      Copy Link
+                    </button>
+                    <a href={doc.sourceHtml} class="btn-open">
+                      <span>Open</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        }
+
+        <!-- No Results State -->
+        <div id="noResults" class="no-results-card" style="display: none;">
+          <div class="no-results-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="no-results-title">No matching policy documents found</h3>
+          <p class="no-results-desc">
+            No agreements matched your search query. Try searching for broader terms like <strong>SLA</strong>, <strong>cancellation</strong>, <strong>uptime</strong>, <strong>backup</strong>, <strong>sub-processor</strong>, or <strong>governing law</strong>.
+          </p>
+          <button type="button" class="btn-clear-filter" onclick="clearSearch()">Clear Search Filter</button>
+        </div>
+      </div>
+
+      <!-- Enterprise Info Callout -->
+      <div class="enterprise-callout">
+        <div class="callout-content">
+          <h3>Enterprise Custom Master Services Agreement (MSA)</h3>
+          <p>Inquiring regarding custom Service Level Agreements, BAA, or custom contract negotiation?</p>
+        </div>
+        <a href="mailto:support@sheernox.com" class="callout-cta">
+          Inquire with Legal
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </main>
+
+    <!-- Copy Notification Toast -->
+    <div class="copy-toast" id="copyToast" role="status" aria-live="polite">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span>Direct document URL copied to clipboard!</span>
+    </div>
+
+    <!-- Global Footer -->
+    <SiteFooter currentSlug="" />
+
+    <script is:inline>
+      const filterInput = document.getElementById('filterInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      const searchShortcut = document.getElementById('searchShortcut');
+      const noResults = document.getElementById('noResults');
+      const cards = document.querySelectorAll('.enterprise-card');
+
+      function applyFilters() {
+        const q = filterInput.value.toLowerCase().trim();
+        let matchCount = 0;
+
+        if (clearSearchBtn) {
+          clearSearchBtn.style.display = q ? 'flex' : 'none';
+        }
+        if (searchShortcut) {
+          searchShortcut.style.opacity = q ? '0' : '1';
+        }
+
+        cards.forEach((c) => {
+          const title = c.getAttribute('data-title') || '';
+          const keys = c.getAttribute('data-keywords') || '';
+          const body = c.textContent.toLowerCase();
+
+          const matchesQuery = !q || title.includes(q) || keys.includes(q) || body.includes(q);
+
+          if (matchesQuery) {
+            c.style.display = 'flex';
+            matchCount++;
+          } else {
+            c.style.display = 'none';
+          }
+        });
+
+        if (noResults) {
+          noResults.style.display = matchCount === 0 ? 'block' : 'none';
+        }
+      }
+
+      if (filterInput) {
+        filterInput.addEventListener('input', applyFilters);
+      }
+
+      window.clearSearch = function clearSearch() {
+        if (!filterInput) return;
+        filterInput.value = '';
+        applyFilters();
+        filterInput.focus();
+      };
+
+      // Keyboard shortcuts: '/' to search, 'Escape' to clear
+      window.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== filterInput && document.activeElement.tagName !== 'INPUT') {
+          e.preventDefault();
+          filterInput.focus();
+          filterInput.select();
+        } else if (e.key === 'Escape') {
+          if (filterInput && filterInput.value) {
+            window.clearSearch();
+          }
+          filterInput?.blur();
+        }
+      });
+
+      // Card click handler: navigates to policy page unless an inner button or link is clicked
+      window.handleCardClick = function handleCardClick(event, url) {
+        if (event.target.closest('a, button, input')) return;
+        window.location.href = url;
+      };
+
+      // Copy to clipboard with full URL resolution
+      window.copyDocUrl = function copyDocUrl(url) {
+        const fullUrl = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '') + url;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(fullUrl).then(() => {
+            const toast = document.getElementById('copyToast');
+            if (toast) {
+              toast.classList.add('show');
+              setTimeout(() => toast.classList.remove('show'), 2500);
+            }
+          }).catch(() => {
+            prompt('Copy document link:', fullUrl);
+          });
+        } else {
+          prompt('Copy document link:', fullUrl);
+        }
+      };
+    </script>
+  </body>
+</html>

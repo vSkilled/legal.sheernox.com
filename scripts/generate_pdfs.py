@@ -640,9 +640,14 @@ def build_print_html(source_path, category, title, version, last_revised, accent
 </html>
 """
 
-def render_doc(browser_bin, key, doc_info, temp_dir):
-    source_file = REPO_ROOT / doc_info["source"]
-    dest_pdf = PDF_DIR / doc_info["output_pdf"]
+def render_doc(browser_bin, key, doc_info, temp_dir, source_dir=None, output_dir=None):
+    if source_dir is None:
+        source_dir = REPO_ROOT / "dist" if (REPO_ROOT / "dist").exists() else REPO_ROOT
+    if output_dir is None:
+        output_dir = REPO_ROOT / "dist" if (REPO_ROOT / "dist").exists() else REPO_ROOT
+
+    source_file = Path(source_dir) / doc_info["source"]
+    dest_pdf = Path(output_dir) / doc_info["output_pdf"]
 
     if not source_file.exists():
         print(f"[-] Source file not found: {source_file}", file=sys.stderr)
@@ -662,7 +667,7 @@ def render_doc(browser_bin, key, doc_info, temp_dir):
     with open(temp_html, "w", encoding="utf-8") as f:
         f.write(html_markup)
 
-    print(f"[*] Compiling vector PDF -> {dest_pdf.relative_to(REPO_ROOT)}")
+    print(f"[*] Compiling vector PDF -> {dest_pdf}")
     cmd = [
         browser_bin,
         "--headless",
@@ -677,6 +682,12 @@ def render_doc(browser_bin, key, doc_info, temp_dir):
         print(f"[-] Failed to compile {dest_pdf.name}: {res.stderr}", file=sys.stderr)
         return False
 
+    # Also keep public/ directory in sync if it exists and output_dir was dist
+    public_dir = REPO_ROOT / "public"
+    if public_dir.exists() and Path(output_dir).resolve() != public_dir.resolve():
+        pub_pdf = public_dir / doc_info["output_pdf"]
+        shutil.copy2(dest_pdf, pub_pdf)
+
     size_kb = dest_pdf.stat().st_size / 1024
     print(f"[+] Successfully generated: {dest_pdf.name} ({size_kb:.1f} KB)")
     return True
@@ -690,6 +701,8 @@ def main():
         help="Target document key (aup, tos, wdt, priv/privacy, sla, vdp, cpr, wcp, all)",
     )
     parser.add_argument("--browser", default=None, help="Explicit path to Chrome/Brave/Chromium executable")
+    parser.add_argument("--source-dir", default=None, help="Directory containing source HTML files (default: dist/ or repo root)")
+    parser.add_argument("--output-dir", default=None, help="Directory where PDFs will be written (default: dist/ or repo root)")
     args = parser.parse_args()
 
     browser_bin = find_browser(args.browser)
@@ -702,7 +715,10 @@ def main():
         sys.exit(1)
 
     print(f"[i] Using browser binary: {browser_bin}")
-    PDF_DIR.mkdir(parents=True, exist_ok=True)
+
+    source_dir = Path(args.source_dir) if args.source_dir else (REPO_ROOT / "dist" if (REPO_ROOT / "dist").exists() else REPO_ROOT)
+    output_dir = Path(args.output_dir) if args.output_dir else (REPO_ROOT / "dist" if (REPO_ROOT / "dist").exists() else REPO_ROOT)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     targets = list(DOC_REGISTRY.keys())
     if args.doc not in ["all", "privacy"]:
@@ -713,11 +729,11 @@ def main():
     success_count = 0
     with tempfile.TemporaryDirectory() as temp_dir:
         for key in targets:
-            ok = render_doc(browser_bin, key, DOC_REGISTRY[key], temp_dir)
+            ok = render_doc(browser_bin, key, DOC_REGISTRY[key], temp_dir, source_dir=source_dir, output_dir=output_dir)
             if ok:
                 success_count += 1
 
-    print(f"\n[✓] Completed: {success_count}/{len(targets)} PDF(s) generated successfully in public root")
+    print(f"\n[✓] Completed: {success_count}/{len(targets)} PDF(s) generated successfully in {output_dir}")
     if success_count < len(targets):
         sys.exit(1)
 

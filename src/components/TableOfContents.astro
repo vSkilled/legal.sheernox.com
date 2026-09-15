@@ -1,0 +1,49 @@
+---
+export interface TocItem {
+  id: string;
+  num: string;
+  title: string;
+}
+
+interface Props {
+  items: TocItem[];
+  badgeText?: string;
+  accentColor?: string;
+}
+
+const { items, badgeText = `${items.length} SECTIONS` } = Astro.props;
+---
+
+<aside class="legal-sidebar" aria-label="Table of Contents">
+  <div class="toc-card" id="tocCard">
+    <div class="toc-header" onclick="toggleTOC()" role="button" tabindex="0" aria-expanded="false" aria-controls="tocBody">
+      <span>Table of Contents</span>
+      <div class="toc-header-right">
+        <span class="toc-badge">{badgeText}</span>
+        <span class="toc-toggle-icon" aria-hidden="true">&#9662;</span>
+      </div>
+    </div>
+    <div class="toc-body" id="tocBody">
+      <input
+        type="text"
+        class="toc-filter"
+        id="tocSearch"
+        placeholder="Filter sections..."
+        oninput="filterTOC()"
+        aria-label="Filter Table of Contents"
+      />
+      <ul class="toc-nav" id="tocList">
+        {
+          items.map((item) => (
+            <li>
+              <a href={`#${item.id}`} class="toc-link">
+                <span class="toc-num">{item.num}</span>
+                <span class="toc-text">{item.title}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</aside>

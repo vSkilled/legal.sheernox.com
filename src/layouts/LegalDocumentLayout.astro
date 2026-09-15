@@ -1,0 +1,190 @@
+---
+import type { LegalDocument } from '../data/documents';
+import type { TocItem } from '../components/TableOfContents.astro';
+import NetworkHeader from '../components/NetworkHeader.astro';
+import PortalHeader from '../components/PortalHeader.astro';
+import DocHero from '../components/DocHero.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Toast from '../components/Toast.astro';
+import '../styles/legal.css';
+
+interface Props {
+  doc: LegalDocument;
+  tocItems: TocItem[];
+  metaDescription?: string;
+  badgeText?: string;
+}
+
+const {
+  doc,
+  tocItems,
+  metaDescription = `Official ${doc.title} of Sheernox Technology Group, registered at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada.`,
+  badgeText,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{doc.title} | Sheernox Legal Portal</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={`https://legal.sheernox.com/${doc.sourceHtml}`} />
+
+    <!-- OpenGraph / Social -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={`${doc.title} | Sheernox Legal Portal`} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={`https://legal.sheernox.com/${doc.sourceHtml}`} />
+    <meta property="og:site_name" content="Sheernox Legal Portal" />
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Reading Progress Bar -->
+    <div id="progressBar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+    <!-- Top Network Bar (Sheernox Technology Group Network) -->
+    <NetworkHeader activeProperty="sheernox" />
+
+    <!-- Sticky Legal Portal Navigation -->
+    <PortalHeader showBackToMain={true} />
+
+    <!-- Document Header Hero -->
+    <DocHero doc={doc} />
+
+    <!-- Main Container -->
+    <main class="layout-container">
+      <TableOfContents items={tocItems} badgeText={badgeText} accentColor={doc.accentColor} />
+      <article class="legal-content legal-prose" role="article">
+        <slot />
+      </article>
+    </main>
+
+    <!-- Global Footer -->
+    <SiteFooter currentSlug={doc.slug} />
+
+    <!-- Toast Notification -->
+    <Toast />
+
+    <script is:inline>
+      // Reading Progress Bar
+      window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        const pBar = document.getElementById('progressBar');
+        if (pBar) {
+          pBar.style.width = scrolled + '%';
+          pBar.setAttribute('aria-valuenow', Math.round(scrolled));
+        }
+      });
+
+      // Mobile TOC Toggle
+      window.toggleTOC = function toggleTOC() {
+        const card = document.getElementById('tocCard');
+        if (card) {
+          card.classList.toggle('open');
+          const header = card.querySelector('.toc-header');
+          if (header) {
+            header.setAttribute('aria-expanded', card.classList.contains('open') ? 'true' : 'false');
+          }
+        }
+      };
+
+      // Filter Table of Contents
+      window.filterTOC = function filterTOC() {
+        const searchEl = document.getElementById('tocSearch');
+        if (!searchEl) return;
+        const query = searchEl.value.toLowerCase();
+        const items = document.querySelectorAll('#tocList li');
+        items.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? '' : 'none';
+        });
+      };
+
+      // Toast notification helper
+      function showToast(msg) {
+        let toast = document.getElementById('toast');
+        if (!toast) toast = document.getElementById('copyToast');
+        if (toast) {
+          const msgEl = document.getElementById('toastMsg') || toast.querySelector('span') || toast;
+          msgEl.textContent = msg;
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+      }
+
+      // Copy Share Link
+      window.copyShareLink = function copyShareLink() {
+        const url = window.location.href.split('#')[0];
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(() => {
+            showToast('Document link copied to clipboard');
+          }).catch(() => {
+            prompt('Copy document link:', url);
+          });
+        } else {
+          prompt('Copy document link:', url);
+        }
+      };
+
+      // Copy Section / Clause Link
+      window.copyClauseLink = function copyClauseLink(clauseId) {
+        const url = window.location.href.split('#')[0] + '#' + clauseId;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(() => {
+            showToast('Section permalink copied to clipboard');
+          }).catch(() => {
+            prompt('Copy section link:', url);
+          });
+        } else {
+          prompt('Copy section link:', url);
+        }
+      };
+
+      // Highlight Active TOC Item on Scroll & auto-close mobile drawer on click
+      document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelectorAll('.toc-link');
+        links.forEach((link) => {
+          link.addEventListener('click', () => {
+            if (window.innerWidth <= 960) {
+              document.getElementById('tocCard')?.classList.remove('open');
+            }
+          });
+        });
+
+        const sections = document.querySelectorAll('.legal-section');
+        if (sections.length > 0) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const id = entry.target.getAttribute('id');
+                  links.forEach((link) => {
+                    const isActive = link.getAttribute('href') === '#' + id;
+                    link.classList.toggle('active', isActive);
+                    link.setAttribute('aria-current', isActive ? 'true' : 'false');
+                  });
+                }
+              });
+            },
+            { rootMargin: '-100px 0px -60% 0px', threshold: 0 }
+          );
+
+          sections.forEach((section) => observer.observe(section));
+        }
+      });
+    </script>
+  </body>
+</html>
