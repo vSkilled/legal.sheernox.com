@@ -1,9 +1,14 @@
 ---
+import { LEGAL_DOCUMENTS } from '../data/documents';
+
 interface Props {
+  currentSlug?: string;
+  isSubPage?: boolean;
   showBackToMain?: boolean;
 }
 
-const { showBackToMain = true } = Astro.props;
+const { currentSlug = '', isSubPage = false, showBackToMain } = Astro.props;
+const isSub = isSubPage || (showBackToMain !== undefined ? showBackToMain : Boolean(currentSlug));
 ---
 
 <nav class="top-nav" aria-label="Portal Navigation">
@@ -14,12 +19,35 @@ const { showBackToMain = true } = Astro.props;
       <span class="nav-portal-label">Legal Portal</span>
     </a>
     <div class="nav-actions">
-      {showBackToMain && (
-        <a href="https://sheernox.com" class="nav-link" target="_blank" rel="noopener noreferrer">
-          <span class="nav-link-full">&larr; Back to Sheernox.com</span>
-          <span class="nav-link-short">&larr; Sheernox</span>
+      {isSub && (
+        <a href="index.html" class="nav-link" aria-label="Back to Legal Portal Homepage">
+          <span class="nav-link-full">&larr; Portal Home</span>
+          <span class="nav-link-short">&larr; Home</span>
         </a>
       )}
+      <div class="policy-switcher">
+        <label for="policySwitcher" class="sr-only">Switch Policy</label>
+        <div class="policy-select-wrap">
+          <select
+            id="policySwitcher"
+            class="policy-select"
+            aria-label="Switch between legal policies"
+            onchange="if(this.value) window.location.href=this.value;"
+          >
+            <option value="" disabled selected={!currentSlug}>
+              Switch Policy...
+            </option>
+            {LEGAL_DOCUMENTS.map((doc) => (
+              <option value={doc.sourceHtml} selected={currentSlug === doc.slug}>
+                {doc.shortTitle}
+              </option>
+            ))}
+          </select>
+          <svg class="select-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </div>
       <a href="https://my.sheernox.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Client Portal</a>
     </div>
   </div>
@@ -73,6 +101,7 @@ const { showBackToMain = true } = Astro.props;
     display: flex;
     align-items: center;
     gap: 14px;
+    flex-wrap: nowrap;
   }
 
   .nav-link {
@@ -81,6 +110,7 @@ const { showBackToMain = true } = Astro.props;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.2s;
+    white-space: nowrap;
   }
 
   .nav-link:hover {
@@ -89,6 +119,73 @@ const { showBackToMain = true } = Astro.props;
 
   .nav-link-short {
     display: none;
+  }
+
+  /* Policy Switcher Dropdown */
+  .policy-switcher {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .policy-select-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .policy-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 6px;
+    color: #e2e8f0;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 6px 30px 6px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.4;
+    transition: all 0.2s ease;
+    max-width: 220px;
+  }
+
+  .policy-select:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+  }
+
+  .policy-select:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+  }
+
+  .policy-select option {
+    background: #071322;
+    color: #f1f5f9;
+    padding: 8px 12px;
+  }
+
+  .select-chevron {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    color: #94a3b8;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 
   .nav-btn {
@@ -104,11 +201,21 @@ const { showBackToMain = true } = Astro.props;
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .nav-btn:hover {
     background: rgba(255, 255, 255, 0.16);
     border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  @media (max-width: 820px) {
+    .policy-select {
+      max-width: 170px;
+      font-size: 0.78rem;
+      padding: 5px 26px 5px 10px;
+    }
   }
 
   @media (max-width: 640px) {
@@ -134,6 +241,14 @@ const { showBackToMain = true } = Astro.props;
     }
     .nav-link-short {
       display: inline;
+    }
+    .policy-select {
+      max-width: 120px;
+      font-size: 0.74rem;
+      padding: 5px 22px 5px 6px;
+    }
+    .select-chevron {
+      right: 6px;
     }
     .nav-btn {
       padding: 5px 10px;
