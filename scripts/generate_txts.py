@@ -111,6 +111,17 @@ DOC_REGISTRY = {
         "support_email": "support@sheernox.com",
         "abuse_email": "abuse@sheernox.com",
     },
+    "prm": {
+        "source": "promotions.html",
+        "category": "Commercial & Promotional Terms",
+        "title": "Promotional Terms and Conditions",
+        "version": "v1.0-PRM",
+        "last_revised": "2026-09-16",
+        "output_txt": "promotions.txt",
+        "output_pdf": "promotions.pdf",
+        "support_email": "support@sheernox.com",
+        "abuse_email": "abuse@sheernox.com",
+    },
 }
 
 WIDTH = 80

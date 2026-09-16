@@ -1,0 +1,409 @@
+================================================================================
+SHEERNOX TECHNOLOGY GROUP - PROMOTIONAL TERMS AND CONDITIONS
+================================================================================
+Document:       Promotional Terms and Conditions
+Entity:         Sheernox Technology Group (Kamloops, BC, Canada)
+Version:        v1.0-PRM
+Last Revised:   2026-09-16
+Web Policy:     https://legal.sheernox.com/promotions.html
+Plain Text:     https://legal.sheernox.com/promotions.txt
+PDF Document:   https://legal.sheernox.com/promotions.pdf
+General Admin:  support@sheernox.com
+Abuse & Sec:    abuse@sheernox.com
+================================================================================
+
+0.0 PREAMBLE & SERVICE SCOPE
+--------------------------------------------------------------------------------
+[IN PLAIN ENGLISH]
+This policy details all active, ongoing, and historical promotional pricing,
+coupon codes, and introductory discounts offered by Sheernox. Promotional
+discounts apply to your initial billing term, renew automatically at standard
+regular rates, and cannot be stacked unless specifically stated. Each active
+promotional offer is detailed in its own dedicated section below.
+
+These Promotional Terms and Conditions ("Promotional Terms") constitute an
+official operational schedule incorporated into and governed by the Master Terms
+and Conditions of Sheernox Technology Group, a sole proprietorship registered in
+the Province of British Columbia, Canada (Registration Number: FM0707819,
+Business Number: 732754924BC0001, Original Registration Date: October 29, 2009),
+having its registered office at 1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8,
+Canada ("Sheernox", "we", "us", or "our").
+
+These Promotional Terms govern any discount, introductory price reduction,
+promotional coupon code, complimentary domain offering, service credit, or
+special commercial package made available to clients ("Client", "Customer",
+"you") through our official website, client portal (my.sheernox.com), marketing
+campaigns, or direct sales channels. In the event of an express conflict between
+these Promotional Terms and our general Terms and Conditions of Service
+regarding promotional pricing and eligibility, these Promotional Terms take
+precedence with respect to the specific promotional offering.
+
+1.0 MASTER PROMOTIONAL TERMS & GENERAL RULES
+--------------------------------------------------------------------------------
+The general provisions set forth in this Section 1.0 apply universally to all
+promotional offerings, discounts, and special pricing published or extended by
+Sheernox, except where a specific sub-promotion schedule explicitly provides
+otherwise in writing.
+
+Unless expressly authorized in writing by Sheernox, promotional offers,
+automated checkout discounts, and promotional voucher codes cannot be combined,
+stacked, or aggregated with any other promotion, affiliate incentive, volume
+discount, agency pricing tier, or enterprise contract concession. If an order
+qualifies for more than one automated or manual promotion, our billing
+automation will apply only the single promotion yielding the highest nominal
+savings to the customer.
+
+All promotional pricing, percentage discounts, and introductory credits apply
+strictly and exclusively to the initial contracted billing cycle or promotional
+period specified in the service order (e.g., the first month of a monthly plan
+or the first year of an annual plan).
+
+Automatic Renewal at Standard Prevailing Rates: Upon the expiration of the
+initial promotional billing cycle, all contracted services automatically renew
+at Sheernox's standard, non-promotional recurring rate in effect at the time of
+renewal. All figures are billed in Canadian Dollars (CAD) and are subject to
+applicable federal Goods and Services Tax (GST, 5%) and British Columbia
+Provincial Sales Tax (PST, 7%). Clients may cancel automatic renewal at any time
+prior to the scheduled invoice date through the client management portal at
+my.sheernox.com in accordance with Section 4.0 of our Master Terms.
+
+Promotional rates are calculated based on the specific hosting plan, resource
+tier, and billing cycle selected at the time of initial checkout. If a client
+upgrades, downgrades, modifies billing cadences (e.g., switching from annual to
+monthly), or transfers the service to another user account mid-cycle during a
+promotional period:
+
+- Immediate Forfeiture: The remaining balance of any promotional discount or
+  credit is immediately and irrevocably forfeited.
+- Standard Rate Recalculation: Billed charges for the modified service are
+  recalculated based on Sheernox's standard prevailing non-promotional recurring
+  rate, pro-rated for the remaining duration of the billing cycle.
+- No Cash Value: Forfeited promotional credits or discounts possess zero cash
+  surrender value and cannot be refunded, transferred, or credited to subsequent
+  invoices.
+
+Sheernox maintains a zero-tolerance policy against fraudulent activities and
+manipulation designed to circumvent promotional rules. Unless a specific
+promotion explicitly states a per-customer limit, clients in good standing may
+place multiple eligible orders during an open promotional window.
+
+However, the creation of fictitious, duplicate, or secondary accounts by the
+same individual or entity, using temporary email providers, falsifying
+registrant details, or coordinating abusive purchasing rings constitutes a
+material breach of our Acceptable Use Policy. Sheernox reserves the unilateral
+right to audit transactions, void fraudulent orders, cancel active services
+without notice, and retroactively invoice the account for full standard
+non-promotional service fees.
+
+Where a promotional hosting service is subject to Sheernox's standard 30-day
+money-back guarantee pursuant to our Master Terms:
+
+- Net Amount Paid: Any approved refund shall be strictly limited to the actual
+  net discounted amount paid by the customer for the affected hosting service.
+- Non-Refundable Items: Third-party licensing fees, dedicated IP addresses,
+  custom software setup charges, domain name registrations, and domain transfer
+  fees are strictly non-refundable and will be deducted from any refund amount
+  as detailed in Section 3.0.
+
+Sheernox reserves the right to terminate, amend, withdraw, or modify any
+promotional offering, discount tier, or promotional schedule at any time. Any
+amendment or termination shall take effect immediately upon publication on this
+page, but will not affect subscriptions already purchased and paid for prior to
+the amendment for the duration of that paid initial billing cycle.
+
+2.0 ACTIVE PROMOTION: 30% OFF FIRST BILLING CYCLE HOSTING
+--------------------------------------------------------------------------------
+[PROMOTION SUMMARY]
+Receive an automated 30% discount off your first billing cycle on any new
+Monthly or Annual subscription for Shared, Reseller, WordPress, Business, or
+Email Hosting. The discount applies automatically at checkout with no coupon
+code required, and is available for unlimited eligible orders by new, returning,
+and active customers.
+
+The specific terms and operational conditions governing the 30% Off First
+Billing Cycle Hosting Promotion (Offer Reference: PROMO-HOST-30) are set forth
+below:
+
+--------------------------------------------------------------------------------
+[Offer Name & ID]
+  Promotional Specification & Policy Terms: 30% Off First Billing Cycle Hosting
+                                            Promotion (PROMO-HOST-30)
+
+[Promotion Period]
+  Promotional Specification & Policy Terms: Commences September 14, 2026 at
+                                            12:01 AM Eastern Time (ET) and
+                                            concludes September 28, 2028 at
+                                            11:59 PM Eastern Time (ET) (the
+                                            "Promotion Period"). Orders
+                                            submitted before or after this
+                                            window do not qualify.
+
+[Discount Structure]
+  Promotional Specification & Policy Terms: 30% discount calculated against the
+                                            regular recurring base subscription
+                                            price of the eligible hosting plan
+                                            for its first billing cycle.
+
+[Eligible Products]
+  Promotional Specification & Policy Terms: Applies exclusively to new service
+                                            orders for:Shared Hosting (all
+                                            standardized plan tiers)Reseller
+                                            Hosting (all standardized plan
+                                            tiers)WordPress Hosting (managed WP
+                                            infrastructure plans)Business
+                                            Hosting (high-resource business
+                                            tiers)Email Hosting (dedicated
+                                            secure mailbox packages)
+
+[Ineligible Services]
+  Promotional Specification & Policy Terms: Virtual Private Servers (VPS),
+                                            Dedicated Bare-Metal Servers, Custom
+                                            Cloud Infrastructure, Domain
+                                            Registrations/Renewals/Transfers,
+                                            Website Care Plans, Custom Web
+                                            Design & Development, SSL
+                                            Certificates, Software Licenses
+                                            (e.g., cPanel, LiteSpeed add-ons),
+                                            and Setup Fees.
+
+[Eligible Billing Cycles]
+  Promotional Specification & Policy Terms: Monthly and Annual subscription
+                                            commitments only. Multi-year
+                                            commitments (biennial or triennial)
+                                            or customized billing cadences are
+                                            excluded.
+
+[Client Eligibility]
+  Promotional Specification & Policy Terms: Open to New Customers, Returning
+                                            Customers, and Active Existing
+                                            Customers whose accounts are in good
+                                            standing (no overdue balances or
+                                            active AUP suspensions).
+
+[Redemption Method]
+  Promotional Specification & Policy Terms: Automated Checkout Application. The
+                                            30% reduction is automatically
+                                            calculated and displayed in the
+                                            shopping cart at my.sheernox.com
+                                            upon selecting an eligible package
+                                            and billing term. No promotional
+                                            code is required.
+
+[Order Volume Limits]
+  Promotional Specification & Policy Terms: Unlimited. Eligible clients may
+                                            purchase an unlimited number of
+                                            qualifying hosting services during
+                                            the active Promotion Period,
+                                            provided each service is utilized in
+                                            compliance with our Acceptable Use
+                                            Policy.
+
+[Renewal Pricing]
+  Promotional Specification & Policy Terms: Upon completion of the first billing
+                                            cycle (e.g., month two for monthly
+                                            plans; year two for annual plans),
+                                            subscriptions automatically renew at
+                                            Sheernox's standard prevailing non-
+                                            promotional recurring CAD rates plus
+                                            applicable GST/PST.
+
+[Plan Modifications]
+  Promotional Specification & Policy Terms: Any mid-cycle upgrade, downgrade, or
+                                            billing cycle alteration during the
+                                            promotional cycle results in
+                                            immediate forfeiture of promotional
+                                            pricing, with billing resetting to
+                                            full regular recurring rates.
+--------------------------------------------------------------------------------
+
+3.0 ACTIVE PROMOTION: FREE DOMAIN NAME WITH QUALIFYING PURCHASE
+--------------------------------------------------------------------------------
+[PROMOTION SUMMARY]
+Receive a complimentary one-year domain registration or inbound transfer when
+purchasing any qualifying hosting package with an annual (1-year or greater)
+billing cycle. Twelve eligible top-level domains are supported including .ca and
+.com. You retain complete ownership of the domain; however, if hosting is
+cancelled or refunded within 30 days, the standard non-refundable registry
+registration fee is deducted from your refund.
+
+The general terms set forth in this Section 3.0 govern any hosting plan, web
+application package, or commercial service bundle advertised by Sheernox as
+including a complimentary, bundled, or "free" domain name (Offer Reference:
+PROMO-DOMAIN-FREE).
+
+--------------------------------------------------------------------------------
+[Offer Name & ID]
+  Promotional Specification & Policy Terms: Free Domain Name with Qualifying
+                                            Purchase (PROMO-DOMAIN-FREE)
+
+[Qualifying Commitment]
+  Promotional Specification & Policy Terms: Requires the simultaneous purchase
+                                            of an eligible Sheernox hosting
+                                            package with a minimum upfront
+                                            subscription commitment of one (1)
+                                            year or more (Annual billing cycle).
+                                            Monthly, quarterly, and semi-annual
+                                            packages do not qualify for a
+                                            complimentary domain name.
+
+[Eligible TLD Extensions]
+  Promotional Specification & Policy Terms: The complimentary offer is strictly
+                                            restricted to the following twelve
+                                            (12) Top-Level Domains (TLDs): .ca •
+                                            .com • .net • .org • .app • .link •
+                                            .top • .art • .business • .cam •
+                                            .company • .eu All other generic,
+                                            country-code, or specialized premium
+                                            TLDs are excluded from this
+                                            promotion and are subject to
+                                            standard retail domain pricing.
+
+[Transaction Types]
+  Promotional Specification & Policy Terms: Valid for either:New Domain
+                                            Registration: A brand-new initial
+                                            one-year domain
+                                            registration.Qualifying Inbound
+                                            Transfer: The inbound transfer of an
+                                            existing domain name from a third-
+                                            party registrar to Sheernox, adding
+                                            one complimentary registration year.
+
+[Duration & Renewal]
+  Promotional Specification & Policy Terms: The registration or transfer credit
+                                            is complimentary ($0.00 CAD) for the
+                                            first one-year (12-month)
+                                            registration period only. Upon the
+                                            conclusion of the first 12 months,
+                                            the domain will automatically renew
+                                            annually at Sheernox's standard
+                                            prevailing retail domain renewal
+                                            rate in Canadian Dollars (CAD) plus
+                                            applicable taxes.
+
+[Domain Ownership & Registry Governance]
+  Promotional Specification & Policy Terms: The customer remains the sole,
+                                            recognized registrant and legal
+                                            owner of the domain name at all
+                                            times, subject to the statutory
+                                            rules of ICANN, the Canadian
+                                            Internet Registration Authority
+                                            (CIRA for .ca), EURid (for .eu), and
+                                            our upstream domain accreditation
+                                            partners.
+
+[Transfer Restrictions (ICANN 60-Day Lock)]
+  Promotional Specification & Policy Terms: Pursuant to ICANN's Policy on
+                                            Transfer of Registrations, newly
+                                            registered domain names and
+                                            transferred domain names cannot be
+                                            transferred to another registrar
+                                            within sixty (60) calendar days of
+                                            the initial registration or transfer
+                                            date.
+
+[Hosting Cancellation & Non-Refundable Clawback]
+  Promotional Specification & Policy Terms: Wholesale registry fees disbursed by
+                                            Sheernox to registries (e.g., CIRA,
+                                            Verisign, PIR) are immediately non-
+                                            refundable and irreversible upon
+                                            registration. Clawback Policy: If a
+                                            customer exercises their rights
+                                            under Sheernox's 30-day money-back
+                                            guarantee to cancel their qualifying
+                                            hosting service, the standard
+                                            prevailing non-promotional retail
+                                            registration fee for the domain name
+                                            (plus applicable GST/PST) will be
+                                            deducted from the gross hosting
+                                            refund. If the hosting purchase
+                                            price is less than the regular
+                                            domain registration fee, the
+                                            difference is waived, but zero
+                                            refund shall be issued. The customer
+                                            retains full ownership and control
+                                            of the domain name for the remainder
+                                            of its 1-year registration period.
+--------------------------------------------------------------------------------
+
+4.0 HISTORICAL & EXPIRED PROMOTIONS ARCHIVE
+--------------------------------------------------------------------------------
+[CONTRACTUAL AUDIT TRAIL]
+To preserve complete legal certainty and transparency for our clients, Sheernox
+maintains a permanent historical archive of concluded promotions. Expired offers
+remain documented here to verify the exact terms under which existing services
+were initially provisioned.
+
+Promotions that have reached their scheduled expiration date or were retired
+prior to the current revision date are cataloged below. Concluded promotions are
+preserved for historical verification, dispute resolution, and contractual audit
+purposes:
+
+--------------------------------------------------------------------------------
+[PROMO-HOST-30]
+  Promotional Title: 30% Off First Billing Cycle Hosting Promotion
+  Category: Web Hosting
+  Active Window: 2026-09-14 to 2028-09-28
+  Status: Active (See Section 2.0)
+
+[PROMO-DOMAIN-FREE]
+  Promotional Title: Free Domain Name with Qualifying Purchase
+  Category: Domains & Bundles
+  Active Window: Standing Schedule
+  Status: Active (See Section 3.0)
+
+[ARCHIVE-LEGACY-2026]
+  Promotional Title: Legacy Introductory Server Credits (Pre-Portal)
+  Category: Cloud Infrastructure
+  Active Window: Prior to 2026-09-14
+  Status: Concluded / Governed by Invoiced Terms
+--------------------------------------------------------------------------------
+
+* Note: When an active promotional campaign concludes, its operational
+parameters are migrated to this historical archive with its definitive close
+date, ensuring existing customers can always inspect the governing terms in
+effect at their time of purchase.
+
+5.0 GOVERNING LAW, JURISDICTION & INQUIRIES
+--------------------------------------------------------------------------------
+These Promotional Terms are governed by, construed, and enforced in accordance
+with the laws of the Province of British Columbia and the federal laws of Canada
+applicable therein, without regard to conflict of law principles.
+
+Any dispute, claim, controversy, or question arising out of or relating to these
+Promotional Terms, their interpretation, breach, or enforcement shall be subject
+to the exclusive jurisdiction of the Courts of British Columbia sitting in the
+City of Kamloops, British Columbia, Canada, or referred to and finally resolved
+by arbitration administered by the Vancouver International Arbitration Centre
+(VanIAC) pursuant to its applicable rules. Small claims debt recovery or
+commercial restitution matters may be brought before the Small Claims Court of
+British Columbia (Kamloops Registry).
+
+By participating in any Sheernox promotion, creating an account, or redeeming
+promotional pricing, you consent to receive essential commercial electronic
+messages relating to your service order, billing statements, renewal reminders,
+and service notifications pursuant to Canada's Anti-Spam Legislation (CASL, S.C.
+2010, c. 23). Marketing communications may be unsubscribed from at any time via
+the link provided in promotional emails.
+
+For inquiries regarding active promotional qualifications, invoice discount
+verification, or historical terms, contact our commercial operations team:
+
+- General Legal & Commercial Inquiries: support@sheernox.com
+- Reporting Fraud & Promotion Abuse: abuse@sheernox.com
+- Client Management & Billing Portal: https://my.sheernox.com
+- Registered Physical Address: Sheernox Technology Group, 1-1885 Grasslands
+  Blvd, Kamloops, BC, V2B 0B8, Canada
+
+================================================================================
+OFFICIAL CONTACT & GOVERNING JURISDICTION COORDINATES
+--------------------------------------------------------------------------------
+Entity:                  Sheernox Technology Group (Sole Proprietorship)
+Registration Number:     FM0707819 (Province of British Columbia)
+Business Number:         732754924BC0001 (Canada Revenue Agency)
+Physical Address:        1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada
+Governing Law:           Province of British Columbia and Federal Laws of Canada
+Exclusive Legal Venue:   Courts of British Columbia in Kamloops, BC, Canada
+General & Legal Inquiries: support@sheernox.com
+Abuse & Security Incidents: abuse@sheernox.com
+Client Support Hub:      https://my.sheernox.com
+================================================================================

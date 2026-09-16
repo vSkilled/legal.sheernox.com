@@ -22,6 +22,7 @@ This document is the authoritative operational guide for AI coding agents (and d
 | `vdp` | `src/pages/vulnerability-disclosure-policy.astro` | `vulnerability-disclosure-policy.html` | `vulnerability-disclosure-policy.pdf` | `vulnerability-disclosure-policy.txt` | Vulnerability Disclosure Policy (VDP) | `v1.5-VDP` |
 | `cpr` | `src/pages/copyright-policy.astro` | `copyright-policy.html` | `copyright-policy.pdf` | `copyright-policy.txt` | Copyright & Notice-and-Notice Policy | `v1.5-CPR` |
 | `wcp` | `src/pages/website-care-plan-terms.astro` | `website-care-plan-terms.html` | `website-care-plan-terms.pdf` | `website-care-plan-terms.txt` | Website Care Plan & Maintenance Terms | `v1.5-WCP` |
+| `prm` | `src/pages/promotions.astro` | `promotions.html` | `promotions.pdf` | `promotions.txt` | Promotional Terms and Conditions | `v1.0-PRM` |
 | `hub` | `src/pages/index.astro` | `index.html` | N/A | N/A | Legal Portal Directory & Search Hub | N/A |
 
 ---
@@ -135,6 +136,7 @@ python3 scripts/generate_pdfs.py --doc sla
 python3 scripts/generate_pdfs.py --doc vdp
 python3 scripts/generate_pdfs.py --doc cpr
 python3 scripts/generate_pdfs.py --doc wcp
+python3 scripts/generate_pdfs.py --doc prm
 ```
 
 ### Revision Dates & Versioning Standards
@@ -197,8 +199,8 @@ Before committing any update:
 1. [ ] **Legal Verification**: Are all party definitions set to Sheernox Technology Group in Kamloops, BC, Canada?
 2. [ ] **Email Verification**: Is abuse routed to `abuse@sheernox.com` and all other legal/privacy routed to `support@sheernox.com`?
 3. [ ] **Address Check**: Is the official physical address `1-1885 Grasslands Blvd, Kamloops, BC, V2B 0B8, Canada` accurately included across all documents?
-4. [ ] **Build Check**: Did `npm run build` succeed with 9 routes generated?
+4. [ ] **Build Check**: Did `npm run build` succeed with 10 routes generated?
 5. [ ] **Diagnostics Check**: Did `npm test` pass with 0 errors and 0 warnings?
-6. [ ] **PDF Re-generation**: Was `npm run generate:pdfs` executed successfully (8/8 PDFs)?
+6. [ ] **PDF Re-generation**: Was `npm run generate:pdfs` executed successfully (9/9 PDFs)?
 7. [ ] **Plain Text Re-generation**: Was `npm run generate:txts` executed successfully?
 8. [ ] **Clean Git Tree**: Are only production files staged? (`git status` shows no scratch or debug files).

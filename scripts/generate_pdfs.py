@@ -111,6 +111,15 @@ DOC_REGISTRY = {
         "output_pdf": "website-care-plan-terms.pdf",
         "accent_color": "#0d9488",
     },
+    "prm": {
+        "source": "promotions.html",
+        "category": "Commercial & Promotional Terms",
+        "title": "Promotional Terms and Conditions",
+        "version": "v1.0-PRM",
+        "last_revised": "2026-09-16",
+        "output_pdf": "promotions.pdf",
+        "accent_color": "#059669",
+    },
 }
 
 def get_css(last_revised, version, accent_color="#0284c7"):

@@ -93,4 +93,7 @@ jobs:
           curl -f -s -I "https://legal.sheernox.com/terms-and-conditions.txt" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/vulnerability-disclosure-policy.txt" | head -n 5
           curl -f -s -I "https://legal.sheernox.com/website-care-plan-terms.html" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/promotions.html" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/promotions.pdf" | head -n 5
+          curl -f -s -I "https://legal.sheernox.com/promotions.txt" | head -n 5
           echo "Deployment verified successfully!"

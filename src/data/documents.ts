@@ -185,6 +185,27 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
       'Up to 5 hours/mo content tasks & preferred CAD rates',
     ],
   },
+  {
+    slug: 'promotions',
+    sourceHtml: 'promotions.html',
+    outputPdf: 'promotions.pdf',
+    outputTxt: 'promotions.txt',
+    title: 'Promotional Terms and Conditions',
+    shortTitle: 'Promotional Terms',
+    category: 'Commercial & Promotional Terms',
+    categorySlug: 'hosting',
+    version: 'v1.0-PRM',
+    lastRevised: '2026-09-16',
+    accentColor: '#059669',
+    colorTheme: 'emerald',
+    keywords: 'promotions promotional terms discount 30 off hosting free domain coupon special offer billing first cycle automated discount',
+    desc: 'Master promotional rules, active introductory schedules (including 30% off hosting and free domain registration), renewal terms, and historical offers archive.',
+    bullets: [
+      'Master promotional rules, discount caps & renewal rates',
+      '30% off first billing cycle for monthly & annual hosting',
+      'Free domain registration (.ca, .com, etc.) with 1-year plans',
+    ],
+  },
 ];
 
 export const DOC_BY_SLUG = new Map<string, LegalDocument>(
